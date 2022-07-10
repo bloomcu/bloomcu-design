@@ -7,7 +7,7 @@ namespace Research;
 class Ajax {
 
 	public function __construct() {
-		add_action( 'wp_ajax_research_save_research', [ $this, 'save_research' ] );
+		// add_action( 'wp_ajax_research_save_research', [ $this, 'save_research' ] );
 	}
 
 	public function save_research() {

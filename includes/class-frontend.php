@@ -8,8 +8,8 @@ namespace Research;
 class Frontend {
 
 	public function __construct() {
-		add_action('wp_footer', [$this, 'render_frontend']);
-		add_filter('body_class', [$this, 'add_body_class']);
+		// add_action('wp_footer', [$this, 'render_frontend']);
+		// add_filter('body_class', [$this, 'add_body_class']);
 	}
 	
 	public function add_body_class($classes = []) {
@@ -37,7 +37,7 @@ class Frontend {
 			<div class="bloom-research-bar">
 			  <p>This page has <a href="<?php the_field('research_article'); ?>" target="_blank">research</a></p>
 			</div>
-		<?php endif; ?>
+		<?php //endif; ?>
 		
 		<?php
 		echo ob_get_contents();

@@ -1,14 +1,14 @@
 {
-  "name": "bloomcu-research",
+  "name": "bloomcu-design",
   "version": "0.0.1",
-  "description": "Connect research with website experiences. Made by BloomCU.",
+  "description": "Design made easier. Made by BloomCU.",
   "author": "Ryan Harmon",
   "license": "GPLv2",
   "private": true,
   "scripts": {
     "dev": "cross-env WEBPACK_ENV=development webpack --progress --colors --watch --hide-modules",
     "build": "cross-env WEBPACK_ENV=production webpack",
-    "zip": "zip -r bloomcu-research.zip . -x *.git* *.DS_Store* bloomcu-research.json /node_modules node_modules/\\*"
+    "zip": "zip -r bloomcu-design.zip . -x *.git* *.DS_Store* bloomcu-design.json /node_modules node_modules/\\*"
   },
   "dependencies": {},
   "devDependencies": {

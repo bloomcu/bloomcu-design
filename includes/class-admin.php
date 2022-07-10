@@ -7,9 +7,9 @@ namespace Research;
 class Admin {
 
 	public function __construct() {
-		add_action( 'admin_menu', [ $this, 'admin_menu' ] );
-		add_filter( 'manage_research_posts_columns', [ $this, 'set_post_columns' ] );
-		add_action( 'manage_research_posts_custom_column', [ $this, 'set_columns_content' ], 10, 2 );
+		// add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		// add_filter( 'manage_research_posts_columns', [ $this, 'set_post_columns' ] );
+		// add_action( 'manage_research_posts_custom_column', [ $this, 'set_columns_content' ], 10, 2 );
 	}
 
 	/**

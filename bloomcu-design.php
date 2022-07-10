@@ -1,14 +1,14 @@
 <?php
 /*
-Plugin Name: BloomCU Research
+Plugin Name: BloomCU Design
 Plugin URI: https://bloomcu.com/
-Description: Connect research with website experiences. Made by BloomCU.
+Description: Design made easier. Made by BloomCU.
 Version: 0.0.1
 Author: BloomCU
 Author URI: https://bloomcu.com/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: researchplugin
+Text Domain: designPlugin
 Domain Path: /languages
 */
 
@@ -42,11 +42,11 @@ Domain Path: /languages
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
- * Research_Plugin class
+ * Design_Plugin class
  *
- * @class Research_Plugin The class that holds the entire Research_Plugin plugin
+ * @class Design_Plugin The class that holds the entire Design_Plugin plugin
  */
-final class Research_Plugin {
+final class Design_Plugin {
 
 	/**
 	 * Plugin version
@@ -63,7 +63,7 @@ final class Research_Plugin {
 	private $container = array();
 
 	/**
-	 * Constructor for the Research_Plugin class
+	 * Constructor for the Design_Plugin class
 	 *
 	 * Sets up all the appropriate hooks and actions
 	 * within our plugin.
@@ -79,16 +79,16 @@ final class Research_Plugin {
 	}
 
 	/**
-	 * Initializes the Research_Plugin() class
+	 * Initializes the Design_Plugin() class
 	 *
-	 * Checks for an existing Research_Plugin() instance
+	 * Checks for an existing Design_Plugin() instance
 	 * and if it doesn't find one, creates it.
 	 */
 	public static function init() {
 		static $instance = false;
 
 		if ( ! $instance ) {
-			$instance = new Research_Plugin();
+			$instance = new Design_Plugin();
 		}
 
 		return $instance;
@@ -151,14 +151,14 @@ final class Research_Plugin {
 	 */
 	public function activate() {
 
-		$installed = get_option( 'researchplugin_installed' );
+		$installed = get_option( 'designPlugin_installed' );
 
 		if ( ! $installed ) {
-			update_option( 'researchplugin_installed', time() );
+			update_option( 'designPlugin_installed', time() );
 		}
 
 		// Update plugin version
-		update_option( 'researchplugin_version', BOILERPLATE_PLUGIN_VERSION );
+		update_option( 'designPlugin_version', BOILERPLATE_PLUGIN_VERSION );
 	}
 
 	/**
@@ -239,7 +239,7 @@ final class Research_Plugin {
 	 * @uses load_plugin_textdomain()
 	 */
 	public function localization_setup() {
-		load_plugin_textdomain( 'researchplugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		load_plugin_textdomain( 'designPlugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**
@@ -269,4 +269,4 @@ final class Research_Plugin {
 	}
 }
 
-$researchplugin = Research_Plugin::init();
+$designPlugin = Design_Plugin::init();

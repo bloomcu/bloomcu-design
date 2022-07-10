@@ -7,12 +7,12 @@ namespace Research;
 class REST_API {
 
 	public function __construct() {
-		add_action( 'rest_api_init', function() {
-			register_rest_route( 'research/v1', '/research/(?P<id>\d+)', [
-				'methods'  => 'GET',
-				'callback' => [ $this, 'get_research' ],
-			] );
-		} );
+		// add_action( 'rest_api_init', function() {
+		// 	register_rest_route( 'research/v1', '/research/(?P<id>\d+)', [
+		// 		'methods'  => 'GET',
+		// 		'callback' => [ $this, 'get_research' ],
+		// 	] );
+		// } );
 	}
 
 	public function get_research( $data ) {

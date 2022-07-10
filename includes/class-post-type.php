@@ -7,7 +7,7 @@ namespace Research;
 class Post_Type {
 
 	public function __construct() {
-		add_action( 'init', [ $this, 'research_acf' ], 5 );
+		// add_action( 'init', [ $this, 'research_acf' ], 5 );
 	}
 	
 	/**

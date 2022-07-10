@@ -1,9 +1,9 @@
-# BloomCU Research
+# BloomCU Design
 
-Connect research with website experiences. Made by BloomCU.
+Design made easier. Made by BloomCU.
 
 ## Changelog
 
 **0.0.1**
-*Release Date – April 20, 2022*
-* Initial release of Research Plugin
+*Release Date – July 10, 2022*
+* Initial release of Design Plugin

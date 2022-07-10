@@ -9,12 +9,12 @@ class Assets {
 	public function __construct() {
 
 		if ( is_admin() ) {
-			wp_enqueue_editor();
-			add_action( 'admin_enqueue_scripts', [ $this, 'register' ], 5 );
-			add_action( 'admin_enqueue_scripts', [ $this, 'localize_admin_script' ], 10 );
+			// wp_enqueue_editor();
+			// add_action( 'admin_enqueue_scripts', [ $this, 'register' ], 5 );
+			// add_action( 'admin_enqueue_scripts', [ $this, 'localize_admin_script' ], 10 );
 		} else {
-			add_action( 'wp_enqueue_scripts', [ $this, 'register' ], 5 );
-			add_action( 'wp_enqueue_scripts', [ $this, 'localize_frontend_script' ], 10 );
+			// add_action( 'wp_enqueue_scripts', [ $this, 'register' ], 5 );
+			// add_action( 'wp_enqueue_scripts', [ $this, 'localize_frontend_script' ], 10 );
 		}
 
 	}
@@ -51,7 +51,7 @@ class Assets {
 	 */
 	public function localize_admin_script() {
 		wp_localize_script(
-			'researchplugin-admin',
+			'designPlugin-admin',
 			'researchLocal',
 			[
 				'siteUrl'  => esc_url( home_url() ),
@@ -98,20 +98,20 @@ class Assets {
 		$prefix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.min' : '';
 
 		$scripts = [
-			'researchplugin-vendor' => [
+			'designPlugin-vendor' => [
 				'src'       => BOILERPLATE_PLUGIN_ASSETS . '/js/vendor.min.js',
 				'version'   => filemtime( BOILERPLATE_PLUGIN_PATH . '/assets/js/vendor.min.js' ),
 				'in_footer' => true,
 			],
 			'research-plugin-frontend' => [
 				'src'       => BOILERPLATE_PLUGIN_ASSETS . '/js/frontend.min.js',
-				'deps'      => [ 'jquery', 'researchplugin-vendor' ],
+				'deps'      => [ 'jquery', 'designPlugin-vendor' ],
 				'version'   => filemtime( BOILERPLATE_PLUGIN_PATH . '/assets/js/frontend.min.js' ),
 				'in_footer' => true,
 			],
-			// 'researchplugin-admin' => [
+			// 'designPlugin-admin' => [
 			// 	'src'       => BOILERPLATE_PLUGIN_ASSETS . '/js/admin.min.js',
-			// 	'deps'      => [ 'jquery', 'researchplugin-vendor' ],
+			// 	'deps'      => [ 'jquery', 'designPlugin-vendor' ],
 			// 	'version'   => filemtime( BOILERPLATE_PLUGIN_PATH . '/assets/js/admin.min.js' ),
 			// 	'in_footer' => true,
 			// ],
@@ -140,13 +140,13 @@ class Assets {
 	public function get_styles() {
 
 		$styles = [
-			'researchplugin-style' => [
+			'designPlugin-style' => [
 				'src' =>  BOILERPLATE_PLUGIN_ASSETS . '/css/style.css'
 			],
 			'research-plugin-frontend' => [
 				'src' =>  BOILERPLATE_PLUGIN_ASSETS . '/css/frontend.css'
 			],
-			'researchplugin-admin' => [
+			'designPlugin-admin' => [
 				'src' =>  BOILERPLATE_PLUGIN_ASSETS . '/css/admin.css'
 			],
 		];
