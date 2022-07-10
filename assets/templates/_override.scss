@@ -1,0 +1,29 @@
+//--------------------------------------------------------------
+// Global SCSS Override Template
+// Use this SCSS template inside theme to override plugin styles
+//--------------------------------------------------------------
+
+#bloomcu {
+
+    .bloom-post {
+        background-color: #fafafa;
+
+        &__title {
+            font-size: 18px;
+        }
+
+        &__role {
+            font-style: italic;
+        }
+
+        &__bio {
+            font-size: 16px;
+        }
+
+        &__tool {
+            font-weight: bold;
+        }
+
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+	"name": "BloomCU Research",
+	"version": "0.0.1",
+	"download_url": "https://demo.bloomcudev.com/bloomcu-boilerplate.zip",
+
+	"homepage": "https://bloomcu.com/",
+	"requires": "4.9",
+	"tested": "4.9",
+	"last_updated": "2018-07-14 16:17:00",
+	"upgrade_notice": "Here's why you should upgrade...",
+
+	"author": "BloomCU",
+	"author_homepage": "https://bloomcu.com/",
+
+	"sections": {
+		"description": "Create and manage BloomCU boilerplate",
+		"changelog": "Changelog. <p>Fix a naming conflict when saving a boilerplate.</p>"
+	}
+}
