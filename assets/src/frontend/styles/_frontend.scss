@@ -2,7 +2,7 @@
 // Global SCSS
 //--------------------------------------------------------------
 
-.bloom-research-bar {
+.bloom-design-bar {
   position: fixed;
   top: 0px;
   width: 100%;
@@ -21,17 +21,17 @@
   }
 }
 
-.research-bar .bloom-research-bar {
+.design-bar .bloom-design-bar {
   position: absolute;
   top: 46px;
 }
 
-body.research-bar {
+body.design-bar {
   margin-top: 48px;
 }
 
 @media screen and (min-width: 783px) {
-  .research-bar .bloom-research-bar {
+  .design-bar .bloom-design-bar {
     position: fixed;
     top: 32px;
   }

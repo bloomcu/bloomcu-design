@@ -126,12 +126,12 @@ final class Design_Plugin {
 	 * @return void
 	 */
 	public function define_constants() {
-		define( 'BOILERPLATE_PLUGIN_VERSION', $this->version );
-		define( 'BOILERPLATE_PLUGIN_FILE', __FILE__ );
-		define( 'BOILERPLATE_PLUGIN_PATH', dirname( BOILERPLATE_PLUGIN_FILE ) );
-		define( 'BOILERPLATE_PLUGIN_INCLUDES', BOILERPLATE_PLUGIN_PATH . '/includes' );
-		define( 'BOILERPLATE_PLUGIN_URL', plugins_url( '', BOILERPLATE_PLUGIN_FILE ) );
-		define( 'BOILERPLATE_PLUGIN_ASSETS', BOILERPLATE_PLUGIN_URL . '/assets' );
+		define( 'DESIGN_PLUGIN_VERSION', $this->version );
+		define( 'DESIGN_PLUGIN_FILE', __FILE__ );
+		define( 'DESIGN_PLUGIN_PATH', dirname( DESIGN_PLUGIN_FILE ) );
+		define( 'DESIGN_PLUGIN_INCLUDES', DESIGN_PLUGIN_PATH . '/includes' );
+		define( 'DESIGN_PLUGIN_URL', plugins_url( '', DESIGN_PLUGIN_FILE ) );
+		define( 'DESIGN_PLUGIN_ASSETS', DESIGN_PLUGIN_URL . '/assets' );
 	}
 
 	/**
@@ -158,7 +158,7 @@ final class Design_Plugin {
 		}
 
 		// Update plugin version
-		update_option( 'designPlugin_version', BOILERPLATE_PLUGIN_VERSION );
+		update_option( 'designPlugin_version', DESIGN_PLUGIN_VERSION );
 	}
 
 	/**
@@ -177,19 +177,19 @@ final class Design_Plugin {
 	 */
 	public function includes() {
 
-		require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-assets.php';
+		require_once DESIGN_PLUGIN_INCLUDES . '/class-assets.php';
 
 		if ( $this->is_request( 'admin' ) ) {
-			require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-admin.php';
+			require_once DESIGN_PLUGIN_INCLUDES . '/class-admin.php';
 		}
 
 		if ( $this->is_request( 'frontend' ) ) {
-			require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-frontend.php';
+			require_once DESIGN_PLUGIN_INCLUDES . '/class-frontend.php';
 		}
 
-		// require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-ajax.php';
-		// require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-rest-api.php';
-		require_once BOILERPLATE_PLUGIN_INCLUDES . '/class-post-type.php';
+		// require_once DESIGN_PLUGIN_INCLUDES . '/class-ajax.php';
+		// require_once DESIGN_PLUGIN_INCLUDES . '/class-rest-api.php';
+		require_once DESIGN_PLUGIN_INCLUDES . '/class-post-type.php';
 
 	}
 
@@ -214,23 +214,23 @@ final class Design_Plugin {
 	public function init_classes() {
 
 		if ( $this->is_request( 'admin' ) ) {
-			$this->container['admin'] = new Research\Admin();
+			$this->container['admin'] = new Design\Admin();
 		}
 
 		if ( $this->is_request( 'frontend' ) ) {
-			$this->container['frontend'] = new Research\Frontend();
+			$this->container['frontend'] = new Design\Frontend();
 		}
 
-		$this->container['assets'] = new Research\Assets();
-		// $this->container['ajax'] = new Research\Ajax();
-		// $this->container['rest'] = new Research\REST_API();
+		$this->container['assets'] = new Design\Assets();
+		// $this->container['ajax'] = new Design\Ajax();
+		// $this->container['rest'] = new Design\REST_API();
 	}
 
 	/**
 	 * Initialize our custom post type
 	 */
 	public function init_cpt() {
-		new Research\Post_Type();
+		new Design\Post_Type();
 	}
 
 	/**

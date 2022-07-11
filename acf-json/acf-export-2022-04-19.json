@@ -1,14 +1,14 @@
 [
     {
         "key": "group_3dgc21ee7b84c",
-        "title": "Research",
+        "title": "Design",
         "fields": [
             {
                 "key": "field_5cac228b49995",
-                "label": "Research Article",
-                "name": "research_article",
+                "label": "Design Article",
+                "name": "design_article",
                 "type": "text",
-                "instructions": "Link to research article.",
+                "instructions": "Link to design article.",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

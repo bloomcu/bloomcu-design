@@ -1,5 +1,5 @@
 <?php
-namespace Research;
+namespace Design;
 // require 'partials/topbar.php';
 
 /**
@@ -8,15 +8,15 @@ namespace Research;
 class Frontend {
 
 	public function __construct() {
-		// add_action('wp_footer', [$this, 'render_frontend']);
+		// add_action('wp_head', [$this, 'render_frontend'], 11);
 		// add_filter('body_class', [$this, 'add_body_class']);
 	}
 	
 	public function add_body_class($classes = []) {
-		if (get_field('research_article')) {
-			$classes[] = 'research-bar';
-		}
-    return $classes;
+		// if (get_field('design_article')) {
+		// 	$classes[] = 'design-bar';
+		// }
+    // return $classes;
 	}
 
 	/**
@@ -27,17 +27,26 @@ class Frontend {
 	 * @return string
 	 */
 	public function render_frontend( $atts ) {
-		wp_enqueue_style( 'research-plugin-frontend' );
-		wp_enqueue_script( 'research-plugin-frontend' ); 
+		// wp_enqueue_style( 'design-plugin-frontend' );
+		// wp_enqueue_script( 'design-plugin-frontend' ); 
 		
 		ob_start();
 		?>
 		
-		<?php if (get_field('research_article')): ?>
-			<div class="bloom-research-bar">
-			  <p>This page has <a href="<?php the_field('research_article'); ?>" target="_blank">research</a></p>
-			</div>
-		<?php //endif; ?>
+		<style media="screen">
+		.color-primary {
+			color: #000;
+		}
+		
+		:root, [data-theme="default"] {
+			--color-primary: #000;
+			
+			/* --color-primary: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+			--color-primary-h: #{$hue};
+			--color-primary-s: #{$saturation};
+			--color-primary-l: #{$lightness}; */
+		}
+		</style>
 		
 		<?php
 		echo ob_get_contents();
