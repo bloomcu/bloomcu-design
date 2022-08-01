@@ -8,7 +8,7 @@ namespace Design;
 class Frontend {
 
 	public function __construct() {
-		// add_action('wp_head', [$this, 'render_frontend'], 11);
+		add_action('wp_head', [$this, 'render_frontend'], 11);
 		// add_filter('body_class', [$this, 'add_body_class']);
 	}
 	
@@ -35,11 +35,11 @@ class Frontend {
 		
 		<style media="screen">
 		.color-primary {
-			color: #000;
+			/* color: #000; */
 		}
 		
 		:root, [data-theme="default"] {
-			--color-primary: #000;
+			/* --color-primary: #000; */
 			
 			/* --color-primary: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
 			--color-primary-h: #{$hue};
