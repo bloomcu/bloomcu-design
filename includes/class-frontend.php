@@ -9,6 +9,7 @@ class Frontend {
 
 	public function __construct() {
 		add_action('wp_head', [$this, 'render_frontend'], 11);
+		// add_action('plugins_loaded', [$this, 'render_frontend'], 11);
 		// add_filter('body_class', [$this, 'add_body_class']);
 	}
 	
@@ -28,28 +29,15 @@ class Frontend {
 	 */
 	public function render_frontend( $atts ) {
 		// wp_enqueue_style( 'design-plugin-frontend' );
-		// wp_enqueue_script( 'design-plugin-frontend' ); 
-		
+		wp_enqueue_script('design-plugin-frontend', plugin_dir_url(__FILE__) . '/js/main.js'); 
 		ob_start();
 		?>
 		
-		<style media="screen">
-		.color-primary {
-			/* color: #000; */
-		}
-		
-		:root, [data-theme="default"] {
-			/* --color-primary: #000; */
-			
-			/* --color-primary: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
-			--color-primary-h: #{$hue};
-			--color-primary-s: #{$saturation};
-			--color-primary-l: #{$lightness}; */
-		}
-		</style>
+		<div id="design"></div>
 		
 		<?php
-		echo ob_get_contents();
+		// echo ob_get_contents();
+		// return ob_get_clean();
 	}
 
 }

@@ -15,7 +15,7 @@ class Assets {
 			// add_action( 'admin_enqueue_scripts', [ $this, 'register' ], 5 );
 			// add_action( 'admin_enqueue_scripts', [ $this, 'localize_admin_script' ], 10 );
 		} else {
-			// add_action( 'wp_enqueue_scripts', [ $this, 'register' ], 5 );
+			add_action( 'wp_enqueue_scripts', [ $this, 'register' ], 5 );
 			// add_action( 'wp_enqueue_scripts', [ $this, 'localize_frontend_script' ], 10 );
 		}
 	}
@@ -31,8 +31,7 @@ class Assets {
 	}
 	
 	public function enqueue_dynamic_stylesheet() {
-		// wp_deregister_style('dynamic-css', DESIGN_PLUGIN_ASSETS . '/css/style.php');
-		wp_enqueue_style('dynamic-css', DESIGN_PLUGIN_ASSETS . '/css/style.php');
+		// wp_enqueue_style('dynamic-css', DESIGN_PLUGIN_ASSETS . '/css/style.php');
 		
 	}
 
@@ -42,7 +41,7 @@ class Assets {
 	 * @return void
 	 */
 	public function register() {
-		// $this->register_scripts( $this->get_scripts() );
+		$this->register_scripts( $this->get_scripts() );
 		// $this->register_styles( $this->get_styles() );
 	}
 
@@ -54,13 +53,13 @@ class Assets {
 	 * @return void
 	 */
 	private function register_scripts( $scripts ) {
-		// foreach ( $scripts as $handle => $script ) {
-		// 	$deps      = isset( $script['deps'] ) ? $script['deps'] : false;
-		// 	$in_footer = isset( $script['in_footer'] ) ? $script['in_footer'] : false;
-		// 	$version   = isset( $script['version'] ) ? $script['version'] : DESIGN_PLUGIN_VERSION;
-		// 
-		// 	wp_register_script( $handle, $script['src'], $deps, $version, $in_footer );
-		// }
+		foreach ( $scripts as $handle => $script ) {
+			$deps      = isset( $script['deps'] ) ? $script['deps'] : false;
+			$in_footer = isset( $script['in_footer'] ) ? $script['in_footer'] : false;
+			$version   = isset( $script['version'] ) ? $script['version'] : DESIGN_PLUGIN_VERSION;
+		
+			wp_register_script( $handle, $script['src'], $deps, $version, $in_footer );
+		}
 	}
 
 	/**
@@ -114,18 +113,17 @@ class Assets {
 	public function get_scripts() {
 		// $prefix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '.min' : '';
 		// 
-		// $scripts = [
+		$scripts = [
 		// 	'designPlugin-vendor' => [
 		// 		'src'       => DESIGN_PLUGIN_ASSETS . '/js/vendor.min.js',
 		// 		'version'   => filemtime( DESIGN_PLUGIN_PATH . '/assets/js/vendor.min.js' ),
 		// 		'in_footer' => true,
 		// 	],
-		// 	'design-plugin-frontend' => [
-		// 		'src'       => DESIGN_PLUGIN_ASSETS . '/js/frontend.min.js',
-		// 		'deps'      => [ 'jquery', 'designPlugin-vendor' ],
-		// 		'version'   => filemtime( DESIGN_PLUGIN_PATH . '/assets/js/frontend.min.js' ),
-		// 		'in_footer' => true,
-		// 	],
+			'design-plugin-frontend' => [
+				'src'       => DESIGN_PLUGIN_ASSETS . '/js/main.js',
+				// 'version'   => filemtime( DESIGN_PLUGIN_PATH . '/assets/js/main.js' ),
+				'in_footer' => true,
+			],
 			// 'designPlugin-admin' => [
 			// 	'src'       => DESIGN_PLUGIN_ASSETS . '/js/admin.min.js',
 			// 	'deps'      => [ 'jquery', 'designPlugin-vendor' ],
@@ -144,9 +142,9 @@ class Assets {
 			// 	'version'   => '3.25.1',
 			// 	'in_footer' => false,
 			// ],
-		// ];
+		];
 
-		// return $scripts;
+		return $scripts;
 	}
 
 	/**
