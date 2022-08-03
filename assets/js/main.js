@@ -111,7 +111,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     cssVariables: function cssVariables() {
       return {
-        '--primary': this.primary
+        '--color-primary': this.primary
       };
     }
   },
@@ -283,7 +283,7 @@ var render = function render() {
     }
   })])])])])])]), _vm._v(" "), _c("style", {
     tag: "component"
-  }, [_vm._v("\n    :root {\n      --primary: " + _vm._s(_vm.primary) + "\n    }\n  ")])], 1);
+  }, [_vm._v("\n    :root {\n      --color-primary: " + _vm._s(_vm.primary) + "\n    }\n  ")])], 1);
 };
 
 var staticRenderFns = [];
@@ -304,7 +304,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, ".siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\nh1 {\n  color: var(--primary) !important;\n}", ""]);
+exports.push([module.i, ".siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\nh1 {\n  color: var(--color-primary) !important;\n}", ""]);
 
 // exports
 

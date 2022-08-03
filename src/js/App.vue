@@ -41,7 +41,7 @@
     
     <component :is="'style'">
       :root {
-        --primary: {{ primary }}
+        --color-primary: {{ primary }}
       }
     </component>
   </div>
@@ -83,7 +83,6 @@
     width: 40px;
     height: 40px;
     border: 0;
-    // border-radius: 5px;
     background: none;
     cursor: pointer;
     
@@ -105,7 +104,6 @@
       border-radius: 5px;
       transform: scale(.75);
       transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-      // transition-timing-function: var(--hds-beziers-in-out);
       transition-duration: .15s;
     }
     
@@ -137,7 +135,7 @@
 }
 
 h1 {
-  color: var(--primary) !important;
+  color: var(--color-primary) !important;
 }
 </style>
 
@@ -156,7 +154,7 @@ export default {
     computed: {
       cssVariables() {
         return {
-          '--primary': this.primary
+          '--color-primary': this.primary
         }
       }
     },
