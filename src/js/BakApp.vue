@@ -67,7 +67,7 @@
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: left 0s linear;
-    border-radius:7px;
+    border-radius: 7px;
   }
 }
 

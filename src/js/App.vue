@@ -1,12 +1,9 @@
 <template>
   <div>
     <!-- <router-view></router-view> -->
-    
-    <!-- <v-swatches v-model="primary"></v-swatches>
-    {{ primary }} -->
-    
+        
     <div class="siderail">
-      <div class="siderail__inner">
+      <div class="siderail__inner" style="padding-top: 80px;">
         <div class="siderail-item">
           <button type="button" class="siderail-item__button siderail-item__button--active">
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -15,6 +12,44 @@
               </g>
             </svg>
           </button>
+          
+          <div class="siderail-menu" style="">
+            <div class="siderail-menu__section" style="display: flex; align-items: center; flex-grow: 1;">
+              <p style="font-size: 18px; flex-grow: 1;">Primary</p>
+              <!-- <v-swatches v-model="primary"></v-swatches> -->
+              <!-- <input-color-picker  v-model="primary" /> -->
+              
+              <!-- <div class="input-group color-picker"> -->
+              	<input type="text" v-model="primary" />
+              	<span class="input-group-addon color-picker-container" style="position: relative;">
+              		<!-- <span class="current-color" :style="'background-color: ' + colorValue"></span> -->
+              		<!-- <chrome-picker :value="colors" @input="updateFromPicker" v-if="displayPicker" /> -->
+                  <color-picker :value="primary" @input="updateFromPicker" style="position: absolute; top: -14px; left: 5px;"/>
+              	</span>
+              <!-- </div> -->
+              
+            </div>
+            
+            <div class="siderail-menu__section" style="display: flex; align-items: center;">
+              <p style="font-size: 18px; flex-grow: 1;">Accent</p>
+              <input type="text" v-model="accent" />
+            </div>
+            
+            <div class="siderail-menu__section" style="display: flex; align-items: center;">
+              <p style="font-size: 18px; flex-grow: 1;">Text</p>
+              <input type="text" v-model="text" />
+            </div>
+            
+            <div class="siderail-menu__section" style="display: flex; align-items: center;">
+              <p style="font-size: 18px; flex-grow: 1;">Background</p>
+              <input type="text" v-model="background" />
+            </div>
+            
+            <div class="siderail-menu__section" style="display: flex; align-items: center;">
+              <p style="font-size: 18px; flex-grow: 1;">Background Medium</p>
+              <input type="text" v-model="backgroundMedium" />
+            </div>
+          </div>
         </div>
         
         <div class="siderail-item">
@@ -41,13 +76,59 @@
     
     <component :is="'style'">
       :root {
-        --color-primary: {{ primary }}
+        --primary: {{ primary }}
       }
     </component>
   </div>
 </template>
 
+<script>
+import VSwatches from 'vue-swatches'
+import 'vue-swatches/dist/vue-swatches.css'
+import { Chrome } from 'vue-color'
+import InputColorPicker from "vue-native-color-picker";
+
+export default {
+    name: 'App',
+    data() {
+        return {
+          primary: '#000000',
+          accent: '#111111',
+          text: '#222222',
+          background: '#FFFFFF',
+          backgroundMedium: '#1A1A1A',
+        }
+    },
+    
+    computed: {
+      cssVariables() {
+        return {
+          '--primary': this.primary
+        }
+      }
+    },
+    
+    methods: {
+      updateFromPicker(color) {
+        this.primary = color.hex
+      }
+    },
+    
+    mounted() {},
+    
+    components: {
+      VSwatches,
+      'color-picker': Chrome,
+      InputColorPicker
+    },
+}
+</script>
+
 <style lang="scss">
+h1 {
+  color: var(--primary) !important;
+}
+
 .siderail {
   position: fixed;
   left: 0;
@@ -74,97 +155,76 @@
   display: inline-flex;
   position: relative;
   margin-bottom: 8px;
+}
+
+.siderail-item__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: none;
+  cursor: pointer;
   
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    background: none;
-    cursor: pointer;
-    
+  svg {
+    display: block;
+    stroke: #000;
+    z-index: 1;
+  }
+  
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: #9f9f9f;
+    border-radius: 5px;
+    transform: scale(.75);
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: .15s;
+  }
+  
+  &--active {
     svg {
-      display: block;
-      stroke: #000;
-      z-index: 1;
+      stroke: #712aff;
     }
     
     &:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      opacity: 0;
-      background-color: #9f9f9f;
-      border-radius: 5px;
-      transform: scale(.75);
-      transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-      transition-duration: .15s;
-    }
-    
-    &--active {
-      svg {
-        stroke: #712aff;
-      }
-      
-      &:before {
-        transform: scale(1);
-        opacity: .17;
-        background-color: #96f;
-      }
-      
-      &:hover {
-        &:before {
-          opacity: .32 !important;
-        }
-      }
+      transform: scale(1);
+      opacity: .17;
+      background-color: #96f;
     }
     
     &:hover {
       &:before {
-        transform: scale(1);
-        opacity: .17;
+        opacity: .32 !important;
       }
+    }
+  }
+  
+  &:hover {
+    &:before {
+      transform: scale(1);
+      opacity: .17;
     }
   }
 }
 
-h1 {
-  color: var(--color-primary) !important;
+.siderail-menu {
+  position: absolute;
+  margin-left: 60px;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  
+  &__section {
+    padding: 10px;
+  }
 }
 </style>
-
-<script>
-import VSwatches from 'vue-swatches'
-import 'vue-swatches/dist/vue-swatches.css'
-
-export default {
-    name: 'App',
-    data() {
-        return {
-          primary: '#000'
-        }
-    },
-    
-    computed: {
-      cssVariables() {
-        return {
-          '--color-primary': this.primary
-        }
-      }
-    },
-    
-    methods: {},
-    
-    mounted() {},
-    
-    components: {
-      VSwatches
-    },
-}
-</script>
