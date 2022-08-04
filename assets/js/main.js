@@ -17426,44 +17426,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   __name: 'App',
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.useCssVars)(function (_ctx) {
-      return {
-        "3ea74058-yellow": yellow.value,
-        "3ea74058-tan": tan.value,
-        "3ea74058-red": red.value,
-        "3ea74058-green": green.value
-      };
-    });
-
-    var color = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('red');
-    var yellow = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('yellow');
-    var tan = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('tan');
-    var red = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('red');
-    var green = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('green'); // export default {
-    //   data() {
-    //       return {
-    //         primary: '#0065ff',
-    //         accent: '#ff0000',
-    //         text: '#0065ff',
-    //         background: '#fafafa',
-    //         backgroundMedium: '#d3d3d3',
-    //       }
-    //   },
-    // }
-
+    var colorPrimary = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('purple');
+    var colorAccent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('red');
+    var colorContrastHigh = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('brown');
+    var colorContrastHigher = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('blue');
+    var colorBackground = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('tan');
     var __returned__ = {
-      color: color,
-      yellow: yellow,
-      tan: tan,
-      red: red,
-      green: green,
+      colorPrimary: colorPrimary,
+      colorAccent: colorAccent,
+      colorContrastHigh: colorContrastHigh,
+      colorContrastHigher: colorContrastHigher,
+      colorBackground: colorBackground,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -17488,16 +17466,248 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "siderail"
+};
+var _hoisted_2 = {
+  "class": "siderail__inner",
+  style: {
+    "padding-top": "80px"
+  }
+};
+var _hoisted_3 = {
+  "class": "siderail-item"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "color"
-}, "Hello", -1
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<button type=\"button\" class=\"siderail-item__button siderail-item__button--active\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><path data-cap=\"butt\" d=\"M3.41,12.017l10.607,7.778 c0.781,0.781,3.155-0.327,5.303-2.475s3.256-4.522,2.475-5.303L14.017,1.41\"></path><ellipse transform=\"matrix(0.7071 -0.7071 0.7071 0.7071 -2.195 8.1276)\" cx=\"8.713\" cy=\"6.713\" rx=\"7.5\" ry=\"3\"></ellipse><path d=\"M1,20 c0-1.105,2-4,2-4s2,2.895,2,4s-0.895,2-2,2S1,21.105,1,20z\"></path><path d=\"M14,11h4 c2.209,0,4-1.791,4-4c0-2.209-1.791-4-4-4h-2.817\"></path></g></svg></button>", 1);
+
+var _hoisted_5 = {
+  "class": "siderail-menu"
+};
+var _hoisted_6 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Primary", -1
 /* HOISTED */
 );
 
-var _hoisted_2 = [_hoisted_1];
+var _hoisted_8 = {
+  "class": "input-group"
+};
+var _hoisted_9 = {
+  "class": "input-group__tag"
+};
+var _hoisted_10 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Accent", -1
+/* HOISTED */
+);
+
+var _hoisted_12 = {
+  "class": "input-group"
+};
+var _hoisted_13 = {
+  "class": "input-group__tag"
+};
+var _hoisted_14 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Text", -1
+/* HOISTED */
+);
+
+var _hoisted_16 = {
+  "class": "input-group"
+};
+var _hoisted_17 = {
+  "class": "input-group__tag"
+};
+var _hoisted_18 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Background", -1
+/* HOISTED */
+);
+
+var _hoisted_20 = {
+  "class": "input-group"
+};
+var _hoisted_21 = {
+  "class": "input-group__tag"
+};
+var _hoisted_22 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Background Medium", -1
+/* HOISTED */
+);
+
+var _hoisted_24 = {
+  "class": "input-group"
+};
+var _hoisted_25 = {
+  "class": "input-group__tag"
+};
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"siderail-item\"><button type=\"button\" class=\"siderail-item__button\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline points=\"1,5 1,3 17,3 17,5 \"></polyline><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"20\"></line><line x1=\"5\" y1=\"20\" x2=\"12\" y2=\"20\"></line><polyline points=\" 13,11 13,10 23,10 23,11 \"></polyline><line x1=\"18\" y1=\"10\" x2=\"18\" y2=\"20\"></line><line x1=\"16\" y1=\"20\" x2=\"20\" y2=\"20\"></line></g></svg></button></div><div class=\"siderail-item\"><button type=\"button\" class=\"siderail-item__button\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg></button></div>", 2);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, _hoisted_2);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $setup.colorPrimary = $event;
+    }),
+    "class": "form-control",
+    style: {
+      "width": "160px"
+    },
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorPrimary]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
+      'background-color': $setup.colorPrimary
+    }, {
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "100px",
+      "cursor": "pointer"
+    }])
+  }, null, 4
+  /* STYLE */
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div style=\"position: relative;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <v-swatches v-model=\"primary\"></v-swatches> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <input-color-picker  v-model=\"primary\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <chrome-picker :value=\"colors\" @input=\"updateFromPicker\" v-if=\"displayPicker\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <color-picker :value=\"primary\" @input=\"updateFromPicker\" style=\"position: absolute; top: -14px; left: 5px;\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+      return $setup.colorAccent = $event;
+    }),
+    "class": "form-control",
+    style: {
+      "width": "160px"
+    },
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorAccent]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
+      'background-color': $setup.colorAccent
+    }, {
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "100px",
+      "cursor": "pointer"
+    }])
+  }, null, 4
+  /* STYLE */
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+      return $setup.colorContrastHigher = $event;
+    }),
+    "class": "form-control",
+    style: {
+      "width": "160px"
+    },
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorContrastHigher]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
+      'background-color': $setup.colorContrastHigher
+    }, {
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "100px",
+      "cursor": "pointer"
+    }])
+  }, null, 4
+  /* STYLE */
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+      return $setup.colorBackground = $event;
+    }),
+    "class": "form-control",
+    style: {
+      "width": "160px"
+    },
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorBackground]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
+      'background-color': $setup.colorBackground
+    }, {
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "100px",
+      "cursor": "pointer"
+    }])
+  }, null, 4
+  /* STYLE */
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+      return $setup.colorBackground = $event;
+    }),
+    "class": "form-control",
+    style: {
+      "width": "160px"
+    },
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorBackground]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
+      'background-color': $setup.colorBackground
+    }, {
+      "width": "20px",
+      "height": "20px",
+      "border-radius": "100px",
+      "cursor": "pointer"
+    }])
+  }, null, 4
+  /* STYLE */
+  )])])])])]), _hoisted_26])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" :root, [data-theme] { --color-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorPrimary) + "; --color-accent: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorAccent) + "; --color-contrast-high: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorContrastHigh) + "; --color-contrast-higher: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorContrastHigher) + "; --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorBackground) + "; } ", 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  }))]);
 }
 
 /***/ }),
@@ -17546,7 +17756,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "[data-theme] {\n  --color-primary: var(--3ea74058-yellow) !important;\n  --color-bg: var(--3ea74058-tan) !important;\n  --color-contrast-high: var(--3ea74058-red) !important;\n  --color-contrast-higher: var(--3ea74058-green) !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
