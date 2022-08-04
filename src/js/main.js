@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp } from 'vue'
 import App from './App';
 // import VueRouter from 'vue-router';
 // 
@@ -10,8 +10,10 @@ import App from './App';
 //   routes
 // })
 
-new Vue({
-    el: '#design',
-    render: h => h(App),
-    // router: router
-});
+createApp(App).mount('#app')
+
+// new Vue({
+//     el: '#design',
+//     render: h => h(App),
+//     // router: router
+// });
