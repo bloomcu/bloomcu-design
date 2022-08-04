@@ -201,7 +201,6 @@ final class Design_Plugin {
 	public function init_hooks() {
 
 		add_action( 'init', array( $this, 'init_classes' ) );
-		add_action( 'init', array( $this, 'localization_setup' ) );
 
 		$this->init_cpt();
 	}
@@ -231,15 +230,6 @@ final class Design_Plugin {
 	 */
 	public function init_cpt() {
 		new Design\Post_Type();
-	}
-
-	/**
-	 * Initialize plugin for localization
-	 *
-	 * @uses load_plugin_textdomain()
-	 */
-	public function localization_setup() {
-		load_plugin_textdomain( 'designPlugin', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	}
 
 	/**
