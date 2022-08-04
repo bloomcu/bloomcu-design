@@ -111,11 +111,11 @@ __webpack_require__.r(__webpack_exports__);
   name: 'App',
   data: function data() {
     return {
-      primary: '#000000',
-      accent: '#111111',
-      text: '#222222',
-      background: '#FFFFFF',
-      backgroundMedium: '#1A1A1A'
+      primary: '#0065ff',
+      accent: '#ff0000',
+      text: '#000000',
+      background: '#fafafa',
+      backgroundMedium: '#d3d3d3'
     };
   },
   computed: {
@@ -207,24 +207,26 @@ var render = function render() {
   })])])]), _vm._v(" "), _c("div", {
     staticClass: "siderail-menu"
   }, [_c("div", {
-    staticClass: "siderail-menu__section",
-    staticStyle: {
-      display: "flex",
-      "align-items": "center",
-      "flex-grow": "1"
-    }
+    staticClass: "siderail-menu__section"
   }, [_c("p", {
+    staticClass: "font-bold",
     staticStyle: {
       "font-size": "18px",
-      "flex-grow": "1"
+      width: "200px"
     }
-  }, [_vm._v("Primary")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Primary")]), _vm._v(" "), _c("div", {
+    staticClass: "input-group"
+  }, [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.primary,
       expression: "primary"
     }],
+    staticClass: "form-control",
+    staticStyle: {
+      width: "160px"
+    },
     attrs: {
       type: "text"
     },
@@ -237,41 +239,39 @@ var render = function render() {
         _vm.primary = $event.target.value;
       }
     }
-  }), _vm._v(" "), _c("span", {
-    staticClass: "input-group-addon color-picker-container",
+  }), _vm._v(" "), _c("div", {
+    staticClass: "input-group__tag"
+  }, [_c("div", {
     staticStyle: {
-      position: "relative"
-    }
-  }, [_c("color-picker", {
-    staticStyle: {
-      position: "absolute",
-      top: "-14px",
-      left: "5px"
+      width: "20px",
+      height: "20px",
+      "border-radius": "100px",
+      cursor: "pointer"
     },
-    attrs: {
-      value: _vm.primary
-    },
-    on: {
-      input: _vm.updateFromPicker
+    style: {
+      "background-color": _vm.primary
     }
-  })], 1)]), _vm._v(" "), _c("div", {
-    staticClass: "siderail-menu__section",
-    staticStyle: {
-      display: "flex",
-      "align-items": "center"
-    }
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "siderail-menu__section"
   }, [_c("p", {
+    staticClass: "font-bold",
     staticStyle: {
       "font-size": "18px",
-      "flex-grow": "1"
+      width: "200px"
     }
-  }, [_vm._v("Accent")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Accent")]), _vm._v(" "), _c("div", {
+    staticClass: "input-group"
+  }, [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.accent,
       expression: "accent"
     }],
+    staticClass: "form-control",
+    staticStyle: {
+      width: "160px"
+    },
     attrs: {
       type: "text"
     },
@@ -284,24 +284,39 @@ var render = function render() {
         _vm.accent = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "siderail-menu__section",
+  }), _vm._v(" "), _c("div", {
+    staticClass: "input-group__tag"
+  }, [_c("div", {
     staticStyle: {
-      display: "flex",
-      "align-items": "center"
+      width: "20px",
+      height: "20px",
+      "border-radius": "100px",
+      cursor: "pointer"
+    },
+    style: {
+      "background-color": _vm.accent
     }
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "siderail-menu__section"
   }, [_c("p", {
+    staticClass: "font-bold",
     staticStyle: {
       "font-size": "18px",
-      "flex-grow": "1"
+      width: "200px"
     }
-  }, [_vm._v("Text")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Text")]), _vm._v(" "), _c("div", {
+    staticClass: "input-group"
+  }, [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.text,
       expression: "text"
     }],
+    staticClass: "form-control",
+    staticStyle: {
+      width: "160px"
+    },
     attrs: {
       type: "text"
     },
@@ -314,24 +329,39 @@ var render = function render() {
         _vm.text = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "siderail-menu__section",
+  }), _vm._v(" "), _c("div", {
+    staticClass: "input-group__tag"
+  }, [_c("div", {
     staticStyle: {
-      display: "flex",
-      "align-items": "center"
+      width: "20px",
+      height: "20px",
+      "border-radius": "100px",
+      cursor: "pointer"
+    },
+    style: {
+      "background-color": _vm.text
     }
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "siderail-menu__section"
   }, [_c("p", {
+    staticClass: "font-bold",
     staticStyle: {
       "font-size": "18px",
-      "flex-grow": "1"
+      width: "200px"
     }
-  }, [_vm._v("Background")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Background")]), _vm._v(" "), _c("div", {
+    staticClass: "input-group"
+  }, [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.background,
       expression: "background"
     }],
+    staticClass: "form-control",
+    staticStyle: {
+      width: "160px"
+    },
     attrs: {
       type: "text"
     },
@@ -344,24 +374,39 @@ var render = function render() {
         _vm.background = $event.target.value;
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "siderail-menu__section",
+  }), _vm._v(" "), _c("div", {
+    staticClass: "input-group__tag"
+  }, [_c("div", {
     staticStyle: {
-      display: "flex",
-      "align-items": "center"
+      width: "20px",
+      height: "20px",
+      "border-radius": "100px",
+      cursor: "pointer"
+    },
+    style: {
+      "background-color": _vm.background
     }
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "siderail-menu__section"
   }, [_c("p", {
+    staticClass: "font-bold",
     staticStyle: {
       "font-size": "18px",
-      "flex-grow": "1"
+      width: "200px"
     }
-  }, [_vm._v("Background Medium")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Background Medium")]), _vm._v(" "), _c("div", {
+    staticClass: "input-group"
+  }, [_c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
       value: _vm.backgroundMedium,
       expression: "backgroundMedium"
     }],
+    staticClass: "form-control",
+    staticStyle: {
+      width: "160px"
+    },
     attrs: {
       type: "text"
     },
@@ -374,7 +419,19 @@ var render = function render() {
         _vm.backgroundMedium = $event.target.value;
       }
     }
-  })])])]), _vm._v(" "), _c("div", {
+  }), _vm._v(" "), _c("div", {
+    staticClass: "input-group__tag"
+  }, [_c("div", {
+    staticStyle: {
+      width: "20px",
+      height: "20px",
+      "border-radius": "100px",
+      cursor: "pointer"
+    },
+    style: {
+      "background-color": _vm.backgroundMedium
+    }
+  })])])])])]), _vm._v(" "), _c("div", {
     staticClass: "siderail-item"
   }, [_c("button", {
     staticClass: "siderail-item__button",
@@ -493,7 +550,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "h1 {\n  color: var(--primary) !important;\n}\n.siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  padding: 10px;\n}", ""]);
+exports.push([module.i, "h1 {\n  color: var(--primary) !important;\n}\n.siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}", ""]);
 
 // exports
 

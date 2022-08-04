@@ -8,7 +8,7 @@ class Assets {
 
 	public function __construct() {
 		add_action('wp_enqueue_scripts', [ $this, 'dequeue_child_theme_stylesheet' ], 999);
-		add_action('get_footer', [ $this, 'enqueue_dynamic_stylesheet' ]);
+		// add_action('get_footer', [ $this, 'enqueue_dynamic_stylesheet' ]);
 		
 		if ( is_admin() ) {
 			// wp_enqueue_editor();
@@ -31,8 +31,7 @@ class Assets {
 	}
 	
 	public function enqueue_dynamic_stylesheet() {
-		// wp_enqueue_style('dynamic-css', DESIGN_PLUGIN_ASSETS . '/css/style.php');
-		
+		wp_enqueue_style('dynamic-css', DESIGN_PLUGIN_ASSETS . '/css/style.php');
 	}
 
 	/**

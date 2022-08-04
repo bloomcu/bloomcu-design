@@ -13,41 +13,62 @@
             </svg>
           </button>
           
-          <div class="siderail-menu" style="">
-            <div class="siderail-menu__section" style="display: flex; align-items: center; flex-grow: 1;">
-              <p style="font-size: 18px; flex-grow: 1;">Primary</p>
-              <!-- <v-swatches v-model="primary"></v-swatches> -->
-              <!-- <input-color-picker  v-model="primary" /> -->
-              
-              <!-- <div class="input-group color-picker"> -->
-              	<input type="text" v-model="primary" />
-              	<span class="input-group-addon color-picker-container" style="position: relative;">
-              		<!-- <span class="current-color" :style="'background-color: ' + colorValue"></span> -->
-              		<!-- <chrome-picker :value="colors" @input="updateFromPicker" v-if="displayPicker" /> -->
-                  <color-picker :value="primary" @input="updateFromPicker" style="position: absolute; top: -14px; left: 5px;"/>
-              	</span>
-              <!-- </div> -->
-              
+          <div class="siderail-menu">
+            <div class="siderail-menu__section">
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Primary</p>
+              <div class="input-group">
+                <input v-model="primary" class="form-control" style="width: 160px;" type="text">
+                <div class="input-group__tag">
+                  <div :style="{'background-color': primary}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                </div>
+              </div>
+  
+            	<!-- <div style="position: relative;"> -->
+                <!-- <v-swatches v-model="primary"></v-swatches> -->
+                <!-- <input-color-picker  v-model="primary" /> -->
+            		<!-- <chrome-picker :value="colors" @input="updateFromPicker" v-if="displayPicker" /> -->
+                <!-- <color-picker :value="primary" @input="updateFromPicker" style="position: absolute; top: -14px; left: 5px;"/> -->
+            	<!-- </div> -->
             </div>
             
-            <div class="siderail-menu__section" style="display: flex; align-items: center;">
-              <p style="font-size: 18px; flex-grow: 1;">Accent</p>
-              <input type="text" v-model="accent" />
+            <div class="siderail-menu__section">
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Accent</p>
+              <div class="input-group">
+                <input v-model="accent" class="form-control" style="width: 160px;" type="text">
+                <div class="input-group__tag">
+                  <div :style="{'background-color': accent}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                </div>
+              </div>
             </div>
             
-            <div class="siderail-menu__section" style="display: flex; align-items: center;">
-              <p style="font-size: 18px; flex-grow: 1;">Text</p>
-              <input type="text" v-model="text" />
+            <div class="siderail-menu__section">
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Text</p>
+              <div class="input-group">
+                <input v-model="text" class="form-control" style="width: 160px;" type="text">
+                <div class="input-group__tag">
+                  <div :style="{'background-color': text}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                </div>
+              </div>
             </div>
             
-            <div class="siderail-menu__section" style="display: flex; align-items: center;">
-              <p style="font-size: 18px; flex-grow: 1;">Background</p>
-              <input type="text" v-model="background" />
+            <div class="siderail-menu__section">
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Background</p>
+              <div class="input-group">
+                <input v-model="background" class="form-control" style="width: 160px;" type="text">
+                <div class="input-group__tag">
+                  <div :style="{'background-color': background}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                </div>
+              </div>
             </div>
             
-            <div class="siderail-menu__section" style="display: flex; align-items: center;">
-              <p style="font-size: 18px; flex-grow: 1;">Background Medium</p>
-              <input type="text" v-model="backgroundMedium" />
+            <div class="siderail-menu__section">
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Background Medium</p>
+              <div class="input-group">
+                <input v-model="backgroundMedium" class="form-control" style="width: 160px;" type="text">
+                <div class="input-group__tag">
+                  <div :style="{'background-color': backgroundMedium}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -92,11 +113,11 @@ export default {
     name: 'App',
     data() {
         return {
-          primary: '#000000',
-          accent: '#111111',
-          text: '#222222',
-          background: '#FFFFFF',
-          backgroundMedium: '#1A1A1A',
+          primary: '#0065ff',
+          accent: '#ff0000',
+          text: '#000000',
+          background: '#fafafa',
+          backgroundMedium: '#d3d3d3',
         }
     },
     
@@ -224,7 +245,69 @@ h1 {
   z-index: 100;
   
   &__section {
-    padding: 10px;
+    display: flex; 
+    align-items: center; 
+    gap: 10px 10px;
+    padding: 20px;
+    border-bottom: 1px solid #e3e2e9;
   }
 }
+
+.input-group {
+  display: flex;
+
+  > * {
+    position: relative;
+  }
+
+  > *:not(:last-child):not(:first-child) {
+    border-radius: 0;
+  }
+
+  > *:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .select__input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  > *:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .select__input {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  > *:focus, *:focus-within {
+    z-index: 1;
+  }
+}
+
+.input-group__tag {
+  display: flex;
+  align-items: center;
+
+  padding: 0 var(--space-sm);
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 2px solid #e3e2e9;
+
+  white-space: nowrap;
+  color: var(--color-contrast-medium);
+
+  &:first-child {
+    border-right-width: 0px;
+  }
+
+  &:last-child {
+    border-left-width: 0px;
+  }
+}
+
 </style>
