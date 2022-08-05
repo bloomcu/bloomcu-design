@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "vue": "^3.2.36",
-    "vue-color-kit": "^1.0.5",
     "vue-loader": "^17.0.0",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "vue3-colorpicker": "^2.0.4"
   },
   "devDependencies": {
     "browser-sync": "^2.27.10",

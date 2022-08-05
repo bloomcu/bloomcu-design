@@ -17,18 +17,18 @@
               <div class="input-group">
                 <input v-model="colorPrimary" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
-                  <div :style="{'background-color': colorPrimary}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                  <!-- <div :style="{'background-color': colorPrimary}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div> -->
+                  <color-picker 
+                    v-model:pureColor="colorPrimary"
+                    shape="circle"
+                    format="hex"
+                    pickerType="chrome"
+                    useType="pure"
+                    lang="en"
+                    roundHistory
+                  />
                 </div>
               </div>
-  
-            	<div style="position: relative;">
-                <!-- <ColorPicker
-                  theme="light"
-                  :color="colorPrimary"
-                  @changeColor=""
-                  style="position: absolute;"
-                /> -->
-            	</div>
             </div>
             
             <div class="siderail-menu__section">
@@ -36,7 +36,15 @@
               <div class="input-group">
                 <input v-model="colorAccent" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
-                  <div :style="{'background-color': colorAccent}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                  <color-picker 
+                    v-model:pureColor="colorAccent"
+                    shape="circle"
+                    format="hex"
+                    pickerType="chrome"
+                    useType="pure"
+                    lang="en"
+                    roundHistory
+                  />
                 </div>
               </div>
             </div>
@@ -46,7 +54,15 @@
               <div class="input-group">
                 <input v-model="colorContrastHigher" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
-                  <div :style="{'background-color': colorContrastHigher}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                  <color-picker 
+                    v-model:pureColor="colorContrastHigher"
+                    shape="circle"
+                    format="hex"
+                    pickerType="chrome"
+                    useType="pure"
+                    lang="en"
+                    roundHistory
+                  />
                 </div>
               </div>
             </div>
@@ -56,7 +72,15 @@
               <div class="input-group">
                 <input v-model="colorBackground" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
-                  <div :style="{'background-color': colorBackground}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div>
+                  <color-picker 
+                    v-model:pureColor="colorBackground"
+                    shape="circle"
+                    format="hex"
+                    pickerType="chrome"
+                    useType="pure"
+                    lang="en"
+                    roundHistory
+                  />
                 </div>
               </div>
             </div>
@@ -86,9 +110,9 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 260px;" class="font-bold">Heading Font</p>
               <div class="select">
-                  <select v-model="" name="heading" id="heading" class="select_input form-control width-100%">
-                    <option value="roboto" key="roboto" :selected="'roboto' === 'roboto'">Roboto</option>
-                    <option value="poppins" key="poppins" :selected="false">Poppins</option>
+                  <select v-model="fontPrimary" name="heading" id="heading" class="select_input form-control width-100%">
+                    <option value="Roboto" key="Roboto" :selected="fontPrimary === 'Roboto'">Roboto</option>
+                    <option value="Poppins" key="Poppins" :selected="fontPrimary === 'Poppins'">Poppins</option>
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
               </div>
@@ -97,9 +121,9 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 260px;" class="font-bold">Body Font</p>
               <div class="select">
-                  <select v-model="" name="body" id="body" class="select_input form-control width-100%">
-                    <option value="roboto" key="roboto" :selected="false">Roboto</option>
-                    <option value="poppins" key="poppins" :selected="'poppins' === 'poppins'">Poppins</option>
+                  <select v-model="fontSecondary" name="body" id="body" class="select_input form-control width-100%">
+                    <option value="Roboto" key="Roboto" :selected="fontSecondary === 'Roboto'">Roboto</option>
+                    <option value="Poppins" key="Poppins" :selected="fontSecondary === 'Poppins'">Poppins</option>
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
               </div>
@@ -171,28 +195,44 @@
     <component :is="'style'">
       :root,
       [data-theme] {
+        <!-- Colors -->
         --color-primary:         {{ colorPrimary }};
         --color-accent:          {{ colorAccent }};
-        --color-contrast-high:   {{ colorContrastHigh }};
+        --color-contrast-high:   {{ colorContrastHigher }};
         --color-contrast-higher: {{ colorContrastHigher }};
         --color-bg:              {{ colorBackground }};
+        
+        <!-- Typeography -->
+        --font-primary:   {{ fontPrimary }};
+        --font-secondary: {{ fontSecondary }};
       }
     </component>
+    
+    <!-- <link :href="`https://fonts.googleapis.com/css?family=${family.css}`" rel="stylesheet"> -->
+    <link :href="`https://fonts.googleapis.com/css2?family=${fontPrimary}`" rel="stylesheet" />
+
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { ColorPicker } from 'vue-color-kit'
+import { ColorPicker } from "vue3-colorpicker"
 
 const activeMenu = ref('')
 
 import useColors from "./store/useColors.js";
 const { colorPrimary, colorAccent, colorContrastHigh, colorContrastHigher, colorBackground } = useColors()
+
+import useTypography from "./store/useTypography.js";
+const { fontPrimary, fontSecondary } = useTypography()
 </script>
 
 <style lang="scss">
-@import 'vue-color-kit/dist/vue-color-kit.css';
+@import "vue3-colorpicker/style.css";
+
+.vc-color-wrap {
+  margin: 0 !important;
+}
 
 /* --------------------------------
 Siderail

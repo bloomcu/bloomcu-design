@@ -1,10 +1,11 @@
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
+import useDebouncedRef from '../composables/useDebouncedRef'
 
-const colorPrimary = ref('#003865')
-const colorAccent = ref('#ef5b0c')
-const colorContrastHigh = ref('#000000')
-const colorContrastHigher = ref('#000000')
-const colorBackground = ref('#ffffff')
+const colorPrimary = useDebouncedRef('#003865', 100)
+const colorAccent = useDebouncedRef('#ef5b0c', 100)
+const colorContrastHigh = useDebouncedRef('#000000', 100)
+const colorContrastHigher = useDebouncedRef('#000000', 100)
+const colorBackground = useDebouncedRef('#ffffff', 100)
 
 export default function useColors() {
     return {
