@@ -84,7 +84,7 @@
           </button>
           <div v-if="activeMenu === 'typeography'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Heading Font</p>
+              <p style="font-size: 18px; width: 260px;" class="font-bold">Heading Font</p>
               <div class="select">
                   <select v-model="" name="heading" id="heading" class="select_input form-control width-100%">
                     <option value="roboto" key="roboto" :selected="'roboto' === 'roboto'">Roboto</option>
@@ -95,7 +95,7 @@
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Body Font</p>
+              <p style="font-size: 18px; width: 260px;" class="font-bold">Body Font</p>
               <div class="select">
                   <select v-model="" name="body" id="body" class="select_input form-control width-100%">
                     <option value="roboto" key="roboto" :selected="false">Roboto</option>
@@ -111,22 +111,24 @@
         <div class="siderail-item">
           <button @click="activeMenu = 'buttons'" type="button" class="siderail-item__button" :class="activeMenu === 'buttons' ? 'siderail-item__button--active' : ''">
             <svg width="24" height="24" viewBox="0 0 24 24">
-              <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round">
-                <polyline points="1,5 1,3 17,3 17,5 "></polyline><line x1="9" y1="3" x2="9" y2="20"></line><line x1="5" y1="20" x2="12" y2="20"></line><polyline points=" 13,11 13,10 23,10 23,11 "></polyline><line x1="18" y1="10" x2="18" y2="20"></line><line x1="16" y1="20" x2="20" y2="20"></line>
+              <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline data-cap="butt" points="8.333,14 1,14 1,1 23,1 23,14 20,14 "></polyline><line data-cap="butt" x1="13" y1="14" x2="19" y2="20"></line><polygon points=" 6,7 10,19 13,14 18,11 "></polygon>
               </g>
             </svg>
           </button>
           <div v-if="activeMenu === 'buttons'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Primary</p>
+              <p style="font-size: 18px; width: 260px;" class="font-bold">Primary Button</p>
+              <a href="#" class="btn btn--primary">Apply for an Auto Loan</a>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Secondary</p>
+              <p style="font-size: 18px; width: 260px;" class="font-bold">Secondary Button</p>
+              <a href="#" class="btn btn--accent">Apply for an Auto Loan</a>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Tertiary</p>
+              <p style="font-size: 18px; width: 260px;" class="font-bold">Tertiary Button</p>
+              <a href="#" class="btn btn--tertiray">Apply for an Auto Loan</a>
             </div>
           </div>
         </div>
@@ -293,6 +295,7 @@ Siderail
     display: flex; 
     align-items: center; 
     gap: 10px 10px;
+    width: max-content;
     padding: 20px;
     border-bottom: 1px solid #e3e2e9;
   }
