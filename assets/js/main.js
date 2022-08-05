@@ -17425,24 +17425,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var vue_color_kit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-color-kit */ "./node_modules/vue-color-kit/dist/vue-color-kit.esm-bundler.js");
+/* harmony import */ var _store_useColors_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store/useColors.js */ "./src/js/store/useColors.js");
+
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   __name: 'App',
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    var colorPrimary = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('purple');
-    var colorAccent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('red');
-    var colorContrastHigh = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('brown');
-    var colorContrastHigher = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('blue');
-    var colorBackground = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('tan');
+    var activeMenu = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('');
+
+    var _useColors = (0,_store_useColors_js__WEBPACK_IMPORTED_MODULE_1__["default"])(),
+        colorPrimary = _useColors.colorPrimary,
+        colorAccent = _useColors.colorAccent,
+        colorContrastHigh = _useColors.colorContrastHigh,
+        colorContrastHigher = _useColors.colorContrastHigher,
+        colorBackground = _useColors.colorBackground;
+
     var __returned__ = {
+      activeMenu: activeMenu,
       colorPrimary: colorPrimary,
       colorAccent: colorAccent,
       colorContrastHigh: colorContrastHigh,
       colorContrastHigher: colorContrastHigher,
       colorBackground: colorBackground,
-      ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref
+      ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
+      ColorPicker: vue_color_kit__WEBPACK_IMPORTED_MODULE_2__.ColorPicker,
+      useColors: _store_useColors_js__WEBPACK_IMPORTED_MODULE_1__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -17479,16 +17490,18 @@ var _hoisted_3 = {
   "class": "siderail-item"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<button type=\"button\" class=\"siderail-item__button siderail-item__button--active\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><path data-cap=\"butt\" d=\"M3.41,12.017l10.607,7.778 c0.781,0.781,3.155-0.327,5.303-2.475s3.256-4.522,2.475-5.303L14.017,1.41\"></path><ellipse transform=\"matrix(0.7071 -0.7071 0.7071 0.7071 -2.195 8.1276)\" cx=\"8.713\" cy=\"6.713\" rx=\"7.5\" ry=\"3\"></ellipse><path d=\"M1,20 c0-1.105,2-4,2-4s2,2.895,2,4s-0.895,2-2,2S1,21.105,1,20z\"></path><path d=\"M14,11h4 c2.209,0,4-1.791,4-4c0-2.209-1.791-4-4-4h-2.817\"></path></g></svg></button>", 1);
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><path data-cap=\"butt\" d=\"M3.41,12.017l10.607,7.778 c0.781,0.781,3.155-0.327,5.303-2.475s3.256-4.522,2.475-5.303L14.017,1.41\"></path><ellipse transform=\"matrix(0.7071 -0.7071 0.7071 0.7071 -2.195 8.1276)\" cx=\"8.713\" cy=\"6.713\" rx=\"7.5\" ry=\"3\"></ellipse><path d=\"M1,20 c0-1.105,2-4,2-4s2,2.895,2,4s-0.895,2-2,2S1,21.105,1,20z\"></path><path d=\"M14,11h4 c2.209,0,4-1.791,4-4c0-2.209-1.791-4-4-4h-2.817\"></path></g></svg>", 1);
 
-var _hoisted_5 = {
+var _hoisted_5 = [_hoisted_4];
+var _hoisted_6 = {
+  key: 0,
   "class": "siderail-menu"
 };
-var _hoisted_6 = {
+var _hoisted_7 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -17498,17 +17511,26 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 /* HOISTED */
 );
 
-var _hoisted_8 = {
+var _hoisted_9 = {
   "class": "input-group"
 };
-var _hoisted_9 = {
+var _hoisted_10 = {
   "class": "input-group__tag"
 };
-var _hoisted_10 = {
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  style: {
+    "position": "relative"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <ColorPicker\n                  theme=\"light\"\n                  :color=\"colorPrimary\"\n                  @changeColor=\"\"\n                  style=\"position: absolute;\"\n                /> ")], -1
+/* HOISTED */
+);
+
+var _hoisted_12 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -17518,17 +17540,17 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_12 = {
+var _hoisted_14 = {
   "class": "input-group"
 };
-var _hoisted_13 = {
+var _hoisted_15 = {
   "class": "input-group__tag"
 };
-var _hoisted_14 = {
+var _hoisted_16 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -17538,17 +17560,17 @@ var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_16 = {
+var _hoisted_18 = {
   "class": "input-group"
 };
-var _hoisted_17 = {
+var _hoisted_19 = {
   "class": "input-group__tag"
 };
-var _hoisted_18 = {
+var _hoisted_20 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -17558,38 +17580,140 @@ var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_20 = {
+var _hoisted_22 = {
   "class": "input-group"
 };
-var _hoisted_21 = {
+var _hoisted_23 = {
   "class": "input-group__tag"
 };
-var _hoisted_22 = {
-  "class": "siderail-menu__section"
+var _hoisted_24 = {
+  "class": "siderail-item"
 };
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline points=\"1,5 1,3 17,3 17,5 \"></polyline><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"20\"></line><line x1=\"5\" y1=\"20\" x2=\"12\" y2=\"20\"></line><polyline points=\" 13,11 13,10 23,10 23,11 \"></polyline><line x1=\"18\" y1=\"10\" x2=\"18\" y2=\"20\"></line><line x1=\"16\" y1=\"20\" x2=\"20\" y2=\"20\"></line></g></svg>", 1);
+
+var _hoisted_26 = [_hoisted_25];
+var _hoisted_27 = {
+  key: 0,
+  "class": "siderail-menu"
+};
+
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "siderail-menu__section"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
   },
   "class": "font-bold"
-}, "Background Medium", -1
+}, "Heading Font"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "select"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  name: "heading",
+  id: "heading",
+  "class": "select_input form-control width-100%"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: "roboto",
+  key: "roboto",
+  selected: 'roboto' === 'roboto'
+}, "Roboto"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: "poppins",
+  key: "poppins",
+  selected: false
+}, "Poppins")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})])])], -1
 /* HOISTED */
 );
 
-var _hoisted_24 = {
-  "class": "input-group"
-};
-var _hoisted_25 = {
-  "class": "input-group__tag"
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "siderail-menu__section"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px",
+    "width": "200px"
+  },
+  "class": "font-bold"
+}, "Body Font"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "select"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  name: "body",
+  id: "body",
+  "class": "select_input form-control width-100%"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: "roboto",
+  key: "roboto",
+  selected: false
+}, "Roboto"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: "poppins",
+  key: "poppins",
+  selected: 'poppins' === 'poppins'
+}, "Poppins")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_30 = [_hoisted_28, _hoisted_29];
+var _hoisted_31 = {
+  "class": "siderail-item"
 };
 
-var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"siderail-item\"><button type=\"button\" class=\"siderail-item__button\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline points=\"1,5 1,3 17,3 17,5 \"></polyline><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"20\"></line><line x1=\"5\" y1=\"20\" x2=\"12\" y2=\"20\"></line><polyline points=\" 13,11 13,10 23,10 23,11 \"></polyline><line x1=\"18\" y1=\"10\" x2=\"18\" y2=\"20\"></line><line x1=\"16\" y1=\"20\" x2=\"20\" y2=\"20\"></line></g></svg></button></div><div class=\"siderail-item\"><button type=\"button\" class=\"siderail-item__button\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg></button></div>", 2);
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline points=\"1,5 1,3 17,3 17,5 \"></polyline><line x1=\"9\" y1=\"3\" x2=\"9\" y2=\"20\"></line><line x1=\"5\" y1=\"20\" x2=\"12\" y2=\"20\"></line><polyline points=\" 13,11 13,10 23,10 23,11 \"></polyline><line x1=\"18\" y1=\"10\" x2=\"18\" y2=\"20\"></line><line x1=\"16\" y1=\"20\" x2=\"20\" y2=\"20\"></line></g></svg>", 1);
 
+var _hoisted_33 = [_hoisted_32];
+var _hoisted_34 = {
+  key: 0,
+  "class": "siderail-menu"
+};
+
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Primary</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Secondary</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Tertiary</p></div>", 3);
+
+var _hoisted_38 = [_hoisted_35];
+var _hoisted_39 = {
+  "class": "siderail-item"
+};
+
+var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg>", 1);
+
+var _hoisted_41 = [_hoisted_40];
+var _hoisted_42 = {
+  key: 0,
+  "class": "siderail-menu"
+};
+
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Default Background</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Medium Background</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Dark Background</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Custom Background 1</p></div><div class=\"siderail-menu__section\"><p style=\"font-size:18px;width:200px;\" class=\"font-bold\">Custom Background 2</p></div>", 5);
+
+var _hoisted_48 = [_hoisted_43];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return $setup.activeMenu = 'colors';
+    }),
+    type: "button",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'colors' ? 'siderail-item__button--active' : ''])
+  }, _hoisted_5, 2
+  /* CLASS */
+  ), $setup.activeMenu === 'colors' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $setup.colorPrimary = $event;
     }),
     "class": "form-control",
@@ -17599,7 +17723,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorPrimary]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorPrimary]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorPrimary
     }, {
@@ -17610,8 +17734,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }])
   }, null, 4
   /* STYLE */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div style=\"position: relative;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <v-swatches v-model=\"primary\"></v-swatches> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <input-color-picker  v-model=\"primary\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <chrome-picker :value=\"colors\" @input=\"updateFromPicker\" v-if=\"displayPicker\" /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <color-picker :value=\"primary\" @input=\"updateFromPicker\" style=\"position: absolute; top: -14px; left: 5px;\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+  )])]), _hoisted_11]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return $setup.colorAccent = $event;
     }),
     "class": "form-control",
@@ -17621,7 +17745,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorAccent]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorAccent]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorAccent
     }, {
@@ -17632,8 +17756,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }])
   }, null, 4
   /* STYLE */
-  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $setup.colorContrastHigher = $event;
     }),
     "class": "form-control",
@@ -17643,7 +17767,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorContrastHigher]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorContrastHigher]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorContrastHigher
     }, {
@@ -17654,29 +17778,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }])
   }, null, 4
   /* STYLE */
-  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
-      return $setup.colorBackground = $event;
-    }),
-    "class": "form-control",
-    style: {
-      "width": "160px"
-    },
-    type: "text"
-  }, null, 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorBackground]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
-      'background-color': $setup.colorBackground
-    }, {
-      "width": "20px",
-      "height": "20px",
-      "border-radius": "100px",
-      "cursor": "pointer"
-    }])
-  }, null, 4
-  /* STYLE */
-  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $setup.colorBackground = $event;
     }),
@@ -17687,7 +17789,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorBackground]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.colorBackground]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorBackground
     }, {
@@ -17698,7 +17800,31 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }])
   }, null, 4
   /* STYLE */
-  )])])])])]), _hoisted_26])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"siderail-menu__section\">\n              <p style=\"font-size: 18px; width: 200px;\" class=\"font-bold\">Background Medium</p>\n              <div class=\"input-group\">\n                <input v-model=\"colorBackground\" class=\"form-control\" style=\"width: 160px;\" type=\"text\">\n                <div class=\"input-group__tag\">\n                  <div :style=\"{'background-color': colorBackground}\" style=\"width: 20px; height: 20px; border-radius: 100px; cursor: pointer;\"></div>\n                </div>\n              </div>\n            </div> ")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Typeography "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[5] || (_cache[5] = function ($event) {
+      return $setup.activeMenu = 'typeography';
+    }),
+    type: "button",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'typeography' ? 'siderail-item__button--active' : ''])
+  }, _hoisted_26, 2
+  /* CLASS */
+  ), $setup.activeMenu === 'typeography' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_27, _hoisted_30)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[6] || (_cache[6] = function ($event) {
+      return $setup.activeMenu = 'buttons';
+    }),
+    type: "button",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'buttons' ? 'siderail-item__button--active' : ''])
+  }, _hoisted_33, 2
+  /* CLASS */
+  ), $setup.activeMenu === 'buttons' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_34, _hoisted_38)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Backgrounds "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[7] || (_cache[7] = function ($event) {
+      return $setup.activeMenu = 'backgrounds';
+    }),
+    type: "button",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'backgrounds' ? 'siderail-item__button--active' : ''])
+  }, _hoisted_41, 2
+  /* CLASS */
+  ), $setup.activeMenu === 'backgrounds' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_42, _hoisted_48)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" :root, [data-theme] { --color-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorPrimary) + "; --color-accent: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorAccent) + "; --color-contrast-high: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorContrastHigh) + "; --color-contrast-higher: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorContrastHigher) + "; --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.colorBackground) + "; } ", 1
       /* TEXT */
@@ -17740,6 +17866,58 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/store/useColors.js":
+/*!***********************************!*\
+  !*** ./src/js/store/useColors.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useColors)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var colorPrimary = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('#003865');
+var colorAccent = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('#ef5b0c');
+var colorContrastHigh = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('#000000');
+var colorContrastHigher = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('#000000');
+var colorBackground = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('#ffffff');
+function useColors() {
+  return {
+    colorPrimary: colorPrimary,
+    colorAccent: colorAccent,
+    colorContrastHigh: colorContrastHigh,
+    colorContrastHigher: colorContrastHigher,
+    colorBackground: colorBackground
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-color-kit/dist/vue-color-kit.css":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-color-kit/dist/vue-color-kit.css ***!
+  \**************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".hu-color-picker{padding:10px;background:#1d2024;border-radius:4px;box-shadow:0 0 16px 0 rgba(0,0,0,.16);z-index:1}.hu-color-picker.light{background:#f7f8f9}.hu-color-picker.light .color-show .sucker{background:#eceef0}.hu-color-picker.light .color-type .name{background:#e7e8e9}.hu-color-picker.light .color-type .value{color:#666;background:#eceef0}.hu-color-picker.light .colors.history{border-top:1px solid #eee}.hu-color-picker canvas{vertical-align:top}.hu-color-picker .color-set{display:flex}.hu-color-picker .color-show{margin-top:8px;display:flex}.saturation{position:relative;cursor:pointer}.saturation .slide{position:absolute;left:100px;top:0;width:10px;height:10px;border-radius:50%;border:1px solid #fff;box-shadow:0 0 1px 1px rgba(0,0,0,.3);pointer-events:none}.color-alpha{position:relative;margin-left:8px;cursor:pointer}.color-alpha .slide{position:absolute;left:0;top:100px;width:100%;height:4px;background:#fff;box-shadow:0 0 1px 0 rgba(0,0,0,.3);pointer-events:none}.sucker{width:30px;fill:#9099a4;background:#2e333a;cursor:pointer;transition:all .3s}.sucker.active,.sucker:hover{fill:#1593ff}.hue{position:relative;margin-left:8px;cursor:pointer}.hue .slide{position:absolute;left:0;top:100px;width:100%;height:4px;background:#fff;box-shadow:0 0 1px 0 rgba(0,0,0,.3);pointer-events:none}.colors{padding:0;margin:0}.colors.history{margin-top:10px;border-top:1px solid #2e333a}.colors .item{position:relative;width:16px;height:16px;margin:10px 0 0 10px;border-radius:3px;box-sizing:border-box;vertical-align:top;display:inline-block;transition:all .1s;cursor:pointer}.colors .item:nth-child(8n+1){margin-left:0}.colors .item:hover{transform:scale(1.4)}.colors .item .alpha{height:100%;border-radius:4px}.colors .item .color{position:absolute;left:0;top:0;width:100%;height:100%;border-radius:3px}.color-type{display:flex;margin-top:8px;font-size:12px}.color-type .name{width:60px;height:30px;float:left;display:flex;justify-content:center;align-items:center;color:#999;background:#252930}.color-type .value{flex:1;height:30px;min-width:100px;padding:0 12px;border:0;color:#fff;background:#2e333a;box-sizing:border-box}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/App.vue?vue&type=style&index=0&id=3ea74058&lang=scss":
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/App.vue?vue&type=style&index=0&id=3ea74058&lang=scss ***!
@@ -17752,11 +17930,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_color_kit_dist_vue_color_kit_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../node_modules/vue-color-kit/dist/vue-color-kit.css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-color-kit/dist/vue-color-kit.css");
 // Imports
 
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_color_kit_dist_vue_color_kit_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nSiderail\n-------------------------------- */\n.siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n\n/* --------------------------------\nInput group\n-------------------------------- */\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}\n\n/* --------------------------------\nSelect input\n-------------------------------- */\n.select {\n  position: relative;\n  width: 100%;\n}\n.select__icon {\n  width: 16px;\n  height: 16px;\n  pointer-events: none;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  transform: translateY(-50%);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18154,6 +18335,1123 @@ module.exports = function (list, options) {
     lastIdentifiers = newLastIdentifiers;
   };
 };
+
+/***/ }),
+
+/***/ "./node_modules/vue-color-kit/dist/vue-color-kit.esm-bundler.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/vue-color-kit/dist/vue-color-kit.esm-bundler.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ColorPicker": () => (/* binding */ script$7),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/*!
+  * vue-color-kit v1.0.4
+  * (c) 2021 
+  * @license MIT
+  */
+
+
+function setColorValue(color) {
+    let rgba = { r: 0, g: 0, b: 0, a: 1 };
+    if (/#/.test(color)) {
+        rgba = hex2rgb(color);
+    }
+    else if (/rgb/.test(color)) {
+        rgba = rgb2rgba(color);
+    }
+    else if (typeof color === 'string') {
+        rgba = rgb2rgba(`rgba(${color})`);
+    }
+    else if (Object.prototype.toString.call(color) === '[object Object]') {
+        rgba = color;
+    }
+    const { r, g, b, a } = rgba;
+    const { h, s, v } = rgb2hsv(rgba);
+    return { r, g, b, a: a === undefined ? 1 : a, h, s, v };
+}
+function createAlphaSquare(size) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const doubleSize = size * 2;
+    canvas.width = doubleSize;
+    canvas.height = doubleSize;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, doubleSize, doubleSize);
+    ctx.fillStyle = '#ccd5db';
+    ctx.fillRect(0, 0, size, size);
+    ctx.fillRect(size, size, size, size);
+    return canvas;
+}
+function createLinearGradient(direction, ctx, width, height, color1, color2) {
+    // l horizontal p vertical
+    const isL = direction === 'l';
+    const gradient = ctx.createLinearGradient(0, 0, isL ? width : 0, isL ? 0 : height);
+    gradient.addColorStop(0.01, color1);
+    gradient.addColorStop(0.99, color2);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+}
+function rgb2hex({ r, g, b }, toUpper) {
+    const change = (val) => ('0' + Number(val).toString(16)).slice(-2);
+    const color = `#${change(r)}${change(g)}${change(b)}`;
+    return toUpper ? color.toUpperCase() : color;
+}
+function hex2rgb(hex) {
+    hex = hex.slice(1);
+    const change = (val) => parseInt(val, 16) || 0; // Avoid NaN situations
+    return {
+        r: change(hex.slice(0, 2)),
+        g: change(hex.slice(2, 4)),
+        b: change(hex.slice(4, 6)),
+    };
+}
+function rgb2rgba(rgba) {
+    if (typeof rgba === 'string') {
+        rgba = (/rgba?\((.*?)\)/.exec(rgba) || ['', '0,0,0,1'])[1].split(',');
+        return {
+            r: Number(rgba[0]) || 0,
+            g: Number(rgba[1]) || 0,
+            b: Number(rgba[2]) || 0,
+            a: Number(rgba[3] ? rgba[3] : 1),
+        };
+    }
+    else {
+        return rgba;
+    }
+}
+function rgb2hsv({ r, g, b }) {
+    r = r / 255;
+    g = g / 255;
+    b = b / 255;
+    const max = Math.max(r, g, b);
+    const min = Math.min(r, g, b);
+    const delta = max - min;
+    let h = 0;
+    if (max === min) {
+        h = 0;
+    }
+    else if (max === r) {
+        if (g >= b) {
+            h = (60 * (g - b)) / delta;
+        }
+        else {
+            h = (60 * (g - b)) / delta + 360;
+        }
+    }
+    else if (max === g) {
+        h = (60 * (b - r)) / delta + 120;
+    }
+    else if (max === b) {
+        h = (60 * (r - g)) / delta + 240;
+    }
+    h = Math.floor(h);
+    let s = parseFloat((max === 0 ? 0 : 1 - min / max).toFixed(2));
+    let v = parseFloat(max.toFixed(2));
+    return { h, s, v };
+}
+
+var script = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        color: {
+            type: String,
+            default: '#000000',
+        },
+        hsv: {
+            type: Object,
+            default: null,
+        },
+        size: {
+            type: Number,
+            default: 152,
+        },
+    },
+    emits: ['selectSaturation'],
+    data() {
+        return {
+            slideSaturationStyle: {},
+        };
+    },
+    // Can’t monitor, otherwise the color will change when you change yourself
+    // watch: {
+    //     color() {
+    //         this.renderColor()
+    //     }
+    // },
+    mounted() {
+        this.renderColor();
+        this.renderSlide();
+    },
+    methods: {
+        renderColor() {
+            const canvas = this.$refs.canvasSaturation;
+            const size = this.size;
+            const ctx = canvas.getContext('2d');
+            canvas.width = size;
+            canvas.height = size;
+            ctx.fillStyle = this.color;
+            ctx.fillRect(0, 0, size, size);
+            createLinearGradient('l', ctx, size, size, '#FFFFFF', 'rgba(255,255,255,0)');
+            createLinearGradient('p', ctx, size, size, 'rgba(0,0,0,0)', '#000000');
+        },
+        renderSlide() {
+            this.slideSaturationStyle = {
+                left: this.hsv.s * this.size - 5 + 'px',
+                top: (1 - this.hsv.v) * this.size - 5 + 'px',
+            };
+        },
+        selectSaturation(e) {
+            const { top: saturationTop, left: saturationLeft, } = this.$el.getBoundingClientRect();
+            const ctx = e.target.getContext('2d');
+            const mousemove = (e) => {
+                let x = e.clientX - saturationLeft;
+                let y = e.clientY - saturationTop;
+                if (x < 0) {
+                    x = 0;
+                }
+                if (y < 0) {
+                    y = 0;
+                }
+                if (x > this.size) {
+                    x = this.size;
+                }
+                if (y > this.size) {
+                    y = this.size;
+                }
+                // Do not modify the dom by monitoring data changes, otherwise when the color is #ffffff, the slide will go to the lower left corner
+                this.slideSaturationStyle = {
+                    left: x - 5 + 'px',
+                    top: y - 5 + 'px',
+                };
+                // If you use the maximum value, the selected pixel will be empty, and the empty default is black
+                const imgData = ctx.getImageData(Math.min(x, this.size - 1), Math.min(y, this.size - 1), 1, 1);
+                const [r, g, b] = imgData.data;
+                this.$emit('selectSaturation', { r, g, b });
+            };
+            mousemove(e);
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove);
+                document.removeEventListener('mouseup', mouseup);
+            };
+            document.addEventListener('mousemove', mousemove);
+            document.addEventListener('mouseup', mouseup);
+        },
+    },
+});
+
+const _hoisted_1 = { ref: "canvasSaturation" };
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
+    class: "saturation",
+    onMousedown: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)((...args) => (_ctx.selectSaturation && _ctx.selectSaturation(...args)), ["prevent","stop"]))
+  }, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("canvas", _hoisted_1, null, 512 /* NEED_PATCH */),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+      style: _ctx.slideSaturationStyle,
+      class: "slide"
+    }, null, 4 /* STYLE */)
+  ], 32 /* HYDRATE_EVENTS */))
+}
+
+script.render = render;
+script.__file = "src/color/Saturation.vue";
+
+var script$1 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        hsv: {
+            type: Object,
+            default: null,
+        },
+        width: {
+            type: Number,
+            default: 15,
+        },
+        height: {
+            type: Number,
+            default: 152,
+        },
+    },
+    emits: ['selectHue'],
+    data() {
+        return {
+            slideHueStyle: {},
+        };
+    },
+    mounted() {
+        this.renderColor();
+        this.renderSlide();
+    },
+    methods: {
+        renderColor() {
+            const canvas = this.$refs.canvasHue;
+            const width = this.width;
+            const height = this.height;
+            const ctx = canvas.getContext('2d');
+            canvas.width = width;
+            canvas.height = height;
+            const gradient = ctx.createLinearGradient(0, 0, 0, height);
+            gradient.addColorStop(0, '#FF0000'); // red
+            gradient.addColorStop(0.17 * 1, '#FF00FF'); // purple
+            gradient.addColorStop(0.17 * 2, '#0000FF'); // blue
+            gradient.addColorStop(0.17 * 3, '#00FFFF'); // green
+            gradient.addColorStop(0.17 * 4, '#00FF00'); // green
+            gradient.addColorStop(0.17 * 5, '#FFFF00'); // yellow
+            gradient.addColorStop(1, '#FF0000'); // red
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+        },
+        renderSlide() {
+            this.slideHueStyle = {
+                top: (1 - this.hsv.h / 360) * this.height - 2 + 'px',
+            };
+        },
+        selectHue(e) {
+            const { top: hueTop } = this.$el.getBoundingClientRect();
+            const ctx = e.target.getContext('2d');
+            const mousemove = (e) => {
+                let y = e.clientY - hueTop;
+                if (y < 0) {
+                    y = 0;
+                }
+                if (y > this.height) {
+                    y = this.height;
+                }
+                this.slideHueStyle = {
+                    top: y - 2 + 'px',
+                };
+                // If you use the maximum value, the selected pixel will be empty, and the empty default is black
+                const imgData = ctx.getImageData(0, Math.min(y, this.height - 1), 1, 1);
+                const [r, g, b] = imgData.data;
+                this.$emit('selectHue', { r, g, b });
+            };
+            mousemove(e);
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove);
+                document.removeEventListener('mouseup', mouseup);
+            };
+            document.addEventListener('mousemove', mousemove);
+            document.addEventListener('mouseup', mouseup);
+        },
+    },
+});
+
+const _hoisted_1$1 = { ref: "canvasHue" };
+
+function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
+    class: "hue",
+    onMousedown: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)((...args) => (_ctx.selectHue && _ctx.selectHue(...args)), ["prevent","stop"]))
+  }, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("canvas", _hoisted_1$1, null, 512 /* NEED_PATCH */),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+      style: _ctx.slideHueStyle,
+      class: "slide"
+    }, null, 4 /* STYLE */)
+  ], 32 /* HYDRATE_EVENTS */))
+}
+
+script$1.render = render$1;
+script$1.__file = "src/color/Hue.vue";
+
+var script$2 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        color: {
+            type: String,
+            default: '#000000',
+        },
+        rgba: {
+            type: Object,
+            default: null,
+        },
+        width: {
+            type: Number,
+            default: 15,
+        },
+        height: {
+            type: Number,
+            default: 152,
+        },
+    },
+    emits: ['selectAlpha'],
+    data() {
+        return {
+            slideAlphaStyle: {},
+            alphaSize: 5,
+        };
+    },
+    watch: {
+        color() {
+            this.renderColor();
+        },
+        'rgba.a'() {
+            this.renderSlide();
+        },
+    },
+    mounted() {
+        this.renderColor();
+        this.renderSlide();
+    },
+    methods: {
+        renderColor() {
+            const canvas = this.$refs.canvasAlpha;
+            const width = this.width;
+            const height = this.height;
+            const size = this.alphaSize;
+            const canvasSquare = createAlphaSquare(size);
+            const ctx = canvas.getContext('2d');
+            canvas.width = width;
+            canvas.height = height;
+            ctx.fillStyle = ctx.createPattern(canvasSquare, 'repeat');
+            ctx.fillRect(0, 0, width, height);
+            createLinearGradient('p', ctx, width, height, 'rgba(255,255,255,0)', this.color);
+        },
+        renderSlide() {
+            this.slideAlphaStyle = {
+                top: this.rgba.a * this.height - 2 + 'px',
+            };
+        },
+        selectAlpha(e) {
+            const { top: hueTop } = this.$el.getBoundingClientRect();
+            const mousemove = (e) => {
+                let y = e.clientY - hueTop;
+                if (y < 0) {
+                    y = 0;
+                }
+                if (y > this.height) {
+                    y = this.height;
+                }
+                let a = parseFloat((y / this.height).toFixed(2));
+                this.$emit('selectAlpha', a);
+            };
+            mousemove(e);
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove);
+                document.removeEventListener('mouseup', mouseup);
+            };
+            document.addEventListener('mousemove', mousemove);
+            document.addEventListener('mouseup', mouseup);
+        },
+    },
+});
+
+const _hoisted_1$2 = { ref: "canvasAlpha" };
+
+function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
+    class: "color-alpha",
+    onMousedown: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)((...args) => (_ctx.selectAlpha && _ctx.selectAlpha(...args)), ["prevent","stop"]))
+  }, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("canvas", _hoisted_1$2, null, 512 /* NEED_PATCH */),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+      style: _ctx.slideAlphaStyle,
+      class: "slide"
+    }, null, 4 /* STYLE */)
+  ], 32 /* HYDRATE_EVENTS */))
+}
+
+script$2.render = render$2;
+script$2.__file = "src/color/Alpha.vue";
+
+var script$3 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        color: {
+            type: String,
+            default: '#000000',
+        },
+        width: {
+            type: Number,
+            default: 100,
+        },
+        height: {
+            type: Number,
+            default: 30,
+        },
+    },
+    data() {
+        return {
+            alphaSize: 5,
+        };
+    },
+    watch: {
+        color() {
+            this.renderColor();
+        },
+    },
+    mounted() {
+        this.renderColor();
+    },
+    methods: {
+        renderColor() {
+            const canvas = this.$el;
+            const width = this.width;
+            const height = this.height;
+            const size = this.alphaSize;
+            const canvasSquare = createAlphaSquare(size);
+            const ctx = canvas.getContext('2d');
+            canvas.width = width;
+            canvas.height = height;
+            ctx.fillStyle = ctx.createPattern(canvasSquare, 'repeat');
+            ctx.fillRect(0, 0, width, height);
+            ctx.fillStyle = this.color;
+            ctx.fillRect(0, 0, width, height);
+        },
+    },
+});
+
+function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("canvas"))
+}
+
+script$3.render = render$3;
+script$3.__file = "src/color/Preview.vue";
+
+// import imgSucker from '../img/sucker.png'
+var script$4 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        suckerCanvas: {
+            type: Object,
+            default: null,
+        },
+        suckerArea: {
+            type: Array,
+            default: () => [],
+        },
+    },
+    data() {
+        return {
+            isOpenSucker: false,
+            suckerPreview: null,
+            isSucking: false,
+        };
+    },
+    watch: {
+        suckerCanvas(newVal) {
+            this.isSucking = false;
+            this.suckColor(newVal);
+            // newVal.style.cursor = `url('../img/sucker.png') 0 32, default`
+            //TODO
+        },
+    },
+    methods: {
+        openSucker() {
+            if (!this.isOpenSucker) {
+                this.isOpenSucker = true;
+                this.isSucking = true;
+                this.$emit('openSucker', true);
+                document.addEventListener('keydown', this.keydownHandler);
+            }
+            else {
+                // The processing logic is the same as pressing the esc key
+                this.keydownHandler({ keyCode: 27 });
+            }
+        },
+        keydownHandler(e) {
+            // esc
+            if (e.keyCode === 27) {
+                this.isOpenSucker = false;
+                this.isSucking = false;
+                this.$emit('openSucker', false);
+                document.removeEventListener('keydown', this.keydownHandler);
+                document.removeEventListener('mousemove', this.mousemoveHandler);
+                document.removeEventListener('mouseup', this.mousemoveHandler);
+                if (this.suckerPreview) {
+                    // @ts-ignore
+                    document.body.removeChild(this.suckerPreview);
+                    this.suckerPreview = null;
+                }
+            }
+        },
+        mousemoveHandler(e) {
+            const { clientX, clientY } = e;
+            const { top: domTop, left: domLeft, width, height, } = this.suckerCanvas.getBoundingClientRect();
+            const x = clientX - domLeft;
+            const y = clientY - domTop;
+            const ctx = this.suckerCanvas.getContext('2d');
+            const imgData = ctx.getImageData(Math.min(x, width - 1), Math.min(y, height - 1), 1, 1);
+            let [r, g, b, a] = imgData.data;
+            a = parseFloat((a / 255).toFixed(2));
+            // @ts-ignore
+            const style = this.suckerPreview.style;
+            Object.assign(style, {
+                position: 'absolute',
+                left: clientX + 20 + 'px',
+                top: clientY - 36 + 'px',
+                width: '24px',
+                height: '24px',
+                borderRadius: '50%',
+                border: '2px solid #fff',
+                boxShadow: '0 0 8px 0 rgba(0, 0, 0, 0.16)',
+                background: `rgba(${r}, ${g}, ${b}, ${a})`,
+                zIndex: 95,
+            });
+            if (this.suckerArea.length &&
+                // @ts-ignore
+                clientX >= this.suckerArea[0] &&
+                // @ts-ignore
+                clientY >= this.suckerArea[1] &&
+                // @ts-ignore
+                clientX <= this.suckerArea[2] &&
+                // @ts-ignore
+                clientY <= this.suckerArea[3]) {
+                // @ts-ignore
+                style.display = '';
+            }
+            else {
+                // @ts-ignore
+                style.display = 'none';
+            }
+        },
+        suckColor(dom) {
+            if (dom && dom.tagName !== 'CANVAS') {
+                return;
+            }
+            // @ts-ignore
+            this.suckerPreview = document.createElement('div');
+            // @ts-ignore
+            if (this.suckerPreview)
+                document.body.appendChild(this.suckerPreview);
+            document.addEventListener('mousemove', this.mousemoveHandler);
+            document.addEventListener('mouseup', this.mousemoveHandler);
+            dom.addEventListener('click', (e) => {
+                const { clientX, clientY } = e;
+                const { top, left, width, height } = dom.getBoundingClientRect();
+                const x = clientX - left;
+                const y = clientY - top;
+                const ctx = dom.getContext('2d');
+                const imgData = ctx.getImageData(Math.min(x, width - 1), Math.min(y, height - 1), 1, 1);
+                let [r, g, b, a] = imgData.data;
+                a = parseFloat((a / 255).toFixed(2));
+                this.$emit('selectSucker', { r, g, b, a });
+            });
+        },
+    },
+});
+
+const _hoisted_1$3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", { d: "M13.1,8.2l5.6,5.6c0.4,0.4,0.5,1.1,0.1,1.5s-1.1,0.5-1.5,0.1c0,0-0.1,0-0.1-0.1l-1.4-1.4l-7.7,7.7C7.9,21.9,7.6,22,7.3,22H3.1C2.5,22,2,21.5,2,20.9l0,0v-4.2c0-0.3,0.1-0.6,0.3-0.8l5.8-5.8C8.5,9.7,9.2,9.6,9.7,10s0.5,1.1,0.1,1.5c0,0,0,0.1-0.1,0.1l-5.5,5.5v2.7h2.7l7.4-7.4L8.7,6.8c-0.5-0.4-0.5-1-0.1-1.5s1.1-0.5,1.5-0.1c0,0,0.1,0,0.1,0.1l1.4,1.4l3.5-3.5c1.6-1.6,4.1-1.6,5.8-0.1c1.6,1.6,1.6,4.1,0.1,5.8L20.9,9l-3.6,3.6c-0.4,0.4-1.1,0.5-1.5,0.1" }, null, -1 /* HOISTED */);
+const _hoisted_2 = {
+  key: 1,
+  class: "sucker",
+  viewBox: "-16 -16 68 68",
+  xmlns: "http://www.w3.org/2000/svg",
+  stroke: "#9099a4"
+};
+const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("g", {
+  fill: "none",
+  "fill-rule": "evenodd"
+}, [
+  /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("g", {
+    transform: "translate(1 1)",
+    "stroke-width": "4"
+  }, [
+    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("circle", {
+      "stroke-opacity": ".5",
+      cx: "18",
+      cy: "18",
+      r: "18"
+    }),
+    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("path", { d: "M36 18c0-9.94-8.06-18-18-18" }, [
+      /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("animateTransform", {
+        attributeName: "transform",
+        type: "rotate",
+        from: "0 18 18",
+        to: "360 18 18",
+        dur: "1s",
+        repeatCount: "indefinite"
+      })
+    ])
+  ])
+], -1 /* HOISTED */);
+
+function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [
+    (!_ctx.isSucking)
+      ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("svg", {
+          key: 0,
+          class: [{ active: _ctx.isOpenSucker }, "sucker"],
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "-12 -12 48 48",
+          onClick: _cache[1] || (_cache[1] = (...args) => (_ctx.openSucker && _ctx.openSucker(...args)))
+        }, [
+          _hoisted_1$3
+        ], 2 /* CLASS */))
+      : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true),
+    (_ctx.isSucking)
+      ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("svg", _hoisted_2, [
+          _hoisted_3
+        ]))
+      : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)
+  ]))
+}
+
+script$4.render = render$4;
+script$4.__file = "src/color/Sucker.vue";
+
+var script$5 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    props: {
+        name: {
+            type: String,
+            default: '',
+        },
+        color: {
+            type: String,
+            default: '',
+        },
+    },
+    emits: ['inputColor'],
+    setup(props, { emit }) {
+        const modelColor = (0,vue__WEBPACK_IMPORTED_MODULE_0__.computed)({
+            get() {
+                return props.color || '';
+            },
+            set(val) {
+                emit('inputColor', val);
+            },
+        });
+        return {
+            modelColor,
+        };
+    },
+});
+
+const _hoisted_1$4 = { class: "color-type" };
+const _hoisted_2$1 = { class: "name" };
+
+function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1$4, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", _hoisted_2$1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.name), 1 /* TEXT */),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+      "onUpdate:modelValue": _cache[1] || (_cache[1] = $event => (_ctx.modelColor = $event)),
+      class: "value"
+    }, null, 512 /* NEED_PATCH */), [
+      [vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, _ctx.modelColor]
+    ])
+  ]))
+}
+
+script$5.render = render$5;
+script$5.__file = "src/color/Box.vue";
+
+var script$6 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    name: 'ColorPicker',
+    props: {
+        color: {
+            type: String,
+            default: '#000000',
+        },
+        colorsDefault: {
+            type: Array,
+            default: () => [],
+        },
+        colorsHistoryKey: {
+            type: String,
+            default: '',
+        },
+    },
+    emits: ['selectColor'],
+    setup(props, { emit }) {
+        const color = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+        const colorsHistory = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)([]);
+        const imgAlphaBase64 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+        if (props.colorsHistoryKey && localStorage) {
+            colorsHistory.value =
+                JSON.parse(localStorage.getItem(props.colorsHistoryKey)) || [];
+        }
+        imgAlphaBase64.value = createAlphaSquare(4).toDataURL();
+        (0,vue__WEBPACK_IMPORTED_MODULE_0__.onUnmounted)(() => {
+            setColorsHistory(color.value);
+        });
+        function setColorsHistory(color) {
+            if (!color) {
+                return;
+            }
+            const colors = colorsHistory.value || [];
+            // @ts-ignore
+            const index = colors.indexOf(color);
+            if (index >= 0) {
+                colors.splice(index, 1);
+            }
+            if (colors.length >= 8) {
+                colors.length = 7;
+            }
+            // @ts-ignore
+            colors.unshift(color);
+            colorsHistory.value = colors || [];
+            if (localStorage && props.colorsHistoryKey)
+                localStorage.setItem(props.colorsHistoryKey, JSON.stringify(colors));
+        }
+        function selectColor(color) {
+            emit('selectColor', color);
+        }
+        return {
+            setColorsHistory,
+            colorsHistory,
+            color,
+            imgAlphaBase64,
+            selectColor,
+        };
+    },
+});
+
+const _hoisted_1$5 = { class: "colors" };
+const _hoisted_2$2 = {
+  key: 0,
+  class: "colors history"
+};
+
+function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_1$5, [
+      ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.colorsDefault, (item) => {
+        return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+          key: item,
+          class: "item",
+          onClick: $event => (_ctx.selectColor(item))
+        }, [
+          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+            style: { background: `url(${_ctx.imgAlphaBase64})` },
+            class: "alpha"
+          }, null, 4 /* STYLE */),
+          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+            style: { background: item },
+            class: "color"
+          }, null, 4 /* STYLE */)
+        ], 8 /* PROPS */, ["onClick"]))
+      }), 128 /* KEYED_FRAGMENT */))
+    ]),
+    (_ctx.colorsHistory.length)
+      ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_2$2, [
+          ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_ctx.colorsHistory, (item) => {
+            return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+              key: item,
+              class: "item",
+              onClick: $event => (_ctx.selectColor(item))
+            }, [
+              (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+                style: { background: `url(${_ctx.imgAlphaBase64})` },
+                class: "alpha"
+              }, null, 4 /* STYLE */),
+              (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+                style: { background: item },
+                class: "color"
+              }, null, 4 /* STYLE */)
+            ], 8 /* PROPS */, ["onClick"]))
+          }), 128 /* KEYED_FRAGMENT */))
+        ]))
+      : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)
+  ]))
+}
+
+script$6.render = render$6;
+script$6.__file = "src/color/Colors.vue";
+
+var script$7 = (0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+    components: {
+        Saturation: script,
+        Hue: script$1,
+        Alpha: script$2,
+        Preview: script$3,
+        Sucker: script$4,
+        Box: script$5,
+        Colors: script$6,
+    },
+    emits: ['changeColor', 'openSucker'],
+    props: {
+        color: {
+            type: String,
+            default: '#000000',
+        },
+        theme: {
+            type: String,
+            default: 'dark',
+        },
+        suckerHide: {
+            type: Boolean,
+            default: true,
+        },
+        suckerCanvas: {
+            type: null,
+            default: null,
+        },
+        suckerArea: {
+            type: Array,
+            default: () => [],
+        },
+        colorsDefault: {
+            type: Array,
+            default: () => [
+                '#000000',
+                '#FFFFFF',
+                '#FF1900',
+                '#F47365',
+                '#FFB243',
+                '#FFE623',
+                '#6EFF2A',
+                '#1BC7B1',
+                '#00BEFF',
+                '#2E81FF',
+                '#5D61FF',
+                '#FF89CF',
+                '#FC3CAD',
+                '#BF3DCE',
+                '#8E00A7',
+                'rgba(0,0,0,0)',
+            ],
+        },
+        colorsHistoryKey: {
+            type: String,
+            default: 'vue-colorpicker-history',
+        },
+    },
+    data() {
+        return {
+            hueWidth: 15,
+            hueHeight: 152,
+            previewHeight: 30,
+            modelRgba: '',
+            modelHex: '',
+            r: 0,
+            g: 0,
+            b: 0,
+            a: 1,
+            h: 0,
+            s: 0,
+            v: 0,
+        };
+    },
+    computed: {
+        isLightTheme() {
+            return this.theme === 'light';
+        },
+        totalWidth() {
+            return this.hueHeight + (this.hueWidth + 8) * 2;
+        },
+        previewWidth() {
+            return this.totalWidth - (this.suckerHide ? 0 : this.previewHeight);
+        },
+        rgba() {
+            return {
+                r: this.r,
+                g: this.g,
+                b: this.b,
+                a: this.a,
+            };
+        },
+        hsv() {
+            return {
+                h: this.h,
+                s: this.s,
+                v: this.v,
+            };
+        },
+        rgbString() {
+            return `rgb(${this.r}, ${this.g}, ${this.b})`;
+        },
+        rgbaStringShort() {
+            return `${this.r}, ${this.g}, ${this.b}, ${this.a}`;
+        },
+        rgbaString() {
+            return `rgba(${this.rgbaStringShort})`;
+        },
+        hexString() {
+            return rgb2hex(this.rgba, true);
+        },
+    },
+    created() {
+        Object.assign(this, setColorValue(this.color));
+        this.setText();
+        this.$watch('rgba', () => {
+            this.$emit('changeColor', {
+                rgba: this.rgba,
+                hsv: this.hsv,
+                hex: this.modelHex,
+            });
+        });
+    },
+    methods: {
+        selectSaturation(color) {
+            const { r, g, b, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, h, s, v });
+            this.setText();
+        },
+        selectHue(color) {
+            const { r, g, b, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, h, s, v });
+            this.setText();
+            this.$nextTick(() => {
+                // @ts-ignore
+                this.$refs.saturation.renderColor();
+                // @ts-ignore
+                this.$refs.saturation.renderSlide();
+            });
+        },
+        selectAlpha(a) {
+            this.a = a;
+            this.setText();
+        },
+        inputHex(color) {
+            const { r, g, b, a, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, a, h, s, v });
+            this.modelHex = color;
+            this.modelRgba = this.rgbaStringShort;
+            this.$nextTick(() => {
+                // @ts-ignore
+                this.$refs.saturation.renderColor();
+                // @ts-ignore
+                this.$refs.saturation.renderSlide();
+                // @ts-ignore
+                this.$refs.hue.renderSlide();
+            });
+        },
+        inputRgba(color) {
+            const { r, g, b, a, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, a, h, s, v });
+            this.modelHex = this.hexString;
+            this.modelRgba = color;
+            this.$nextTick(() => {
+                // @ts-ignore
+                this.$refs.saturation.renderColor();
+                // @ts-ignore
+                this.$refs.saturation.renderSlide();
+                // @ts-ignore
+                this.$refs.hue.renderSlide();
+            });
+        },
+        setText() {
+            this.modelHex = this.hexString;
+            this.modelRgba = this.rgbaStringShort;
+        },
+        openSucker(isOpen) {
+            this.$emit('openSucker', isOpen);
+        },
+        selectSucker(color) {
+            const { r, g, b, a, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, a, h, s, v });
+            this.setText();
+            this.$nextTick(() => {
+                // @ts-ignore
+                this.$refs.saturation.renderColor();
+                // @ts-ignore
+                this.$refs.saturation.renderSlide();
+                // @ts-ignore
+                this.$refs.hue.renderSlide();
+            });
+        },
+        selectColor(color) {
+            const { r, g, b, a, h, s, v } = setColorValue(color);
+            Object.assign(this, { r, g, b, a, h, s, v });
+            this.setText();
+            this.$nextTick(() => {
+                // @ts-ignore
+                this.$refs.saturation.renderColor();
+                // @ts-ignore
+                this.$refs.saturation.renderSlide();
+                // @ts-ignore
+                this.$refs.hue.renderSlide();
+            });
+        },
+    },
+});
+
+const _hoisted_1$6 = { class: "color-set" };
+
+function render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  const _component_Saturation = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Saturation");
+  const _component_Hue = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Hue");
+  const _component_Alpha = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Alpha");
+  const _component_Preview = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Preview");
+  const _component_Sucker = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Sucker");
+  const _component_Box = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Box");
+  const _component_Colors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Colors");
+
+  return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
+    class: ["hu-color-picker", { light: _ctx.isLightTheme }],
+    style: { width: _ctx.totalWidth + 'px' }
+  }, [
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1$6, [
+      (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Saturation, {
+        ref: "saturation",
+        color: _ctx.rgbString,
+        hsv: _ctx.hsv,
+        size: _ctx.hueHeight,
+        onSelectSaturation: _ctx.selectSaturation
+      }, null, 8 /* PROPS */, ["color", "hsv", "size", "onSelectSaturation"]),
+      (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Hue, {
+        ref: "hue",
+        hsv: _ctx.hsv,
+        width: _ctx.hueWidth,
+        height: _ctx.hueHeight,
+        onSelectHue: _ctx.selectHue
+      }, null, 8 /* PROPS */, ["hsv", "width", "height", "onSelectHue"]),
+      (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Alpha, {
+        ref: "alpha",
+        color: _ctx.rgbString,
+        rgba: _ctx.rgba,
+        width: _ctx.hueWidth,
+        height: _ctx.hueHeight,
+        onSelectAlpha: _ctx.selectAlpha
+      }, null, 8 /* PROPS */, ["color", "rgba", "width", "height", "onSelectAlpha"])
+    ]),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+      style: { height: _ctx.previewHeight + 'px' },
+      class: "color-show"
+    }, [
+      (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Preview, {
+        color: _ctx.rgbaString,
+        width: _ctx.previewWidth,
+        height: _ctx.previewHeight
+      }, null, 8 /* PROPS */, ["color", "width", "height"]),
+      (!_ctx.suckerHide)
+        ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Sucker, {
+            key: 0,
+            "sucker-canvas": _ctx.suckerCanvas,
+            "sucker-area": _ctx.suckerArea,
+            onOpenSucker: _ctx.openSucker,
+            onSelectSucker: _ctx.selectSucker
+          }, null, 8 /* PROPS */, ["sucker-canvas", "sucker-area", "onOpenSucker", "onSelectSucker"]))
+        : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)
+    ], 4 /* STYLE */),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Box, {
+      name: "HEX",
+      color: _ctx.modelHex,
+      onInputColor: _ctx.inputHex
+    }, null, 8 /* PROPS */, ["color", "onInputColor"]),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Box, {
+      name: "RGBA",
+      color: _ctx.modelRgba,
+      onInputColor: _ctx.inputRgba
+    }, null, 8 /* PROPS */, ["color", "onInputColor"]),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Colors, {
+      color: _ctx.rgbaString,
+      "colors-default": _ctx.colorsDefault,
+      "colors-history-key": _ctx.colorsHistoryKey,
+      onSelectColor: _ctx.selectColor
+    }, null, 8 /* PROPS */, ["color", "colors-default", "colors-history-key", "onSelectColor"]),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" custom options "),
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")
+  ], 6 /* CLASS, STYLE */))
+}
+
+script$7.render = render$7;
+script$7.__file = "src/color/ColorPicker.vue";
+
+script$7.install = (Vue) => {
+    Vue.component(script$7.name, script$7);
+};
+
+function install(Vue) {
+    Vue.component(script$7.name, script$7);
+}
+var index = { install };
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
+
 
 /***/ }),
 
