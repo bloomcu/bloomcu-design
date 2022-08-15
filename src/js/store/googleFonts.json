@@ -1,0 +1,1835 @@
+[
+  {
+    "family": "Roboto",
+    "variants": [
+      "100",
+      "100italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "700",
+      "700italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v30",
+    "last_modified": "2022-05-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Open Sans",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic"
+    ],
+    "version": "v29",
+    "last_modified": "2022-05-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Sans JP",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "900"
+    ],
+    "version": "v42",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Lato",
+    "variants": [
+      "100",
+      "100italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "700",
+      "700italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v23",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Montserrat",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v25",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Poppins",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v20",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Roboto Condensed",
+    "variants": [
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v25",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Source Sans Pro",
+    "variants": [
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v21",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Oswald",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v49",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Roboto Mono",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v22",
+    "last_modified": "2022-07-12",
+    "category": "monospace"
+  },
+  {
+    "family": "Raleway",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v28",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Sans",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v27",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Inter",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v12",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Ubuntu",
+    "variants": [
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v20",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Roboto Slab",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v24",
+    "last_modified": "2022-07-12",
+    "category": "serif"
+  },
+  {
+    "family": "Mukta",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "version": "v13",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Nunito",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v25",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Merriweather",
+    "variants": [
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "700",
+      "700italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v30",
+    "last_modified": "2022-04-26",
+    "category": "serif"
+  },
+  {
+    "family": "PT Sans",
+    "variants": [
+      "regular",
+      "italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Playfair Display",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v30",
+    "last_modified": "2022-07-19",
+    "category": "serif"
+  },
+  {
+    "family": "Noto Sans KR",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "900"
+    ],
+    "version": "v27",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Nunito Sans",
+    "variants": [
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Rubik",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v21",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Work Sans",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Lora",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v25",
+    "last_modified": "2022-07-12",
+    "category": "serif"
+  },
+  {
+    "family": "Noto Sans TC",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "900"
+    ],
+    "version": "v26",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Nanum Gothic",
+    "variants": [
+      "regular",
+      "700",
+      "800"
+    ],
+    "version": "v21",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Fira Sans",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v16",
+    "last_modified": "2022-04-21",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Barlow",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Quicksand",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v30",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Titillium Web",
+    "variants": [
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "900"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Kanit",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "PT Serif",
+    "variants": [
+      "regular",
+      "italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-27",
+    "category": "serif"
+  },
+  {
+    "family": "Mulish",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Hind Siliguri",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v12",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Serif",
+    "variants": [
+      "regular",
+      "italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v21",
+    "last_modified": "2022-05-10",
+    "category": "serif"
+  },
+  {
+    "family": "Inconsolata",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v31",
+    "last_modified": "2022-07-12",
+    "category": "monospace"
+  },
+  {
+    "family": "Heebo",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v21",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "IBM Plex Sans",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v14",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Josefin Sans",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v25",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Libre Franklin",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v13",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Karla",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic"
+    ],
+    "version": "v23",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Cairo",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v20",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "EB Garamond",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic"
+    ],
+    "version": "v26",
+    "last_modified": "2022-07-12",
+    "category": "serif"
+  },
+  {
+    "family": "Arimo",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v27",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "DM Sans",
+    "variants": [
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v11",
+    "last_modified": "2022-04-21",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Oxygen",
+    "variants": [
+      "300",
+      "regular",
+      "700"
+    ],
+    "version": "v15",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Dosis",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "version": "v27",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Libre Baskerville",
+    "variants": [
+      "regular",
+      "italic",
+      "700"
+    ],
+    "version": "v14",
+    "last_modified": "2022-04-26",
+    "category": "serif"
+  },
+  {
+    "family": "PT Sans Narrow",
+    "variants": [
+      "regular",
+      "700"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Bebas Neue",
+    "variants": [
+      "regular"
+    ],
+    "version": "v9",
+    "last_modified": "2022-04-20",
+    "category": "display"
+  },
+  {
+    "family": "Noto Sans SC",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "900"
+    ],
+    "version": "v26",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Bitter",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v28",
+    "last_modified": "2022-06-27",
+    "category": "serif"
+  },
+  {
+    "family": "Anton",
+    "variants": [
+      "regular"
+    ],
+    "version": "v23",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Dancing Script",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v24",
+    "last_modified": "2022-07-12",
+    "category": "handwriting"
+  },
+  {
+    "family": "Source Serif Pro",
+    "variants": [
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-27",
+    "category": "serif"
+  },
+  {
+    "family": "Cabin",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v26",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Source Code Pro",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v21",
+    "last_modified": "2022-04-27",
+    "category": "monospace"
+  },
+  {
+    "family": "Prompt",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v10",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Signika Negative",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v19",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Hind",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v16",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Barlow Condensed",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Lobster",
+    "variants": [
+      "regular"
+    ],
+    "version": "v28",
+    "last_modified": "2022-04-26",
+    "category": "display"
+  },
+  {
+    "family": "M PLUS Rounded 1c",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Abel",
+    "variants": [
+      "regular"
+    ],
+    "version": "v18",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Varela Round",
+    "variants": [
+      "regular"
+    ],
+    "version": "v19",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Yanone Kaffeesatz",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v23",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Comfortaa",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v40",
+    "last_modified": "2022-06-27",
+    "category": "display"
+  },
+  {
+    "family": "Fjalla One",
+    "variants": [
+      "regular"
+    ],
+    "version": "v13",
+    "last_modified": "2022-04-21",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Sans HK",
+    "variants": [
+      "100",
+      "300",
+      "regular",
+      "500",
+      "700",
+      "900"
+    ],
+    "version": "v21",
+    "last_modified": "2022-05-10",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Manrope",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "version": "v13",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Maven Pro",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v32",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Pacifico",
+    "variants": [
+      "regular"
+    ],
+    "version": "v22",
+    "last_modified": "2022-05-10",
+    "category": "handwriting"
+  },
+  {
+    "family": "Crimson Text",
+    "variants": [
+      "regular",
+      "italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v19",
+    "last_modified": "2022-05-24",
+    "category": "serif"
+  },
+  {
+    "family": "Cinzel",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v19",
+    "last_modified": "2022-06-27",
+    "category": "serif"
+  },
+  {
+    "family": "Exo 2",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v20",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Teko",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Overpass",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v12",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Arvo",
+    "variants": [
+      "regular",
+      "italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v20",
+    "last_modified": "2022-04-20",
+    "category": "serif"
+  },
+  {
+    "family": "Noto Serif TC",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "900"
+    ],
+    "version": "v23",
+    "last_modified": "2022-05-10",
+    "category": "serif"
+  },
+  {
+    "family": "Hind Madurai",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v11",
+    "last_modified": "2022-04-26",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Saira",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v14",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Serif JP",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "900"
+    ],
+    "version": "v21",
+    "last_modified": "2022-05-10",
+    "category": "serif"
+  },
+  {
+    "family": "Asap",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v24",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Abril Fatface",
+    "variants": [
+      "regular"
+    ],
+    "version": "v19",
+    "last_modified": "2022-04-20",
+    "category": "display"
+  },
+  {
+    "family": "Fira Sans Condensed",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v10",
+    "last_modified": "2022-04-21",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Noto Serif KR",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "900"
+    ],
+    "version": "v20",
+    "last_modified": "2022-05-10",
+    "category": "serif"
+  },
+  {
+    "family": "Secular One",
+    "variants": [
+      "regular"
+    ],
+    "version": "v11",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Merriweather Sans",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic"
+    ],
+    "version": "v22",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Archivo",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v18",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Taviraj",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v11",
+    "last_modified": "2022-04-27",
+    "category": "serif"
+  },
+  {
+    "family": "Shadows Into Light",
+    "variants": [
+      "regular"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-27",
+    "category": "handwriting"
+  },
+  {
+    "family": "Rajdhani",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Assistant",
+    "variants": [
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800"
+    ],
+    "version": "v18",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Indie Flower",
+    "variants": [
+      "regular"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-26",
+    "category": "handwriting"
+  },
+  {
+    "family": "Questrial",
+    "variants": [
+      "regular"
+    ],
+    "version": "v18",
+    "last_modified": "2022-04-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Bree Serif",
+    "variants": [
+      "regular"
+    ],
+    "version": "v17",
+    "last_modified": "2022-04-21",
+    "category": "serif"
+  },
+  {
+    "family": "Caveat",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v17",
+    "last_modified": "2022-06-27",
+    "category": "handwriting"
+  },
+  {
+    "family": "Cormorant SC",
+    "variants": [
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700"
+    ],
+    "version": "v16",
+    "last_modified": "2022-04-21",
+    "category": "serif"
+  },
+  {
+    "family": "Catamaran",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ],
+    "version": "v17",
+    "last_modified": "2022-06-27",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Barlow Semi Condensed",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic",
+      "800",
+      "800italic",
+      "900",
+      "900italic"
+    ],
+    "version": "v14",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "ABeeZee",
+    "variants": [
+      "regular",
+      "italic"
+    ],
+    "version": "v22",
+    "last_modified": "2022-04-20",
+    "category": "sans-serif"
+  },
+  {
+    "family": "IBM Plex Serif",
+    "variants": [
+      "100",
+      "100italic",
+      "200",
+      "200italic",
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v15",
+    "last_modified": "2022-04-26",
+    "category": "serif"
+  },
+  {
+    "family": "Slabo 27px",
+    "variants": [
+      "regular"
+    ],
+    "version": "v12",
+    "last_modified": "2022-04-27",
+    "category": "serif"
+  },
+  {
+    "family": "Ibarra Real Nova",
+    "variants": [
+      "regular",
+      "500",
+      "600",
+      "700",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic"
+    ],
+    "version": "v20",
+    "last_modified": "2022-07-12",
+    "category": "serif"
+  },
+  {
+    "family": "Jost",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v14",
+    "last_modified": "2022-07-12",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Public Sans",
+    "variants": [
+      "100",
+      "200",
+      "300",
+      "regular",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900",
+      "100italic",
+      "200italic",
+      "300italic",
+      "italic",
+      "500italic",
+      "600italic",
+      "700italic",
+      "800italic",
+      "900italic"
+    ],
+    "version": "v14",
+    "last_modified": "2022-07-19",
+    "category": "sans-serif"
+  },
+  {
+    "family": "Zilla Slab",
+    "variants": [
+      "300",
+      "300italic",
+      "regular",
+      "italic",
+      "500",
+      "500italic",
+      "600",
+      "600italic",
+      "700",
+      "700italic"
+    ],
+    "version": "v11",
+    "last_modified": "2022-04-27",
+    "category": "serif"
+  }
+]

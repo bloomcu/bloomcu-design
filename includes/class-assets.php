@@ -21,7 +21,18 @@ class Assets {
 	 * @return void
 	 */
 	public function dequeue_child_theme_stylesheet() {
+		// Dequeue child theme css
 		wp_dequeue_style('client-css');
+		
+		// Re enqueue base.js with depending on Vue
+		wp_deregister_script('base');
+		wp_enqueue_script('base', THEME_JS . '/app.js', [], '', true);
+		
+		// Dequeue search js and vue
+		wp_dequeue_script('codybloom-search');
+		wp_dequeue_script('vue');
+		
+		// Enqueue this plugin's js
 		wp_enqueue_script('design-plugin-frontend');
 	}
 	

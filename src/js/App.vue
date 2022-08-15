@@ -97,7 +97,7 @@
           </div>
         </div>
         
-        <!-- Typeography -->
+        <!-- Typography -->
         <div class="siderail-item">
           <button @click="activeMenu = 'typeography'" type="button" class="siderail-item__button" :class="activeMenu === 'typeography' ? 'siderail-item__button--active' : ''">
             <svg width="24" height="24" viewBox="0 0 24 24">
@@ -111,8 +111,14 @@
               <p style="font-size: 18px; width: 260px;" class="font-bold">Heading Font</p>
               <div class="select">
                   <select v-model="fontPrimary" name="heading" id="heading" class="select_input form-control width-100%">
-                    <option value="Roboto" key="Roboto" :selected="fontPrimary === 'Roboto'">Roboto</option>
-                    <option value="Poppins" key="Poppins" :selected="fontPrimary === 'Poppins'">Poppins</option>
+                    <option 
+                      v-for="font in googleFonts" 
+                      :key="font.family" 
+                      :value="font.family" 
+                      :selected="fontPrimary === font.family"
+                    >
+                      {{ font.family }}
+                    </option>
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
               </div>
@@ -122,8 +128,14 @@
               <p style="font-size: 18px; width: 260px;" class="font-bold">Body Font</p>
               <div class="select">
                   <select v-model="fontSecondary" name="body" id="body" class="select_input form-control width-100%">
-                    <option value="Roboto" key="Roboto" :selected="fontSecondary === 'Roboto'">Roboto</option>
-                    <option value="Poppins" key="Poppins" :selected="fontSecondary === 'Poppins'">Poppins</option>
+                    <option 
+                      v-for="font in googleFonts" 
+                      :key="font.family" 
+                      :value="font.family" 
+                      :selected="fontPrimary === font.family"
+                    >
+                      {{ font.family }}
+                    </option>
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
               </div>
@@ -141,18 +153,27 @@
           </button>
           <div v-if="activeMenu === 'buttons'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 260px;" class="font-bold">Primary Button</p>
-              <a href="#" class="btn btn--primary">Apply for an Auto Loan</a>
-            </div>
-            
-            <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 260px;" class="font-bold">Secondary Button</p>
-              <a href="#" class="btn btn--accent">Apply for an Auto Loan</a>
-            </div>
-            
-            <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 260px;" class="font-bold">Tertiary Button</p>
-              <a href="#" class="btn btn--tertiray">Apply for an Auto Loan</a>
+              <div class="margin-right-lg">
+                <p style="font-size: 18px; width: 260px;" class="font-bold">Button radius</p>
+                
+                <fieldset>
+                  <div class="slider slider--input gap-sm">
+                    <div class="slider__range">
+                      <input v-model="buttonRadius" class="slider__input" type="range" name="sliderValue" min="0" max="2" step="0.05">
+                    </div>
+                    <div class="slider__value">
+                      <input v-model="buttonRadius" class="form-control text-sm text-center width-xl" type="text">
+                      <span class="text-sm margin-left-xxxs">em</span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              
+              <div class="flex flex-column gap-sm">
+                <a href="#" class="btn btn--primary">Primary Button</a>
+                <a href="#" class="btn btn--accent">Secondary Button</a>
+                <a href="#" class="btn btn--tertiray">Tertiary Button</a>
+              </div>
             </div>
           </div>
         </div>
@@ -169,42 +190,74 @@
           <div v-if="activeMenu === 'backgrounds'" class="siderail-menu">
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Default Background</p>
+              <div :style="{'background-color': colorBackground}"  class="border radius-md width-xxxl height-xxl">
+              </div>
             </div>
             
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Medium Background</p>
+              <div :style="{'background-color': colorPrimary}" style="opacity: 0.05;" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Dark Background</p>
+              <div :style="{'background-color': colorPrimary}" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
-            <div class="siderail-menu__section">
+            <!-- <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Custom Background 1</p>
             </div>
             
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Custom Background 2</p>
-            </div>
+            </div> -->
           </div>
         </div>
-        
       </div>
     </div>
     
     <component :is="'style'">
-      :root,
-      [data-theme] {
-        <!-- Colors -->
+      :root {
+        --btn-radius: {{ buttonRadius + 'em' }};
+      }
+    </component>
+    
+    <component :is="'style'">
+      :root {
+        --color-white:    {{ colorWhite }};
+        --font-primary:   {{ fontPrimary }};
+        --font-secondary: {{ fontSecondary }};
+        --btn-radius:     {{ buttonRadius + 'em' }};
+      }
+      
+      <!-- Theme: Default -->
+      :root, [data-theme="default"] {
         --color-primary:         {{ colorPrimary }};
         --color-accent:          {{ colorAccent }};
         --color-contrast-high:   {{ colorContrastHigher }};
         --color-contrast-higher: {{ colorContrastHigher }};
         --color-bg:              {{ colorBackground }};
-        
-        <!-- Typeography -->
-        --font-primary:   {{ fontPrimary }};
-        --font-secondary: {{ fontSecondary }};
+      }
+      
+      <!-- Theme: bg-1 -->
+      [data-theme="bg-1"] {        
+        --color-bg: {{ colorPrimary + '0D' }};
+      }
+      
+      <!-- Theme: bg-2 -->
+      [data-theme="bg-2"] {        
+        --color-bg:              {{ colorPrimary }};
+        --color-contrast-high:   {{ colorWhite }};
+        --color-contrast-higher: {{ colorWhite }};
+      }
+      
+      [data-theme="bg-2"] .pre-title {
+        color: {{ colorWhite }};
+      }
+      
+      [data-theme="bg-2"] .btn--primary {
+        background-color: {{ colorWhite }};
+        color: {{ colorPrimary }};
       }
     </component>
     
@@ -217,19 +270,57 @@
 <script setup>
 import { ref } from 'vue'
 import { ColorPicker } from "vue3-colorpicker"
+import useColors from "./store/useColors.js";
+import useButtons from "./store/useButtons.js";
+import useTypography from "./store/useTypography.js";
+
+const { 
+  colorWhite,
+  colorPrimary, 
+  colorAccent, 
+  colorContrastHigh, 
+  colorContrastHigher, 
+  colorBackground,
+  colorBackgroundMedium,
+} = useColors()
+
+const { 
+  buttonRadius
+} = useButtons()
+
+const { 
+  googleFonts, 
+  fontPrimary, 
+  fontSecondary,
+} = useTypography()
 
 const activeMenu = ref('')
-
-import useColors from "./store/useColors.js";
-const { colorPrimary, colorAccent, colorContrastHigh, colorContrastHigher, colorBackground } = useColors()
-
-import useTypography from "./store/useTypography.js";
-const { fontPrimary, fontSecondary } = useTypography()
 </script>
 
 <style lang="scss">
 @import "vue3-colorpicker/style.css";
 
+/* --------------------------------
+Base Theme Overrides
+-------------------------------- */
+.btn--primary, .btn--secondary, .btn--tertiary {
+    border: 2px solid transparent;
+}
+
+.btn--secondary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.btn--tertiary {
+  background-color: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* --------------------------------
+Vue Colorpicker
+-------------------------------- */
 .vc-color-wrap {
   margin: 0 !important;
 }
@@ -417,5 +508,134 @@ Select input
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* --------------------------------
+Slider input
+-------------------------------- */
+:root {
+  --slider-track-height: 8px;
+  --slide-thumb-size: 20px;
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.slider__range {
+  width: 100%;
+  --slider-fill-value: 0%;
+  --slider-empty-value: 100%;
+}
+
+.slider__input {
+  display: block;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+.slider__input:focus {
+  outline: none;
+}
+
+.slider__input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-xs), var(--shadow-sm);
+  cursor: -webkit-grab;
+  cursor: grab;
+  margin-top: calc((var(--slider-track-height) - var(--slide-thumb-size)) * 0.5);
+}
+
+.slider__input:active::-webkit-slider-thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slider__input::-moz-range-thumb {
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-xs), var(--shadow-sm);
+  cursor: grab;
+}
+
+.slider__input:active::-moz-range-thumb {
+  cursor: grabbing;
+}
+
+.slider__input:active::-ms-thumb {
+  cursor: grabbing;
+}
+
+.slider__input:focus::-webkit-slider-thumb {
+  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
+}
+
+.slider__input:focus::-moz-range-thumb {
+  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
+}
+
+.slider__input::-webkit-slider-runnable-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+  margin-top: calc((var(--slide-thumb-size) - var(--slider-track-height)) * 0.5);
+}
+
+.slider__input::-moz-range-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+}
+
+.slider__input::-moz-focus-outer {
+  border: 0;
+}
+
+.slider__input::-ms-tooltip {
+  display: none;
+}
+
+.slider__input::-ms-thumb {
+  width: var(--slide-thumb-size);
+  height: var(--slide-thumb-size);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-xs), var(--shadow-sm);
+  cursor: grab;
+  transform: translateY(0);
+  background-color: white !important;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+  height: 20px;
+  width: 20px;
+}
+
+.slider__input:focus::-ms-thumb {
+  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);
+}
+
+.slider__input::-ms-track {
+  height: var(--slider-track-height);
+  border-radius: 50em;
+  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+  background-color: hsl(240deg, 1%, 60%);
+  color: transparent;
+  height: 8px;
+}
+
+.slider__value {
+  display: flex;
+  align-items: center;  
 }
 </style>
