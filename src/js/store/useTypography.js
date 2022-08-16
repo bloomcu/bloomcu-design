@@ -5,7 +5,7 @@ const fontPrimary = ref('Roboto Slab')
 const fontSecondary = ref('Poppins')
 const fontPrimaryWeight = ref('400')
 const fontSecondaryWeight = ref('400')
-const textBaseSize = ref('1')
+const textBaseSize = ref('1.3')
 
 function getFontByFamily(family) {
   return googleFonts.find((font) => {

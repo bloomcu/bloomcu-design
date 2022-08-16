@@ -106,7 +106,7 @@
               </g>
             </svg>
           </button>
-          <div v-if="true" class="siderail-menu">
+          <div v-if="activeMenu === 'typography'" class="siderail-menu">
             <div class="siderail-menu__section">
               <div style="width: 140px;">
                 <p style="font-size: 18px;" class="font-bold">Heading Font</p>  
@@ -188,11 +188,6 @@
             </div>
             
             <div class="siderail-menu__section">
-              <!-- <div style="width: 140px;">
-                <p style="font-size: 18px;" class="font-bold">Text Base Size</p>  
-              </div> -->
-              <!-- <div style="width: 400px;"> -->
-                <!-- Text base size -->
                 <p style="font-size: 18px; width: 140px;" class="font-bold">Text Base Size</p>
                 
                 <fieldset>
@@ -206,7 +201,6 @@
                     </div>
                   </div>
                 </fieldset>
-              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -368,22 +362,59 @@ function toggleMenu(menu) {
 /* --------------------------------
 Base Theme Overrides
 -------------------------------- */
+body {
+  font-family: var(--font-secondary);
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: var(--font-primary);
   font-weight: unset;
 }
 
-body {
-  font-family: var(--font-secondary);
+.btn--primary, .btn--secondary, .btn--tertiary {
+  border: 2px solid transparent;
 }
 
-.btn--primary, .btn--secondary, .btn--tertiary {
-    border: 2px solid transparent;
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  // &:hover {
+  //   border: 2px solid var(--color-primary);
+  //   background-color: transparent;
+  //   color: var(--color-primary)
+  // }
+}
+
+.btn--secondary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+  // &:hover {
+  //   border: 2px solid var(--color-accent);
+  //   background-color: transparent;
+  //   color: var(--color-accent)
+  // }
 }
 
 .btn--tertiary {
-  background-color: var(--color-accent);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  // color: var(--color-primary);
+
+  // &:hover {
+  //   border: 2px solid var(--color-accent);
+  //   background-color: transparent;
+  //   color: var(--color-accent)
+  // }
+}
+
+// Override tertiary button in hero's
+.hero,
+.feature-v4 { // feature-v4 is isolated hero block
+  .btn--tertiary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
 }
 
 [data-theme="bg-2"] {
@@ -391,16 +422,14 @@ body {
     color: var(--color-contrast-lower);
   }
   
+  .btn--tertiary {
+      color: var(--color-contrast-lower);
+  }
+  
   .pre-title {
     color: var(--color-primary);
   }
 }
-
-// .btn--tertiary {
-//   background-color: transparent;
-//   border-color: var(--color-accent);
-//   color: var(--color-accent);
-// }
 
 /* --------------------------------
 Vue Colorpicker
