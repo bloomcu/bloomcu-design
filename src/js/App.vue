@@ -303,7 +303,7 @@
       [data-theme="bg-2"] {        
         --color-bg:              {{ colorPrimary }};
         --color-primary:         {{ colorWhite }};
-        --color-contrast-lower:  {{ colorPrimary }};
+        --color-contrast-lower:  {{ colorContrastHigher }};
         --color-contrast-high:   {{ colorWhite }};
         --color-contrast-higher: {{ colorWhite }};
       }
@@ -443,7 +443,7 @@ Siderail
 -------------------------------- */
 .siderail {
   position: fixed;
-  left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
   z-index: 99;
@@ -451,7 +451,7 @@ Siderail
   width: 64px;
   height: 100vh;
   padding-top: 30px;
-  border-right: 1px solid #eaeaeb;
+  border-left: 1px solid #eaeaeb;
   background: #fff;
   
   &__inner {
@@ -529,7 +529,8 @@ Siderail
 
 .siderail-menu {
   position: absolute;
-  margin-left: 60px;
+  right: 0;
+  margin-right: 60px;
   border-radius: 7px;
   background: #fff;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
