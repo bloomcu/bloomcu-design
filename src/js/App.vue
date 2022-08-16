@@ -263,47 +263,32 @@
     </div>
     
     <component :is="'style'">
-      :root {
-        --btn-radius: {{ buttonRadius + 'em' }};
-      }
-    </component>
-    
-    <component :is="'style'">
-      :root {
-        --color-white:    {{ colorWhite }};
-        --font-primary:   {{ fontPrimary }};
-        --font-secondary: {{ fontSecondary }};
-        --btn-radius:     {{ buttonRadius + 'em' }};
-      }
-      
-      <!-- Theme: Default -->
+      <!-- Root & Default theme -->
       :root, [data-theme="default"] {
+        --color-white:           {{ colorWhite }};
+        --color-black:           {{ colorBlack }};
         --color-primary:         {{ colorPrimary }};
         --color-accent:          {{ colorAccent }};
         --color-contrast-high:   {{ colorContrastHigher }};
         --color-contrast-higher: {{ colorContrastHigher }};
         --color-bg:              {{ colorBackground }};
+        --font-primary:          {{ fontPrimary }};
+        --font-secondary:        {{ fontSecondary }};
+        --btn-radius:            {{ buttonRadius + 'em' }};
       }
       
-      <!-- Theme: bg-1 -->
+      <!-- Theme 1 -->
       [data-theme="bg-1"] {        
         --color-bg: {{ colorPrimary + '0D' }};
       }
       
-      <!-- Theme: bg-2 -->
+      <!-- Theme 2 -->
       [data-theme="bg-2"] {        
         --color-bg:              {{ colorPrimary }};
+        --color-primary:         {{ colorWhite }};
+        --color-contrast-lower:  {{ colorPrimary }};
         --color-contrast-high:   {{ colorWhite }};
         --color-contrast-higher: {{ colorWhite }};
-      }
-      
-      [data-theme="bg-2"] .pre-title {
-        color: {{ colorWhite }};
-      }
-      
-      [data-theme="bg-2"] .btn--primary {
-        background-color: {{ colorWhite }};
-        color: {{ colorPrimary }};
       }
     </component>
     
@@ -324,6 +309,7 @@ import useTypography from "./store/useTypography.js";
 
 const { 
   colorWhite,
+  colorBlack,
   colorPrimary, 
   colorAccent, 
   colorContrastHigh, 
@@ -367,16 +353,26 @@ body {
     border: 2px solid transparent;
 }
 
-.btn--secondary {
+.btn--tertiary {
   background-color: var(--color-accent);
   color: var(--color-white);
 }
 
-.btn--tertiary {
-  background-color: transparent;
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+[data-theme="bg-2"] {
+  .btn--primary {
+    color: var(--color-contrast-lower);
+  }
+  
+  .pre-title {
+    color: var(--color-primary);
+  }
 }
+
+// .btn--tertiary {
+//   background-color: transparent;
+//   border-color: var(--color-accent);
+//   color: var(--color-accent);
+// }
 
 /* --------------------------------
 Vue Colorpicker

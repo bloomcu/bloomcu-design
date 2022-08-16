@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import googleFonts from "./googleFonts.json"; //https://jsonformatter.org/e0f20a
 
-const fontPrimary = ref('Roboto')
+const fontPrimary = ref('Roboto Slab')
 const fontPrimaryWeight = ref('400')
 const fontSecondary = ref('Poppins')
 const fontSecondaryWeight = ref('400')
