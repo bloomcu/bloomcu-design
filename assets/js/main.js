@@ -20640,7 +20640,10 @@ __webpack_require__.r(__webpack_exports__);
     var _useTypography = (0,_store_useTypography_js__WEBPACK_IMPORTED_MODULE_4__["default"])(),
         googleFonts = _useTypography.googleFonts,
         fontPrimary = _useTypography.fontPrimary,
-        fontSecondary = _useTypography.fontSecondary;
+        fontPrimaryWeight = _useTypography.fontPrimaryWeight,
+        fontSecondary = _useTypography.fontSecondary,
+        fontSecondaryWeight = _useTypography.fontSecondaryWeight,
+        getFontByFamily = _useTypography.getFontByFamily;
 
     var activeMenu = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('');
     var __returned__ = {
@@ -20654,7 +20657,10 @@ __webpack_require__.r(__webpack_exports__);
       buttonRadius: buttonRadius,
       googleFonts: googleFonts,
       fontPrimary: fontPrimary,
+      fontPrimaryWeight: fontPrimaryWeight,
       fontSecondary: fontSecondary,
+      fontSecondaryWeight: fontSecondaryWeight,
+      getFontByFamily: getFontByFamily,
       activeMenu: activeMenu,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
       ColorPicker: vue3_colorpicker__WEBPACK_IMPORTED_MODULE_1__.ColorPicker,
@@ -20800,22 +20806,30 @@ var _hoisted_27 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   style: {
-    "font-size": "18px",
-    "width": "260px"
+    "width": "140px"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px"
   },
   "class": "font-bold"
-}, "Heading Font", -1
+}, "Heading Font")], -1
 /* HOISTED */
 );
 
 var _hoisted_29 = {
-  "class": "select"
+  style: {
+    "width": "400px"
+  }
 };
-var _hoisted_30 = ["value", "selected"];
+var _hoisted_30 = {
+  "class": "select margin-bottom-xxs"
+};
+var _hoisted_31 = ["value", "selected"];
 
-var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -20830,26 +20844,54 @@ var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_32 = {
+var _hoisted_33 = {
+  "class": "select"
+};
+var _hoisted_34 = ["value", "selected"];
+
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_36 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   style: {
-    "font-size": "18px",
-    "width": "260px"
+    "width": "140px"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px"
   },
   "class": "font-bold"
-}, "Body Font", -1
+}, "Body Font")], -1
 /* HOISTED */
 );
 
-var _hoisted_34 = {
-  "class": "select"
+var _hoisted_38 = {
+  style: {
+    "width": "400px"
+  }
 };
-var _hoisted_35 = ["value", "selected"];
+var _hoisted_39 = {
+  "class": "select margin-bottom-xxs"
+};
+var _hoisted_40 = ["value", "selected"];
 
-var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_41 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -20864,25 +20906,45 @@ var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_37 = {
+var _hoisted_42 = {
+  "class": "select"
+};
+var _hoisted_43 = ["value", "selected"];
+
+var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_45 = {
   "class": "siderail-item"
 };
 
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"8.333,14 1,14 1,1 23,1 23,14 20,14 \"></polyline><line data-cap=\"butt\" x1=\"13\" y1=\"14\" x2=\"19\" y2=\"20\"></line><polygon points=\" 6,7 10,19 13,14 18,11 \"></polygon></g></svg>", 1);
+var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"8.333,14 1,14 1,1 23,1 23,14 20,14 \"></polyline><line data-cap=\"butt\" x1=\"13\" y1=\"14\" x2=\"19\" y2=\"20\"></line><polygon points=\" 6,7 10,19 13,14 18,11 \"></polygon></g></svg>", 1);
 
-var _hoisted_39 = [_hoisted_38];
-var _hoisted_40 = {
+var _hoisted_47 = [_hoisted_46];
+var _hoisted_48 = {
   key: 0,
   "class": "siderail-menu"
 };
-var _hoisted_41 = {
+var _hoisted_49 = {
   "class": "siderail-menu__section"
 };
-var _hoisted_42 = {
+var _hoisted_50 = {
   "class": "margin-right-lg"
 };
 
-var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "260px"
@@ -20892,23 +20954,23 @@ var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_44 = {
+var _hoisted_52 = {
   "class": "slider slider--input gap-sm"
 };
-var _hoisted_45 = {
+var _hoisted_53 = {
   "class": "slider__range"
 };
-var _hoisted_46 = {
+var _hoisted_54 = {
   "class": "slider__value"
 };
 
-var _hoisted_47 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_55 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "text-sm margin-left-xxxs"
 }, "em", -1
 /* HOISTED */
 );
 
-var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex flex-column gap-sm"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
@@ -20923,22 +20985,22 @@ var _hoisted_48 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_49 = {
+var _hoisted_57 = {
   "class": "siderail-item"
 };
 
-var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg>", 1);
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg>", 1);
 
-var _hoisted_51 = [_hoisted_50];
-var _hoisted_52 = {
+var _hoisted_59 = [_hoisted_58];
+var _hoisted_60 = {
   key: 0,
   "class": "siderail-menu"
 };
-var _hoisted_53 = {
+var _hoisted_61 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -20948,11 +21010,11 @@ var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_55 = {
+var _hoisted_63 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -20962,11 +21024,11 @@ var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_57 = {
+var _hoisted_65 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -20976,7 +21038,23 @@ var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_59 = ["href"];
+var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+  rel: "preconnect",
+  href: "https://fonts.googleapis.com"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+  rel: "preconnect",
+  href: "https://fonts.gstatic.com",
+  crossorigin: ""
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_69 = ["href"];
+var _hoisted_70 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
@@ -21084,13 +21162,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["pureColor"])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"siderail-menu__section\">\n              <p style=\"font-size: 18px; width: 200px;\" class=\"font-bold\">Background Medium</p>\n              <div class=\"input-group\">\n                <input v-model=\"colorBackground\" class=\"form-control\" style=\"width: 160px;\" type=\"text\">\n                <div class=\"input-group__tag\">\n                  <div :style=\"{'background-color': colorBackground}\" style=\"width: 20px; height: 20px; border-radius: 100px; cursor: pointer;\"></div>\n                </div>\n              </div>\n            </div> ")])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Typography "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[9] || (_cache[9] = function ($event) {
-      return $setup.activeMenu = 'typeography';
+      return $setup.activeMenu = 'typography';
     }),
     type: "button",
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'typeography' ? 'siderail-item__button--active' : ''])
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'typography' ? 'siderail-item__button--active' : ''])
   }, _hoisted_25, 2
   /* CLASS */
-  ), $setup.activeMenu === 'typeography' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), $setup.activeMenu === 'typography' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex align-center margin-bottom-xs\">\n                  <button class=\"reset text-sm padding-xxs margin-right-xs border radius-md text-decoration-none\">Google Fonts</button>\n                  <button class=\"reset text-sm padding-xxs cursor-pointer\">Upload</button>\n                </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "onUpdate:modelValue": _cache[10] || (_cache[10] = function ($event) {
       return $setup.fontPrimary = $event;
     }),
@@ -21104,13 +21182,32 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.fontPrimary === font.family
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(font.family), 9
     /* TEXT, PROPS */
-    , _hoisted_30);
+    , _hoisted_31);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontPrimary]]), _hoisted_31])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [_hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontPrimary]]), _hoisted_32]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "onUpdate:modelValue": _cache[11] || (_cache[11] = function ($event) {
+      return $setup.fontPrimaryWeight = $event;
+    }),
+    name: "heading",
+    id: "heading",
+    "class": "select_input form-control width-100%"
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.getFontByFamily($setup.fontPrimary).variants, function (weight) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      key: weight,
+      value: weight,
+      selected: $setup.fontPrimaryWeight === weight
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
+    /* TEXT, PROPS */
+    , _hoisted_34);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontPrimaryWeight]]), _hoisted_35])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [_hoisted_37, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"flex align-center margin-bottom-xs\">\n                  <button class=\"reset text-sm padding-xxs margin-right-xs border radius-md text-decoration-none\">Google Fonts</button>\n                  <button class=\"reset text-sm padding-xxs cursor-pointer\">Upload</button>\n                </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[12] || (_cache[12] = function ($event) {
       return $setup.fontSecondary = $event;
     }),
     name: "body",
@@ -21123,21 +21220,40 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.fontPrimary === font.family
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(font.family), 9
     /* TEXT, PROPS */
-    , _hoisted_35);
+    , _hoisted_40);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontSecondary]]), _hoisted_36])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[12] || (_cache[12] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontSecondary]]), _hoisted_41]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
+      return $setup.fontSecondaryWeight = $event;
+    }),
+    name: "heading",
+    id: "heading",
+    "class": "select_input form-control width-100%"
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.getFontByFamily($setup.fontSecondary).variants, function (weight) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      key: weight,
+      value: weight,
+      selected: $setup.fontSecondaryWeight === weight
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
+    /* TEXT, PROPS */
+    , _hoisted_43);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.fontSecondaryWeight]]), _hoisted_44])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[14] || (_cache[14] = function ($event) {
       return $setup.activeMenu = 'buttons';
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'buttons' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_39, 2
+  }, _hoisted_47, 2
   /* CLASS */
-  ), $setup.activeMenu === 'buttons' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [_hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
+  ), $setup.activeMenu === 'buttons' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_48, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
       return $setup.buttonRadius = $event;
     }),
     "class": "slider__input",
@@ -21148,30 +21264,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     step: "0.05"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[14] || (_cache[14] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[16] || (_cache[16] = function ($event) {
       return $setup.buttonRadius = $event;
     }),
     "class": "form-control text-sm text-center width-xl",
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]]), _hoisted_47])])])]), _hoisted_48])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Backgrounds "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[15] || (_cache[15] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]]), _hoisted_55])])])]), _hoisted_56])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Backgrounds "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[17] || (_cache[17] = function ($event) {
       return $setup.activeMenu = 'backgrounds';
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'backgrounds' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_51, 2
+  }, _hoisted_59, 2
   /* CLASS */
-  ), $setup.activeMenu === 'backgrounds' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_52, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [_hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), $setup.activeMenu === 'backgrounds' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_60, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [_hoisted_62, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
       'background-color': $setup.colorBackground
     }),
     "class": "border radius-md width-xxxl height-xxl"
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [_hoisted_64, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorPrimary
     }, {
@@ -21180,7 +21296,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "radius-md width-xxxl height-xxl"
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
       'background-color': $setup.colorPrimary
     }),
@@ -21211,12 +21327,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <link :href=\"`https://fonts.googleapis.com/css?family=${family.css}`\" rel=\"stylesheet\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "https://fonts.googleapis.com/css2?family=".concat($setup.fontPrimary),
+  })), _hoisted_67, _hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "https://fonts.googleapis.com/css2?family=".concat($setup.fontPrimary, ":wght@").concat($setup.fontPrimaryWeight),
     rel: "stylesheet"
   }, null, 8
   /* PROPS */
-  , _hoisted_59)]);
+  , _hoisted_69), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "https://fonts.googleapis.com/css2?family=".concat($setup.fontSecondary, ":wght@").concat($setup.fontSecondaryWeight),
+    rel: "stylesheet"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_70)]);
 }
 
 /***/ }),
@@ -21375,12 +21496,24 @@ __webpack_require__.r(__webpack_exports__);
  //https://jsonformatter.org/e0f20a
 
 var fontPrimary = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('Roboto');
+var fontPrimaryWeight = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('400');
 var fontSecondary = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('Poppins');
+var fontSecondaryWeight = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)('400');
+
+function getFontByFamily(family) {
+  return _googleFonts_json__WEBPACK_IMPORTED_MODULE_1__.find(function (font) {
+    return font.family == family;
+  });
+}
+
 function useTypography() {
   return {
     googleFonts: _googleFonts_json__WEBPACK_IMPORTED_MODULE_1__,
     fontPrimary: fontPrimary,
-    fontSecondary: fontSecondary
+    fontPrimaryWeight: fontPrimaryWeight,
+    fontSecondary: fontSecondary,
+    fontSecondaryWeight: fontSecondaryWeight,
+    getFontByFamily: getFontByFamily
   };
 }
 
@@ -21406,7 +21539,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue3_colorpicker_style_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\n.btn--primary, .btn--secondary, .btn--tertiary {\n  border: 2px solid transparent;\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--color-white);\n}\n.btn--tertiary {\n  background-color: transparent;\n  border-color: var(--color-accent);\n  color: var(--color-accent);\n}\n\n/* --------------------------------\nVue Colorpicker\n-------------------------------- */\n.vc-color-wrap {\n  margin: 0 !important;\n}\n\n/* --------------------------------\nSiderail\n-------------------------------- */\n.siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n\n/* --------------------------------\nInput group\n-------------------------------- */\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}\n\n/* --------------------------------\nSelect input\n-------------------------------- */\n.select {\n  position: relative;\n  width: 100%;\n}\n.select__icon {\n  width: 16px;\n  height: 16px;\n  pointer-events: none;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n/* --------------------------------\nSlider input\n-------------------------------- */\n:root {\n  --slider-track-height: 8px;\n  --slide-thumb-size: 20px;\n}\n.slider {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.slider__range {\n  width: 100%;\n  --slider-fill-value: 0%;\n  --slider-empty-value: 100%;\n}\n.slider__input {\n  display: block;\n  -webkit-appearance: none;\n  width: 100%;\n  background: transparent;\n}\n.slider__input:focus {\n  outline: none;\n}\n.slider__input::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-primary);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: -webkit-grab;\n  cursor: grab;\n  margin-top: calc((var(--slider-track-height) - var(--slide-thumb-size)) * 0.5);\n}\n.slider__input:active::-webkit-slider-thumb {\n  cursor: -webkit-grabbing;\n  cursor: grabbing;\n}\n.slider__input::-moz-range-thumb {\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-primary);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n}\n.slider__input:active::-moz-range-thumb {\n  cursor: grabbing;\n}\n.slider__input:active::-ms-thumb {\n  cursor: grabbing;\n}\n.slider__input:focus::-webkit-slider-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.slider__input:focus::-moz-range-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.slider__input::-webkit-slider-runnable-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  margin-top: calc((var(--slide-thumb-size) - var(--slider-track-height)) * 0.5);\n}\n.slider__input::-moz-range-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n}\n.slider__input::-moz-focus-outer {\n  border: 0;\n}\n.slider__input::-ms-tooltip {\n  display: none;\n}\n.slider__input::-ms-thumb {\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-white);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n  transform: translateY(0);\n  background-color: white !important;\n  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);\n  height: 20px;\n  width: 20px;\n}\n.slider__input:focus::-ms-thumb {\n  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);\n}\n.slider__input::-ms-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  background-color: hsl(240deg, 1%, 60%);\n  color: transparent;\n  height: 8px;\n}\n.slider__value {\n  display: flex;\n  align-items: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\nh1, .h1, h2, .h2, h3, .h3, h4, .h4 {\n  font-family: var(--font-primary);\n  font-weight: unset;\n}\nbody {\n  font-family: var(--font-secondary);\n}\n.btn--primary, .btn--secondary, .btn--tertiary {\n  border: 2px solid transparent;\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--color-white);\n}\n.btn--tertiary {\n  background-color: transparent;\n  border-color: var(--color-accent);\n  color: var(--color-accent);\n}\n\n/* --------------------------------\nVue Colorpicker\n-------------------------------- */\n.vc-color-wrap {\n  margin: 0 !important;\n}\n\n/* --------------------------------\nSiderail\n-------------------------------- */\n.siderail {\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 99;\n  width: 64px;\n  height: 100vh;\n  padding-top: 30px;\n  border-right: 1px solid #eaeaeb;\n  background: #fff;\n}\n.siderail__inner {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  align-items: center;\n  padding: 12px;\n}\n.siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;\n  transition-duration: 0.15s;\n}\n.siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.siderail-menu {\n  position: absolute;\n  margin-left: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n\n/* --------------------------------\nInput group\n-------------------------------- */\n.input-group {\n  display: flex;\n}\n.input-group > * {\n  position: relative;\n}\n.input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.input-group > *:focus, .input-group *:focus-within {\n  z-index: 1;\n}\n.input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 var(--space-sm);\n  background-color: var(--color-bg);\n  border-radius: var(--radius-md);\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: var(--color-contrast-medium);\n}\n.input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.input-group__tag:last-child {\n  border-left-width: 0px;\n}\n\n/* --------------------------------\nSelect input\n-------------------------------- */\n.select {\n  position: relative;\n  width: 100%;\n}\n.select__icon {\n  width: 16px;\n  height: 16px;\n  pointer-events: none;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n/* --------------------------------\nSlider input\n-------------------------------- */\n:root {\n  --slider-track-height: 8px;\n  --slide-thumb-size: 20px;\n}\n.slider {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.slider__range {\n  width: 100%;\n  --slider-fill-value: 0%;\n  --slider-empty-value: 100%;\n}\n.slider__input {\n  display: block;\n  -webkit-appearance: none;\n  width: 100%;\n  background: transparent;\n}\n.slider__input:focus {\n  outline: none;\n}\n.slider__input::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-primary);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: -webkit-grab;\n  cursor: grab;\n  margin-top: calc((var(--slider-track-height) - var(--slide-thumb-size)) * 0.5);\n}\n.slider__input:active::-webkit-slider-thumb {\n  cursor: -webkit-grabbing;\n  cursor: grabbing;\n}\n.slider__input::-moz-range-thumb {\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-primary);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n}\n.slider__input:active::-moz-range-thumb {\n  cursor: grabbing;\n}\n.slider__input:active::-ms-thumb {\n  cursor: grabbing;\n}\n.slider__input:focus::-webkit-slider-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.slider__input:focus::-moz-range-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.slider__input::-webkit-slider-runnable-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  margin-top: calc((var(--slide-thumb-size) - var(--slider-track-height)) * 0.5);\n}\n.slider__input::-moz-range-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n}\n.slider__input::-moz-focus-outer {\n  border: 0;\n}\n.slider__input::-ms-tooltip {\n  display: none;\n}\n.slider__input::-ms-thumb {\n  width: var(--slide-thumb-size);\n  height: var(--slide-thumb-size);\n  border-radius: 50%;\n  border: none;\n  background-color: var(--color-white);\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n  transform: translateY(0);\n  background-color: white !important;\n  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);\n  height: 20px;\n  width: 20px;\n}\n.slider__input:focus::-ms-thumb {\n  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);\n}\n.slider__input::-ms-track {\n  height: var(--slider-track-height);\n  border-radius: 50em;\n  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  background-color: hsl(240deg, 1%, 60%);\n  color: transparent;\n  height: 8px;\n}\n.slider__value {\n  display: flex;\n  align-items: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -36127,7 +36260,7 @@ function t(){return t=Object.assign?Object.assign.bind():function(e){for(var t=1
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"family":"Roboto","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","900","900italic"],"version":"v30","last_modified":"2022-05-12","category":"sans-serif"},{"family":"Open Sans","variants":["300","regular","500","600","700","800","300italic","italic","500italic","600italic","700italic","800italic"],"version":"v29","last_modified":"2022-05-12","category":"sans-serif"},{"family":"Noto Sans JP","variants":["100","300","regular","500","700","900"],"version":"v42","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Lato","variants":["100","100italic","300","300italic","regular","italic","700","700italic","900","900italic"],"version":"v23","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Montserrat","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v25","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Poppins","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v20","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Roboto Condensed","variants":["300","300italic","regular","italic","700","700italic"],"version":"v25","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Source Sans Pro","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900","900italic"],"version":"v21","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Oswald","variants":["200","300","regular","500","600","700"],"version":"v49","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Roboto Mono","variants":["100","200","300","regular","500","600","700","100italic","200italic","300italic","italic","500italic","600italic","700italic"],"version":"v22","last_modified":"2022-07-12","category":"monospace"},{"family":"Raleway","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v28","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Noto Sans","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v27","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Inter","variants":["100","200","300","regular","500","600","700","800","900"],"version":"v12","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Ubuntu","variants":["300","300italic","regular","italic","500","500italic","700","700italic"],"version":"v20","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Roboto Slab","variants":["100","200","300","regular","500","600","700","800","900"],"version":"v24","last_modified":"2022-07-12","category":"serif"},{"family":"Mukta","variants":["200","300","regular","500","600","700","800"],"version":"v13","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Nunito","variants":["200","300","regular","500","600","700","800","900","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v25","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Merriweather","variants":["300","300italic","regular","italic","700","700italic","900","900italic"],"version":"v30","last_modified":"2022-04-26","category":"serif"},{"family":"PT Sans","variants":["regular","italic","700","700italic"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Playfair Display","variants":["regular","500","600","700","800","900","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v30","last_modified":"2022-07-19","category":"serif"},{"family":"Noto Sans KR","variants":["100","300","regular","500","700","900"],"version":"v27","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Nunito Sans","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v12","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Rubik","variants":["300","regular","500","600","700","800","900","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v21","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Work Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Lora","variants":["regular","500","600","700","italic","500italic","600italic","700italic"],"version":"v25","last_modified":"2022-07-12","category":"serif"},{"family":"Noto Sans TC","variants":["100","300","regular","500","700","900"],"version":"v26","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Nanum Gothic","variants":["regular","700","800"],"version":"v21","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Fira Sans","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v16","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Barlow","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v12","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Quicksand","variants":["300","regular","500","600","700"],"version":"v30","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Titillium Web","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Kanit","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v12","last_modified":"2022-04-26","category":"sans-serif"},{"family":"PT Serif","variants":["regular","italic","700","700italic"],"version":"v17","last_modified":"2022-04-27","category":"serif"},{"family":"Mulish","variants":["200","300","regular","500","600","700","800","900","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v12","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Hind Siliguri","variants":["300","regular","500","600","700"],"version":"v12","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Noto Serif","variants":["regular","italic","700","700italic"],"version":"v21","last_modified":"2022-05-10","category":"serif"},{"family":"Inconsolata","variants":["200","300","regular","500","600","700","800","900"],"version":"v31","last_modified":"2022-07-12","category":"monospace"},{"family":"Heebo","variants":["100","200","300","regular","500","600","700","800","900"],"version":"v21","last_modified":"2022-07-12","category":"sans-serif"},{"family":"IBM Plex Sans","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"],"version":"v14","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Josefin Sans","variants":["100","200","300","regular","500","600","700","100italic","200italic","300italic","italic","500italic","600italic","700italic"],"version":"v25","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Libre Franklin","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v13","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Karla","variants":["200","300","regular","500","600","700","800","200italic","300italic","italic","500italic","600italic","700italic","800italic"],"version":"v23","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Cairo","variants":["200","300","regular","500","600","700","800","900"],"version":"v20","last_modified":"2022-06-27","category":"sans-serif"},{"family":"EB Garamond","variants":["regular","500","600","700","800","italic","500italic","600italic","700italic","800italic"],"version":"v26","last_modified":"2022-07-12","category":"serif"},{"family":"Arimo","variants":["regular","500","600","700","italic","500italic","600italic","700italic"],"version":"v27","last_modified":"2022-07-12","category":"sans-serif"},{"family":"DM Sans","variants":["regular","italic","500","500italic","700","700italic"],"version":"v11","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Oxygen","variants":["300","regular","700"],"version":"v15","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Dosis","variants":["200","300","regular","500","600","700","800"],"version":"v27","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Libre Baskerville","variants":["regular","italic","700"],"version":"v14","last_modified":"2022-04-26","category":"serif"},{"family":"PT Sans Narrow","variants":["regular","700"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Bebas Neue","variants":["regular"],"version":"v9","last_modified":"2022-04-20","category":"display"},{"family":"Noto Sans SC","variants":["100","300","regular","500","700","900"],"version":"v26","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Bitter","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v28","last_modified":"2022-06-27","category":"serif"},{"family":"Anton","variants":["regular"],"version":"v23","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Dancing Script","variants":["regular","500","600","700"],"version":"v24","last_modified":"2022-07-12","category":"handwriting"},{"family":"Source Serif Pro","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900","900italic"],"version":"v15","last_modified":"2022-04-27","category":"serif"},{"family":"Cabin","variants":["regular","500","600","700","italic","500italic","600italic","700italic"],"version":"v26","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Source Code Pro","variants":["200","300","regular","500","600","700","800","900","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v21","last_modified":"2022-04-27","category":"monospace"},{"family":"Prompt","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v10","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Signika Negative","variants":["300","regular","500","600","700"],"version":"v19","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Hind","variants":["300","regular","500","600","700"],"version":"v16","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Barlow Condensed","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v12","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Lobster","variants":["regular"],"version":"v28","last_modified":"2022-04-26","category":"display"},{"family":"M PLUS Rounded 1c","variants":["100","300","regular","500","700","800","900"],"version":"v15","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Abel","variants":["regular"],"version":"v18","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Varela Round","variants":["regular"],"version":"v19","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Yanone Kaffeesatz","variants":["200","300","regular","500","600","700"],"version":"v23","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Comfortaa","variants":["300","regular","500","600","700"],"version":"v40","last_modified":"2022-06-27","category":"display"},{"family":"Fjalla One","variants":["regular"],"version":"v13","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Noto Sans HK","variants":["100","300","regular","500","700","900"],"version":"v21","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Manrope","variants":["200","300","regular","500","600","700","800"],"version":"v13","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Maven Pro","variants":["regular","500","600","700","800","900"],"version":"v32","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Pacifico","variants":["regular"],"version":"v22","last_modified":"2022-05-10","category":"handwriting"},{"family":"Crimson Text","variants":["regular","italic","600","600italic","700","700italic"],"version":"v19","last_modified":"2022-05-24","category":"serif"},{"family":"Cinzel","variants":["regular","500","600","700","800","900"],"version":"v19","last_modified":"2022-06-27","category":"serif"},{"family":"Exo 2","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v20","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Teko","variants":["300","regular","500","600","700"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Overpass","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v12","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Arvo","variants":["regular","italic","700","700italic"],"version":"v20","last_modified":"2022-04-20","category":"serif"},{"family":"Noto Serif TC","variants":["200","300","regular","500","600","700","900"],"version":"v23","last_modified":"2022-05-10","category":"serif"},{"family":"Hind Madurai","variants":["300","regular","500","600","700"],"version":"v11","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Saira","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v14","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Noto Serif JP","variants":["200","300","regular","500","600","700","900"],"version":"v21","last_modified":"2022-05-10","category":"serif"},{"family":"Asap","variants":["regular","500","600","700","italic","500italic","600italic","700italic"],"version":"v24","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Abril Fatface","variants":["regular"],"version":"v19","last_modified":"2022-04-20","category":"display"},{"family":"Fira Sans Condensed","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v10","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Noto Serif KR","variants":["200","300","regular","500","600","700","900"],"version":"v20","last_modified":"2022-05-10","category":"serif"},{"family":"Secular One","variants":["regular"],"version":"v11","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Merriweather Sans","variants":["300","regular","500","600","700","800","300italic","italic","500italic","600italic","700italic","800italic"],"version":"v22","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Archivo","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v18","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Taviraj","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v11","last_modified":"2022-04-27","category":"serif"},{"family":"Shadows Into Light","variants":["regular"],"version":"v15","last_modified":"2022-04-27","category":"handwriting"},{"family":"Rajdhani","variants":["300","regular","500","600","700"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Assistant","variants":["200","300","regular","500","600","700","800"],"version":"v18","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Indie Flower","variants":["regular"],"version":"v17","last_modified":"2022-04-26","category":"handwriting"},{"family":"Questrial","variants":["regular"],"version":"v18","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Bree Serif","variants":["regular"],"version":"v17","last_modified":"2022-04-21","category":"serif"},{"family":"Caveat","variants":["regular","500","600","700"],"version":"v17","last_modified":"2022-06-27","category":"handwriting"},{"family":"Cormorant SC","variants":["300","regular","500","600","700"],"version":"v16","last_modified":"2022-04-21","category":"serif"},{"family":"Catamaran","variants":["100","200","300","regular","500","600","700","800","900"],"version":"v17","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Barlow Semi Condensed","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"],"version":"v14","last_modified":"2022-04-20","category":"sans-serif"},{"family":"ABeeZee","variants":["regular","italic"],"version":"v22","last_modified":"2022-04-20","category":"sans-serif"},{"family":"IBM Plex Serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"],"version":"v15","last_modified":"2022-04-26","category":"serif"},{"family":"Slabo 27px","variants":["regular"],"version":"v12","last_modified":"2022-04-27","category":"serif"},{"family":"Ibarra Real Nova","variants":["regular","500","600","700","italic","500italic","600italic","700italic"],"version":"v20","last_modified":"2022-07-12","category":"serif"},{"family":"Jost","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v14","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Public Sans","variants":["100","200","300","regular","500","600","700","800","900","100italic","200italic","300italic","italic","500italic","600italic","700italic","800italic","900italic"],"version":"v14","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Zilla Slab","variants":["300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"],"version":"v11","last_modified":"2022-04-27","category":"serif"}]');
+module.exports = JSON.parse('[{"family":"ABeeZee","variants":["400"],"version":"v22","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Abel","variants":["400"],"version":"v18","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Abril Fatface","variants":["400"],"version":"v19","last_modified":"2022-04-20","category":"display"},{"family":"Anton","variants":["400"],"version":"v23","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Archivo","variants":["100","200","300","400","500","600","700","800","900"],"version":"v18","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Arimo","variants":["400","500","600","700"],"version":"v27","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Arvo","variants":["400","700"],"version":"v20","last_modified":"2022-04-20","category":"serif"},{"family":"Asap","variants":["400","500","600","700"],"version":"v24","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Assistant","variants":["200","300","400","500","600","700","800"],"version":"v18","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Barlow","variants":["100","200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Barlow Condensed","variants":["100","200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Barlow Semi Condensed","variants":["100","200","300","400","500","600","700","800","900"],"version":"v14","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Bebas Neue","variants":["400"],"version":"v9","last_modified":"2022-04-20","category":"display"},{"family":"Bitter","variants":["100","200","300","400","500","600","700","800","900"],"version":"v28","last_modified":"2022-06-27","category":"serif"},{"family":"Bree Serif","variants":["400"],"version":"v17","last_modified":"2022-04-21","category":"serif"},{"family":"Cabin","variants":["400","500","600","700"],"version":"v26","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Cairo","variants":["200","300","400","500","600","700","800","900"],"version":"v20","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Catamaran","variants":["100","200","300","400","500","600","700","800","900"],"version":"v17","last_modified":"2022-06-27","category":"sans-serif"},{"family":"Caveat","variants":["400","500","600","700"],"version":"v17","last_modified":"2022-06-27","category":"handwriting"},{"family":"Cinzel","variants":["400","500","600","700","800","900"],"version":"v19","last_modified":"2022-06-27","category":"serif"},{"family":"Comfortaa","variants":["300","400","500","600","700"],"version":"v40","last_modified":"2022-06-27","category":"display"},{"family":"Cormorant SC","variants":["300","400","500","600","700"],"version":"v16","last_modified":"2022-04-21","category":"serif"},{"family":"Crimson Text","variants":["400","600","700"],"version":"v19","last_modified":"2022-05-24","category":"serif"},{"family":"DM Sans","variants":["400","500","700"],"version":"v11","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Dancing Script","variants":["400","500","600","700"],"version":"v24","last_modified":"2022-07-12","category":"handwriting"},{"family":"Dosis","variants":["200","300","400","500","600","700","800"],"version":"v27","last_modified":"2022-07-12","category":"sans-serif"},{"family":"EB Garamond","variants":["400","500","600","700","800"],"version":"v26","last_modified":"2022-07-12","category":"serif"},{"family":"Exo 2","variants":["100","200","300","400","500","600","700","800","900"],"version":"v20","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Fira Sans","variants":["100","200","300","400","500","600","700","800","900"],"version":"v16","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Fira Sans Condensed","variants":["100","200","300","400","500","600","700","800","900"],"version":"v10","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Fjalla One","variants":["400"],"version":"v13","last_modified":"2022-04-21","category":"sans-serif"},{"family":"Heebo","variants":["100","200","300","400","500","600","700","800","900"],"version":"v21","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Hind","variants":["300","400","500","600","700"],"version":"v16","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Hind Madurai","variants":["300","400","500","600","700"],"version":"v11","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Hind Siliguri","variants":["300","400","500","600","700"],"version":"v12","last_modified":"2022-04-26","category":"sans-serif"},{"family":"IBM Plex Sans","variants":["100","200","300","400","500","600","700"],"version":"v14","last_modified":"2022-04-26","category":"sans-serif"},{"family":"IBM Plex Serif","variants":["100","200","300","400","500","600","700"],"version":"v15","last_modified":"2022-04-26","category":"serif"},{"family":"Ibarra Real Nova","variants":["400","500","600","700"],"version":"v20","last_modified":"2022-07-12","category":"serif"},{"family":"Inconsolata","variants":["200","300","400","500","600","700","800","900"],"version":"v31","last_modified":"2022-07-12","category":"monospace"},{"family":"Indie Flower","variants":["400"],"version":"v17","last_modified":"2022-04-26","category":"handwriting"},{"family":"Inter","variants":["100","200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Josefin Sans","variants":["100","200","300","400","500","600","700"],"version":"v25","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Jost","variants":["100","200","300","400","500","600","700","800","900"],"version":"v14","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Kanit","variants":["100","200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Karla","variants":["200","300","400","500","600","700","800"],"version":"v23","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Lato","variants":["100","300","400","700","900"],"version":"v23","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Libre Baskerville","variants":["400","700"],"version":"v14","last_modified":"2022-04-26","category":"serif"},{"family":"Libre Franklin","variants":["100","200","300","400","500","600","700","800","900"],"version":"v13","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Lobster","variants":["400"],"version":"v28","last_modified":"2022-04-26","category":"display"},{"family":"Lora","variants":["400","500","600","700"],"version":"v25","last_modified":"2022-07-12","category":"serif"},{"family":"M PLUS Rounded 1c","variants":["100","300","400","500","700","800","900"],"version":"v15","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Manrope","variants":["200","300","400","500","600","700","800"],"version":"v13","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Maven Pro","variants":["400","500","600","700","800","900"],"version":"v32","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Merriweather","variants":["300","400","700","900"],"version":"v30","last_modified":"2022-04-26","category":"serif"},{"family":"Merriweather Sans","variants":["300","400","500","600","700","800"],"version":"v22","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Montserrat","variants":["100","200","300","400","500","600","700","800","900"],"version":"v25","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Mukta","variants":["200","300","400","500","600","700","800"],"version":"v13","last_modified":"2022-04-26","category":"sans-serif"},{"family":"Mulish","variants":["200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-07-12","category":"sans-serif"},{"family":"Nanum Gothic","variants":["400","700","800"],"version":"v21","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans","variants":["100","200","300","400","500","600","700","800","900"],"version":"v27","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans HK","variants":["100","300","400","500","700","900"],"version":"v21","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans JP","variants":["100","300","400","500","700","900"],"version":"v42","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans KR","variants":["100","300","400","500","700","900"],"version":"v27","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans SC","variants":["100","300","400","500","700","900"],"version":"v26","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Sans TC","variants":["100","300","400","500","700","900"],"version":"v26","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Noto Serif","variants":["400","700"],"version":"v21","last_modified":"2022-05-10","category":"serif"},{"family":"Noto Serif JP","variants":["200","300","400","500","600","700","900"],"version":"v21","last_modified":"2022-05-10","category":"serif"},{"family":"Noto Serif KR","variants":["200","300","400","500","600","700","900"],"version":"v20","last_modified":"2022-05-10","category":"serif"},{"family":"Noto Serif TC","variants":["200","300","400","500","600","700","900"],"version":"v23","last_modified":"2022-05-10","category":"serif"},{"family":"Nunito","variants":["200","300","400","500","600","700","800","900"],"version":"v25","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Nunito Sans","variants":["200","300","400","600","700","800","900"],"version":"v12","last_modified":"2022-05-10","category":"sans-serif"},{"family":"Open Sans","variants":["300","400","500","600","700","800"],"version":"v29","last_modified":"2022-05-12","category":"sans-serif"},{"family":"Oswald","variants":["200","300","400","500","600","700"],"version":"v49","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Overpass","variants":["100","200","300","400","500","600","700","800","900"],"version":"v12","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Oxygen","variants":["300","400","700"],"version":"v15","last_modified":"2022-05-10","category":"sans-serif"},{"family":"PT Sans","variants":["400","700"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"PT Sans Narrow","variants":["400","700"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"PT Serif","variants":["400","700"],"version":"v17","last_modified":"2022-04-27","category":"serif"},{"family":"Pacifico","variants":["400"],"version":"v22","last_modified":"2022-05-10","category":"handwriting"},{"family":"Playfair Display","variants":["400","500","600","700","800","900"],"version":"v30","last_modified":"2022-07-19","category":"serif"},{"family":"Poppins","variants":["100","200","300","400","500","600","700","800","900"],"version":"v20","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Prompt","variants":["100","200","300","400","500","600","700","800","900"],"version":"v10","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Public Sans","variants":["100","200","300","400","500","600","700","800","900"],"version":"v14","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Questrial","variants":["400"],"version":"v18","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Quicksand","variants":["300","400","500","600","700"],"version":"v30","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Rajdhani","variants":["300","400","500","600","700"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Raleway","variants":["100","200","300","400","500","600","700","800","900"],"version":"v28","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Roboto","variants":["100","300","400","500","700","900"],"version":"v30","last_modified":"2022-05-12","category":"sans-serif"},{"family":"Roboto Condensed","variants":["300","400","700"],"version":"v25","last_modified":"2022-04-20","category":"sans-serif"},{"family":"Roboto Mono","variants":["100","200","300","400","500","600","700"],"version":"v22","last_modified":"2022-07-12","category":"monospace"},{"family":"Roboto Slab","variants":["100","200","300","400","500","600","700","800","900"],"version":"v24","last_modified":"2022-07-12","category":"serif"},{"family":"Rubik","variants":["300","400","500","600","700","800","900"],"version":"v21","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Saira","variants":["100","200","300","400","500","600","700","800","900"],"version":"v14","last_modified":"2022-07-19","category":"sans-serif"},{"family":"Secular One","variants":["400"],"version":"v11","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Shadows Into Light","variants":["400"],"version":"v15","last_modified":"2022-04-27","category":"handwriting"},{"family":"Signika Negative","variants":["300","400","500","600","700"],"version":"v19","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Slabo 27px","variants":["400"],"version":"v12","last_modified":"2022-04-27","category":"serif"},{"family":"Source Code Pro","variants":["200","300","400","500","600","700","800","900"],"version":"v21","last_modified":"2022-04-27","category":"monospace"},{"family":"Source Sans Pro","variants":["200","300","400","600","700","900"],"version":"v21","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Source Serif Pro","variants":["200","300","400","600","700","900"],"version":"v15","last_modified":"2022-04-27","category":"serif"},{"family":"Space Grotesk","variants":["300","400","500","600","700"],"version":"v12","lastModified":"2022-04-27","category":"sans-serif"},{"family":"Taviraj","variants":["100","200","300","400","500","600","700","800","900"],"version":"v11","last_modified":"2022-04-27","category":"serif"},{"family":"Teko","variants":["300","400","500","600","700"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Titillium Web","variants":["200","300","400","600","700","900"],"version":"v15","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Ubuntu","variants":["300","400","500","700"],"version":"v20","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Varela Round","variants":["400"],"version":"v19","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Work Sans","variants":["100","200","300","400","500","600","700","800","900"],"version":"v17","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Yanone Kaffeesatz","variants":["200","300","400","500","600","700"],"version":"v23","last_modified":"2022-04-27","category":"sans-serif"},{"family":"Zilla Slab","variants":["300","400","500","600","700"],"version":"v11","last_modified":"2022-04-27","category":"serif"}]');
 
 /***/ })
 

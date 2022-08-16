@@ -99,45 +99,91 @@
         
         <!-- Typography -->
         <div class="siderail-item">
-          <button @click="activeMenu = 'typeography'" type="button" class="siderail-item__button" :class="activeMenu === 'typeography' ? 'siderail-item__button--active' : ''">
+          <button @click="activeMenu = 'typography'" type="button" class="siderail-item__button" :class="activeMenu === 'typography' ? 'siderail-item__button--active' : ''">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round">
                 <polyline points="1,5 1,3 17,3 17,5 "></polyline><line x1="9" y1="3" x2="9" y2="20"></line><line x1="5" y1="20" x2="12" y2="20"></line><polyline points=" 13,11 13,10 23,10 23,11 "></polyline><line x1="18" y1="10" x2="18" y2="20"></line><line x1="16" y1="20" x2="20" y2="20"></line>
               </g>
             </svg>
           </button>
-          <div v-if="activeMenu === 'typeography'" class="siderail-menu">
+          <div v-if="activeMenu === 'typography'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 260px;" class="font-bold">Heading Font</p>
-              <div class="select">
-                  <select v-model="fontPrimary" name="heading" id="heading" class="select_input form-control width-100%">
-                    <option 
-                      v-for="font in googleFonts" 
-                      :key="font.family" 
-                      :value="font.family" 
-                      :selected="fontPrimary === font.family"
-                    >
-                      {{ font.family }}
-                    </option>
-                  </select>
-                  <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+              <div style="width: 140px;">
+                <p style="font-size: 18px;" class="font-bold">Heading Font</p>  
+              </div>
+              <div style="width: 400px;">
+                <!-- <div class="flex align-center margin-bottom-xs">
+                  <button class="reset text-sm padding-xxs margin-right-xs border radius-md text-decoration-none">Google Fonts</button>
+                  <button class="reset text-sm padding-xxs cursor-pointer">Upload</button>
+                </div> -->
+                <!-- Primary font -->
+                <div class="select margin-bottom-xxs">
+                    <select v-model="fontPrimary" name="heading" id="heading" class="select_input form-control width-100%">
+                      <option 
+                        v-for="font in googleFonts" 
+                        :key="font.family" 
+                        :value="font.family" 
+                        :selected="fontPrimary === font.family"
+                      >
+                        {{ font.family }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+                <!-- Primary font weight -->
+                <div class="select">
+                    <select v-model="fontPrimaryWeight" name="heading" id="heading" class="select_input form-control width-100%">
+                      <option 
+                        v-for="weight in getFontByFamily(fontPrimary).variants" 
+                        :key="weight" 
+                        :value="weight" 
+                        :selected="fontPrimaryWeight === weight"
+                      >
+                        {{ weight }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
               </div>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 260px;" class="font-bold">Body Font</p>
-              <div class="select">
-                  <select v-model="fontSecondary" name="body" id="body" class="select_input form-control width-100%">
-                    <option 
-                      v-for="font in googleFonts" 
-                      :key="font.family" 
-                      :value="font.family" 
-                      :selected="fontPrimary === font.family"
-                    >
-                      {{ font.family }}
-                    </option>
-                  </select>
-                  <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+              <div style="width: 140px;">
+                <p style="font-size: 18px;" class="font-bold">Body Font</p>  
+              </div>
+              <div style="width: 400px;">
+                <!-- <div class="flex align-center margin-bottom-xs">
+                  <button class="reset text-sm padding-xxs margin-right-xs border radius-md text-decoration-none">Google Fonts</button>
+                  <button class="reset text-sm padding-xxs cursor-pointer">Upload</button>
+                </div> -->
+                <!-- Secondary font -->
+                <div class="select margin-bottom-xxs">
+                    <select v-model="fontSecondary" name="body" id="body" class="select_input form-control width-100%">
+                      <option 
+                        v-for="font in googleFonts" 
+                        :key="font.family" 
+                        :value="font.family" 
+                        :selected="fontPrimary === font.family"
+                      >
+                        {{ font.family }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+                <!-- Secondary font weight -->
+                <div class="select">
+                    <select v-model="fontSecondaryWeight" name="heading" id="heading" class="select_input form-control width-100%">
+                      <option 
+                        v-for="weight in getFontByFamily(fontSecondary).variants" 
+                        :key="weight" 
+                        :value="weight" 
+                        :selected="fontSecondaryWeight === weight"
+                      >
+                        {{ weight }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
               </div>
             </div>
           </div>
@@ -261,8 +307,10 @@
       }
     </component>
     
-    <!-- <link :href="`https://fonts.googleapis.com/css?family=${family.css}`" rel="stylesheet"> -->
-    <link :href="`https://fonts.googleapis.com/css2?family=${fontPrimary}`" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link :href="`https://fonts.googleapis.com/css2?family=${fontPrimary}:wght@${fontPrimaryWeight}`" rel="stylesheet" />
+    <link :href="`https://fonts.googleapis.com/css2?family=${fontSecondary}:wght@${fontSecondaryWeight}`" rel="stylesheet" />
 
   </div>
 </template>
@@ -290,8 +338,11 @@ const {
 
 const { 
   googleFonts, 
-  fontPrimary, 
+  fontPrimary,
+  fontPrimaryWeight,
   fontSecondary,
+  fontSecondaryWeight,
+  getFontByFamily,
 } = useTypography()
 
 const activeMenu = ref('')
@@ -303,6 +354,15 @@ const activeMenu = ref('')
 /* --------------------------------
 Base Theme Overrides
 -------------------------------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: var(--font-primary);
+  font-weight: unset;
+}
+
+body {
+  font-family: var(--font-secondary);
+}
+
 .btn--primary, .btn--secondary, .btn--tertiary {
     border: 2px solid transparent;
 }
