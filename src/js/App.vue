@@ -193,13 +193,14 @@
                 <fieldset>
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="textBaseSize" class="slider__input" type="range" name="sliderValue" min="0.8" max="2" step="0.01">
+                      <input v-model="textBaseSize" class="slider__input" type="range" name="sliderValue" min="1" max="1.8" step="0.01">
                     </div>
                     <div class="slider__value">
                       <input v-model="textBaseSize" class="form-control text-sm text-center width-xl" type="text">
-                      <span class="text-sm margin-left-xxxs">rem</span>
+                      <!-- <span class="text-sm margin-left-xxxs">rem</span> -->
                     </div>
                   </div>
+                  <small>Add guidelines here. Default is 1.3. Most sites use between 1 - 1.5.</small>
                 </fieldset>
             </div>
           </div>
@@ -225,7 +226,7 @@
                     </div>
                     <div class="slider__value">
                       <input v-model="buttonRadius" class="form-control text-sm text-center width-xl" type="text">
-                      <span class="text-sm margin-left-xxxs">em</span>
+                      <!-- <span class="text-sm margin-left-xxxs">em</span> -->
                     </div>
                   </div>
                 </fieldset>
@@ -352,7 +353,8 @@ const {
 const activeMenu = ref('')
 
 function toggleMenu(menu) {
-  activeMenu.value = menu === activeMenu.value ? '' : menu
+  // activeMenu.value = menu === activeMenu.value ? '' : menu
+  activeMenu.value = activeMenu.value === menu ? '' : menu
 }
 </script>
 

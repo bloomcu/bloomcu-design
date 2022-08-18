@@ -20960,9 +20960,7 @@ var _hoisted_49 = {
   "class": "slider__value"
 };
 
-var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-sm margin-left-xxxs"
-}, "rem", -1
+var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", null, "Add guidelines here. Default is 1.3. Most sites use between 1 - 1.5.", -1
 /* HOISTED */
 );
 
@@ -21004,13 +21002,7 @@ var _hoisted_60 = {
   "class": "slider__value"
 };
 
-var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "text-sm margin-left-xxxs"
-}, "em", -1
-/* HOISTED */
-);
-
-var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "flex flex-column gap-sm"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
@@ -21025,22 +21017,22 @@ var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_63 = {
+var _hoisted_62 = {
   "class": "siderail-item"
 };
 
-var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg>", 1);
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"1 20 6 14 10 18 17 10 23 17\"></polyline><rect x=\"1\" y=\"3\" width=\"22\" height=\"18\"></rect><circle cx=\"9\" cy=\"8\" r=\"2\"></circle></g></svg>", 1);
 
-var _hoisted_65 = [_hoisted_64];
-var _hoisted_66 = {
+var _hoisted_64 = [_hoisted_63];
+var _hoisted_65 = {
   key: 0,
   "class": "siderail-menu"
 };
-var _hoisted_67 = {
+var _hoisted_66 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -21050,11 +21042,11 @@ var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_69 = {
+var _hoisted_68 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -21064,11 +21056,11 @@ var _hoisted_70 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_71 = {
+var _hoisted_70 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "font-size": "18px",
     "width": "200px"
@@ -21078,14 +21070,14 @@ var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
   rel: "preconnect",
   href: "https://fonts.googleapis.com"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_74 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
   rel: "preconnect",
   href: "https://fonts.gstatic.com",
   crossorigin: ""
@@ -21093,8 +21085,8 @@ var _hoisted_74 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
+var _hoisted_74 = ["href"];
 var _hoisted_75 = ["href"];
-var _hoisted_76 = ["href"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
@@ -21291,8 +21283,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "slider__input",
     type: "range",
     name: "sliderValue",
-    min: "0.8",
-    max: "2",
+    min: "1",
+    max: "1.8",
     step: "0.01"
   }, null, 512
   /* NEED_PATCH */
@@ -21304,7 +21296,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.textBaseSize]]), _hoisted_50])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.textBaseSize]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <span class=\"text-sm margin-left-xxxs\">rem</span> ")])]), _hoisted_50])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[16] || (_cache[16] = function ($event) {
       return $setup.toggleMenu('buttons');
     }),
@@ -21332,22 +21324,22 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]]), _hoisted_61])])])]), _hoisted_62])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Backgrounds "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.buttonRadius]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <span class=\"text-sm margin-left-xxxs\">em</span> ")])])])]), _hoisted_61])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Backgrounds "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[19] || (_cache[19] = function ($event) {
       return $setup.toggleMenu('backgrounds');
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'backgrounds' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_65, 2
+  }, _hoisted_64, 2
   /* CLASS */
-  ), $setup.activeMenu === 'backgrounds' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_67, [_hoisted_68, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), $setup.activeMenu === 'backgrounds' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_66, [_hoisted_67, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
       'background-color': $setup.colorBackground
     }),
     "class": "border radius-md width-xxxl height-xxl"
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_69, [_hoisted_70, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_68, [_hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)([{
       'background-color': $setup.colorPrimary
     }, {
@@ -21356,7 +21348,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": "radius-md width-xxxl height-xxl"
   }, null, 4
   /* STYLE */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [_hoisted_72, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)({
       'background-color': $setup.colorPrimary
     }),
@@ -21376,17 +21368,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })), _hoisted_73, _hoisted_74, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+  })), _hoisted_72, _hoisted_73, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
     href: "https://fonts.googleapis.com/css2?family=".concat($setup.fontPrimary, ":wght@").concat($setup.fontPrimaryWeight),
     rel: "stylesheet"
   }, null, 8
   /* PROPS */
-  , _hoisted_75), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+  , _hoisted_74), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
     href: "https://fonts.googleapis.com/css2?family=".concat($setup.fontSecondary, ":wght@").concat($setup.fontSecondaryWeight),
     rel: "stylesheet"
   }, null, 8
   /* PROPS */
-  , _hoisted_76)]);
+  , _hoisted_75)]);
 }
 
 /***/ }),
