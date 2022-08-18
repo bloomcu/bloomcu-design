@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import App from './App';
+import store from './store'
+import App from './App'
 // import VueRouter from 'vue-router';
 // 
 // Vue.use(VueRouter);
@@ -10,7 +11,9 @@ import App from './App';
 //   routes
 // })
 
-createApp(App).mount('#app')
+createApp(App)
+  .use(store)
+  .mount('#app')
 
 // new Vue({
 //     el: '#design',

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="store.design">
     <div class="siderail">
       <div class="siderail__inner" style="padding-top: 80px;">
         <!-- Colors -->
@@ -15,11 +15,11 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Primary</p>
               <div class="input-group">
-                <input v-model="colorPrimary" class="form-control" style="width: 160px;" type="text">
+                <input v-model="store.variables.color_primary" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
                   <!-- <div :style="{'background-color': colorPrimary}" style="width: 20px; height: 20px; border-radius: 100px; cursor: pointer;"></div> -->
                   <color-picker 
-                    v-model:pureColor="colorPrimary"
+                    v-model:pureColor="store.variables.color_primary"
                     shape="circle"
                     format="hex"
                     pickerType="chrome"
@@ -34,10 +34,10 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Accent</p>
               <div class="input-group">
-                <input v-model="colorAccent" class="form-control" style="width: 160px;" type="text">
+                <input v-model="store.variables.color_accent" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
                   <color-picker 
-                    v-model:pureColor="colorAccent"
+                    v-model:pureColor="store.variables.color_accent"
                     shape="circle"
                     format="hex"
                     pickerType="chrome"
@@ -52,10 +52,10 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Text</p>
               <div class="input-group">
-                <input v-model="colorContrastHigher" class="form-control" style="width: 160px;" type="text">
+                <input v-model="store.variables.color_contrast_higher" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
                   <color-picker 
-                    v-model:pureColor="colorContrastHigher"
+                    v-model:pureColor="store.variables.color_contrast_higher"
                     shape="circle"
                     format="hex"
                     pickerType="chrome"
@@ -70,10 +70,10 @@
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Background</p>
               <div class="input-group">
-                <input v-model="colorBackground" class="form-control" style="width: 160px;" type="text">
+                <input v-model="store.variables.color_background" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
                   <color-picker 
-                    v-model:pureColor="colorBackground"
+                    v-model:pureColor="store.variables.color_background"
                     shape="circle"
                     format="hex"
                     pickerType="chrome"
@@ -107,6 +107,7 @@
             </svg>
           </button>
           <div v-if="activeMenu === 'typography'" class="siderail-menu">
+            <!-- Primary font -->
             <div class="siderail-menu__section">
               <div style="width: 140px;">
                 <p style="font-size: 18px;" class="font-bold">Heading Font</p>  
@@ -117,27 +118,27 @@
                   <button class="reset text-sm padding-xxs cursor-pointer">Upload</button>
                 </div> -->
                 <!-- Primary font -->
+                <!-- Primary font -->
                 <div class="select margin-bottom-xxs">
-                    <select v-model="fontPrimary" name="heading" id="heading" class="select_input form-control width-100%">
+                    <select v-model="store.variables.font_primary" name="heading" id="heading" class="select_input form-control width-100%">
                       <option 
                         v-for="font in googleFonts" 
                         :key="font.family" 
                         :value="font.family" 
-                        :selected="fontPrimary === font.family"
+                        :selected="store.variables.font_primary === font.family"
                       >
                         {{ font.family }}
                       </option>
                     </select>
                     <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                 </div>
-                <!-- Primary font weight -->
                 <div class="select">
-                    <select v-model="fontPrimaryWeight" name="heading" id="heading" class="select_input form-control width-100%">
+                    <select v-model="store.variables.font_primary_weight" name="heading" id="heading" class="select_input form-control width-100%">
                       <option 
-                        v-for="weight in getFontByFamily(fontPrimary).variants" 
+                        v-for="weight in getGoogleFontByFamily(store.variables.font_primary).variants" 
                         :key="weight" 
                         :value="weight" 
-                        :selected="fontPrimaryWeight === weight"
+                        :selected="store.variables.font_primary_weight === weight"
                       >
                         {{ weight }}
                       </option>
@@ -147,6 +148,7 @@
               </div>
             </div>
             
+            <!-- Secondary font -->
             <div class="siderail-menu__section">
               <div style="width: 140px;">
                 <p style="font-size: 18px;" class="font-bold">Body Font</p>  
@@ -158,26 +160,25 @@
                 </div> -->
                 <!-- Secondary font -->
                 <div class="select margin-bottom-xxs">
-                    <select v-model="fontSecondary" name="body" id="body" class="select_input form-control width-100%">
+                    <select v-model="store.variables.font_secondary" name="body" id="body" class="select_input form-control width-100%">
                       <option 
                         v-for="font in googleFonts" 
                         :key="font.family" 
                         :value="font.family" 
-                        :selected="fontPrimary === font.family"
+                        :selected="store.variables.font_secondary === font.family"
                       >
                         {{ font.family }}
                       </option>
                     </select>
                     <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                 </div>
-                <!-- Secondary font weight -->
                 <div class="select">
-                    <select v-model="fontSecondaryWeight" name="heading" id="heading" class="select_input form-control width-100%">
+                    <select v-model="store.variables.font_secondary_weight" name="heading" id="heading" class="select_input form-control width-100%">
                       <option 
-                        v-for="weight in getFontByFamily(fontSecondary).variants" 
+                        v-for="weight in getGoogleFontByFamily(store.variables.font_secondary).variants" 
                         :key="weight" 
                         :value="weight" 
-                        :selected="fontSecondaryWeight === weight"
+                        :selected="store.variables.font_secondary_weight === weight"
                       >
                         {{ weight }}
                       </option>
@@ -187,16 +188,17 @@
               </div>
             </div>
             
+            <!-- Text base size -->
             <div class="siderail-menu__section">
                 <p style="font-size: 18px; width: 140px;" class="font-bold">Text Base Size</p>
                 
                 <fieldset>
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="textBaseSize" class="slider__input" type="range" name="sliderValue" min="1" max="1.8" step="0.01">
+                      <input v-model="store.variables.text_base_size" class="slider__input" type="range" name="sliderValue" min="1" max="1.8" step="0.01">
                     </div>
                     <div class="slider__value">
-                      <input v-model="textBaseSize" class="form-control text-sm text-center width-xl" type="text">
+                      <input v-model="store.variables.text_base_size" class="form-control text-sm text-center width-xl" type="text">
                       <!-- <span class="text-sm margin-left-xxxs">rem</span> -->
                     </div>
                   </div>
@@ -222,10 +224,10 @@
                 <fieldset>
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="buttonRadius" class="slider__input" type="range" name="sliderValue" min="0" max="2" step="0.05">
+                      <input v-model="store.variables.button_radius" class="slider__input" type="range" name="sliderValue" min="0" max="2" step="0.05">
                     </div>
                     <div class="slider__value">
-                      <input v-model="buttonRadius" class="form-control text-sm text-center width-xl" type="text">
+                      <input v-model="store.variables.button_radius" class="form-control text-sm text-center width-xl" type="text">
                       <!-- <span class="text-sm margin-left-xxxs">em</span> -->
                     </div>
                   </div>
@@ -234,7 +236,7 @@
               
               <div class="flex flex-column gap-sm">
                 <a href="#" class="btn btn--primary">Primary Button</a>
-                <a href="#" class="btn btn--accent">Secondary Button</a>
+                <a href="#" class="btn btn--secondary">Secondary Button</a>
                 <a href="#" class="btn btn--tertiray">Tertiary Button</a>
               </div>
             </div>
@@ -253,18 +255,18 @@
           <div v-if="activeMenu === 'backgrounds'" class="siderail-menu">
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Default Background</p>
-              <div :style="{'background-color': colorBackground}"  class="border radius-md width-xxxl height-xxl">
+              <div :style="{'background-color': store.variables.color_background}"  class="border radius-md width-xxxl height-xxl">
               </div>
             </div>
             
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Medium Background</p>
-              <div :style="{'background-color': colorPrimary}" style="opacity: 0.05;" class="radius-md width-xxxl height-xxl"></div>
+              <div :style="{'background-color': store.variables.color_primary}" style="opacity: 0.05;" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
             <div class="siderail-menu__section">
               <p style="font-size: 18px; width: 200px;" class="font-bold">Dark Background</p>
-              <div :style="{'background-color': colorPrimary}" class="radius-md width-xxxl height-xxl"></div>
+              <div :style="{'background-color': store.variables.color_primary}" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
             <!-- <div class="siderail-menu__section">
@@ -282,80 +284,74 @@
     <component :is="'style'">
       <!-- Root & Default theme -->
       :root, [data-theme="default"] {
-        --color-white:           {{ colorWhite }};
-        --color-black:           {{ colorBlack }};
-        --color-primary:         {{ colorPrimary }};
-        --color-accent:          {{ colorAccent }};
-        --color-contrast-high:   {{ colorContrastHigher }};
-        --color-contrast-higher: {{ colorContrastHigher }};
-        --color-bg:              {{ colorBackground }};
-        --font-primary:          {{ fontPrimary }};
-        --font-secondary:        {{ fontSecondary }};
-        --text-base-size:        {{ textBaseSize + 'rem' }};
-        --btn-radius:            {{ buttonRadius + 'em' }};
+        --color-white:           {{ store.variables.color_white }};
+        --color-black:           {{ store.variables.color_black }};
+        --color-primary:         {{ store.variables.color_primary }};
+        --color-accent:          {{ store.variables.color_accent }};
+        --color-contrast-high:   {{ store.variables.color_contrast_higher }};
+        --color-contrast-higher: {{ store.variables.color_contrast_higher }};
+        --color-bg:              {{ store.variables.color_background }};
+        --text-base-size:        {{ store.variables.text_base_size + 'rem' }};
+        --font-primary:          {{ store.variables.font_primary }};
+        --font-primary-weight:   {{ store.variables.font_primary_weight }};
+        --font-secondary:        {{ store.variables.font_secondary }};
+        --font-secondary-weight: {{ store.variables.font_secondary_weight }};
+        --btn-radius:            {{ store.variables.button_radius + 'em' }};
       }
       
       <!-- Theme 1 -->
       [data-theme="bg-1"] {        
-        --color-bg: {{ colorPrimary + '0D' }};
+        --color-bg: {{ store.variables.color_primary + '0D' }};
       }
       
       <!-- Theme 2 -->
       [data-theme="bg-2"] {        
-        --color-bg:              {{ colorPrimary }};
-        --color-primary:         {{ colorWhite }};
-        --color-contrast-lower:  {{ colorContrastHigher }};
-        --color-contrast-high:   {{ colorWhite }};
-        --color-contrast-higher: {{ colorWhite }};
+        --color-bg:              {{ store.variables.color_primary }};
+        --color-primary:         {{ store.variables.color_white }};
+        --color-contrast-lower:  {{ store.variables.color_contrast_higher }};
+        --color-contrast-high:   {{ store.variables.color_white }};
+        --color-contrast-higher: {{ store.variables.color_white }};
       }
     </component>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link :href="`https://fonts.googleapis.com/css2?family=${fontPrimary}:wght@${fontPrimaryWeight}`" rel="stylesheet" />
-    <link :href="`https://fonts.googleapis.com/css2?family=${fontSecondary}:wght@${fontSecondaryWeight}`" rel="stylesheet" />
-
+    <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_primary}:wght@${store.variables.font_primary_weight}`" rel="stylesheet" />
+    <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_secondary}:wght@${store.variables.font_secondary_weight}`" rel="stylesheet" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { ColorPicker } from "vue3-colorpicker"
-import useColors from "./store/useColors.js";
-import useButtons from "./store/useButtons.js";
-import useTypography from "./store/useTypography.js";
-
-const { 
-  colorWhite,
-  colorBlack,
-  colorPrimary, 
-  colorAccent, 
-  colorContrastHigh, 
-  colorContrastHigher, 
-  colorBackground,
-  colorBackgroundMedium,
-} = useColors()
-
-const { 
-  buttonRadius
-} = useButtons()
-
-const { 
-  googleFonts, 
-  fontPrimary,
-  fontSecondary,
-  fontPrimaryWeight,
-  fontSecondaryWeight,
-  textBaseSize,
-  getFontByFamily,
-} = useTypography()
+import { ref, watch, onMounted } from 'vue'
+// import { storeToRefs } from 'pinia'
+import { useDesignStore } from './store/useDesignStore'
+import { googleFonts, getGoogleFontByFamily } from './store/useGoogleFonts'
+import { ColorPicker } from 'vue3-colorpicker'
+import debounce from 'lodash/debounce';
 
 const activeMenu = ref('')
+const store = useDesignStore()
+
+// watch(store.design, (currentValue, oldValue) => {
+//   console.log(currentValue);
+//   console.log(oldValue);
+// });
+    
+// store.$subscribe((mutation, state) => (debounce) => {
+//   if (mutation.type === 'direct') {
+//     debounce(() => {
+//       console.log(mutation)
+//     }, 800)
+//   }
+// })
 
 function toggleMenu(menu) {
-  // activeMenu.value = menu === activeMenu.value ? '' : menu
   activeMenu.value = activeMenu.value === menu ? '' : menu
 }
+
+onMounted(() => {
+  store.show(1)
+})
 </script>
 
 <style lang="scss">
@@ -364,13 +360,14 @@ function toggleMenu(menu) {
 /* --------------------------------
 Base Theme Overrides
 -------------------------------- */
-body {
-  font-family: var(--font-secondary);
-}
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: var(--font-primary);
-  font-weight: unset;
+  font-weight: var(--font-primary-weight);
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-secondary-weight);
 }
 
 .btn--primary, .btn--secondary, .btn--tertiary {
@@ -452,7 +449,6 @@ Siderail
   
   width: 64px;
   height: 100vh;
-  padding-top: 30px;
   border-left: 1px solid #eaeaeb;
   background: #fff;
   
@@ -461,7 +457,7 @@ Siderail
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
+    padding: 60px 12px 0;
   }
 }
 
