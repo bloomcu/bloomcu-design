@@ -5,7 +5,7 @@ export const useDesignStore = defineStore('designStore', {
     state: () => ({
         designs: null,
         design: null,
-        isLoading: true,
+        loading: true,
     }),
     
     getters: {
@@ -14,20 +14,20 @@ export const useDesignStore = defineStore('designStore', {
     
     actions: {
         index(params) {
-          this.isLoading = true
+          this.loading = true
           this.designs = null
           
           DesignApi.index('bloomcu', params)
             .then(response => {
               this.designs = response.data.data
-              this.isLoading = false
+              this.loading = false
             }).catch(error => {
               console.log('Error', error.response.data)
             })
         },
         
         async store(design) {
-          this.isLoading = true
+          this.loading = true
           
           await DesignApi.store('bloomcu', design)
             .then(response => {
@@ -38,32 +38,38 @@ export const useDesignStore = defineStore('designStore', {
         },
         
         show(id) {
-          this.isLoading = true
+          this.loading = true
           
           DesignApi.show('bloomcu', id)
             .then(response => {
               this.design = response.data.data
-              this.isLoading = false
+              
+              setTimeout(() => {
+                  this.loading = false
+              }, 1000)
             })
         },
         
         update() {
-          this.isLoading = true
+          this.loading = true
           
           DesignApi.update('bloomcu', this.design.id, this.design)
             .then(response => {
               console.log('Design successfully updated')
-              this.isLoading = false
+              
+              setTimeout(() => {
+                  this.loading = false
+              }, 2000)
             })
         },
         
         destroy(id) {
-          this.isLoading = true
+          this.loading = true
           
           DesignApi.destroy('bloomcu', id)
             .then(response => {
               this.designs = this.designs.filter((design) => design.id !== id)
-              this.isLoading = false
+              this.loading = false
             })
         },
     }

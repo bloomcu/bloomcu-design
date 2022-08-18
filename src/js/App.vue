@@ -1,7 +1,25 @@
 <template>
-  <div v-if="store.design">
+  <div>
     <div class="siderail">
-      <div class="siderail__inner" style="padding-top: 80px;">
+      <!-- Hero menu -->
+      <div class="siderail-hero">
+        <IconLoading v-if="store.loading"/>
+        <button v-else @click="toggleHero()" type="button" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
+          <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
+        </button>
+        <div v-if="activeMenu === 'hero'" class="siderail-menu">
+          <div class="siderail-menu__section">
+            <div>
+              <p style="font-size: 18px; width: 200px;" class="font-bold">Designs</p>
+              <a href="#">Foo</a>
+              <a href="#">Bar</a>
+              <a href="#">Baz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div v-if="store.design" class="siderail__inner">
         <!-- Colors -->
         <div class="siderail-item">
           <button @click="toggleMenu('colors')" type="button" class="siderail-item__button" :class="activeMenu === 'colors' ? 'siderail-item__button--active' : ''">
@@ -96,7 +114,6 @@
             </div> -->
           </div>
         </div>
-        
         <!-- Typography -->
         <div class="siderail-item">
           <button @click="toggleMenu('typography')" type="button" class="siderail-item__button" :class="activeMenu === 'typography' ? 'siderail-item__button--active' : ''">
@@ -207,7 +224,6 @@
             </div>
           </div>
         </div>
-        
         <!-- Buttons -->
         <div class="siderail-item">
           <button @click="toggleMenu('buttons')" type="button" class="siderail-item__button" :class="activeMenu === 'buttons' ? 'siderail-item__button--active' : ''">
@@ -242,7 +258,6 @@
             </div>
           </div>
         </div>
-        
         <!-- Backgrounds -->
         <div class="siderail-item">
           <button @click="toggleMenu('backgrounds')" type="button" class="siderail-item__button" :class="activeMenu === 'backgrounds' ? 'siderail-item__button--active' : ''">
@@ -281,73 +296,80 @@
       </div>
     </div>
     
-    <component :is="'style'">
-      <!-- Root & Default theme -->
-      :root, [data-theme="default"] {
-        --color-white:           {{ store.variables.color_white }};
-        --color-black:           {{ store.variables.color_black }};
-        --color-primary:         {{ store.variables.color_primary }};
-        --color-accent:          {{ store.variables.color_accent }};
-        --color-contrast-high:   {{ store.variables.color_contrast_higher }};
-        --color-contrast-higher: {{ store.variables.color_contrast_higher }};
-        --color-bg:              {{ store.variables.color_background }};
-        --text-base-size:        {{ store.variables.text_base_size + 'rem' }};
-        --font-primary:          {{ store.variables.font_primary }};
-        --font-primary-weight:   {{ store.variables.font_primary_weight }};
-        --font-secondary:        {{ store.variables.font_secondary }};
-        --font-secondary-weight: {{ store.variables.font_secondary_weight }};
-        --btn-radius:            {{ store.variables.button_radius + 'em' }};
-      }
+    <div v-if="store.design">
+      <component :is="'style'">
+        <!-- Root & Default theme -->
+        :root, [data-theme="default"] {
+          --color-white:           {{ store.variables.color_white }};
+          --color-black:           {{ store.variables.color_black }};
+          --color-primary:         {{ store.variables.color_primary }};
+          --color-accent:          {{ store.variables.color_accent }};
+          --color-contrast-high:   {{ store.variables.color_contrast_higher }};
+          --color-contrast-higher: {{ store.variables.color_contrast_higher }};
+          --color-bg:              {{ store.variables.color_background }};
+          --text-base-size:        {{ store.variables.text_base_size + 'rem' }};
+          --font-primary:          {{ store.variables.font_primary }};
+          --font-primary-weight:   {{ store.variables.font_primary_weight }};
+          --font-secondary:        {{ store.variables.font_secondary }};
+          --font-secondary-weight: {{ store.variables.font_secondary_weight }};
+          --btn-radius:            {{ store.variables.button_radius + 'em' }};
+        }
+        
+        <!-- Theme 1 -->
+        [data-theme="bg-1"] {        
+          --color-bg: {{ store.variables.color_primary + '0D' }};
+        }
+        
+        <!-- Theme 2 -->
+        [data-theme="bg-2"] {        
+          --color-bg:              {{ store.variables.color_primary }};
+          --color-primary:         {{ store.variables.color_white }};
+          --color-contrast-lower:  {{ store.variables.color_contrast_higher }};
+          --color-contrast-high:   {{ store.variables.color_white }};
+          --color-contrast-higher: {{ store.variables.color_white }};
+        }
+      </component>
       
-      <!-- Theme 1 -->
-      [data-theme="bg-1"] {        
-        --color-bg: {{ store.variables.color_primary + '0D' }};
-      }
-      
-      <!-- Theme 2 -->
-      [data-theme="bg-2"] {        
-        --color-bg:              {{ store.variables.color_primary }};
-        --color-primary:         {{ store.variables.color_white }};
-        --color-contrast-lower:  {{ store.variables.color_contrast_higher }};
-        --color-contrast-high:   {{ store.variables.color_white }};
-        --color-contrast-higher: {{ store.variables.color_white }};
-      }
-    </component>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_primary}:wght@${store.variables.font_primary_weight}`" rel="stylesheet" />
-    <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_secondary}:wght@${store.variables.font_secondary_weight}`" rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_primary}:wght@${store.variables.font_primary_weight}`" rel="stylesheet" />
+      <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_secondary}:wght@${store.variables.font_secondary_weight}`" rel="stylesheet" />
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref, watch, onMounted } from 'vue'
-// import { storeToRefs } from 'pinia'
+import { debounce } from './composables/useDebounce'
 import { useDesignStore } from './store/useDesignStore'
 import { googleFonts, getGoogleFontByFamily } from './store/useGoogleFonts'
 import { ColorPicker } from 'vue3-colorpicker'
-import debounce from 'lodash/debounce';
+import IconLoading from './components/IconLoading.vue'
 
 const activeMenu = ref('')
 const store = useDesignStore()
 
-// watch(store.design, (currentValue, oldValue) => {
-//   console.log(currentValue);
-//   console.log(oldValue);
-// });
-    
-// store.$subscribe((mutation, state) => (debounce) => {
-//   if (mutation.type === 'direct') {
-//     debounce(() => {
-//       console.log(mutation)
-//     }, 800)
-//   }
-// })
+const toggleHero = () => {
+  toggleMenu('hero')
+  
+  if (!store.designs) {
+    store.index()
+  }
+}
 
-function toggleMenu(menu) {
+const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
 }
+
+const saveDesign = debounce(() => {
+  store.update()
+}, 2000)
+
+store.$subscribe((mutation, state) => {
+  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
+    saveDesign()
+  }
+})
 
 onMounted(() => {
   store.show(1)
@@ -449,6 +471,7 @@ Siderail
   
   width: 64px;
   height: 100vh;
+  padding: 12px;
   border-left: 1px solid #eaeaeb;
   background: #fff;
   
@@ -457,7 +480,19 @@ Siderail
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 60px 12px 0;
+  }
+}
+
+.siderail-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 54px;
+  margin-bottom: 20px;
+  
+  .siderail-menu {
+    top: 10px;
   }
 }
 

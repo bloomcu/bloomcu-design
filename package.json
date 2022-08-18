@@ -14,7 +14,6 @@
     "zip": "zip -r bloomcu-design.zip . -x *.git* *.DS_Store* bloomcu-design.json /node_modules node_modules/\\*"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
     "pinia": "^2.0.18",
     "vue": "^3.2.36",
     "vue-loader": "^17.0.0",

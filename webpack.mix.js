@@ -15,5 +15,6 @@ mix.browserSync({
   files: [
     './src/js/*.vue',
   ],
+  notify: false
 });
     
