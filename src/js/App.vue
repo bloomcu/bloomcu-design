@@ -9,11 +9,9 @@
         </button>
         <div v-if="activeMenu === 'hero'" class="siderail-menu">
           <div class="siderail-menu__section">
-            <div>
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Designs</p>
-              <a href="#">Foo</a>
-              <a href="#">Bar</a>
-              <a href="#">Baz</a>
+            <div v-if="store.designs" class="text-component">
+              <p class="font-bold">My Designs</p>
+              <p v-for="design in store.designs" :key="design.id" href="#">{{ design.title }}</p>
             </div>
           </div>
         </div>
@@ -363,7 +361,7 @@ const toggleMenu = (menu) => {
 
 const saveDesign = debounce(() => {
   store.update()
-}, 2000)
+}, 3000)
 
 store.$subscribe((mutation, state) => {
   if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
@@ -372,7 +370,7 @@ store.$subscribe((mutation, state) => {
 })
 
 onMounted(() => {
-  store.show(1)
+  store.init()
 })
 </script>
 
