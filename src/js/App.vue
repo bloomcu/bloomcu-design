@@ -1,7 +1,9 @@
 <template>
   <div>
+    <!-- <div v-if="store.profile" class="siderail"> -->
     <div class="siderail">
       <!-- Hero menu -->
+      {{ viewing }}
       <div class="siderail-hero">
         <IconLoading v-if="store.loading"/>
         <button v-else @click="toggleHero()" type="button" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
@@ -295,43 +297,8 @@
     </div>
     
     <div v-if="store.design">
-      <component :is="'style'">
-        <!-- Root & Default theme -->
-        :root, [data-theme="default"] {
-          --color-white:           {{ store.variables.color_white }};
-          --color-black:           {{ store.variables.color_black }};
-          --color-primary:         {{ store.variables.color_primary }};
-          --color-accent:          {{ store.variables.color_accent }};
-          --color-contrast-high:   {{ store.variables.color_contrast_higher }};
-          --color-contrast-higher: {{ store.variables.color_contrast_higher }};
-          --color-bg:              {{ store.variables.color_background }};
-          --text-base-size:        {{ store.variables.text_base_size + 'rem' }};
-          --font-primary:          {{ store.variables.font_primary }};
-          --font-primary-weight:   {{ store.variables.font_primary_weight }};
-          --font-secondary:        {{ store.variables.font_secondary }};
-          --font-secondary-weight: {{ store.variables.font_secondary_weight }};
-          --btn-radius:            {{ store.variables.button_radius + 'em' }};
-        }
-        
-        <!-- Theme 1 -->
-        [data-theme="bg-1"] {        
-          --color-bg: {{ store.variables.color_primary + '0D' }};
-        }
-        
-        <!-- Theme 2 -->
-        [data-theme="bg-2"] {        
-          --color-bg:              {{ store.variables.color_primary }};
-          --color-primary:         {{ store.variables.color_white }};
-          --color-contrast-lower:  {{ store.variables.color_contrast_higher }};
-          --color-contrast-high:   {{ store.variables.color_white }};
-          --color-contrast-higher: {{ store.variables.color_white }};
-        }
-      </component>
-      
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_primary}:wght@${store.variables.font_primary_weight}`" rel="stylesheet" />
-      <link :href="`https://fonts.googleapis.com/css2?family=${store.variables.font_secondary}:wght@${store.variables.font_secondary_weight}`" rel="stylesheet" />
+      <DesignFonts :variables="store.variables"/>
+      <DesignStyles :variables="store.variables"/>
     </div>
   </div>
 </template>
@@ -343,6 +310,15 @@ import { useDesignStore } from './store/useDesignStore'
 import { googleFonts, getGoogleFontByFamily } from './store/useGoogleFonts'
 import { ColorPicker } from 'vue3-colorpicker'
 import IconLoading from './components/IconLoading.vue'
+import DesignFonts from './components/DesignFonts.vue'
+import DesignStyles from './components/DesignStyles.vue'
+
+const props = defineProps({
+  viewing: { 
+    type: String,
+    default: false,
+  }
+})
 
 const activeMenu = ref('')
 const store = useDesignStore()
@@ -370,7 +346,8 @@ store.$subscribe((mutation, state) => {
 })
 
 onMounted(() => {
-  store.init()
+  // store.init()
+  store.show('ffa4ae2f-9dd6-4119-9b77-8ebc157b9882')
 })
 </script>
 
