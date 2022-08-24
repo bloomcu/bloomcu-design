@@ -1,9 +1,7 @@
 <template>
   <div>
-    <!-- <div v-if="store.profile" class="siderail"> -->
-    <div class="siderail">
+    <div v-if="mode === 'edit'" class="siderail">
       <!-- Hero menu -->
-      {{ viewing }}
       <div class="siderail-hero">
         <IconLoading v-if="store.loading"/>
         <button v-else @click="toggleHero()" type="button" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
@@ -314,9 +312,13 @@ import DesignFonts from './components/DesignFonts.vue'
 import DesignStyles from './components/DesignStyles.vue'
 
 const props = defineProps({
-  viewing: { 
+  design: { 
     type: String,
-    default: false,
+    required: true,
+  },
+  mode: {
+    type: String,
+    required: true,
   }
 })
 
@@ -347,7 +349,7 @@ store.$subscribe((mutation, state) => {
 
 onMounted(() => {
   // store.init()
-  store.show('ffa4ae2f-9dd6-4119-9b77-8ebc157b9882')
+  store.show(props.design)
 })
 </script>
 
@@ -446,7 +448,7 @@ Siderail
   
   width: 64px;
   height: 100vh;
-  padding: 12px;
+  padding: 40px 12px;
   border-left: 1px solid #eaeaeb;
   background: #fff;
   

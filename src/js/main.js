@@ -11,7 +11,11 @@ import App from './App'
 //   routes
 // })
 
-createApp(App)
+const AppElement = document.querySelector('#app')
+
+createApp(App, {
+  ...AppElement.dataset
+  })
   .use(store)
   .mount('#app')
 

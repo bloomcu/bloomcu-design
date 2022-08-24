@@ -8,7 +8,12 @@ namespace Design;
 class Frontend {
 
 	public function __construct() {
-		add_action('wp_head', [$this, 'render_frontend'], 12);
+		// add_action('init', [$this, 'set_cookie'], 1);
+		setcookie('design_plugin_enabled', 'true', time() + (86400 * 30), '/');
+		
+		if (isset($_COOKIE['design_plugin_enabled'])) {
+			add_action('wp_head', [$this, 'render_frontend'], 12);	
+		}
 	}
 	
 	public function add_body_class($classes = []) {
@@ -17,16 +22,17 @@ class Frontend {
 		// }
     // return $classes;
 	}
-
+	
 	/**
-	 * Render frontend
+	 * Set cookie
 	 *
 	 * @param  array $atts
 	 *
-	 * @return string
 	 */
-	public function render_frontend( $atts ) {
-		echo '<div id="app"></div>';
+	public function set_cookie() {
+		// if(!isset($_COOKIE['design_plugin_enabled'])) {
+			// setcookie('design_plugin_enabled', false);
+		// }
 	}
 	
 	/**
@@ -36,8 +42,19 @@ class Frontend {
 	 *
 	 * @return string
 	 */
-	public function enqueue_base( $atts ) {
-		wp_enqueue_style('base');
+	public function render_frontend( $atts ) {
+		// $enabled = isset($_COOKIE['design_plugin_enabled']);
+		$design = isset($_GET['design']) ? $_GET['design'] : null;
+		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		
+		if ($design) {
+			echo '
+				<div
+					id="app"
+					data-design="'.$design.'"
+					data-mode="'.$mode.'"
+				></div>
+			';
+		}
 	}
-
 }

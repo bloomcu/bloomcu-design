@@ -7,12 +7,45 @@ namespace Design;
 class Assets {
 
 	public function __construct() {
-		add_action('wp_enqueue_scripts', [ $this, 'dequeue_child_theme_stylesheet' ], 999);
-		if ( is_admin() ) {
-
-		} else {
-			add_action( 'wp_enqueue_scripts', [$this, 'register']);
+		$design = isset($_GET['design']) ? $_GET['design'] : null;
+		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		
+		if (is_admin()) { 
+			return; 
 		}
+		
+		if (!$design) { 
+			return; 
+		}
+		
+		if ($mode === 'edit' && !is_user_logged_in()) {
+			$this->redirect_to_login();
+		}
+		
+		if ($mode === 'view' || $mode === 'edit') {
+			$this->init();
+		}
+	}
+	
+	/**
+	 * Init plugin assets
+	 *
+	 * @return void
+	 */
+	public function init() {
+		add_action('wp_enqueue_scripts', [$this, 'dequeue_child_theme_stylesheet'], 999);
+		add_action('wp_enqueue_scripts', [$this, 'register']);
+	}
+	
+	/**
+	 * Redirect to login
+	 *
+	 * @return void
+	 */
+	public function redirect_to_login() {
+		wp_redirect(
+			wp_login_url()
+		);
 	}
 	
 	/**
