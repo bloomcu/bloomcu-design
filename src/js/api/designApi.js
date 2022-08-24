@@ -27,8 +27,8 @@ const designApi = {
      * @param Integer id [Slug of the design you want to show]
      * @return promise
      */
-    show(organization, id) {
-      return HttpClient.get(`/${organization}/designs/${id}`)
+    show(organization, uuid) {
+      return HttpClient.get(`/${organization}/designs/${uuid}`)
     },
     
     /**
@@ -38,8 +38,8 @@ const designApi = {
      * @param Object  design [Properties to update design with]
      * @return promise
      */
-    update(organization, id, design) {
-      return HttpClient.put(`/${organization}/designs/${id}`, design)
+    update(organization, uuid, design) {
+      return HttpClient.put(`/${organization}/designs/${uuid}`, design)
     },
     
     /**
@@ -48,8 +48,8 @@ const designApi = {
      * @param Integer id [Id of the file you want to destroy]
      * @return promise
      */
-    destroy(organization, id) {
-        return HttpClient.delete(`/${organization}/designs/${id}`)
+    destroy(organization, uuid) {
+        return HttpClient.delete(`/${organization}/designs/${uuid}`)
     },
 }
 

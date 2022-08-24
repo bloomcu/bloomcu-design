@@ -3,10 +3,10 @@ import { designApi as DesignApi } from '../api/designApi'
 
 export const useDesignStore = defineStore('designStore', {
   state: () => ({
-    user: null,
+    // profile: JSON.parse(localStorage.getItem('designer_profile')),
     designs: null,
     design: null,
-    loading: true,
+    loading: false,
   }),
 
   getters: {
@@ -15,7 +15,12 @@ export const useDesignStore = defineStore('designStore', {
 
   actions: {
     init() {
-      this.loading = true
+      // this.loading = true
+    },
+    
+    setProfile(name, email) {
+      // this.profile = { name: name, email: email }
+      // localStorage.setItem('designer_profile', JSON.stringify(this.profile))
     },
 
     index(params) {
@@ -58,7 +63,7 @@ export const useDesignStore = defineStore('designStore', {
     update() {
       this.loading = true
 
-      DesignApi.update('bloomcu', this.design.id, this.design)
+      DesignApi.update('bloomcu', this.design.uuid, this.design)
         .then(response => {
           console.log('Design successfully updated')
 
