@@ -7,10 +7,9 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "npm run development",
-    "development": "mix watch",
-    "prod": "npm run production",
-    "production": "mix --production",
+    "dev": "mix watch",
+    "build": "mix",
+    "prod": "mix --production",
     "zip": "zip -r bloomcu-design.zip . -x *.git* *.DS_Store* bloomcu-design.json /node_modules node_modules/\\*"
   },
   "dependencies": {
