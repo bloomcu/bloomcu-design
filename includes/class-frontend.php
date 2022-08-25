@@ -1,6 +1,5 @@
 <?php
 namespace Design;
-// require 'partials/topbar.php';
 
 /**
  * Frontend Handler
@@ -8,31 +7,8 @@ namespace Design;
 class Frontend {
 
 	public function __construct() {
-		// add_action('init', [$this, 'set_cookie'], 1);
-		setcookie('design_plugin_enabled', 'true', time() + (86400 * 30), '/');
-		
-		if (isset($_COOKIE['design_plugin_enabled'])) {
-			add_action('wp_head', [$this, 'render_frontend'], 12);	
-		}
-	}
-	
-	public function add_body_class($classes = []) {
-		// if (get_field('design_article')) {
-		// 	$classes[] = 'design-bar';
-		// }
-    // return $classes;
-	}
-	
-	/**
-	 * Set cookie
-	 *
-	 * @param  array $atts
-	 *
-	 */
-	public function set_cookie() {
-		// if(!isset($_COOKIE['design_plugin_enabled'])) {
-			// setcookie('design_plugin_enabled', false);
-		// }
+		add_action('wp_head', [$this, 'render_frontend'], 12);
+		add_action('admin_bar_menu', [ $this, 'admin_bar_menu' ], 999);
 	}
 	
 	/**
@@ -43,11 +19,10 @@ class Frontend {
 	 * @return string
 	 */
 	public function render_frontend( $atts ) {
-		// $enabled = isset($_COOKIE['design_plugin_enabled']);
 		$design = isset($_GET['design']) ? $_GET['design'] : null;
 		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
 		
-		if ($design) {
+		if ($design && $mode) {
 			echo '
 				<div
 					id="app"
@@ -55,6 +30,38 @@ class Frontend {
 					data-mode="'.$mode.'"
 				></div>
 			';
+		}
+	}
+	
+	/**
+	 * Inject our button into the frontend admin bar
+	 *
+	 * @return void
+	 */
+	public function admin_bar_menu($admin_bar) {
+		if (isset($_COOKIE['design_plugin_disabled'])) {
+			// Enable design
+			$admin_bar->add_menu( array(
+				'id'    => 'design-plugin-power-button',
+				'title' => '<span class="ab-icon dashicons dashicons-admin-appearance"></span>' . 'Enable Design',
+				'href'  => '#',
+				'meta'  => array(
+					'onclick' => 'document.cookie = "design_plugin_disabled=; path=/; expires= Thu, 01 Jan 1970 00:00:00 UTC", location.reload();',
+					// 'onclick' => '$.removeCookie("design_plugin_disabled");'
+				),
+			));	
+			
+		} else {
+			// Disable design
+			$admin_bar->add_menu( array(
+				'id'    => 'design-plugin-power-button',
+				'title' => '<span class="ab-icon dashicons dashicons-admin-appearance"></span>' . 'Disable Design',
+				'href'  => '#',
+				'meta'  => array(
+					'onclick' => 'document.cookie = "design_plugin_disabled=true; path=/;", location.reload();',
+				),
+			));	
+			
 		}
 	}
 }

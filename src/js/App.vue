@@ -1,10 +1,11 @@
 <template>
   <div>
     <div v-if="mode === 'edit'" class="siderail">
-      <!-- Hero menu -->
-      <div class="siderail-hero">
+      
+      <!-- Top menu -->
+      <div class="siderail__top-menu">
         <IconLoading v-if="store.loading"/>
-        <button v-else @click="toggleHero()" type="button" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
+        <button v-else @click="toggleHero()" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
           <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
         </button>
         <div v-if="activeMenu === 'hero'" class="siderail-menu">
@@ -17,7 +18,8 @@
         </div>
       </div>
       
-      <div v-if="store.design" class="siderail__inner">
+      <!-- Design controls -->
+      <div v-if="store.design">
         <!-- Colors -->
         <div class="siderail-item">
           <button @click="toggleMenu('colors')" type="button" class="siderail-item__button" :class="activeMenu === 'colors' ? 'siderail-item__button--active' : ''">
@@ -292,6 +294,13 @@
           </div>
         </div>
       </div>
+      
+      <!-- Bottom menu -->
+      <div class="siderail__bottom-menu">
+        <button @click="togglePower()" class="siderail-item__button">
+          <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
+        </button>
+      </div>
     </div>
     
     <div v-if="store.design">
@@ -335,6 +344,10 @@ const toggleHero = () => {
 
 const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
+}
+
+const togglePower = () => {
+  document.cookie = 'design_plugin_disabled=true; path=/;'
 }
 
 const saveDesign = debounce(() => {
@@ -446,31 +459,27 @@ Siderail
   bottom: 0;
   z-index: 99;
   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
   width: 64px;
   height: 100vh;
-  padding: 40px 12px;
+  padding: 46px 12px 20px 12px;
   border-left: 1px solid #eaeaeb;
   background: #fff;
   
-  &__inner {
+  &__top-menu {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 44px;
+    margin-bottom: 30px;
   }
-}
-
-.siderail-hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  height: 54px;
-  margin-bottom: 20px;
   
-  .siderail-menu {
-    top: 10px;
-  }
+  &__bottom-menu {}
 }
 
 .siderail-item {

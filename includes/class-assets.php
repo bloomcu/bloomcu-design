@@ -7,23 +7,21 @@ namespace Design;
 class Assets {
 
 	public function __construct() {
-		$design = isset($_GET['design']) ? $_GET['design'] : null;
-		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
-		
-		if (is_admin()) { 
-			return; 
-		}
-		
-		if (!$design) { 
-			return; 
-		}
-		
-		if ($mode === 'edit' && !is_user_logged_in()) {
-			$this->redirect_to_login();
-		}
-		
-		if ($mode === 'view' || $mode === 'edit') {
-			$this->init();
+		if (!isset($_COOKIE['design_plugin_disabled'])) {
+			$design = isset($_GET['design']) ? $_GET['design'] : null;
+			$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+			
+			if (!$design) { 
+				return; 
+			}
+			
+			if ($mode === 'edit' && !is_user_logged_in()) {
+				$this->redirect_to_login();
+			}
+			
+			if ($mode === 'view' || $mode === 'edit') {
+				$this->init();
+			}	
 		}
 	}
 	
@@ -43,9 +41,27 @@ class Assets {
 	 * @return void
 	 */
 	public function redirect_to_login() {
-		wp_redirect(
-			wp_login_url()
-		);
+		$redirect = wp_login_url() . '?redirect_to=' . $this->get_current_url();
+		
+		wp_redirect($redirect);
+	}
+	
+	/**
+	 * Get the current URL
+	 *
+	 * @return String
+	 */
+	public function get_current_url() {
+		if (
+			isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) || 
+			isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https'
+		) {
+			$protocol = 'https://';
+		} else {
+			$protocol = 'http://';
+		}
+		
+		return urlencode($protocol . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 	}
 	
 	/**
