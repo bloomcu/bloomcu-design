@@ -1,7 +1,6 @@
 <template>
   <div>
     <div v-if="mode === 'edit'" class="siderail">
-      
       <!-- Top menu -->
       <div class="siderail__top-menu">
         <IconLoading v-if="store.loading"/>
@@ -303,6 +302,7 @@
       </div>
     </div>
     
+    <!-- Design variables -->
     <div v-if="store.design">
       <DesignFonts :variables="store.variables"/>
       <DesignStyles :variables="store.variables"/>
@@ -311,11 +311,12 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { debounce } from './composables/useDebounce'
 import { useDesignStore } from './store/useDesignStore'
 import { googleFonts, getGoogleFontByFamily } from './store/useGoogleFonts'
 import { ColorPicker } from 'vue3-colorpicker'
+
 import IconLoading from './components/IconLoading.vue'
 import DesignFonts from './components/DesignFonts.vue'
 import DesignStyles from './components/DesignStyles.vue'
@@ -548,6 +549,7 @@ Siderail
 
 .siderail-menu {
   position: absolute;
+  top: 0;
   right: 0;
   margin-right: 60px;
   border-radius: 7px;
