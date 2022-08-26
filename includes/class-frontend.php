@@ -43,7 +43,7 @@ class Frontend {
 			// Enable design
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
-				'title' => '<span class="ab-icon dashicons dashicons-admin-appearance"></span>' . 'Enable Design',
+				'title' => '<span class="ab-icon dashicons dashicons-visibility" style="top: 2px;"></span>' . 'Enable Style Designer',
 				'href'  => '#',
 				'meta'  => array(
 					'onclick' => 'document.cookie = "design_plugin_disabled=; path=/; expires= Thu, 01 Jan 1970 00:00:00 UTC", location.reload();',
@@ -55,7 +55,7 @@ class Frontend {
 			// Disable design
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
-				'title' => '<span class="ab-icon dashicons dashicons-admin-appearance"></span>' . 'Disable Design',
+				'title' => '<span class="ab-icon dashicons dashicons-hidden" style="top: 2px;"></span>' . 'Disable Style Designer',
 				'href'  => '#',
 				'meta'  => array(
 					'onclick' => 'document.cookie = "design_plugin_disabled=true; path=/;", location.reload();',
