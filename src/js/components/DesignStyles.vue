@@ -40,3 +40,92 @@ const props = defineProps({
   }
 })
 </script>
+
+<style lang="scss">
+/* --------------------------------
+Base Theme Overrides
+-------------------------------- */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-primary-weight);
+}
+
+body {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-secondary-weight);
+}
+
+.btn--primary, .btn--secondary, .btn--tertiary {
+  border: 2px solid transparent;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+
+  // &:hover {
+  //   border: 2px solid var(--color-primary);
+  //   background-color: transparent;
+  //   color: var(--color-primary)
+  // }
+}
+
+.btn--secondary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+  // &:hover {
+  //   border: 2px solid var(--color-accent);
+  //   background-color: transparent;
+  //   color: var(--color-accent)
+  // }
+}
+
+.btn--tertiary {
+  background-color: var(--color-white);
+  // color: var(--color-primary);
+
+  // &:hover {
+  //   border: 2px solid var(--color-accent);
+  //   background-color: transparent;
+  //   color: var(--color-accent)
+  // }
+}
+
+[data-theme="bg-1"] {
+  background-color: var(--color-bg);
+}
+
+[data-theme="bg-2"] {
+  background-color: var(--color-bg);
+  
+  .btn--primary {
+    color: var(--color-contrast-lower);
+  }
+  
+  .btn--tertiary {
+    color: var(--color-contrast-lower);
+  }
+  
+  .pre-title {
+    color: var(--color-primary);
+  }
+}
+
+// Override tertiary button in hero's
+.hero, 
+.feature-v4 { // feature-v4 is the isolated hero block
+  .btn--tertiary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+}
+
+// Fixes the button misalignment in boxed hero
+.hero--boxed {
+  .btn--primary {
+    margin-bottom: var(--gap-y, 0) !important;
+    margin-right: 0 !important;
+  }
+}
+</style>
