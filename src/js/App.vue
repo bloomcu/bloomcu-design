@@ -1,20 +1,31 @@
 <template>
-  <div>
+  <div class="bloomcu-design">
     <div v-if="mode === 'edit'" class="siderail">
       <!-- Top menu -->
       <div class="siderail__top-menu">
         <IconLoading v-if="store.loading"/>
-        <button v-else @click="toggleHero()" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
+        <svg v-else width="24" height="24" viewBox="0 0 24 24">
+          <g fill="currentColor">
+            <path d="M22.707,6.293l-5-5c-0.391-0.391-1.023-0.391-1.414,0l-2.291,2.291l2.706,2.71l-1.415,1.413l-2.705-2.709 l-1.586,1.586l1.709,1.709l-1.414,1.414L9.588,7.998L8.002,9.584l2.709,2.709l-1.414,1.414l-2.709-2.709l-1.586,1.586l1.709,1.709 l-1.414,1.414l-1.709-1.709l-2.295,2.295c-0.391,0.391-0.391,1.023,0,1.414l5,5C6.488,22.902,6.744,23,7,23s0.512-0.098,0.707-0.293 l15-15C23.098,7.316,23.098,6.684,22.707,6.293z"></path> <path data-color="color-2" d="M4.672,10.086l5.414-5.414L6.707,1.293c-0.391-0.391-1.023-0.391-1.414,0l-4,4 c-0.391,0.391-0.391,1.023,0,1.414L4.672,10.086z"></path><path data-color="color-2" d="M21.98,16.804c-0.039-0.193-0.134-0.371-0.273-0.511l-2.379-2.379l-5.414,5.414l2.379,2.379 c0.14,0.14,0.317,0.235,0.511,0.273l5,1C21.869,22.994,21.935,23,22,23c0.263,0,0.518-0.104,0.707-0.293 c0.236-0.236,0.339-0.575,0.273-0.903L21.98,16.804z"></path>
+          </g>
+        </svg>
+        <!-- <button v-else @click="toggleHero()" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
           <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
         </button>
         <div v-if="activeMenu === 'hero'" class="siderail-menu">
           <div class="siderail-menu__section">
             <div v-if="store.designs" class="text-component">
               <p class="font-bold">My Designs</p>
-              <p v-for="design in store.designs" :key="design.id" href="#">{{ design.title }}</p>
+              <div
+                v-for="design in store.designs" 
+                :key="design.id" 
+                class="card padding-xs text-sm"
+              >
+                {{ design.title }}
+              </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
       
       <!-- Design controls -->
@@ -30,7 +41,7 @@
           </button>
           <div v-if="activeMenu === 'colors'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Primary</p>
+              <p style="width: 200px;" class="font-bold">Primary</p>
               <div class="input-group">
                 <input v-model="store.variables.color_primary" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
@@ -49,7 +60,7 @@
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Accent</p>
+              <p style="width: 200px;" class="font-bold">Accent</p>
               <div class="input-group">
                 <input v-model="store.variables.color_accent" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
@@ -67,7 +78,7 @@
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Text</p>
+              <p style="width: 200px;" class="font-bold">Text</p>
               <div class="input-group">
                 <input v-model="store.variables.color_contrast_higher" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
@@ -85,7 +96,7 @@
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Background</p>
+              <p style="width: 200px;" class="font-bold">Background</p>
               <div class="input-group">
                 <input v-model="store.variables.color_background" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
@@ -103,7 +114,7 @@
             </div>
             
             <!-- <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Background Medium</p>
+              <p style="width: 200px;" class="font-bold">Background Medium</p>
               <div class="input-group">
                 <input v-model="colorBackground" class="form-control" style="width: 160px;" type="text">
                 <div class="input-group__tag">
@@ -206,7 +217,7 @@
             
             <!-- Text base size -->
             <div class="siderail-menu__section">
-                <p style="font-size: 18px; width: 140px;" class="font-bold">Text Base Size</p>
+                <p style="width: 140px;" class="font-bold">Text Base Size</p>
                 
                 <fieldset>
                   <div class="slider slider--input gap-sm">
@@ -234,7 +245,7 @@
           <div v-if="activeMenu === 'buttons'" class="siderail-menu">
             <div class="siderail-menu__section">
               <div class="margin-right-lg">
-                <p style="font-size: 18px; width: 260px;" class="font-bold">Button radius</p>
+                <p style="width: 260px;" class="font-bold">Button radius</p>
                 
                 <fieldset>
                   <div class="slider slider--input gap-sm">
@@ -268,27 +279,27 @@
           </button>
           <div v-if="activeMenu === 'backgrounds'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Default Background</p>
+              <p style="width: 200px;" class="font-bold">Default Background</p>
               <div :style="{'background-color': store.variables.color_background}"  class="border radius-md width-xxxl height-xxl">
               </div>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Medium Background</p>
+              <p style="width: 200px;" class="font-bold">Medium Background</p>
               <div :style="{'background-color': store.variables.color_primary}" style="opacity: 0.05;" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Dark Background</p>
+              <p style="width: 200px;" class="font-bold">Dark Background</p>
               <div :style="{'background-color': store.variables.color_primary}" class="radius-md width-xxxl height-xxl"></div>
             </div>
             
             <!-- <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Custom Background 1</p>
+              <p style="width: 200px;" class="font-bold">Custom Background 1</p>
             </div>
             
             <div class="siderail-menu__section">
-              <p style="font-size: 18px; width: 200px;" class="font-bold">Custom Background 2</p>
+              <p style="width: 200px;" class="font-bold">Custom Background 2</p>
             </div> -->
           </div>
         </div>
@@ -309,6 +320,382 @@
     </div>
   </div>
 </template>
+
+<style lang="scss">
+@import "vue3-colorpicker/style.css";
+
+/* --------------------------------
+Vue Colorpicker
+-------------------------------- */
+.vc-color-wrap {
+  margin: 0 !important;
+}
+
+/* --------------------------------
+Plugin styles
+-------------------------------- */
+.bloomcu-design {
+  /* --------------------------------
+  Resets
+  -------------------------------- */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 20px;
+  color: #313135;
+  
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  
+    color: #1c1c21;
+    line-height: 1.2;
+  }
+
+  h1, .h1 {
+    font-size: 41px;
+  }
+
+  h2, .h2 {
+    font-size: 34px;
+  }
+
+  h3, .h3 {
+    font-size: 28px;
+  }
+
+  h4, .h4 {
+    font-size: 24px;
+  }
+  
+  // .btn--primary, .btn--secondary, .btn--tertiary {
+  // 
+  // }
+  // 
+  // .btn--primary {
+  // 
+  // }
+  
+  .form-control {
+    background: #fff;
+  }
+  
+  /* --------------------------------
+  Siderail
+  -------------------------------- */
+  .siderail {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 64px;
+    height: 100vh;
+    padding: 46px 12px 20px 12px;
+    border-left: 1px solid #eaeaeb;
+    background: #fff;
+    
+    &__top-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 40px;
+      // margin-bottom: 30px;
+    }
+    
+    &__bottom-menu {}
+  }
+
+  .siderail-item {
+    display: inline-flex;
+    position: relative;
+    margin-bottom: 8px;
+  }
+
+  .siderail-item__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    
+    svg {
+      display: block;
+      stroke: #000;
+      z-index: 1;
+    }
+    
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      background-color: #9f9f9f;
+      border-radius: 5px;
+      transform: scale(.75);
+      transition-property: transform;
+      transition-duration: .15s;
+    }
+    
+    &--active {
+      svg {
+        stroke: #712aff;
+      }
+      
+      &:before {
+        transform: scale(1);
+        opacity: .17;
+        background-color: #96f;
+      }
+      
+      &:hover {
+        &:before {
+          opacity: .32 !important;
+        }
+      }
+    }
+    
+    &:hover {
+      &:before {
+        transform: scale(1);
+        opacity: .17;
+      }
+    }
+  }
+
+  .siderail-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 60px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    
+    &__section {
+      display: flex; 
+      align-items: center; 
+      gap: 10px 10px;
+      width: max-content;
+      padding: 20px;
+      border-bottom: 1px solid #e3e2e9;
+    }
+  }
+
+  /* --------------------------------
+  Input group
+  -------------------------------- */
+  .input-group {
+    display: flex;
+
+    > * {
+      position: relative;
+    }
+
+    > *:not(:last-child):not(:first-child) {
+      border-radius: 0;
+    }
+
+    > *:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .select__input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+
+    > *:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .select__input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    > *:focus, *:focus-within {
+      z-index: 1;
+    }
+  }
+
+  .input-group__tag {
+    display: flex;
+    align-items: center;
+
+    padding: 0 18.5px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #e3e2e9;
+
+    white-space: nowrap;
+    color: #68667f;
+
+    &:first-child {
+      border-right-width: 0px;
+    }
+
+    &:last-child {
+      border-left-width: 0px;
+    }
+  }
+
+  /* --------------------------------
+  Select input
+  -------------------------------- */
+  .select {
+    position: relative;
+    width: 100%;
+  }
+
+  .select__icon {
+    width: 16px;
+    height: 16px;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* --------------------------------
+  Slider input
+  -------------------------------- */
+  .slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider__range {
+    width: 100%;
+    --slider-fill-value: 0%;
+    --slider-empty-value: 100%;
+  }
+
+  .slider__input {
+    display: block;
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+  }
+
+  .slider__input:focus {
+    outline: none;
+  }
+
+  .slider__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #9966ff;
+    box-shadow: var(--shadow-xs), var(--shadow-sm);
+    cursor: -webkit-grab;
+    cursor: grab;
+    margin-top: calc((8px - 20px) * 0.5);
+  }
+
+  .slider__input:active::-webkit-slider-thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+  }
+
+  .slider__input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #9966ff;
+    box-shadow: var(--shadow-xs), var(--shadow-sm);
+    cursor: grab;
+  }
+
+  .slider__input:active::-moz-range-thumb {
+    cursor: grabbing;
+  }
+
+  .slider__input:active::-ms-thumb {
+    cursor: grabbing;
+  }
+
+  .slider__input:focus::-webkit-slider-thumb {
+    box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
+  }
+
+  .slider__input:focus::-moz-range-thumb {
+    box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
+  }
+
+  .slider__input::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 50em;
+    background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+    margin-top: calc((20px - 8px) * 0.5);
+  }
+
+  .slider__input::-moz-range-track {
+    height: 8px;
+    border-radius: 50em;
+    background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+  }
+
+  .slider__input::-moz-focus-outer {
+    border: 0;
+  }
+
+  .slider__input::-ms-tooltip {
+    display: none;
+  }
+
+  .slider__input::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    box-shadow: var(--shadow-xs), var(--shadow-sm);
+    cursor: grab;
+    transform: translateY(0);
+    background-color: white !important;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 20px;
+    width: 20px;
+  }
+
+  .slider__input:focus::-ms-thumb {
+    box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);
+  }
+
+  .slider__input::-ms-track {
+    height: 8px;
+    border-radius: 50em;
+    background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
+    background-color: hsl(240deg, 1%, 60%);
+    color: transparent;
+    height: 8px;
+  }
+
+  .slider__value {
+    display: flex;
+    align-items: center;  
+  }  
+}
+</style>
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -366,411 +753,3 @@ onMounted(() => {
   store.show(props.design)
 })
 </script>
-
-<style lang="scss">
-@import "vue3-colorpicker/style.css";
-
-/* --------------------------------
-Base Theme Overrides
--------------------------------- */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: var(--font-primary);
-  font-weight: var(--font-primary-weight);
-}
-
-body {
-  font-family: var(--font-secondary);
-  font-weight: var(--font-secondary-weight);
-}
-
-.btn--primary, .btn--secondary, .btn--tertiary {
-  border: 2px solid transparent;
-}
-
-.btn--primary {
-  background: var(--color-primary);
-  color: var(--color-white);
-
-  // &:hover {
-  //   border: 2px solid var(--color-primary);
-  //   background-color: transparent;
-  //   color: var(--color-primary)
-  // }
-}
-
-.btn--secondary {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-
-  // &:hover {
-  //   border: 2px solid var(--color-accent);
-  //   background-color: transparent;
-  //   color: var(--color-accent)
-  // }
-}
-
-.btn--tertiary {
-  background-color: var(--color-white);
-  // color: var(--color-primary);
-
-  // &:hover {
-  //   border: 2px solid var(--color-accent);
-  //   background-color: transparent;
-  //   color: var(--color-accent)
-  // }
-}
-
-// Override tertiary button in hero's
-.hero,
-.feature-v4 { // feature-v4 is isolated hero block
-  .btn--tertiary {
-    background-color: var(--color-accent);
-    color: var(--color-white);
-  }
-}
-
-[data-theme="bg-2"] {
-  .btn--primary {
-    color: var(--color-contrast-lower);
-  }
-  
-  .btn--tertiary {
-      color: var(--color-contrast-lower);
-  }
-  
-  .pre-title {
-    color: var(--color-primary);
-  }
-}
-
-/* --------------------------------
-Vue Colorpicker
--------------------------------- */
-.vc-color-wrap {
-  margin: 0 !important;
-}
-
-/* --------------------------------
-Siderail
--------------------------------- */
-.siderail {
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 99;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  
-  width: 64px;
-  height: 100vh;
-  padding: 46px 12px 20px 12px;
-  border-left: 1px solid #eaeaeb;
-  background: #fff;
-  
-  &__top-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 44px;
-    margin-bottom: 30px;
-  }
-  
-  &__bottom-menu {}
-}
-
-.siderail-item {
-  display: inline-flex;
-  position: relative;
-  margin-bottom: 8px;
-}
-
-.siderail-item__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  
-  svg {
-    display: block;
-    stroke: #000;
-    z-index: 1;
-  }
-  
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    background-color: #9f9f9f;
-    border-radius: 5px;
-    transform: scale(.75);
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-    transition-duration: .15s;
-  }
-  
-  &--active {
-    svg {
-      stroke: #712aff;
-    }
-    
-    &:before {
-      transform: scale(1);
-      opacity: .17;
-      background-color: #96f;
-    }
-    
-    &:hover {
-      &:before {
-        opacity: .32 !important;
-      }
-    }
-  }
-  
-  &:hover {
-    &:before {
-      transform: scale(1);
-      opacity: .17;
-    }
-  }
-}
-
-.siderail-menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 60px;
-  border-radius: 7px;
-  background: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  
-  &__section {
-    display: flex; 
-    align-items: center; 
-    gap: 10px 10px;
-    width: max-content;
-    padding: 20px;
-    border-bottom: 1px solid #e3e2e9;
-  }
-}
-
-/* --------------------------------
-Input group
--------------------------------- */
-.input-group {
-  display: flex;
-
-  > * {
-    position: relative;
-  }
-
-  > *:not(:last-child):not(:first-child) {
-    border-radius: 0;
-  }
-
-  > *:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-    .select__input {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-
-  > *:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-
-    .select__input {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-
-  > *:focus, *:focus-within {
-    z-index: 1;
-  }
-}
-
-.input-group__tag {
-  display: flex;
-  align-items: center;
-
-  padding: 0 var(--space-sm);
-  background-color: var(--color-bg);
-  border-radius: var(--radius-md);
-  border: 2px solid #e3e2e9;
-
-  white-space: nowrap;
-  color: var(--color-contrast-medium);
-
-  &:first-child {
-    border-right-width: 0px;
-  }
-
-  &:last-child {
-    border-left-width: 0px;
-  }
-}
-
-/* --------------------------------
-Select input
--------------------------------- */
-.select {
-  position: relative;
-  width: 100%;
-}
-
-.select__icon {
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* --------------------------------
-Slider input
--------------------------------- */
-:root {
-  --slider-track-height: 8px;
-  --slide-thumb-size: 20px;
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.slider__range {
-  width: 100%;
-  --slider-fill-value: 0%;
-  --slider-empty-value: 100%;
-}
-
-.slider__input {
-  display: block;
-  -webkit-appearance: none;
-  width: 100%;
-  background: transparent;
-}
-
-.slider__input:focus {
-  outline: none;
-}
-
-.slider__input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: var(--slide-thumb-size);
-  height: var(--slide-thumb-size);
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-primary);
-  box-shadow: var(--shadow-xs), var(--shadow-sm);
-  cursor: -webkit-grab;
-  cursor: grab;
-  margin-top: calc((var(--slider-track-height) - var(--slide-thumb-size)) * 0.5);
-}
-
-.slider__input:active::-webkit-slider-thumb {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
-.slider__input::-moz-range-thumb {
-  width: var(--slide-thumb-size);
-  height: var(--slide-thumb-size);
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-primary);
-  box-shadow: var(--shadow-xs), var(--shadow-sm);
-  cursor: grab;
-}
-
-.slider__input:active::-moz-range-thumb {
-  cursor: grabbing;
-}
-
-.slider__input:active::-ms-thumb {
-  cursor: grabbing;
-}
-
-.slider__input:focus::-webkit-slider-thumb {
-  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
-}
-
-.slider__input:focus::-moz-range-thumb {
-  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);
-}
-
-.slider__input::-webkit-slider-runnable-track {
-  height: var(--slider-track-height);
-  border-radius: 50em;
-  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
-  margin-top: calc((var(--slide-thumb-size) - var(--slider-track-height)) * 0.5);
-}
-
-.slider__input::-moz-range-track {
-  height: var(--slider-track-height);
-  border-radius: 50em;
-  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
-}
-
-.slider__input::-moz-focus-outer {
-  border: 0;
-}
-
-.slider__input::-ms-tooltip {
-  display: none;
-}
-
-.slider__input::-ms-thumb {
-  width: var(--slide-thumb-size);
-  height: var(--slide-thumb-size);
-  border-radius: 50%;
-  border: none;
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-xs), var(--shadow-sm);
-  cursor: grab;
-  transform: translateY(0);
-  background-color: white !important;
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);
-  height: 20px;
-  width: 20px;
-}
-
-.slider__input:focus::-ms-thumb {
-  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);
-}
-
-.slider__input::-ms-track {
-  height: var(--slider-track-height);
-  border-radius: 50em;
-  background-image: linear-gradient(to right, var(--color-primary) var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));
-  background-color: hsl(240deg, 1%, 60%);
-  color: transparent;
-  height: 8px;
-}
-
-.slider__value {
-  display: flex;
-  align-items: center;  
-}
-</style>
