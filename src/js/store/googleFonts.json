@@ -1,41 +1,41 @@
 [{
-		"family": "ABeeZee",
+		"name": "ABeeZee",
 		"variants": [
 			"400"
 		],
 		"version": "v22",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Abel",
+		"name": "Abel",
 		"variants": [
 			"400"
 		],
 		"version": "v18",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Abril Fatface",
+		"name": "Abril Fatface",
 		"variants": [
 			"400"
 		],
 		"version": "v19",
 		"last_modified": "2022-04-20",
-		"category": "display"
+		"source": "google-font"
 	},
 	{
-		"family": "Anton",
+		"name": "Anton",
 		"variants": [
 			"400"
 		],
 		"version": "v23",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Archivo",
+		"name": "Archivo",
 		"variants": [
 			"100",
 			"200",
@@ -50,10 +50,10 @@
 		],
 		"version": "v18",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Arimo",
+		"name": "Arimo",
 		"variants": [
 			"400",
 			"500",
@@ -63,37 +63,32 @@
 		],
 		"version": "v27",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Arvo",
+		"name": "Arvo",
 		"variants": [
 			"400",
 			"700"
-
 		],
 		"version": "v20",
 		"last_modified": "2022-04-20",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Asap",
+		"name": "Asap",
 		"variants": [
 			"400",
 			"500",
 			"600",
 			"700"
-
-
-
-
 		],
 		"version": "v24",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Assistant",
+		"name": "Assistant",
 		"variants": [
 			"200",
 			"300",
@@ -105,10 +100,10 @@
 		],
 		"version": "v18",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Barlow",
+		"name": "Barlow",
 		"variants": [
 			"100",
 			"200",
@@ -122,10 +117,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Barlow Condensed",
+		"name": "Barlow Condensed",
 		"variants": [
 			"100",
 			"200",
@@ -139,10 +134,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Barlow Semi Condensed",
+		"name": "Barlow Semi Condensed",
 		"variants": [
 			"100",
 			"200",
@@ -156,19 +151,19 @@
 		],
 		"version": "v14",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Bebas Neue",
+		"name": "Bebas Neue",
 		"variants": [
 			"400"
 		],
 		"version": "v9",
 		"last_modified": "2022-04-20",
-		"category": "display"
+		"source": "google-font"
 	},
 	{
-		"family": "Bitter",
+		"name": "Bitter",
 		"variants": [
 			"100",
 			"200",
@@ -182,19 +177,19 @@
 		],
 		"version": "v28",
 		"last_modified": "2022-06-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Bree Serif",
+		"name": "Bree Serif",
 		"variants": [
 			"400"
 		],
 		"version": "v17",
 		"last_modified": "2022-04-21",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Cabin",
+		"name": "Cabin",
 		"variants": [
 			"400",
 			"500",
@@ -203,10 +198,10 @@
 		],
 		"version": "v26",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Cairo",
+		"name": "Cairo",
 		"variants": [
 			"200",
 			"300",
@@ -219,10 +214,10 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Catamaran",
+		"name": "Catamaran",
 		"variants": [
 			"100",
 			"200",
@@ -236,10 +231,10 @@
 		],
 		"version": "v17",
 		"last_modified": "2022-06-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Caveat",
+		"name": "Caveat",
 		"variants": [
 			"400",
 			"500",
@@ -248,10 +243,10 @@
 		],
 		"version": "v17",
 		"last_modified": "2022-06-27",
-		"category": "handwriting"
+		"source": "google-font"
 	},
 	{
-		"family": "Cinzel",
+		"name": "Cinzel",
 		"variants": [
 			"400",
 			"500",
@@ -262,10 +257,10 @@
 		],
 		"version": "v19",
 		"last_modified": "2022-06-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Comfortaa",
+		"name": "Comfortaa",
 		"variants": [
 			"300",
 			"400",
@@ -275,10 +270,10 @@
 		],
 		"version": "v40",
 		"last_modified": "2022-06-27",
-		"category": "display"
+		"source": "google-font"
 	},
 	{
-		"family": "Cormorant SC",
+		"name": "Cormorant SC",
 		"variants": [
 			"300",
 			"400",
@@ -288,10 +283,10 @@
 		],
 		"version": "v16",
 		"last_modified": "2022-04-21",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Crimson Text",
+		"name": "Crimson Text",
 		"variants": [
 			"400",
 			"600",
@@ -299,10 +294,10 @@
 		],
 		"version": "v19",
 		"last_modified": "2022-05-24",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "DM Sans",
+		"name": "DM Sans",
 		"variants": [
 			"400",
 			"500",
@@ -310,10 +305,10 @@
 		],
 		"version": "v11",
 		"last_modified": "2022-04-21",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Dancing Script",
+		"name": "Dancing Script",
 		"variants": [
 			"400",
 			"500",
@@ -322,10 +317,10 @@
 		],
 		"version": "v24",
 		"last_modified": "2022-07-12",
-		"category": "handwriting"
+		"source": "google-font"
 	},
 	{
-		"family": "Dosis",
+		"name": "Dosis",
 		"variants": [
 			"200",
 			"300",
@@ -337,10 +332,10 @@
 		],
 		"version": "v27",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "EB Garamond",
+		"name": "EB Garamond",
 		"variants": [
 			"400",
 			"500",
@@ -350,10 +345,10 @@
 		],
 		"version": "v26",
 		"last_modified": "2022-07-12",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Exo 2",
+		"name": "Exo 2",
 		"variants": [
 			"100",
 			"200",
@@ -367,10 +362,10 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Fira Sans",
+		"name": "Fira Sans",
 		"variants": [
 			"100",
 			"200",
@@ -384,10 +379,10 @@
 		],
 		"version": "v16",
 		"last_modified": "2022-04-21",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Fira Sans Condensed",
+		"name": "Fira Sans Condensed",
 		"variants": [
 			"100",
 			"200",
@@ -401,19 +396,19 @@
 		],
 		"version": "v10",
 		"last_modified": "2022-04-21",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Fjalla One",
+		"name": "Fjalla One",
 		"variants": [
 			"400"
 		],
 		"version": "v13",
 		"last_modified": "2022-04-21",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Heebo",
+		"name": "Heebo",
 		"variants": [
 			"100",
 			"200",
@@ -427,10 +422,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Hind",
+		"name": "Hind",
 		"variants": [
 			"300",
 			"400",
@@ -440,10 +435,10 @@
 		],
 		"version": "v16",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Hind Madurai",
+		"name": "Hind Madurai",
 		"variants": [
 			"300",
 			"400",
@@ -453,10 +448,10 @@
 		],
 		"version": "v11",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Hind Siliguri",
+		"name": "Hind Siliguri",
 		"variants": [
 			"300",
 			"400",
@@ -466,10 +461,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "IBM Plex Sans",
+		"name": "IBM Plex Sans",
 		"variants": [
 			"100",
 			"200",
@@ -481,10 +476,10 @@
 		],
 		"version": "v14",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "IBM Plex Serif",
+		"name": "IBM Plex Serif",
 		"variants": [
 			"100",
 			"200",
@@ -496,10 +491,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-26",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Ibarra Real Nova",
+		"name": "Ibarra Real Nova",
 		"variants": [
 			"400",
 			"500",
@@ -508,10 +503,10 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-07-12",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Inconsolata",
+		"name": "Inconsolata",
 		"variants": [
 			"200",
 			"300",
@@ -524,19 +519,19 @@
 		],
 		"version": "v31",
 		"last_modified": "2022-07-12",
-		"category": "monospace"
+		"source": "google-font"
 	},
 	{
-		"family": "Indie Flower",
+		"name": "Indie Flower",
 		"variants": [
 			"400"
 		],
 		"version": "v17",
 		"last_modified": "2022-04-26",
-		"category": "handwriting"
+		"source": "google-font"
 	},
 	{
-		"family": "Inter",
+		"name": "Inter",
 		"variants": [
 			"100",
 			"200",
@@ -550,10 +545,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Josefin Sans",
+		"name": "Josefin Sans",
 		"variants": [
 			"100",
 			"200",
@@ -565,10 +560,10 @@
 		],
 		"version": "v25",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Jost",
+		"name": "Jost",
 		"variants": [
 			"100",
 			"200",
@@ -582,10 +577,10 @@
 		],
 		"version": "v14",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Kanit",
+		"name": "Kanit",
 		"variants": [
 			"100",
 			"200",
@@ -599,10 +594,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Karla",
+		"name": "Karla",
 		"variants": [
 			"200",
 			"300",
@@ -614,10 +609,10 @@
 		],
 		"version": "v23",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Lato",
+		"name": "Lato",
 		"variants": [
 			"100",
 			"300",
@@ -627,20 +622,20 @@
 		],
 		"version": "v23",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Libre Baskerville",
+		"name": "Libre Baskerville",
 		"variants": [
 			"400",
 			"700"
 		],
 		"version": "v14",
 		"last_modified": "2022-04-26",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Libre Franklin",
+		"name": "Libre Franklin",
 		"variants": [
 			"100",
 			"200",
@@ -654,19 +649,19 @@
 		],
 		"version": "v13",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Lobster",
+		"name": "Lobster",
 		"variants": [
 			"400"
 		],
 		"version": "v28",
 		"last_modified": "2022-04-26",
-		"category": "display"
+		"source": "google-font"
 	},
 	{
-		"family": "Lora",
+		"name": "Lora",
 		"variants": [
 			"400",
 			"500",
@@ -675,10 +670,10 @@
 		],
 		"version": "v25",
 		"last_modified": "2022-07-12",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "M PLUS Rounded 1c",
+		"name": "M PLUS Rounded 1c",
 		"variants": [
 			"100",
 			"300",
@@ -690,10 +685,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Manrope",
+		"name": "Manrope",
 		"variants": [
 			"200",
 			"300",
@@ -705,10 +700,10 @@
 		],
 		"version": "v13",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Maven Pro",
+		"name": "Maven Pro",
 		"variants": [
 			"400",
 			"500",
@@ -719,10 +714,10 @@
 		],
 		"version": "v32",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Merriweather",
+		"name": "Merriweather",
 		"variants": [
 			"300",
 			"400",
@@ -731,10 +726,10 @@
 		],
 		"version": "v30",
 		"last_modified": "2022-04-26",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Merriweather Sans",
+		"name": "Merriweather Sans",
 		"variants": [
 			"300",
 			"400",
@@ -745,10 +740,10 @@
 		],
 		"version": "v22",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Montserrat",
+		"name": "Montserrat",
 		"variants": [
 			"100",
 			"200",
@@ -762,10 +757,10 @@
 		],
 		"version": "v25",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Mukta",
+		"name": "Mukta",
 		"variants": [
 			"200",
 			"300",
@@ -777,10 +772,10 @@
 		],
 		"version": "v13",
 		"last_modified": "2022-04-26",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Mulish",
+		"name": "Mulish",
 		"variants": [
 			"200",
 			"300",
@@ -793,10 +788,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-07-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Nanum Gothic",
+		"name": "Nanum Gothic",
 		"variants": [
 			"400",
 			"700",
@@ -804,10 +799,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans",
+		"name": "Noto Sans",
 		"variants": [
 			"100",
 			"200",
@@ -821,10 +816,10 @@
 		],
 		"version": "v27",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans HK",
+		"name": "Noto Sans HK",
 		"variants": [
 			"100",
 			"300",
@@ -835,10 +830,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans JP",
+		"name": "Noto Sans JP",
 		"variants": [
 			"100",
 			"300",
@@ -849,10 +844,10 @@
 		],
 		"version": "v42",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans KR",
+		"name": "Noto Sans KR",
 		"variants": [
 			"100",
 			"300",
@@ -863,10 +858,10 @@
 		],
 		"version": "v27",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans SC",
+		"name": "Noto Sans SC",
 		"variants": [
 			"100",
 			"300",
@@ -877,10 +872,10 @@
 		],
 		"version": "v26",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Sans TC",
+		"name": "Noto Sans TC",
 		"variants": [
 			"100",
 			"300",
@@ -891,20 +886,20 @@
 		],
 		"version": "v26",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Serif",
+		"name": "Noto Serif",
 		"variants": [
 			"400",
 			"700"
 		],
 		"version": "v21",
 		"last_modified": "2022-05-10",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Serif JP",
+		"name": "Noto Serif JP",
 		"variants": [
 			"200",
 			"300",
@@ -916,10 +911,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-05-10",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Serif KR",
+		"name": "Noto Serif KR",
 		"variants": [
 			"200",
 			"300",
@@ -931,10 +926,10 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-05-10",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Noto Serif TC",
+		"name": "Noto Serif TC",
 		"variants": [
 			"200",
 			"300",
@@ -946,10 +941,10 @@
 		],
 		"version": "v23",
 		"last_modified": "2022-05-10",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Nunito",
+		"name": "Nunito",
 		"variants": [
 			"200",
 			"300",
@@ -962,10 +957,10 @@
 		],
 		"version": "v25",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Nunito Sans",
+		"name": "Nunito Sans",
 		"variants": [
 			"200",
 			"300",
@@ -977,10 +972,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Open Sans",
+		"name": "Open Sans",
 		"variants": [
 			"300",
 			"400",
@@ -991,10 +986,10 @@
 		],
 		"version": "v29",
 		"last_modified": "2022-05-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Oswald",
+		"name": "Oswald",
 		"variants": [
 			"200",
 			"300",
@@ -1005,10 +1000,10 @@
 		],
 		"version": "v49",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Overpass",
+		"name": "Overpass",
 		"variants": [
 			"100",
 			"200",
@@ -1022,10 +1017,10 @@
 		],
 		"version": "v12",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Oxygen",
+		"name": "Oxygen",
 		"variants": [
 			"300",
 			"400",
@@ -1033,49 +1028,49 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-05-10",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "PT Sans",
+		"name": "PT Sans",
 		"variants": [
 			"400",
 			"700"
 		],
 		"version": "v17",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "PT Sans Narrow",
+		"name": "PT Sans Narrow",
 		"variants": [
 			"400",
 			"700"
 		],
 		"version": "v17",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "PT Serif",
+		"name": "PT Serif",
 		"variants": [
 			"400",
 			"700"
 		],
 		"version": "v17",
 		"last_modified": "2022-04-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Pacifico",
+		"name": "Pacifico",
 		"variants": [
 			"400"
 		],
 		"version": "v22",
 		"last_modified": "2022-05-10",
-		"category": "handwriting"
+		"source": "google-font"
 	},
 	{
-		"family": "Playfair Display",
+		"name": "Playfair Display",
 		"variants": [
 			"400",
 			"500",
@@ -1086,10 +1081,10 @@
 		],
 		"version": "v30",
 		"last_modified": "2022-07-19",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Poppins",
+		"name": "Poppins",
 		"variants": [
 			"100",
 			"200",
@@ -1103,10 +1098,10 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Prompt",
+		"name": "Prompt",
 		"variants": [
 			"100",
 			"200",
@@ -1120,10 +1115,10 @@
 		],
 		"version": "v10",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Public Sans",
+		"name": "Public Sans",
 		"variants": [
 			"100",
 			"200",
@@ -1137,19 +1132,19 @@
 		],
 		"version": "v14",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Questrial",
+		"name": "Questrial",
 		"variants": [
 			"400"
 		],
 		"version": "v18",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Quicksand",
+		"name": "Quicksand",
 		"variants": [
 			"300",
 			"400",
@@ -1159,10 +1154,10 @@
 		],
 		"version": "v30",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Rajdhani",
+		"name": "Rajdhani",
 		"variants": [
 			"300",
 			"400",
@@ -1172,10 +1167,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Raleway",
+		"name": "Raleway",
 		"variants": [
 			"100",
 			"200",
@@ -1189,10 +1184,10 @@
 		],
 		"version": "v28",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Roboto",
+		"name": "Roboto",
 		"variants": [
 			"100",
 			"300",
@@ -1203,10 +1198,10 @@
 		],
 		"version": "v30",
 		"last_modified": "2022-05-12",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Roboto Condensed",
+		"name": "Roboto Condensed",
 		"variants": [
 			"300",
 			"400",
@@ -1214,10 +1209,10 @@
 		],
 		"version": "v25",
 		"last_modified": "2022-04-20",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Roboto Mono",
+		"name": "Roboto Mono",
 		"variants": [
 			"100",
 			"200",
@@ -1229,10 +1224,10 @@
 		],
 		"version": "v22",
 		"last_modified": "2022-07-12",
-		"category": "monospace"
+		"source": "google-font"
 	},
 	{
-		"family": "Roboto Slab",
+		"name": "Roboto Slab",
 		"variants": [
 			"100",
 			"200",
@@ -1246,10 +1241,10 @@
 		],
 		"version": "v24",
 		"last_modified": "2022-07-12",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Rubik",
+		"name": "Rubik",
 		"variants": [
 			"300",
 			"400",
@@ -1261,10 +1256,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Saira",
+		"name": "Saira",
 		"variants": [
 			"100",
 			"200",
@@ -1278,28 +1273,28 @@
 		],
 		"version": "v14",
 		"last_modified": "2022-07-19",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Secular One",
+		"name": "Secular One",
 		"variants": [
 			"400"
 		],
 		"version": "v11",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Shadows Into Light",
+		"name": "Shadows Into Light",
 		"variants": [
 			"400"
 		],
 		"version": "v15",
 		"last_modified": "2022-04-27",
-		"category": "handwriting"
+		"source": "google-font"
 	},
 	{
-		"family": "Signika Negative",
+		"name": "Signika Negative",
 		"variants": [
 			"300",
 			"400",
@@ -1309,19 +1304,19 @@
 		],
 		"version": "v19",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Slabo 27px",
+		"name": "Slabo 27px",
 		"variants": [
 			"400"
 		],
 		"version": "v12",
 		"last_modified": "2022-04-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Source Code Pro",
+		"name": "Source Code Pro",
 		"variants": [
 			"200",
 			"300",
@@ -1334,10 +1329,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-04-27",
-		"category": "monospace"
+		"source": "google-font"
 	},
 	{
-		"family": "Source Sans Pro",
+		"name": "Source Sans Pro",
 		"variants": [
 			"200",
 			"300",
@@ -1348,10 +1343,10 @@
 		],
 		"version": "v21",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Source Serif Pro",
+		"name": "Source Serif Pro",
 		"variants": [
 			"200",
 			"300",
@@ -1362,10 +1357,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Space Grotesk",
+		"name": "Space Grotesk",
 		"variants": [
 			"300",
 			"400",
@@ -1375,10 +1370,10 @@
 		],
 		"version": "v12",
 		"lastModified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Taviraj",
+		"name": "Taviraj",
 		"variants": [
 			"100",
 			"200",
@@ -1392,10 +1387,10 @@
 		],
 		"version": "v11",
 		"last_modified": "2022-04-27",
-		"category": "serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Teko",
+		"name": "Teko",
 		"variants": [
 			"300",
 			"400",
@@ -1405,10 +1400,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Titillium Web",
+		"name": "Titillium Web",
 		"variants": [
 			"200",
 			"300",
@@ -1419,10 +1414,10 @@
 		],
 		"version": "v15",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Ubuntu",
+		"name": "Ubuntu",
 		"variants": [
 			"300",
 			"400",
@@ -1431,19 +1426,19 @@
 		],
 		"version": "v20",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Varela Round",
+		"name": "Varela Round",
 		"variants": [
 			"400"
 		],
 		"version": "v19",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Work Sans",
+		"name": "Work Sans",
 		"variants": [
 			"100",
 			"200",
@@ -1457,10 +1452,10 @@
 		],
 		"version": "v17",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Yanone Kaffeesatz",
+		"name": "Yanone Kaffeesatz",
 		"variants": [
 			"200",
 			"300",
@@ -1471,10 +1466,10 @@
 		],
 		"version": "v23",
 		"last_modified": "2022-04-27",
-		"category": "sans-serif"
+		"source": "google-font"
 	},
 	{
-		"family": "Zilla Slab",
+		"name": "Zilla Slab",
 		"variants": [
 			"300",
 			"400",
@@ -1484,6 +1479,6 @@
 		],
 		"version": "v11",
 		"last_modified": "2022-04-27",
-		"category": "serif"
+		"source": "google-font"
 	}
 ]

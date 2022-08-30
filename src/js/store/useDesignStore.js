@@ -48,10 +48,10 @@ export const useDesignStore = defineStore('designStore', {
         })
     },
 
-    show(id) {
+    async show(id) {
       this.loading = true
 
-      DesignApi.show('bloomcu', id)
+      await DesignApi.show('bloomcu', id)
         .then(response => {
           this.design = response.data.data
           
@@ -82,7 +82,17 @@ export const useDesignStore = defineStore('designStore', {
           this.designs = this.designs.filter((design) => design.id !== id)
           this.loading = false
         })
-    }
+    },
+    
+    async storeMedia(file, collection, tags) {
+      console.log('from store', file)
+      return await DesignApi.storeMedia('bloomcu', this.design.uuid, file, collection, tags)
+        .then(response => {
+          return response.data.data
+        }).catch(error => {
+          console.log('Error', error.response.data)
+        })
+    },
   }
 })
 

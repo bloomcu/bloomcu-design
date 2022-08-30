@@ -51,6 +51,20 @@ const designApi = {
     destroy(organization, uuid) {
         return HttpClient.delete(`/${organization}/designs/${uuid}`)
     },
+    
+    /**
+     * Store design media
+     *
+     * @param String organization [Slug of the organization]
+     * @param String design [UUID of the design]
+     * @param Object file [Object to create file from]
+     * @param String collection [Collection to associate media with]
+     * @param String tags [Tags to attach to media]
+     * @return promise
+     */
+    storeMedia(organization_slug, design_uuid, file, collection, tags) {
+        return HttpClient.post(`/${organization_slug}/designs/${design_uuid}/media`, file)
+    },
 }
 
 export { designApi }

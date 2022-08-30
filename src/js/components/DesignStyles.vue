@@ -2,19 +2,25 @@
   <component :is="'style'">
     <!-- Root & Default theme -->
     :root, [data-theme="default"] {
-      --color-white:           {{ variables.color_white }};
-      --color-black:           {{ variables.color_black }};
-      --color-primary:         {{ variables.color_primary }};
-      --color-accent:          {{ variables.color_accent }};
-      --color-contrast-high:   {{ variables.color_contrast_higher }};
-      --color-contrast-higher: {{ variables.color_contrast_higher }};
-      --color-bg:              {{ variables.color_background }};
-      --text-base-size:        {{ variables.text_base_size + 'rem' }};
-      --font-primary:          {{ variables.font_primary }};
-      --font-primary-weight:   {{ variables.font_primary_weight }};
-      --font-secondary:        {{ variables.font_secondary }};
-      --font-secondary-weight: {{ variables.font_secondary_weight }};
-      --btn-radius:            {{ variables.button_radius + 'em' }};
+      --color-white:              {{ variables.color_white }};
+      --color-black:              {{ variables.color_black }};
+      --color-primary:            {{ variables.color_primary }};
+      --color-accent:             {{ variables.color_accent }};
+      --color-contrast-high:      {{ variables.color_contrast_higher }};
+      --color-contrast-higher:    {{ variables.color_contrast_higher }};
+      --color-bg:                 {{ variables.color_background }};
+      --text-base-size:           {{ variables.text_base_size + 'rem' }};
+      --font-primary:             {{ variables.font_primary.name }};
+      <!-- --font-primary-url:         {{ variables.font_primary.url }}; -->
+      --font-secondary:           {{ variables.font_secondary.name }};
+      --font-primary-weight:      {{ variables.font_primary_weight }};
+      --font-secondary-weight:    {{ variables.font_secondary_weight }};
+      --btn-primary-text-color:   {{ variables.btn_primary_text_color ? variables.btn_primary_text_color : variables.color_white }};
+      --btn-secondary-text-color: {{ variables.btn_secondary_text_color ? variables.btn_secondary_text_color : variables.color_white }};
+      --btn-tertiary-text-color:  {{ variables.btn_tertiary_text_color ? variables.btn_tertiary_text_color : variables.color_contrast_higher }};
+      --btn-radius:               {{ variables.btn_radius + 'em' }};
+      --btn-text-weight:          {{ variables.btn_text_weight }};
+      --btn-text-transform:       {{ variables.btn_text_transform }};
     }
     
     <!-- Theme 1 -->
@@ -41,6 +47,16 @@ const props = defineProps({
 })
 </script>
 
+<style>
+@font-face {
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://build-api.sfo3.cdn.digitaloceanspaces.com/local_harmon/16/Museosans-300.woff) format('woff');
+}
+</style>
+
 <style lang="scss">
 /* --------------------------------
 Base Theme Overrides
@@ -55,13 +71,24 @@ body {
   font-weight: var(--font-secondary-weight);
 }
 
+a {
+  color: var(--color-contrast-higher);
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .btn--primary, .btn--secondary, .btn--tertiary {
   border: 2px solid transparent;
+  font-family: var(--font-secondary);
+  font-weight: var(--btn-text-weight);
+  text-transform: var(--btn-text-transform);
 }
 
 .btn--primary {
   background: var(--color-primary);
-  color: var(--color-white);
+  color: var(--btn-primary-text-color);
 
   // &:hover {
   //   border: 2px solid var(--color-primary);
@@ -72,7 +99,7 @@ body {
 
 .btn--secondary {
   background-color: var(--color-accent);
-  color: var(--color-white);
+  color: var(--btn-secondary-text-color);
 
   // &:hover {
   //   border: 2px solid var(--color-accent);
@@ -83,7 +110,7 @@ body {
 
 .btn--tertiary {
   background-color: var(--color-white);
-  // color: var(--color-primary);
+  color: var(--btn-tertiary-text-color);
 
   // &:hover {
   //   border: 2px solid var(--color-accent);
@@ -117,7 +144,7 @@ body {
 .feature-v4 { // feature-v4 is the isolated hero block
   .btn--tertiary {
     background-color: var(--color-accent);
-    color: var(--color-white);
+    color: var(--btn-secondary-text-color);
   }
 }
 
@@ -126,6 +153,13 @@ body {
   .btn--primary {
     margin-bottom: var(--gap-y, 0) !important;
     margin-right: 0 !important;
+  }
+}
+
+.boxed-feature {
+  // Secondary button
+  .color-inherit {
+    
   }
 }
 </style>

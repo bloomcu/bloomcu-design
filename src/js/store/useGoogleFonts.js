@@ -2,13 +2,13 @@ import fonts from "./googleFonts.json";
 
 const googleFonts = fonts
 
-function getGoogleFontByFamily(family) {
+function getGoogleFontByName(name) {
   return fonts.find((font) => {
-    return font.family == family
+    return font.name == name
   })  
 }
 
 export {
   googleFonts,
-  getGoogleFontByFamily
+  getGoogleFontByName
 }
