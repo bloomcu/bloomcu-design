@@ -61,9 +61,9 @@ function onUploadFile() {
 
 function onRemoveFile() {
   store.variables.font_primary = {
-    source: 'google-font',
-    name: 'Roboto Slab',
-    url: '',
+    source: null,
+    name: null,
+    url: null,
   }
 }
 </script>

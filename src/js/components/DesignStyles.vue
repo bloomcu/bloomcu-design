@@ -13,6 +13,7 @@
       --font-primary:             {{ variables.font_primary.name }};
       <!-- --font-primary-url:         {{ variables.font_primary.url }}; -->
       --font-secondary:           {{ variables.font_secondary.name }};
+      <!-- --font-secondary-url:       {{ variables.font_secondary.url }}; -->
       --font-primary-weight:      {{ variables.font_primary_weight }};
       --font-secondary-weight:    {{ variables.font_secondary_weight }};
       --btn-primary-text-color:   {{ variables.btn_primary_text_color ? variables.btn_primary_text_color : variables.color_white }};
@@ -46,16 +47,6 @@ const props = defineProps({
   }
 })
 </script>
-
-<style>
-@font-face {
-  font-family: var(--font-primary);
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url(https://build-api.sfo3.cdn.digitaloceanspaces.com/local_harmon/16/Museosans-300.woff) format('woff');
-}
-</style>
 
 <style lang="scss">
 /* --------------------------------

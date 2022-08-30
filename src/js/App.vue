@@ -571,7 +571,7 @@ function onSelectPrimaryFont(e) {
 function onSelectSecondaryFont(e) {
   let font = getGoogleFontByName(e.target.value)
   
-  store.variables.font_primary = {
+  store.variables.font_secondary = {
     source: 'google-font',
     name: font.name,
     url: '',

@@ -61,9 +61,9 @@ function onUploadFile() {
 
 function onRemoveFile() {
   store.variables.font_secondary = {
-    source: 'google-font',
-    name: 'Inter',
-    url: '',
+    source: null,
+    name: null,
+    url: null,
   }
 }
 </script>
