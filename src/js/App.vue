@@ -126,7 +126,7 @@
               </div>
             </div>
           </div>
-          <!-- Typography -->
+          <!-- Fonts -->
           <div class="siderail-item">
             <button @click="toggleMenu('typography')" type="button" class="siderail-item__button" :class="activeMenu === 'typography' ? 'siderail-item__button--active' : ''">
               <svg width="24" height="24" viewBox="0 0 24 24">
@@ -435,7 +435,7 @@
     
     <!-- Styleguide -->
     <div v-if="activeMenu === 'styleguide'" class="styleguide flex flex-center bg-black bg-opacity-30%">
-      <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-md bg radius-md shadow-md">
+      <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg bg radius-md shadow-md">
         <!-- Content -->
         <div class="container max-width-lg">
           <div class="grid gap-xxl">
@@ -566,6 +566,8 @@ function onSelectPrimaryFont(e) {
     name: font.name,
     url: '',
   }
+  
+  store.variables.font_primary_weight = '300'
 }
 
 function onSelectSecondaryFont(e) {
@@ -576,6 +578,8 @@ function onSelectSecondaryFont(e) {
     name: font.name,
     url: '',
   }
+  
+  store.variables.font_secondary_weight = '300'
 }
 
 const toggleMenu = (menu) => {
@@ -611,6 +615,13 @@ onMounted(() => {
 @import "vue3-colorpicker/style.css";
 
 /* --------------------------------
+Body
+-------------------------------- */
+body.design-plugin-enabled {
+  padding-right: 65px;
+}
+
+/* --------------------------------
 Vue Colorpicker
 -------------------------------- */
 .vc-color-wrap {
@@ -629,7 +640,7 @@ Plugin styles
   font-weight: normal;
   color: #313135;
   
-  button {
+  button, input, span {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";    
     font-weight: normal;
   }
@@ -659,6 +670,10 @@ Plugin styles
   
   .form-control {
     background: #fff;
+  }
+  
+  .card {
+    background-color: #fff;
   }
   
   /* --------------------------------

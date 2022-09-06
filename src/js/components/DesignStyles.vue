@@ -5,15 +5,16 @@
       --color-white:              {{ variables.color_white }};
       --color-black:              {{ variables.color_black }};
       --color-primary:            {{ variables.color_primary }};
+      --color-primary-light:      {{ shadeColor(variables.color_primary, 10) }};
       --color-accent:             {{ variables.color_accent }};
+      --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }};
+      --color-contrast-medium:    {{ shadeColor(variables.color_contrast_higher, -10) }};
       --color-contrast-high:      {{ variables.color_contrast_higher }};
       --color-contrast-higher:    {{ variables.color_contrast_higher }};
       --color-bg:                 {{ variables.color_background }};
       --text-base-size:           {{ variables.text_base_size + 'rem' }};
       --font-primary:             {{ variables.font_primary.name }};
-      <!-- --font-primary-url:         {{ variables.font_primary.url }}; -->
       --font-secondary:           {{ variables.font_secondary.name }};
-      <!-- --font-secondary-url:       {{ variables.font_secondary.url }}; -->
       --font-primary-weight:      {{ variables.font_primary_weight }};
       --font-secondary-weight:    {{ variables.font_secondary_weight }};
       --btn-primary-text-color:   {{ variables.btn_primary_text_color ? variables.btn_primary_text_color : variables.color_white }};
@@ -46,6 +47,26 @@ const props = defineProps({
     type: Object
   }
 })
+
+function shadeColor(color, percent) {
+    var R = parseInt(color.substring(1,3),16);
+    var G = parseInt(color.substring(3,5),16);
+    var B = parseInt(color.substring(5,7),16);
+
+    R = parseInt(R * (100 + percent) / 100);
+    G = parseInt(G * (100 + percent) / 100);
+    B = parseInt(B * (100 + percent) / 100);
+
+    R = (R<255)?R:255;  
+    G = (G<255)?G:255;  
+    B = (B<255)?B:255;  
+
+    var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+    var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+    var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+    return "#"+RR+GG+BB;
+}
 </script>
 
 <style lang="scss">
@@ -81,22 +102,18 @@ a {
   background: var(--color-primary);
   color: var(--btn-primary-text-color);
 
-  // &:hover {
-  //   border: 2px solid var(--color-primary);
-  //   background-color: transparent;
-  //   color: var(--color-primary)
-  // }
+  &:hover {
+    background: var(--color-primary-light);
+  }
 }
 
 .btn--secondary {
   background-color: var(--color-accent);
   color: var(--btn-secondary-text-color);
 
-  // &:hover {
-  //   border: 2px solid var(--color-accent);
-  //   background-color: transparent;
-  //   color: var(--color-accent)
-  // }
+  &:hover {
+    background-color: var(--color-accent-light);
+  }
 }
 
 .btn--tertiary {
@@ -104,10 +121,20 @@ a {
   color: var(--btn-tertiary-text-color);
 
   // &:hover {
-  //   border: 2px solid var(--color-accent);
-  //   background-color: transparent;
-  //   color: var(--color-accent)
+  //   background-color: var(--color-white);
   // }
+}
+
+.color-contrast-medium {
+  color: var(--color-contrast-medium);
+}
+
+.color-contrast-high {
+  color: var(--color-contrast-high);
+}
+
+.color-contrast-higher {
+  color: var(--color-contrast-higher);
 }
 
 [data-theme="bg-1"] {
@@ -128,6 +155,12 @@ a {
   .pre-title {
     color: var(--color-primary);
   }
+  
+  .text-component {
+    p {
+      color: var(--color-contrast-high);
+    }
+  }
 }
 
 // Override tertiary button in hero's
@@ -136,6 +169,10 @@ a {
   .btn--tertiary {
     background-color: var(--color-accent);
     color: var(--btn-secondary-text-color);
+    
+    &:hover {
+      background-color: var(--color-accent-light);
+    }
   }
 }
 
@@ -147,10 +184,15 @@ a {
   }
 }
 
-.boxed-feature {
-  // Secondary button
-  .color-inherit {
-    
+// Hide the help icon
+.js-tour-help-trigger {
+  font-size: var(--text-sm);
+  
+  .icon {
+    display: none !important;
+  }
+  .mega-nav__icon-label {
+    margin-left: 0 !important;
   }
 }
 </style>

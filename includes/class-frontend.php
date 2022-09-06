@@ -8,6 +8,7 @@ class Frontend {
 
 	public function __construct() {
 		add_action('wp_head', [$this, 'render_frontend'], 12);
+		add_filter('body_class', [$this, 'add_body_class']);
 		add_action('admin_bar_menu', [ $this, 'admin_bar_menu' ], 999);
 	}
 	
@@ -18,7 +19,7 @@ class Frontend {
 	 *
 	 * @return string
 	 */
-	public function render_frontend( $atts ) {
+	public function render_frontend($atts) {
 		$design = isset($_GET['design']) ? $_GET['design'] : null;
 		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
 		
@@ -31,6 +32,23 @@ class Frontend {
 				></div>
 			';
 		}
+	}
+	
+	/**
+	 * Add body class
+	 *
+	 * @return array
+	 */
+	public function add_body_class($classes = []) {
+		$design = isset($_GET['design']) ? $_GET['design'] : null;
+		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		
+		if ($design && $mode === 'edit') {
+			$classes[] = 'design-plugin-enabled';
+	    return $classes;
+		}
+		
+		return $classes;
 	}
 	
 	/**

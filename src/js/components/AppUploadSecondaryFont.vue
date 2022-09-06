@@ -10,7 +10,7 @@
         name="upload"
         style="width: 1px; height: 1px;" 
       >
-      <label for="upload" class="file-upload__label btn btn--primary width-100%">
+      <label for="upload" class="file-upload__label btn color-white bg-black width-100%">
         <span class="flex items-center">
           <svg class="icon" viewBox="0 0 20 20" aria-hidden="true">
             <g fill="currentColor">
@@ -27,7 +27,7 @@
     <div v-if="store.variables.font_secondary.source === 'upload'">
       <div class="card padding-sm margin-bottom-sm">{{ store.variables.font_secondary.name }}</div>
       <div class="flex gap-sm">
-        <button class="btn btn--subtle width-100%" @click="onRemoveFile()">Remove</button>
+        <button class="btn color-white bg-black width-100%" @click="onRemoveFile()">Remove</button>
       </div>
     </div>
   </div>
@@ -56,6 +56,7 @@ function onUploadFile() {
         url: response.original_url,
       }
       
+      store.variables.font_secondary_weight = 'normal'
     })
 }
 

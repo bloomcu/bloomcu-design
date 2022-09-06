@@ -5,13 +5,13 @@
     </div>
     
     <div v-if="variables.font_primary.source === 'upload'">
-      <link rel="preconnect" as="font" :href="variables.font_primary.url" type="font/woff">
+      <!-- <link rel="preconnect" as="font" :href="variables.font_primary.url" type="font/woff"> -->
       <component :is="'style'">
         @font-face {
           font-family: "{{ variables.font_primary.name }}";
           font-style: normal;
-          font-weight: 300;
-          font-display: swap;
+          font-weight: normal;
+          font-display: auto;
           src: url("{{ variables.font_primary.url }}");
         }
       </component>
@@ -25,13 +25,13 @@
     </div>
     
     <div v-if="variables.font_secondary.source === 'upload' && variables.font_secondary.url !== variables.font_primary.url">
-      <link rel="preconnect" as="font" :href="variables.font_secondary.url" type="font/woff">  
+      <!-- <link rel="preconnect" as="font" :href="variables.font_secondary.url" type="font/woff">   -->
       <component :is="'style'">
         @font-face {
           font-family: "{{ variables.font_secondary.name }}";
           font-style: normal;
-          font-weight: 300;
-          font-display: swap;
+          font-weight: normal;
+          font-display: auto;
           src: url("{{ variables.font_secondary.url }}");
         }
       </component>
