@@ -435,7 +435,7 @@
     
     <!-- Styleguide -->
     <div v-if="activeMenu === 'styleguide'" class="styleguide flex flex-center bg-black bg-opacity-30%">
-      <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg bg radius-md shadow-md">
+      <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg radius-md shadow-md">
         <!-- Content -->
         <div class="container max-width-lg">
           <div class="grid gap-xxl">
@@ -465,15 +465,15 @@
                 <p class="text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%">Colors</p>
                 <div class="grid gap-md">
                   <div class="col-4 flex flex-column flex-center">
-                    <div class="width-xxl height-xxl margin-bottom-xs radius-full" :style="`background: ${store.variables.color_primary};`"></div>
+                    <div class="width-xxl height-xxl margin-bottom-xs radius-full border" :style="`background: ${store.variables.color_primary};`"></div>
                     <p class="text-sm text-center">Primary</p>
                   </div>
                   <div class="col-4 flex flex-column flex-center">
-                    <div class="width-xxl height-xxl margin-bottom-xs radius-full" :style="`background: ${store.variables.color_accent};`"></div>
+                    <div class="width-xxl height-xxl margin-bottom-xs radius-full border" :style="`background: ${store.variables.color_accent};`"></div>
                     <p class="text-sm text-center">Accent</p>
                   </div>
                   <div class="col-4 flex flex-column flex-center">
-                    <div class="width-xxl height-xxl margin-bottom-xs radius-full" :style="`background: ${store.variables.color_contrast_higher};`"></div>
+                    <div class="width-xxl height-xxl margin-bottom-xs radius-full border" :style="`background: ${store.variables.color_contrast_higher};`"></div>
                     <p class="text-sm text-center">Text color</p>
                   </div>
                   <div class="col-4 flex flex-column flex-center">
@@ -485,7 +485,7 @@
                     <p class="text-sm text-center">Background <br>medium</p>
                   </div>
                   <div class="col-4 flex flex-column flex-center">
-                    <div class="width-xxl height-xxl margin-bottom-xs radius-full" :style="`background: ${store.variables.color_primary};`"></div>
+                    <div class="width-xxl height-xxl margin-bottom-xs radius-full border" :style="`background: ${store.variables.color_primary};`"></div>
                     <p class="text-sm text-center">Background <br>dark</p>
                   </div>
                 </div>
@@ -996,6 +996,9 @@ Plugin styles
   }  
 }
 
+/* --------------------------------
+Styleguide
+-------------------------------- */
 .styleguide {
   position: fixed;
   top: 0;
@@ -1003,5 +1006,9 @@ Plugin styles
   width: 100%;
   height: 100%;
   z-index: 90;
+  
+  &__content {
+    background: var(--color-bg);
+  }
 }
 </style>
