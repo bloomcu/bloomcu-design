@@ -126,6 +126,7 @@
               </div>
             </div>
           </div>
+          
           <!-- Fonts -->
           <div class="siderail-item">
             <button @click="toggleMenu('typography')" type="button" class="siderail-item__button" :class="activeMenu === 'typography' ? 'siderail-item__button--active' : ''">
@@ -136,9 +137,9 @@
               </svg>
             </button>
             <div v-if="activeMenu === 'typography'" class="siderail-menu" style="top: -250px;">
+              <!-- Toggle Google Fonts and upload -->
               <div class="siderail-menu__section justify-between" style="width: auto;">
                 <p style="font-size: 18px;" class="font-bold">Fonts</p>
-                <!-- Toggle Google Fonts and upload -->
                 <div class="flex align-center">
                   <button 
                     @click="activeFontsSource = 'google-font'"
@@ -157,17 +158,15 @@
                 </div>
               </div>
               
-              <!-- Google Fonts -->
               <!-- Primary font -->
               <div class="siderail-menu__section">
                 <div style="width: 140px;">
                   <p style="font-size: 18px;">Heading font</p>  
                 </div>
-                <!-- Google font -->
                 <div v-if="activeFontsSource === 'google-font'" style="width: 400px;">
+                  <!-- Primary Google font -->
                   <div class="select margin-bottom-xxs">
                     <select @change="onSelectPrimaryFont($event)" name="heading" id="heading" class="select_input form-control width-100%">
-                      <!-- <option value="">Select a Google Font</option> -->
                       <option value="" selected disabled hidden>Select a Google Font</option>
                       <option 
                         v-for="font in googleFonts" 
@@ -181,12 +180,13 @@
                     <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                   </div>
                   <div v-if="store.variables.font_primary.source === 'google-font'" class="select">
-                    <select v-model="store.variables.font_primary_weight" name="heading" id="heading" class="select_input form-control width-100%">
+                    <!-- Primary Google font weight -->
+                    <select v-model="store.variables.font_primary.weight" name="heading" id="heading" class="select_input form-control width-100%">
                       <option 
                         v-for="weight in getGoogleFontByName(store.variables.font_primary.name).variants" 
                         :key="weight" 
                         :value="weight" 
-                        :selected="store.variables.font_primary_weight === weight"
+                        :selected="store.variables.font_primary.weight === weight"
                       >
                         {{ weight }}
                       </option>
@@ -195,7 +195,7 @@
                   </div>
                 </div>
                 
-                <!-- Uploaded font -->
+                <!-- Primary font upload -->
                 <div v-if="activeFontsSource === 'upload'" style="width: 400px;">
                   <AppUploadPrimaryFont/>
                 </div>
@@ -206,11 +206,10 @@
                 <div style="width: 140px;">
                   <p style="font-size: 18px;">Body font</p>  
                 </div>
-                <!-- Google font -->
                 <div v-if="activeFontsSource === 'google-font'" style="width: 400px;">
                   <div class="select margin-bottom-xxs">
+                    <!-- Secondary Google font -->
                     <select @change="onSelectSecondaryFont($event)"  name="body" id="body" class="select_input form-control width-100%">
-                      <!-- <option value="">Select a Google Font</option> -->
                       <option value="" selected disabled hidden>Select a Google Font</option>
                       <option 
                         v-for="font in googleFonts" 
@@ -224,12 +223,13 @@
                     <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                   </div>
                   <div v-if="store.variables.font_secondary.source === 'google-font'" class="select">
-                    <select v-model="store.variables.font_secondary_weight" name="heading" id="heading" class="select_input form-control width-100%">
+                    <!-- Secondary Google font weight -->
+                    <select v-model="store.variables.font_secondary.weight" name="heading" id="heading" class="select_input form-control width-100%">
                       <option 
                         v-for="weight in getGoogleFontByName(store.variables.font_secondary.name).variants" 
                         :key="weight" 
                         :value="weight" 
-                        :selected="store.variables.font_secondary_weight === weight"
+                        :selected="store.variables.font_secondary.weight === weight"
                       >
                         {{ weight }}
                       </option>
@@ -238,9 +238,52 @@
                   </div>
                 </div>
                 
-                <!-- Uploaded font -->
+                <!-- Secondary font upload -->
                 <div v-if="activeFontsSource === 'upload'" style="width: 400px;">
                   <AppUploadSecondaryFont/>
+                </div>
+              </div>
+              
+              <!-- Buttons font -->
+              <div class="siderail-menu__section">
+                <div style="width: 140px;">
+                  <p style="font-size: 18px;">Buttons font</p>  
+                </div>
+                <div v-if="activeFontsSource === 'google-font'" style="width: 400px;">
+                  <div class="select margin-bottom-xxs">
+                    <!-- Buttons Google font -->
+                    <select @change="onSelectButtonsFont($event)"  name="body" id="body" class="select_input form-control width-100%">
+                      <option value="" selected disabled hidden>Select a Google Font</option>
+                      <option 
+                        v-for="font in googleFonts" 
+                        :key="font.name" 
+                        :value="font.name" 
+                        :selected="store.variables.font_buttons.name === font.name"
+                      >
+                        {{ font.name }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                  </div>
+                  <div v-if="store.variables.font_buttons.source === 'google-font'" class="select">
+                    <!-- Buttons Google font weight -->
+                    <select v-model="store.variables.font_buttons.weight" name="heading" id="heading" class="select_input form-control width-100%">
+                      <option 
+                        v-for="weight in getGoogleFontByName(store.variables.font_buttons.name).variants" 
+                        :key="weight" 
+                        :value="weight" 
+                        :selected="store.variables.font_buttons.weight === weight"
+                      >
+                        {{ weight }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                  </div>
+                </div>
+                
+                <!-- Buttons font upload -->
+                <div v-if="activeFontsSource === 'upload'" style="width: 400px;">
+                  <AppUploadButtonsFont/>
                 </div>
               </div>
               
@@ -263,6 +306,7 @@
               </div>
             </div>
           </div>
+          
           <!-- Buttons -->
           <div class="siderail-item">
             <button @click="toggleMenu('buttons')" type="button" class="siderail-item__button" :class="activeMenu === 'buttons' ? 'siderail-item__button--active' : ''">
@@ -376,7 +420,7 @@
               </div>
               
               <!-- Buttons text weight -->
-              <div class="siderail-menu__section" style="width: 100%;">
+              <!-- <div class="siderail-menu__section" style="width: 100%;">
                 <p style="width: 260px; margin-right: 20px; font-size: 18px;">Text weight</p>
                 <div v-if="store.variables.font_secondary.source === 'google-font'" class="select">
                   <select v-model="store.variables.btn_text_weight" name="heading" id="heading" class="select_input form-control width-100%">
@@ -391,7 +435,7 @@
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                 </div>
-              </div>
+              </div> -->
               
               <!-- Buttons text transform -->
               <div class="siderail-menu__section" style="width: 100%;">
@@ -412,6 +456,7 @@
               </div>
             </div>
           </div>
+          
           <!-- Mini style guide -->
           <div class="siderail-item">
             <button @click="toggleMenu('styleguide')" type="button" class="siderail-item__button" :class="activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''">
@@ -532,6 +577,7 @@ import IconLoading from './components/IconLoading.vue'
 // import AppLogin from './components/AppLogin.vue'
 import AppUploadPrimaryFont from './components/AppUploadPrimaryFont.vue'
 import AppUploadSecondaryFont from './components/AppUploadSecondaryFont.vue'
+import AppUploadButtonsFont from './components/AppUploadButtonsFont.vue'
 import DesignFonts from './components/DesignFonts.vue'
 import DesignStyles from './components/DesignStyles.vue'
 
@@ -564,10 +610,9 @@ function onSelectPrimaryFont(e) {
   store.variables.font_primary = {
     source: 'google-font',
     name: font.name,
-    url: '',
+    url: null,
+    weight: '400',
   }
-  
-  store.variables.font_primary_weight = '300'
 }
 
 function onSelectSecondaryFont(e) {
@@ -576,11 +621,31 @@ function onSelectSecondaryFont(e) {
   store.variables.font_secondary = {
     source: 'google-font',
     name: font.name,
-    url: '',
+    url: null,
+    weight: '400',
   }
-  
-  store.variables.font_secondary_weight = '300'
 }
+
+function onSelectButtonsFont(e) {
+  let font = getGoogleFontByName(e.target.value)
+  
+  store.variables.font_buttons = {
+    source: 'google-font',
+    name: font.name,
+    url: null,
+    weight: '400',
+  }
+}
+
+// function onSelectButtonsFont(fontGroup) {
+//   if (fontGroup === 'primary') {
+//     store.variables.font_buttons = store.variables.font_primary
+//   }
+// 
+//   if (fontGroup === 'secondary') {
+//     store.variables.font_buttons = store.variables.font_secondary
+//   }
+// }
 
 const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu

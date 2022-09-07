@@ -6,7 +6,6 @@ export const useDesignStore = defineStore('designStore', {
     // profile: JSON.parse(localStorage.getItem('designer_profile')),
     designs: null,
     design: null,
-    // design: {"id":1,"uuid":"ffa4ae2f-9dd6-4119-9b77-8ebc157b9999","title":"Design #1","designer_name":"Ryan Harmon","designer_email":"ryan@bloomcu.com","variables":{"color_white":"#fff","color_black":"#000","color_primary":"#9966FF","color_accent":"#90F1B7","color_contrast_high":"#000","color_contrast_higher":"#40067a","color_background":"#fff","text_base_size":"1.3","font_primary":"Space Grotesk","font_primary_weight":"700","font_secondary":"Inter","font_secondary_weight":"300","button_radius":"0.45"},"created_at":"2022-08-22T23:05:05.000000Z"},
     loading: false,
   }),
 
@@ -85,7 +84,6 @@ export const useDesignStore = defineStore('designStore', {
     },
     
     async storeMedia(file, collection, tags) {
-      console.log('from store', file)
       return await DesignApi.storeMedia('bloomcu', this.design.uuid, file, collection, tags)
         .then(response => {
           return response.data.data

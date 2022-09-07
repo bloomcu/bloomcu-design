@@ -2,41 +2,56 @@
   <component :is="'style'">
     <!-- Root & Default theme -->
     :root, [data-theme="default"] {
+      
+      <!-- Colors -->
       --color-white:              {{ variables.color_white }};
       --color-black:              {{ variables.color_black }};
       --color-primary:            {{ variables.color_primary }};
-      --color-primary-light:      {{ shadeColor(variables.color_primary, 10) }};
+      --color-primary-light:      {{ shadeColor(variables.color_primary, 10) }}; <!-- 10% darker -->
       --color-accent:             {{ variables.color_accent }};
-      --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }};
-      --color-contrast-medium:    {{ shadeColor(variables.color_contrast_higher, -10) }};
+      --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }}; <!-- 10% darker -->
       --color-contrast-high:      {{ variables.color_contrast_higher }};
       --color-contrast-higher:    {{ variables.color_contrast_higher }};
+      --color-contrast-medium:    {{ shadeColor(variables.color_contrast_higher, -10) }}; <!-- 10% lighter -->
       --color-bg:                 {{ variables.color_background }};
+      
+      <!-- Base text -->
       --text-base-size:           {{ variables.text_base_size + 'rem' }};
+      
+      <!-- Primary font -->
       --font-primary:             {{ variables.font_primary.name }};
+      --font-primary-weight:      {{ variables.font_primary.weight }};
+      
+      <!-- Secondary font -->
       --font-secondary:           {{ variables.font_secondary.name }};
-      --font-primary-weight:      {{ variables.font_primary_weight }};
-      --font-secondary-weight:    {{ variables.font_secondary_weight }};
+      --font-secondary-weight:    {{ variables.font_secondary.weight }};
+      
+      <!-- Buttons font -->
+      --font-buttons:             {{ variables.font_buttons.name ? variables.font_buttons.name : variables.font_secondary.name }};
+      --font-buttons-weight:      {{ variables.font_buttons.weight ? variables.font_buttons.weight : variables.font_secondary.weight }};
+      
+      <!-- Buttons text colors -->
       --btn-primary-text-color:   {{ variables.btn_primary_text_color ? variables.btn_primary_text_color : variables.color_white }};
       --btn-secondary-text-color: {{ variables.btn_secondary_text_color ? variables.btn_secondary_text_color : variables.color_white }};
       --btn-tertiary-text-color:  {{ variables.btn_tertiary_text_color ? variables.btn_tertiary_text_color : variables.color_contrast_higher }};
+      
+      <!-- Buttons style -->
       --btn-radius:               {{ variables.btn_radius + 'em' }};
-      --btn-text-weight:          {{ variables.btn_text_weight }};
       --btn-text-transform:       {{ variables.btn_text_transform }};
     }
     
     <!-- Theme 1 -->
     [data-theme="bg-1"] {        
-      --color-bg: {{ variables.color_primary + '0D' }};
+      --color-bg:                 {{ variables.color_primary + '0D' }};
     }
     
     <!-- Theme 2 -->
     [data-theme="bg-2"] {        
-      --color-bg:              {{ variables.color_primary }};
-      --color-primary:         {{ variables.color_white }};
-      --color-contrast-lower:  {{ variables.color_contrast_higher }};
-      --color-contrast-high:   {{ variables.color_white }};
-      --color-contrast-higher: {{ variables.color_white }};
+      --color-bg:                 {{ variables.color_primary }};
+      --color-primary:            {{ variables.color_white }};
+      --color-contrast-lower:     {{ variables.color_contrast_higher }};
+      --color-contrast-high:      {{ variables.color_white }};
+      --color-contrast-higher:    {{ variables.color_white }};
     }
   </component>
 </template>
@@ -93,8 +108,8 @@ a {
 
 .btn--primary, .btn--secondary, .btn--tertiary {
   border: 2px solid transparent;
-  font-family: var(--font-secondary);
-  font-weight: var(--btn-text-weight);
+  font-family: var(--font-buttons);
+  font-weight: var(--font-buttons-weight);
   text-transform: var(--btn-text-transform);
 }
 
@@ -119,10 +134,6 @@ a {
 .btn--tertiary {
   background-color: var(--color-white);
   color: var(--btn-tertiary-text-color);
-
-  // &:hover {
-  //   background-color: var(--color-white);
-  // }
 }
 
 .color-contrast-medium {

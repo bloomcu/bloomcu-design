@@ -2,15 +2,15 @@
   <div>
     <div v-if="store.variables.font_primary.source !== 'upload'" class="file-upload inline-block">
       <input
-        id="upload"
+        id="uploadPrimaryFont"
         class="file-upload__input sr-only" 
         @change="onUploadFile()"
         type="file" 
-        ref="fileInput"
-        name="upload"
+        ref="input"
+        name="uploadPrimaryFont"
         style="width: 1px; height: 1px;" 
       >
-      <label for="upload" class="file-upload__label btn color-white bg-black width-100%">
+      <label for="uploadPrimaryFont" class="file-upload__label btn color-white bg-black width-100%">
         <span class="flex items-center">
           <svg class="icon" viewBox="0 0 20 20" aria-hidden="true">
             <g fill="currentColor">
@@ -38,14 +38,14 @@ import { ref } from 'vue'
 import { useDesignStore } from '../store/useDesignStore'
 
 const store = useDesignStore()
-const fileInput = ref()
+const input = ref()
 const file = ref()
 
 function onUploadFile() {
-  file.value = fileInput.value.files[0]
+  file.value = input.value.files[0]
   
   let formData = new FormData();
-      formData.append('file', fileInput.value.files[0]);
+      formData.append('file', input.value.files[0]);
       
   store.storeMedia(formData, 'font', '')
     .then((response) => {
@@ -54,9 +54,9 @@ function onUploadFile() {
         source: 'upload',
         name: response.name,
         url: response.original_url,
+        weight: null,
       }
       
-      store.variables.font_primary_weight = 'normal'
     })
 }
 
@@ -65,6 +65,7 @@ function onRemoveFile() {
     source: null,
     name: null,
     url: null,
+    weight: null,
   }
 }
 </script>

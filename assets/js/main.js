@@ -22927,14 +22927,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_IconLoading_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/IconLoading.vue */ "./src/js/components/IconLoading.vue");
 /* harmony import */ var _components_AppUploadPrimaryFont_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/AppUploadPrimaryFont.vue */ "./src/js/components/AppUploadPrimaryFont.vue");
 /* harmony import */ var _components_AppUploadSecondaryFont_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/AppUploadSecondaryFont.vue */ "./src/js/components/AppUploadSecondaryFont.vue");
-/* harmony import */ var _components_DesignFonts_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/DesignFonts.vue */ "./src/js/components/DesignFonts.vue");
-/* harmony import */ var _components_DesignStyles_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/DesignStyles.vue */ "./src/js/components/DesignStyles.vue");
+/* harmony import */ var _components_AppUploadButtonsFont_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/AppUploadButtonsFont.vue */ "./src/js/components/AppUploadButtonsFont.vue");
+/* harmony import */ var _components_DesignFonts_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/DesignFonts.vue */ "./src/js/components/DesignFonts.vue");
+/* harmony import */ var _components_DesignStyles_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/DesignStyles.vue */ "./src/js/components/DesignStyles.vue");
 
 
 
 
 
  // import AppLogin from './components/AppLogin.vue'
+
 
 
 
@@ -22973,9 +22975,9 @@ __webpack_require__.r(__webpack_exports__);
       store.variables.font_primary = {
         source: 'google-font',
         name: font.name,
-        url: ''
+        url: null,
+        weight: '400'
       };
-      store.variables.font_primary_weight = '300';
     }
 
     function onSelectSecondaryFont(e) {
@@ -22983,10 +22985,29 @@ __webpack_require__.r(__webpack_exports__);
       store.variables.font_secondary = {
         source: 'google-font',
         name: font.name,
-        url: ''
+        url: null,
+        weight: '400'
       };
-      store.variables.font_secondary_weight = '300';
     }
+
+    function onSelectButtonsFont(e) {
+      var font = (0,_store_useGoogleFonts__WEBPACK_IMPORTED_MODULE_3__.getGoogleFontByName)(e.target.value);
+      store.variables.font_buttons = {
+        source: 'google-font',
+        name: font.name,
+        url: null,
+        weight: '400'
+      };
+    } // function onSelectButtonsFont(fontGroup) {
+    //   if (fontGroup === 'primary') {
+    //     store.variables.font_buttons = store.variables.font_primary
+    //   }
+    // 
+    //   if (fontGroup === 'secondary') {
+    //     store.variables.font_buttons = store.variables.font_secondary
+    //   }
+    // }
+
 
     var toggleMenu = function toggleMenu(menu) {
       activeMenu.value = activeMenu.value === menu ? '' : menu;
@@ -23020,6 +23041,7 @@ __webpack_require__.r(__webpack_exports__);
       toggleHero: toggleHero,
       onSelectPrimaryFont: onSelectPrimaryFont,
       onSelectSecondaryFont: onSelectSecondaryFont,
+      onSelectButtonsFont: onSelectButtonsFont,
       toggleMenu: toggleMenu,
       togglePower: togglePower,
       saveDesign: saveDesign,
@@ -23033,8 +23055,75 @@ __webpack_require__.r(__webpack_exports__);
       IconLoading: _components_IconLoading_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
       AppUploadPrimaryFont: _components_AppUploadPrimaryFont_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
       AppUploadSecondaryFont: _components_AppUploadSecondaryFont_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-      DesignFonts: _components_DesignFonts_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-      DesignStyles: _components_DesignStyles_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+      AppUploadButtonsFont: _components_AppUploadButtonsFont_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+      DesignFonts: _components_DesignFonts_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+      DesignStyles: _components_DesignStyles_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+    };
+    Object.defineProperty(__returned__, '__isScriptSetup', {
+      enumerable: false,
+      value: true
+    });
+    return __returned__;
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _store_useDesignStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/useDesignStore */ "./src/js/store/useDesignStore.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  __name: 'AppUploadButtonsFont',
+  setup: function setup(__props, _ref) {
+    var expose = _ref.expose;
+    expose();
+    var store = (0,_store_useDesignStore__WEBPACK_IMPORTED_MODULE_1__.useDesignStore)();
+    var input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+    var file = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+
+    function onUploadFile() {
+      file.value = input.value.files[0];
+      var formData = new FormData();
+      formData.append('file', input.value.files[0]);
+      store.storeMedia(formData, 'font', '').then(function (response) {
+        store.variables.font_buttons = {
+          source: 'upload',
+          name: response.name,
+          url: response.original_url,
+          weight: null
+        };
+      });
+    }
+
+    function onRemoveFile() {
+      store.variables.font_buttons = {
+        source: null,
+        name: null,
+        url: null,
+        weight: null
+      };
+    }
+
+    var __returned__ = {
+      store: store,
+      input: input,
+      file: file,
+      onUploadFile: onUploadFile,
+      onRemoveFile: onRemoveFile,
+      ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
+      useDesignStore: _store_useDesignStore__WEBPACK_IMPORTED_MODULE_1__.useDesignStore
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
@@ -23067,20 +23156,20 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var store = (0,_store_useDesignStore__WEBPACK_IMPORTED_MODULE_1__.useDesignStore)();
-    var fileInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+    var input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
     var file = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
 
     function onUploadFile() {
-      file.value = fileInput.value.files[0];
+      file.value = input.value.files[0];
       var formData = new FormData();
-      formData.append('file', fileInput.value.files[0]);
+      formData.append('file', input.value.files[0]);
       store.storeMedia(formData, 'font', '').then(function (response) {
         store.variables.font_primary = {
           source: 'upload',
           name: response.name,
-          url: response.original_url
+          url: response.original_url,
+          weight: null
         };
-        store.variables.font_primary_weight = 'normal';
       });
     }
 
@@ -23088,13 +23177,14 @@ __webpack_require__.r(__webpack_exports__);
       store.variables.font_primary = {
         source: null,
         name: null,
-        url: null
+        url: null,
+        weight: null
       };
     }
 
     var __returned__ = {
       store: store,
-      fileInput: fileInput,
+      input: input,
       file: file,
       onUploadFile: onUploadFile,
       onRemoveFile: onRemoveFile,
@@ -23132,20 +23222,20 @@ __webpack_require__.r(__webpack_exports__);
     var expose = _ref.expose;
     expose();
     var store = (0,_store_useDesignStore__WEBPACK_IMPORTED_MODULE_1__.useDesignStore)();
-    var fileInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
+    var input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
     var file = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)();
 
     function onUploadFile() {
-      file.value = fileInput.value.files[0];
+      file.value = input.value.files[0];
       var formData = new FormData();
-      formData.append('file', fileInput.value.files[0]);
+      formData.append('file', input.value.files[0]);
       store.storeMedia(formData, 'font', '').then(function (response) {
         store.variables.font_secondary = {
           source: 'upload',
           name: response.name,
-          url: response.original_url
+          url: response.original_url,
+          weight: null
         };
-        store.variables.font_secondary_weight = 'normal';
       });
     }
 
@@ -23153,13 +23243,14 @@ __webpack_require__.r(__webpack_exports__);
       store.variables.font_secondary = {
         source: null,
         name: null,
-        url: null
+        url: null,
+        weight: null
       };
     }
 
     var __returned__ = {
       store: store,
-      fileInput: fileInput,
+      input: input,
       file: file,
       onUploadFile: onUploadFile,
       onRemoveFile: onRemoveFile,
@@ -23615,7 +23706,86 @@ var _hoisted_59 = {
   "class": "siderail-menu__section"
 };
 
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  style: {
+    "width": "140px"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "font-size": "18px"
+  }
+}, "Buttons font")], -1
+/* HOISTED */
+);
+
+var _hoisted_61 = {
+  key: 0,
+  style: {
+    "width": "400px"
+  }
+};
+var _hoisted_62 = {
+  "class": "select margin-bottom-xxs"
+};
+
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
+  value: "",
+  selected: "",
+  disabled: "",
+  hidden: ""
+}, "Select a Google Font", -1
+/* HOISTED */
+);
+
+var _hoisted_64 = ["value", "selected"];
+
+var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_66 = {
+  key: 0,
+  "class": "select"
+};
+var _hoisted_67 = ["value", "selected"];
+
+var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  "class": "select__icon",
+  "aria-hidden": "true",
+  viewBox: "0 0 16 16"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
+  points: "1 5 8 12 15 5",
+  fill: "none",
+  stroke: "currentColor",
+  "stroke-linecap": "round",
+  "stroke-linejoin": "round",
+  "stroke-width": "2"
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_69 = {
+  key: 1,
+  style: {
+    "width": "400px"
+  }
+};
+var _hoisted_70 = {
+  "class": "siderail-menu__section"
+};
+
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   style: {
     "width": "140px",
     "font-size": "18px"
@@ -23624,28 +23794,28 @@ var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_61 = {
+var _hoisted_72 = {
   "class": "slider slider--input gap-sm"
 };
-var _hoisted_62 = {
+var _hoisted_73 = {
   "class": "slider__range"
 };
-var _hoisted_63 = {
+var _hoisted_74 = {
   "class": "slider__value"
 };
 
-var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", null, "Add guidelines here. Default is 1.3. Most sites use between 1 - 1.5.", -1
+var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("small", null, "Add guidelines here. Default is 1.3. Most sites use between 1 - 1.5.", -1
 /* HOISTED */
 );
 
-var _hoisted_65 = {
+var _hoisted_76 = {
   "class": "siderail-item"
 };
 
-var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"8.333,14 1,14 1,1 23,1 23,14 20,14 \"></polyline><line data-cap=\"butt\" x1=\"13\" y1=\"14\" x2=\"19\" y2=\"20\"></line><polygon points=\" 6,7 10,19 13,14 18,11 \"></polygon></g></svg>", 1);
+var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><polyline data-cap=\"butt\" points=\"8.333,14 1,14 1,1 23,1 23,14 20,14 \"></polyline><line data-cap=\"butt\" x1=\"13\" y1=\"14\" x2=\"19\" y2=\"20\"></line><polygon points=\" 6,7 10,19 13,14 18,11 \"></polygon></g></svg>", 1);
 
-var _hoisted_67 = [_hoisted_66];
-var _hoisted_68 = {
+var _hoisted_78 = [_hoisted_77];
+var _hoisted_79 = {
   key: 0,
   "class": "siderail-menu",
   style: {
@@ -23653,7 +23823,7 @@ var _hoisted_68 = {
   }
 };
 
-var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_80 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "siderail-menu__section",
   style: {
     "width": "auto"
@@ -23667,19 +23837,19 @@ var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_70 = {
+var _hoisted_81 = {
   "class": "siderail-menu__section",
   style: {
     "width": "100%"
   }
 };
-var _hoisted_71 = {
+var _hoisted_82 = {
   style: {
     "width": "100%"
   }
 };
 
-var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "margin-bottom-sm",
   style: {
     "font-size": "18px"
@@ -23688,18 +23858,18 @@ var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_73 = {
+var _hoisted_84 = {
   "class": "flex gap-sm items-center"
 };
-var _hoisted_74 = {
+var _hoisted_85 = {
   "class": "select",
   style: {
     "width": "300px"
   }
 };
-var _hoisted_75 = ["value", "selected"];
+var _hoisted_86 = ["value", "selected"];
 
-var _hoisted_76 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -23714,7 +23884,7 @@ var _hoisted_76 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_88 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "btn btn--primary",
   style: {
@@ -23724,19 +23894,19 @@ var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_78 = {
+var _hoisted_89 = {
   "class": "siderail-menu__section",
   style: {
     "width": "100%"
   }
 };
-var _hoisted_79 = {
+var _hoisted_90 = {
   style: {
     "width": "100%"
   }
 };
 
-var _hoisted_80 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "margin-bottom-sm",
   style: {
     "font-size": "18px"
@@ -23745,18 +23915,18 @@ var _hoisted_80 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_81 = {
+var _hoisted_92 = {
   "class": "flex gap-sm items-center"
 };
-var _hoisted_82 = {
+var _hoisted_93 = {
   "class": "select",
   style: {
     "width": "300px"
   }
 };
-var _hoisted_83 = ["value", "selected"];
+var _hoisted_94 = ["value", "selected"];
 
-var _hoisted_84 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_95 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -23771,7 +23941,7 @@ var _hoisted_84 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_96 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "btn btn--secondary",
   style: {
@@ -23781,19 +23951,19 @@ var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_86 = {
+var _hoisted_97 = {
   "class": "siderail-menu__section",
   style: {
     "width": "100%"
   }
 };
-var _hoisted_87 = {
+var _hoisted_98 = {
   style: {
     "width": "100%"
   }
 };
 
-var _hoisted_88 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_99 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "margin-bottom-sm",
   style: {
     "font-size": "18px"
@@ -23802,18 +23972,18 @@ var _hoisted_88 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_89 = {
+var _hoisted_100 = {
   "class": "flex gap-sm items-center"
 };
-var _hoisted_90 = {
+var _hoisted_101 = {
   "class": "select",
   style: {
     "width": "300px"
   }
 };
-var _hoisted_91 = ["value", "selected"];
+var _hoisted_102 = ["value", "selected"];
 
-var _hoisted_92 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_103 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -23828,82 +23998,13 @@ var _hoisted_92 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_93 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+var _hoisted_104 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
   href: "#",
   "class": "btn btn--tertiary",
   style: {
     "width": "200px"
   }
 }, "Tertiary", -1
-/* HOISTED */
-);
-
-var _hoisted_94 = {
-  "class": "siderail-menu__section",
-  style: {
-    "width": "100%"
-  }
-};
-
-var _hoisted_95 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  style: {
-    "width": "260px",
-    "margin-right": "20px",
-    "font-size": "18px"
-  }
-}, "Radius", -1
-/* HOISTED */
-);
-
-var _hoisted_96 = {
-  style: {
-    "width": "100%"
-  }
-};
-var _hoisted_97 = {
-  "class": "slider slider--input gap-sm"
-};
-var _hoisted_98 = {
-  "class": "slider__range"
-};
-var _hoisted_99 = {
-  "class": "slider__value"
-};
-var _hoisted_100 = {
-  "class": "siderail-menu__section",
-  style: {
-    "width": "100%"
-  }
-};
-
-var _hoisted_101 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  style: {
-    "width": "260px",
-    "margin-right": "20px",
-    "font-size": "18px"
-  }
-}, "Text weight", -1
-/* HOISTED */
-);
-
-var _hoisted_102 = {
-  key: 0,
-  "class": "select"
-};
-var _hoisted_103 = ["value", "selected"];
-
-var _hoisted_104 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
-  "class": "select__icon",
-  "aria-hidden": "true",
-  viewBox: "0 0 16 16"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("polyline", {
-  points: "1 5 8 12 15 5",
-  fill: "none",
-  stroke: "currentColor",
-  "stroke-linecap": "round",
-  "stroke-linejoin": "round",
-  "stroke-width": "2"
-})], -1
 /* HOISTED */
 );
 
@@ -23920,16 +24021,47 @@ var _hoisted_106 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
     "margin-right": "20px",
     "font-size": "18px"
   }
-}, "Text transform", -1
+}, "Radius", -1
 /* HOISTED */
 );
 
 var _hoisted_107 = {
+  style: {
+    "width": "100%"
+  }
+};
+var _hoisted_108 = {
+  "class": "slider slider--input gap-sm"
+};
+var _hoisted_109 = {
+  "class": "slider__range"
+};
+var _hoisted_110 = {
+  "class": "slider__value"
+};
+var _hoisted_111 = {
+  "class": "siderail-menu__section",
+  style: {
+    "width": "100%"
+  }
+};
+
+var _hoisted_112 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "width": "260px",
+    "margin-right": "20px",
+    "font-size": "18px"
+  }
+}, "Text transform", -1
+/* HOISTED */
+);
+
+var _hoisted_113 = {
   "class": "select"
 };
-var _hoisted_108 = ["value", "selected"];
+var _hoisted_114 = ["value", "selected"];
 
-var _hoisted_109 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_115 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -23944,18 +24076,18 @@ var _hoisted_109 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 /* HOISTED */
 );
 
-var _hoisted_110 = {
+var _hoisted_116 = {
   "class": "siderail-item"
 };
 
-var _hoisted_111 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line data-cap=\"butt\" x1=\"8\" y1=\"17\" x2=\"6\" y2=\"23\"></line><line data-cap=\"butt\" x1=\"18\" y1=\"23\" x2=\"16\" y2=\"17\"></line><line data-cap=\"butt\" x1=\"7\" y1=\"20\" x2=\"17\" y2=\"20\"></line><rect x=\"4\" y=\"3\" width=\"16\" height=\"14\"></rect></g></svg>", 1);
+var _hoisted_117 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line data-cap=\"butt\" x1=\"8\" y1=\"17\" x2=\"6\" y2=\"23\"></line><line data-cap=\"butt\" x1=\"18\" y1=\"23\" x2=\"16\" y2=\"17\"></line><line data-cap=\"butt\" x1=\"7\" y1=\"20\" x2=\"17\" y2=\"20\"></line><rect x=\"4\" y=\"3\" width=\"16\" height=\"14\"></rect></g></svg>", 1);
 
-var _hoisted_112 = [_hoisted_111];
-var _hoisted_113 = {
+var _hoisted_118 = [_hoisted_117];
+var _hoisted_119 = {
   "class": "siderail__bottom-menu"
 };
 
-var _hoisted_114 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_120 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
@@ -23976,76 +24108,46 @@ var _hoisted_114 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 /* HOISTED */
 );
 
-var _hoisted_115 = [_hoisted_114];
-var _hoisted_116 = {
+var _hoisted_121 = [_hoisted_120];
+var _hoisted_122 = {
   key: 0,
   "class": "styleguide flex flex-center bg-black bg-opacity-30%"
 };
-var _hoisted_117 = {
+var _hoisted_123 = {
   "class": "styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg radius-md shadow-md"
 };
-var _hoisted_118 = {
+var _hoisted_124 = {
   "class": "container max-width-lg"
 };
-var _hoisted_119 = {
+var _hoisted_125 = {
   "class": "grid gap-xxl"
 };
 
-var _hoisted_120 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-6 margin-bottom-0\"><!-- Logo --><!-- &lt;div class=&quot;margin-bottom-xl&quot;&gt;\n                &lt;p class=&quot;text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%&quot;&gt;Logo&lt;/p&gt;\n                &lt;h2&gt;AcmeCU&lt;/h2&gt;\n              &lt;/div&gt; --><!-- Typography --><div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Typography</p><h1 class=\"h1 margin-bottom-xs\">H1 heading sample</h1><h2 class=\"h2 margin-bottom-xs\">H2 heading sample</h2><h3 class=\"h3 margin-bottom-xs\">H3 heading sample</h3><h4 class=\"h4 margin-bottom-xs\">H4 heading sample</h4><p>Body lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada leo ac augue fringilla dignissim. Vivamus dolor arcu, iaculis eget augue eget, euismod vulputate lorem.</p></div></div>", 1);
+var _hoisted_126 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-6 margin-bottom-0\"><!-- Logo --><!-- &lt;div class=&quot;margin-bottom-xl&quot;&gt;\n                &lt;p class=&quot;text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%&quot;&gt;Logo&lt;/p&gt;\n                &lt;h2&gt;AcmeCU&lt;/h2&gt;\n              &lt;/div&gt; --><!-- Typography --><div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Typography</p><h1 class=\"h1 margin-bottom-xs\">H1 heading sample</h1><h2 class=\"h2 margin-bottom-xs\">H2 heading sample</h2><h3 class=\"h3 margin-bottom-xs\">H3 heading sample</h3><h4 class=\"h4 margin-bottom-xs\">H4 heading sample</h4><p>Body lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada leo ac augue fringilla dignissim. Vivamus dolor arcu, iaculis eget augue eget, euismod vulputate lorem.</p></div></div>", 1);
 
-var _hoisted_121 = {
+var _hoisted_127 = {
   "class": "col-6 margin-bottom-0"
 };
-var _hoisted_122 = {
+var _hoisted_128 = {
   "class": "margin-bottom-xl"
 };
 
-var _hoisted_123 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_129 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%"
 }, "Colors", -1
 /* HOISTED */
 );
 
-var _hoisted_124 = {
+var _hoisted_130 = {
   "class": "grid gap-md"
 };
-var _hoisted_125 = {
-  "class": "col-4 flex flex-column flex-center"
-};
-
-var _hoisted_126 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-sm text-center"
-}, "Primary", -1
-/* HOISTED */
-);
-
-var _hoisted_127 = {
-  "class": "col-4 flex flex-column flex-center"
-};
-
-var _hoisted_128 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-sm text-center"
-}, "Accent", -1
-/* HOISTED */
-);
-
-var _hoisted_129 = {
-  "class": "col-4 flex flex-column flex-center"
-};
-
-var _hoisted_130 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "text-sm text-center"
-}, "Text color", -1
-/* HOISTED */
-);
-
 var _hoisted_131 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
 var _hoisted_132 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("color")], -1
+}, "Primary", -1
 /* HOISTED */
 );
 
@@ -24055,7 +24157,7 @@ var _hoisted_133 = {
 
 var _hoisted_134 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("medium")], -1
+}, "Accent", -1
 /* HOISTED */
 );
 
@@ -24065,11 +24167,41 @@ var _hoisted_135 = {
 
 var _hoisted_136 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
+}, "Text color", -1
+/* HOISTED */
+);
+
+var _hoisted_137 = {
+  "class": "col-4 flex flex-column flex-center"
+};
+
+var _hoisted_138 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-sm text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("color")], -1
+/* HOISTED */
+);
+
+var _hoisted_139 = {
+  "class": "col-4 flex flex-column flex-center"
+};
+
+var _hoisted_140 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-sm text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("medium")], -1
+/* HOISTED */
+);
+
+var _hoisted_141 = {
+  "class": "col-4 flex flex-column flex-center"
+};
+
+var _hoisted_142 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-sm text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("dark")], -1
 /* HOISTED */
 );
 
-var _hoisted_137 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Buttons</p><div class=\"grid gap-sm\"><div class=\"col\"><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--primary\">Primary</a></div><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--secondary\">Secondary</a></div><div><a href=\"#\" class=\"btn btn--tertiary\">Tertiary</a></div></div><div class=\"col\"><a href=\"#\">Hyperlink</a></div></div></div>", 1);
+var _hoisted_143 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Buttons</p><div class=\"grid gap-sm\"><div class=\"col\"><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--primary\">Primary</a></div><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--secondary\">Secondary</a></div><div><a href=\"#\" class=\"btn btn--tertiary\">Tertiary</a></div></div><div class=\"col\"><a href=\"#\">Hyperlink</a></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Design variables "), $setup.store.design ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["DesignFonts"], {
@@ -24194,7 +24326,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'typography' ? 'siderail-item__button--active' : ''])
   }, _hoisted_32, 2
   /* CLASS */
-  ), $setup.activeMenu === 'typography' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Toggle Google Fonts and upload "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  ), $setup.activeMenu === 'typography' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Toggle Google Fonts and upload "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[10] || (_cache[10] = function ($event) {
       return $setup.activeFontsSource = 'google-font';
     }),
@@ -24208,14 +24340,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["reset text-sm border radius-full padding-y-xxs padding-x-sm cursor-pointer", $setup.activeFontsSource === 'upload' ? 'border-opacity-0 color-white bg-black' : ''])
   }, " Upload ", 2
   /* CLASS */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Google Fonts "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Google font "), $setup.activeFontsSource === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, $setup.activeFontsSource === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary Google font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     onChange: _cache[12] || (_cache[12] = function ($event) {
       return $setup.onSelectPrimaryFont($event);
     }),
     name: "heading",
     id: "heading",
     "class": "select_input form-control width-100%"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <option value=\"\">Select a Google Font</option> "), _hoisted_41, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.googleFonts, function (font) {
+  }, [_hoisted_41, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.googleFonts, function (font) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: font.name,
       value: font.name,
@@ -24227,9 +24359,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* KEYED_FRAGMENT */
   ))], 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_43]), $setup.store.variables.font_primary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), _hoisted_43]), $setup.store.variables.font_primary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary Google font weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "onUpdate:modelValue": _cache[13] || (_cache[13] = function ($event) {
-      return $setup.store.variables.font_primary_weight = $event;
+      return $setup.store.variables.font_primary.weight = $event;
     }),
     name: "heading",
     id: "heading",
@@ -24238,7 +24370,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: weight,
       value: weight,
-      selected: $setup.store.variables.font_primary_weight === weight
+      selected: $setup.store.variables.font_primary.weight === weight
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
     /* TEXT, PROPS */
     , _hoisted_45);
@@ -24246,14 +24378,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.font_primary_weight]]), _hoisted_46])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Uploaded font "), $setup.activeFontsSource === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppUploadPrimaryFont"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Google font "), $setup.activeFontsSource === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.font_primary.weight]]), _hoisted_46])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font upload "), $setup.activeFontsSource === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppUploadPrimaryFont"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_48, [_hoisted_49, $setup.activeFontsSource === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_50, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_51, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary Google font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     onChange: _cache[14] || (_cache[14] = function ($event) {
       return $setup.onSelectSecondaryFont($event);
     }),
     name: "body",
     id: "body",
     "class": "select_input form-control width-100%"
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <option value=\"\">Select a Google Font</option> "), _hoisted_52, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.googleFonts, function (font) {
+  }, [_hoisted_52, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.googleFonts, function (font) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: font.name,
       value: font.name,
@@ -24265,9 +24397,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* KEYED_FRAGMENT */
   ))], 32
   /* HYDRATE_EVENTS */
-  ), _hoisted_54]), $setup.store.variables.font_secondary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), _hoisted_54]), $setup.store.variables.font_secondary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary Google font weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
     "onUpdate:modelValue": _cache[15] || (_cache[15] = function ($event) {
-      return $setup.store.variables.font_secondary_weight = $event;
+      return $setup.store.variables.font_secondary.weight = $event;
     }),
     name: "heading",
     id: "heading",
@@ -24276,7 +24408,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
       key: weight,
       value: weight,
-      selected: $setup.store.variables.font_secondary_weight === weight
+      selected: $setup.store.variables.font_secondary.weight === weight
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
     /* TEXT, PROPS */
     , _hoisted_56);
@@ -24284,8 +24416,46 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.font_secondary_weight]]), _hoisted_57])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Uploaded font "), $setup.activeFontsSource === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_58, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppUploadSecondaryFont"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Text base size "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[16] || (_cache[16] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.font_secondary.weight]]), _hoisted_57])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font upload "), $setup.activeFontsSource === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_58, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppUploadSecondaryFont"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, $setup.activeFontsSource === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons Google font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    onChange: _cache[16] || (_cache[16] = function ($event) {
+      return $setup.onSelectButtonsFont($event);
+    }),
+    name: "body",
+    id: "body",
+    "class": "select_input form-control width-100%"
+  }, [_hoisted_63, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.googleFonts, function (font) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      key: font.name,
+      value: font.name,
+      selected: $setup.store.variables.font_buttons.name === font.name
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(font.name), 9
+    /* TEXT, PROPS */
+    , _hoisted_64);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 32
+  /* HYDRATE_EVENTS */
+  ), _hoisted_65]), $setup.store.variables.font_buttons.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_66, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons Google font weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
+      return $setup.store.variables.font_buttons.weight = $event;
+    }),
+    name: "heading",
+    id: "heading",
+    "class": "select_input form-control width-100%"
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.getGoogleFontByName($setup.store.variables.font_buttons.name).variants, function (weight) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
+      key: weight,
+      value: weight,
+      selected: $setup.store.variables.font_buttons.weight === weight
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
+    /* TEXT, PROPS */
+    , _hoisted_67);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))], 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.font_buttons.weight]]), _hoisted_68])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons font upload "), $setup.activeFontsSource === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppUploadButtonsFont"])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Text base size "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[18] || (_cache[18] = function ($event) {
       return $setup.store.variables.text_base_size = $event;
     }),
     "class": "slider__input",
@@ -24296,24 +24466,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     step: "0.01"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.text_base_size]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_63, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[17] || (_cache[17] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.text_base_size]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
       return $setup.store.variables.text_base_size = $event;
     }),
     "class": "form-control text-sm text-center width-xl",
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.text_base_size]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <span class=\"text-sm margin-left-xxxs\">rem</span> ")])]), _hoisted_64])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[18] || (_cache[18] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.text_base_size]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <span class=\"text-sm margin-left-xxxs\">rem</span> ")])]), _hoisted_75])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[20] || (_cache[20] = function ($event) {
       return $setup.toggleMenu('buttons');
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'buttons' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_67, 2
+  }, _hoisted_78, 2
   /* CLASS */
-  ), $setup.activeMenu === 'buttons' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_68, [_hoisted_69, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [_hoisted_72, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[19] || (_cache[19] = function ($event) {
+  ), $setup.activeMenu === 'buttons' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_79, [_hoisted_80, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [_hoisted_83, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[21] || (_cache[21] = function ($event) {
       return $setup.store.variables.btn_primary_text_color = $event;
     }),
     name: "heading",
@@ -24341,13 +24511,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.store.variables.btn_primary_text_color === color.hex
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(color.name), 9
     /* TEXT, PROPS */
-    , _hoisted_75);
+    , _hoisted_86);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_primary_text_color]]), _hoisted_76]), _hoisted_77])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_79, [_hoisted_80, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_81, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[20] || (_cache[20] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_primary_text_color]]), _hoisted_87]), _hoisted_88])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_89, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_90, [_hoisted_91, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_92, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_93, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[22] || (_cache[22] = function ($event) {
       return $setup.store.variables.btn_secondary_text_color = $event;
     }),
     name: "heading",
@@ -24375,13 +24545,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.store.variables.btn_secondary_text_color === color.hex
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(color.name), 9
     /* TEXT, PROPS */
-    , _hoisted_83);
+    , _hoisted_94);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_secondary_text_color]]), _hoisted_84]), _hoisted_85])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Tertiary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_86, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_87, [_hoisted_88, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_89, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_90, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[21] || (_cache[21] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_secondary_text_color]]), _hoisted_95]), _hoisted_96])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Tertiary button text color "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_97, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_98, [_hoisted_99, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_100, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_101, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[23] || (_cache[23] = function ($event) {
       return $setup.store.variables.btn_tertiary_text_color = $event;
     }),
     name: "heading",
@@ -24409,13 +24579,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.store.variables.btn_tertiary_text_color === color.hex
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(color.name), 9
     /* TEXT, PROPS */
-    , _hoisted_91);
+    , _hoisted_102);
   }), 128
   /* KEYED_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_tertiary_text_color]]), _hoisted_92]), _hoisted_93])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons radius "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_94, [_hoisted_95, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", _hoisted_96, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_97, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_98, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[22] || (_cache[22] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_tertiary_text_color]]), _hoisted_103]), _hoisted_104])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons radius "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_105, [_hoisted_106, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", _hoisted_107, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_108, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_109, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[24] || (_cache[24] = function ($event) {
       return $setup.store.variables.btn_radius = $event;
     }),
     "class": "slider__input",
@@ -24426,35 +24596,16 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     step: "0.05"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_99, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    "onUpdate:modelValue": _cache[23] || (_cache[23] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_110, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[25] || (_cache[25] = function ($event) {
       return $setup.store.variables.btn_radius = $event;
     }),
     "class": "form-control text-sm text-center width-xl",
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_100, [_hoisted_101, $setup.store.variables.font_secondary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_102, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[24] || (_cache[24] = function ($event) {
-      return $setup.store.variables.btn_text_weight = $event;
-    }),
-    name: "heading",
-    id: "heading",
-    "class": "select_input form-control width-100%"
-  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($setup.getGoogleFontByName($setup.store.variables.font_secondary.name).variants, function (weight) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("option", {
-      key: weight,
-      value: weight,
-      selected: $setup.store.variables.btn_text_weight === weight
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(weight), 9
-    /* TEXT, PROPS */
-    , _hoisted_103);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))], 512
-  /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_text_weight]]), _hoisted_104])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text transform "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_105, [_hoisted_106, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_107, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[25] || (_cache[25] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"siderail-menu__section\" style=\"width: 100%;\">\n                <p style=\"width: 260px; margin-right: 20px; font-size: 18px;\">Text weight</p>\n                <div v-if=\"store.variables.font_secondary.source === 'google-font'\" class=\"select\">\n                  <select v-model=\"store.variables.btn_text_weight\" name=\"heading\" id=\"heading\" class=\"select_input form-control width-100%\">\n                    <option \n                      v-for=\"weight in getGoogleFontByName(store.variables.font_secondary.name).variants\"\n                      :key=\"weight\" \n                      :value=\"weight\" \n                      :selected=\"store.variables.btn_text_weight === weight\"\n                    >\n                      {{ weight }}\n                    </option>\n                  </select>\n                  <svg class=\"select__icon\" aria-hidden=\"true\" viewBox=\"0 0 16 16\"><polyline points=\"1 5 8 12 15 5\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"/></svg>\n                </div>\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text transform "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_111, [_hoisted_112, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_113, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[26] || (_cache[26] = function ($event) {
       return $setup.store.variables.btn_text_transform = $event;
     }),
     name: "heading",
@@ -24467,55 +24618,112 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.store.variables.btn_text_transform === transform
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(transform), 9
     /* TEXT, PROPS */
-    , _hoisted_108);
+    , _hoisted_114);
   }), 64
   /* STABLE_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_text_transform]]), _hoisted_109])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Mini style guide "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_110, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[26] || (_cache[26] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_text_transform]]), _hoisted_115])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Mini style guide "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_116, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[27] || (_cache[27] = function ($event) {
       return $setup.toggleMenu('styleguide');
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_112, 2
+  }, _hoisted_118, 2
   /* CLASS */
-  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_113, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[27] || (_cache[27] = function ($event) {
+  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_119, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[28] || (_cache[28] = function ($event) {
       return $setup.togglePower();
     }),
     "class": "siderail-item__button"
-  }, _hoisted_115)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Styleguide "), $setup.activeMenu === 'styleguide' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_116, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_117, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_118, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_119, [_hoisted_120, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_121, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_122, [_hoisted_123, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_124, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_125, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_121)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Styleguide "), $setup.activeMenu === 'styleguide' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_122, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_123, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_124, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_125, [_hoisted_126, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_127, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_128, [_hoisted_129, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_130, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_131, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_126]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_127, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_132]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_133, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_accent, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_128]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_129, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_134]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_135, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_contrast_higher, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_130]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_131, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_136]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_137, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_background, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_132]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_133, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_138]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_139, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full bg-contrast-medium border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary + '0D', ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_134]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_135, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_140]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_141, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_136])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), _hoisted_137])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+  ), _hoisted_142])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), _hoisted_143])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  key: 0,
+  "class": "file-upload inline-block"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"uploadButtonsFont\" class=\"file-upload__label btn color-white bg-black width-100%\"><span class=\"flex items-center\"><svg class=\"icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"currentColor\"><path d=\"M18 12v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13V2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 7l5-5 5 5\"></path></g></svg><span class=\"margin-left-xxs file-upload__text file-upload__text--has-max-width\">Upload</span></span></label>", 1);
+
+var _hoisted_3 = {
+  key: 1
+};
+var _hoisted_4 = {
+  "class": "card padding-sm margin-bottom-sm"
+};
+var _hoisted_5 = {
+  "class": "flex gap-sm"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [$setup.store.variables.font_buttons.source !== 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    id: "uploadButtonsFont",
+    "class": "file-upload__input sr-only",
+    onChange: _cache[0] || (_cache[0] = function ($event) {
+      return $setup.onUploadFile();
+    }),
+    type: "file",
+    ref: "input",
+    name: "uploadButtonsFont",
+    style: {
+      "width": "1px",
+      "height": "1px"
+    }
+  }, null, 544
+  /* HYDRATE_EVENTS, NEED_PATCH */
+  ), _hoisted_2])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.store.variables.font_buttons.source === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.store.variables.font_buttons.name), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "btn color-white bg-black width-100%",
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $setup.onRemoveFile();
+    })
+  }, "Remove")])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -24538,7 +24746,7 @@ var _hoisted_1 = {
   "class": "file-upload inline-block"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"upload\" class=\"file-upload__label btn color-white bg-black width-100%\"><span class=\"flex items-center\"><svg class=\"icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"currentColor\"><path d=\"M18 12v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13V2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 7l5-5 5 5\"></path></g></svg><span class=\"margin-left-xxs file-upload__text file-upload__text--has-max-width\">Upload</span></span></label>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"uploadPrimaryFont\" class=\"file-upload__label btn color-white bg-black width-100%\"><span class=\"flex items-center\"><svg class=\"icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"currentColor\"><path d=\"M18 12v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13V2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 7l5-5 5 5\"></path></g></svg><span class=\"margin-left-xxs file-upload__text file-upload__text--has-max-width\">Upload</span></span></label>", 1);
 
 var _hoisted_3 = {
   key: 1
@@ -24551,14 +24759,14 @@ var _hoisted_5 = {
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [$setup.store.variables.font_primary.source !== 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "upload",
+    id: "uploadPrimaryFont",
     "class": "file-upload__input sr-only",
     onChange: _cache[0] || (_cache[0] = function ($event) {
       return $setup.onUploadFile();
     }),
     type: "file",
-    ref: "fileInput",
-    name: "upload",
+    ref: "input",
+    name: "uploadPrimaryFont",
     style: {
       "width": "1px",
       "height": "1px"
@@ -24595,7 +24803,7 @@ var _hoisted_1 = {
   "class": "file-upload inline-block"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"upload\" class=\"file-upload__label btn color-white bg-black width-100%\"><span class=\"flex items-center\"><svg class=\"icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"currentColor\"><path d=\"M18 12v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13V2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 7l5-5 5 5\"></path></g></svg><span class=\"margin-left-xxs file-upload__text file-upload__text--has-max-width\">Upload</span></span></label>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<label for=\"uploadSecondaryFont\" class=\"file-upload__label btn color-white bg-black width-100%\"><span class=\"flex items-center\"><svg class=\"icon\" viewBox=\"0 0 20 20\" aria-hidden=\"true\"><g fill=\"currentColor\"><path d=\"M18 12v4a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 13V2\"></path><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M5 7l5-5 5 5\"></path></g></svg><span class=\"margin-left-xxs file-upload__text file-upload__text--has-max-width\">Upload</span></span></label>", 1);
 
 var _hoisted_3 = {
   key: 1
@@ -24608,14 +24816,14 @@ var _hoisted_5 = {
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [$setup.store.variables.font_secondary.source !== 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    id: "upload",
+    id: "uploadSecondaryFont",
     "class": "file-upload__input sr-only",
     onChange: _cache[0] || (_cache[0] = function ($event) {
       return $setup.onUploadFile();
     }),
     type: "file",
-    ref: "fileInput",
-    name: "upload",
+    ref: "input",
+    name: "uploadSecondaryFont",
     style: {
       "width": "1px",
       "height": "1px"
@@ -24654,21 +24862,30 @@ var _hoisted_2 = ["href"];
 var _hoisted_3 = {
   key: 1
 };
-var _hoisted_4 = {
+var _hoisted_4 = ["href"];
+var _hoisted_5 = {
   key: 2
 };
-var _hoisted_5 = ["href"];
 var _hoisted_6 = ["href"];
-var _hoisted_7 = {
-  key: 3
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-if=\"variables.font_primary.source\"> "), $props.variables.font_primary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_primary.name, ":wght@").concat($props.variables.font_primary_weight),
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Google fonts "), $props.variables.font_primary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_primary.name, ":wght@").concat($props.variables.font_primary.weight),
     rel: "stylesheet"
   }, null, 8
   /* PROPS */
-  , _hoisted_2)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_primary.source === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <link rel=\"preconnect\" as=\"font\" :href=\"variables.font_primary.url\" type=\"font/woff\"> "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
+  , _hoisted_2)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_secondary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_secondary.name, ":wght@").concat($props.variables.font_secondary.weight),
+    rel: "stylesheet"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_4)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_buttons.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
+    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_buttons.name, ":wght@").concat($props.variables.font_buttons.weight),
+    rel: "stylesheet"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_6)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Uploaded fonts "), $props.variables.font_primary.source === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), {
+    key: 3
+  }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" @font-face { font-family: \"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary.name) + "\"; font-style: normal; font-weight: normal; font-display: auto; src: url(\"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary.url) + "\"); } ", 1
       /* TEXT */
@@ -24677,17 +24894,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-if=\"variables.font_secondary.source\"> "), $props.variables.font_secondary.source === 'google-font' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_secondary.name, ":wght@").concat($props.variables.font_secondary_weight),
-    rel: "stylesheet"
-  }, null, 8
-  /* PROPS */
-  , _hoisted_5), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("link", {
-    href: "https://fonts.googleapis.com/css2?family=".concat($props.variables.font_secondary.name, ":wght@").concat($props.variables.btn_text_weight),
-    rel: "stylesheet"
-  }, null, 8
-  /* PROPS */
-  , _hoisted_6)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_secondary.source === 'upload' && $props.variables.font_secondary.url !== $props.variables.font_primary.url ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <link rel=\"preconnect\" as=\"font\" :href=\"variables.font_secondary.url\" type=\"font/woff\">   "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_secondary.source === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), {
+    key: 4
+  }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" @font-face { font-family: \"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary.name) + "\"; font-style: normal; font-weight: normal; font-display: auto; src: url(\"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary.url) + "\"); } ", 1
       /* TEXT */
@@ -24696,7 +24905,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")], 64
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.variables.font_buttons.source === 'upload' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), {
+    key: 5
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" @font-face { font-family: \"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_buttons.name) + "\"; font-style: normal; font-weight: normal; font-display: auto; src: url(\"" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_buttons.url) + "\"); } ", 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -24716,10 +24936,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" :root, [data-theme=\"default\"] { ");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)('style'), null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Root & Default theme "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" :root, [data-theme=\"default\"] { --color-white: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_white) + "; --color-black: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_black) + "; --color-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_primary) + "; --color-primary-light: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_primary, 10)) + "; --color-accent: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_accent) + "; --color-accent-light: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_accent, 10)) + "; --color-contrast-medium: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_contrast_higher, -10)) + "; --color-contrast-high: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_contrast_higher) + "; --color-contrast-higher: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_contrast_higher) + "; --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_background) + "; --text-base-size: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.text_base_size + 'rem') + "; --font-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary.name) + "; --font-secondary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary.name) + "; --font-primary-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary_weight) + "; --font-secondary-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary_weight) + "; --btn-primary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_primary_text_color ? $props.variables.btn_primary_text_color : $props.variables.color_white) + "; --btn-secondary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_secondary_text_color ? $props.variables.btn_secondary_text_color : $props.variables.color_white) + "; --btn-tertiary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_tertiary_text_color ? $props.variables.btn_tertiary_text_color : $props.variables.color_contrast_higher) + "; --btn-radius: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_radius + 'em') + "; --btn-text-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_text_weight) + "; --btn-text-transform: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_text_transform) + "; } ", 1
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Root & Default theme "), _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --color-white: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_white) + "; --color-black: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_black) + "; --color-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_primary) + "; --color-primary-light: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_primary, 10)) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 10% darker "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --color-accent: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_accent) + "; --color-accent-light: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_accent, 10)) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 10% darker "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --color-contrast-high: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_contrast_higher) + "; --color-contrast-higher: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_contrast_higher) + "; --color-contrast-medium: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($setup.shadeColor($props.variables.color_contrast_higher, -10)) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" 10% lighter "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_background) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Base text "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --text-base-size: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.text_base_size + 'rem') + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Primary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --font-primary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary.name) + "; --font-primary-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_primary.weight) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Secondary font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --font-secondary: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary.name) + "; --font-secondary-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_secondary.weight) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons font "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --font-buttons: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_buttons.name ? $props.variables.font_buttons.name : $props.variables.font_secondary.name) + "; --font-buttons-weight: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.font_buttons.weight ? $props.variables.font_buttons.weight : $props.variables.font_secondary.weight) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --btn-primary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_primary_text_color ? $props.variables.btn_primary_text_color : $props.variables.color_white) + "; --btn-secondary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_secondary_text_color ? $props.variables.btn_secondary_text_color : $props.variables.color_white) + "; --btn-tertiary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_tertiary_text_color ? $props.variables.btn_tertiary_text_color : $props.variables.color_contrast_higher) + "; ", 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons style "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --btn-radius: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_radius + 'em') + "; --btn-text-transform: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_text_transform) + "; } ", 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Theme 1 "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" [data-theme=\"bg-1\"] { --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_primary + '0D') + "; } ", 1
       /* TEXT */
@@ -25006,7 +25247,6 @@ var useDesignStore = (0,pinia__WEBPACK_IMPORTED_MODULE_1__.defineStore)('designS
       // profile: JSON.parse(localStorage.getItem('designer_profile')),
       designs: null,
       design: null,
-      // design: {"id":1,"uuid":"ffa4ae2f-9dd6-4119-9b77-8ebc157b9999","title":"Design #1","designer_name":"Ryan Harmon","designer_email":"ryan@bloomcu.com","variables":{"color_white":"#fff","color_black":"#000","color_primary":"#9966FF","color_accent":"#90F1B7","color_contrast_high":"#000","color_contrast_higher":"#40067a","color_background":"#fff","text_base_size":"1.3","font_primary":"Space Grotesk","font_primary_weight":"700","font_secondary":"Inter","font_secondary_weight":"300","button_radius":"0.45"},"created_at":"2022-08-22T23:05:05.000000Z"},
       loading: false
     };
   },
@@ -25112,18 +25352,17 @@ var useDesignStore = (0,pinia__WEBPACK_IMPORTED_MODULE_1__.defineStore)('designS
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                console.log('from store', file);
-                _context3.next = 3;
+                _context3.next = 2;
                 return _api_designApi__WEBPACK_IMPORTED_MODULE_0__.designApi.storeMedia('bloomcu', _this6.design.uuid, file, collection, tags).then(function (response) {
                   return response.data.data;
                 })["catch"](function (error) {
                   console.log('Error', error.response.data);
                 });
 
-              case 3:
+              case 2:
                 return _context3.abrupt("return", _context3.sent);
 
-              case 4:
+              case 3:
               case "end":
                 return _context3.stop();
             }
@@ -25212,7 +25451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\nh1, .h1, h2, .h2, h3, .h3, h4, .h4 {\n  font-family: var(--font-primary);\n  font-weight: var(--font-primary-weight);\n}\nbody {\n  font-family: var(--font-secondary);\n  font-weight: var(--font-secondary-weight);\n}\na {\n  color: var(--color-contrast-higher);\n}\na:hover {\n  text-decoration: none;\n}\n.btn--primary, .btn--secondary, .btn--tertiary {\n  border: 2px solid transparent;\n  font-family: var(--font-secondary);\n  font-weight: var(--btn-text-weight);\n  text-transform: var(--btn-text-transform);\n}\n.btn--primary {\n  background: var(--color-primary);\n  color: var(--btn-primary-text-color);\n}\n.btn--primary:hover {\n  background: var(--color-primary-light);\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.btn--secondary:hover {\n  background-color: var(--color-accent-light);\n}\n.btn--tertiary {\n  background-color: var(--color-white);\n  color: var(--btn-tertiary-text-color);\n}\n.color-contrast-medium {\n  color: var(--color-contrast-medium);\n}\n.color-contrast-high {\n  color: var(--color-contrast-high);\n}\n.color-contrast-higher {\n  color: var(--color-contrast-higher);\n}\n[data-theme=bg-1] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] .btn--primary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .btn--tertiary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .pre-title {\n  color: var(--color-primary);\n}\n[data-theme=bg-2] .text-component p {\n  color: var(--color-contrast-high);\n}\n.hero .btn--tertiary,\n.feature-v4 .btn--tertiary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.hero .btn--tertiary:hover,\n.feature-v4 .btn--tertiary:hover {\n  background-color: var(--color-accent-light);\n}\n.hero--boxed .btn--primary {\n  margin-bottom: var(--gap-y, 0) !important;\n  margin-right: 0 !important;\n}\n.js-tour-help-trigger {\n  font-size: var(--text-sm);\n}\n.js-tour-help-trigger .icon {\n  display: none !important;\n}\n.js-tour-help-trigger .mega-nav__icon-label {\n  margin-left: 0 !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\nh1, .h1, h2, .h2, h3, .h3, h4, .h4 {\n  font-family: var(--font-primary);\n  font-weight: var(--font-primary-weight);\n}\nbody {\n  font-family: var(--font-secondary);\n  font-weight: var(--font-secondary-weight);\n}\na {\n  color: var(--color-contrast-higher);\n}\na:hover {\n  text-decoration: none;\n}\n.btn--primary, .btn--secondary, .btn--tertiary {\n  border: 2px solid transparent;\n  font-family: var(--font-buttons);\n  font-weight: var(--font-buttons-weight);\n  text-transform: var(--btn-text-transform);\n}\n.btn--primary {\n  background: var(--color-primary);\n  color: var(--btn-primary-text-color);\n}\n.btn--primary:hover {\n  background: var(--color-primary-light);\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.btn--secondary:hover {\n  background-color: var(--color-accent-light);\n}\n.btn--tertiary {\n  background-color: var(--color-white);\n  color: var(--btn-tertiary-text-color);\n}\n.color-contrast-medium {\n  color: var(--color-contrast-medium);\n}\n.color-contrast-high {\n  color: var(--color-contrast-high);\n}\n.color-contrast-higher {\n  color: var(--color-contrast-higher);\n}\n[data-theme=bg-1] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] .btn--primary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .btn--tertiary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .pre-title {\n  color: var(--color-primary);\n}\n[data-theme=bg-2] .text-component p {\n  color: var(--color-contrast-high);\n}\n.hero .btn--tertiary,\n.feature-v4 .btn--tertiary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.hero .btn--tertiary:hover,\n.feature-v4 .btn--tertiary:hover {\n  background-color: var(--color-accent-light);\n}\n.hero--boxed .btn--primary {\n  margin-bottom: var(--gap-y, 0) !important;\n  margin-right: 0 !important;\n}\n.js-tour-help-trigger {\n  font-size: var(--text-sm);\n}\n.js-tour-help-trigger .icon {\n  display: none !important;\n}\n.js-tour-help-trigger .mega-nav__icon-label {\n  margin-left: 0 !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29804,6 +30043,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./src/js/components/AppUploadButtonsFont.vue":
+/*!****************************************************!*\
+  !*** ./src/js/components/AppUploadButtonsFont.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _AppUploadButtonsFont_vue_vue_type_template_id_16a9774c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppUploadButtonsFont.vue?vue&type=template&id=16a9774c */ "./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c");
+/* harmony import */ var _AppUploadButtonsFont_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js */ "./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js");
+/* harmony import */ var _Users_heyharmon_Local_Sites_model_app_public_wp_content_plugins_bloomcu_design_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_heyharmon_Local_Sites_model_app_public_wp_content_plugins_bloomcu_design_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppUploadButtonsFont_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppUploadButtonsFont_vue_vue_type_template_id_16a9774c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"src/js/components/AppUploadButtonsFont.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./src/js/components/AppUploadPrimaryFont.vue":
 /*!****************************************************!*\
   !*** ./src/js/components/AppUploadPrimaryFont.vue ***!
@@ -29967,6 +30234,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js":
+/*!***************************************************************************************!*\
+  !*** ./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AppUploadButtonsFont_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AppUploadButtonsFont_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=script&setup=true&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./src/js/components/AppUploadPrimaryFont.vue?vue&type=script&setup=true&lang=js":
 /*!***************************************************************************************!*\
   !*** ./src/js/components/AppUploadPrimaryFont.vue?vue&type=script&setup=true&lang=js ***!
@@ -30043,6 +30326,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_template_id_3ea74058__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_App_vue_vue_type_template_id_3ea74058__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./App.vue?vue&type=template&id=3ea74058 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/App.vue?vue&type=template&id=3ea74058");
+
+
+/***/ }),
+
+/***/ "./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c":
+/*!**********************************************************************************!*\
+  !*** ./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AppUploadButtonsFont_vue_vue_type_template_id_16a9774c__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AppUploadButtonsFont_vue_vue_type_template_id_16a9774c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AppUploadButtonsFont.vue?vue&type=template&id=16a9774c */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/js/components/AppUploadButtonsFont.vue?vue&type=template&id=16a9774c");
 
 
 /***/ }),

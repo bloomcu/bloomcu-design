@@ -1,16 +1,16 @@
 <template>
   <div>
-    <div v-if="store.variables.font_secondary.source !== 'upload'" class="file-upload inline-block">
+    <div v-if="store.variables.font_buttons.source !== 'upload'" class="file-upload inline-block">
       <input
-        id="uploadSecondaryFont"
+        id="uploadButtonsFont"
         class="file-upload__input sr-only" 
         @change="onUploadFile()"
         type="file" 
         ref="input"
-        name="uploadSecondaryFont"
+        name="uploadButtonsFont"
         style="width: 1px; height: 1px;" 
       >
-      <label for="uploadSecondaryFont" class="file-upload__label btn color-white bg-black width-100%">
+      <label for="uploadButtonsFont" class="file-upload__label btn color-white bg-black width-100%">
         <span class="flex items-center">
           <svg class="icon" viewBox="0 0 20 20" aria-hidden="true">
             <g fill="currentColor">
@@ -24,8 +24,8 @@
       </label>
     </div>
     
-    <div v-if="store.variables.font_secondary.source === 'upload'">
-      <div class="card padding-sm margin-bottom-sm">{{ store.variables.font_secondary.name }}</div>
+    <div v-if="store.variables.font_buttons.source === 'upload'">
+      <div class="card padding-sm margin-bottom-sm">{{ store.variables.font_buttons.name }}</div>
       <div class="flex gap-sm">
         <button class="btn color-white bg-black width-100%" @click="onRemoveFile()">Remove</button>
       </div>
@@ -50,7 +50,7 @@ function onUploadFile() {
   store.storeMedia(formData, 'font', '')
     .then((response) => {
 
-      store.variables.font_secondary = {
+      store.variables.font_buttons = {
         source: 'upload',
         name: response.name,
         url: response.original_url,
@@ -61,7 +61,7 @@ function onUploadFile() {
 }
 
 function onRemoveFile() {
-  store.variables.font_secondary = {
+  store.variables.font_buttons = {
     source: null,
     name: null,
     url: null,
