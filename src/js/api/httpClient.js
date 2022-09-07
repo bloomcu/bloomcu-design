@@ -6,8 +6,8 @@ import axios from 'axios'
 */
 const httpClient = axios.create({
   // baseURL: import.meta.env.VITE_API_BASE_URL,
-  baseURL: 'http://build-api.test/api/'
-  // baseURL: 'https://build-api-staging.bloomcu.com/api/'
+  // baseURL: 'http://build-api.test/api/'
+  baseURL: 'https://build-api-staging.bloomcu.com/api/'
   // baseURL: 'https://build-api.bloomcu.com/api/'
 })
 

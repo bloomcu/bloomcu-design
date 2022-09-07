@@ -12,7 +12,7 @@
       --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }}; <!-- 10% darker -->
       --color-contrast-high:      {{ variables.color_contrast_higher }};
       --color-contrast-higher:    {{ variables.color_contrast_higher }};
-      --color-contrast-medium:    {{ shadeColor(variables.color_contrast_higher, -10) }}; <!-- 10% lighter -->
+      --color-contrast-medium:    {{ variables.color_contrast_higher }};
       --color-bg:                 {{ variables.color_background }};
       
       <!-- Base text -->
@@ -52,6 +52,7 @@
       --color-contrast-lower:     {{ variables.color_contrast_higher }};
       --color-contrast-high:      {{ variables.color_white }};
       --color-contrast-higher:    {{ variables.color_white }};
+      --color-contrast-medium:    {{ variables.color_white }};
     }
   </component>
 </template>
