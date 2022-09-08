@@ -8,6 +8,7 @@ class Admin {
 
 	public function __construct() {
 		// add_action( 'admin_menu', [ $this, 'admin_menu' ] );
+		// add_action('admin_bar_menu', [ $this, 'admin_bar_menu' ], 100);
 		// add_filter( 'manage_design_posts_columns', [ $this, 'set_post_columns' ] );
 		// add_action( 'manage_design_posts_custom_column', [ $this, 'set_columns_content' ], 10, 2 );
 	}
@@ -21,6 +22,22 @@ class Admin {
 
 
 	}
+	
+	// /**
+	//  * Inject our button into the frontend admin bar
+	//  *
+	//  * @return void
+	//  */
+	// public function admin_bar_menu($admin_bar) {
+	// 	$admin_bar->add_menu( array(
+  //       'id'    => 'design-plugin-power-button',
+  //       'title' => 'Design',
+  //       'href'  => '#',
+  //       'meta'  => array(
+  //           'title' => 'Design',            
+  //       ),
+  //   ));
+	// }
 
 	/**
 	 * Add custom columns

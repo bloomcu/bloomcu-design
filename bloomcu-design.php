@@ -3,7 +3,7 @@
 Plugin Name: BloomCU Design
 Plugin URI: https://bloomcu.com/
 Description: Design made easier. Made by BloomCU.
-Version: 0.0.1
+Version: 1.0.0
 Author: BloomCU
 Author URI: https://bloomcu.com/
 License: GPL2
@@ -131,7 +131,7 @@ final class Design_Plugin {
 		define( 'DESIGN_PLUGIN_PATH', dirname( DESIGN_PLUGIN_FILE ) );
 		define( 'DESIGN_PLUGIN_INCLUDES', DESIGN_PLUGIN_PATH . '/includes' );
 		define( 'DESIGN_PLUGIN_URL', plugins_url( '', DESIGN_PLUGIN_FILE ) );
-		define( 'DESIGN_PLUGIN_ASSETS', plugin_dir_url(__FILE__) . '/assets' );
+		define( 'DESIGN_PLUGIN_ASSETS', plugin_dir_url(__FILE__) . 'assets' );
 	}
 
 	/**

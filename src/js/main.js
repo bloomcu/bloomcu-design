@@ -1,5 +1,6 @@
-import Vue from 'vue';
-import App from './App';
+import { createApp } from 'vue'
+import store from './store'
+import App from './App'
 // import VueRouter from 'vue-router';
 // 
 // Vue.use(VueRouter);
@@ -10,8 +11,16 @@ import App from './App';
 //   routes
 // })
 
-new Vue({
-    el: '#design',
-    render: h => h(App),
-    // router: router
-});
+const AppElement = document.querySelector('#app')
+
+createApp(App, {
+  ...AppElement.dataset
+  })
+  .use(store)
+  .mount('#app')
+
+// new Vue({
+//     el: '#design',
+//     render: h => h(App),
+//     // router: router
+// });

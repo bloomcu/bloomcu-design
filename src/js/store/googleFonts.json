@@ -1,0 +1,1484 @@
+[{
+		"name": "ABeeZee",
+		"variants": [
+			"400"
+		],
+		"version": "v22",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Abel",
+		"variants": [
+			"400"
+		],
+		"version": "v18",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Abril Fatface",
+		"variants": [
+			"400"
+		],
+		"version": "v19",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Anton",
+		"variants": [
+			"400"
+		],
+		"version": "v23",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Archivo",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+
+		],
+		"version": "v18",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Arimo",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+
+		],
+		"version": "v27",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Arvo",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v20",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Asap",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v24",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Assistant",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v18",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Barlow",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Barlow Condensed",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Barlow Semi Condensed",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v14",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Bebas Neue",
+		"variants": [
+			"400"
+		],
+		"version": "v9",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Bitter",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v28",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Bree Serif",
+		"variants": [
+			"400"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Cabin",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v26",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Cairo",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v20",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Catamaran",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v17",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Caveat",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v17",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Cinzel",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v19",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Comfortaa",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v40",
+		"last_modified": "2022-06-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Cormorant SC",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v16",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Crimson Text",
+		"variants": [
+			"400",
+			"600",
+			"700"
+		],
+		"version": "v19",
+		"last_modified": "2022-05-24",
+		"source": "google-font"
+	},
+	{
+		"name": "DM Sans",
+		"variants": [
+			"400",
+			"500",
+			"700"
+		],
+		"version": "v11",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Dancing Script",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v24",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Dosis",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v27",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "EB Garamond",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v26",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Exo 2",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v20",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Fira Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v16",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Fira Sans Condensed",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v10",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Fjalla One",
+		"variants": [
+			"400"
+		],
+		"version": "v13",
+		"last_modified": "2022-04-21",
+		"source": "google-font"
+	},
+	{
+		"name": "Heebo",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Hind",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v16",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Hind Madurai",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v11",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Hind Siliguri",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v12",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "IBM Plex Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v14",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "IBM Plex Serif",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Ibarra Real Nova",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v20",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Inconsolata",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v31",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Indie Flower",
+		"variants": [
+			"400"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Inter",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Josefin Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v25",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Jost",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v14",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Kanit",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Karla",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v23",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Lato",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"700",
+			"900"
+		],
+		"version": "v23",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Libre Baskerville",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v14",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Libre Franklin",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v13",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Lobster",
+		"variants": [
+			"400"
+		],
+		"version": "v28",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Lora",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v25",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "M PLUS Rounded 1c",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Manrope",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v13",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Maven Pro",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v32",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Merriweather",
+		"variants": [
+			"300",
+			"400",
+			"700",
+			"900"
+		],
+		"version": "v30",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Merriweather Sans",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v22",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Montserrat",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v25",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Mukta",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v13",
+		"last_modified": "2022-04-26",
+		"source": "google-font"
+	},
+	{
+		"name": "Mulish",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Nanum Gothic",
+		"variants": [
+			"400",
+			"700",
+			"800"
+		],
+		"version": "v21",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v27",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans HK",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans JP",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v42",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans KR",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v27",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans SC",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v26",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Sans TC",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v26",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Serif",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v21",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Serif JP",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Serif KR",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v20",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Noto Serif TC",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v23",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Nunito",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v25",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Nunito Sans",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Open Sans",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800"
+		],
+		"version": "v29",
+		"last_modified": "2022-05-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Oswald",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v49",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Overpass",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v12",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Oxygen",
+		"variants": [
+			"300",
+			"400",
+			"700"
+		],
+		"version": "v15",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "PT Sans",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "PT Sans Narrow",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "PT Serif",
+		"variants": [
+			"400",
+			"700"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Pacifico",
+		"variants": [
+			"400"
+		],
+		"version": "v22",
+		"last_modified": "2022-05-10",
+		"source": "google-font"
+	},
+	{
+		"name": "Playfair Display",
+		"variants": [
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v30",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Poppins",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v20",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Prompt",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v10",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Public Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v14",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Questrial",
+		"variants": [
+			"400"
+		],
+		"version": "v18",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Quicksand",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v30",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Rajdhani",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Raleway",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v28",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Roboto",
+		"variants": [
+			"100",
+			"300",
+			"400",
+			"500",
+			"700",
+			"900"
+		],
+		"version": "v30",
+		"last_modified": "2022-05-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Roboto Condensed",
+		"variants": [
+			"300",
+			"400",
+			"700"
+		],
+		"version": "v25",
+		"last_modified": "2022-04-20",
+		"source": "google-font"
+	},
+	{
+		"name": "Roboto Mono",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v22",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Roboto Slab",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v24",
+		"last_modified": "2022-07-12",
+		"source": "google-font"
+	},
+	{
+		"name": "Rubik",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Saira",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v14",
+		"last_modified": "2022-07-19",
+		"source": "google-font"
+	},
+	{
+		"name": "Secular One",
+		"variants": [
+			"400"
+		],
+		"version": "v11",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Shadows Into Light",
+		"variants": [
+			"400"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Signika Negative",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v19",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Slabo 27px",
+		"variants": [
+			"400"
+		],
+		"version": "v12",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Source Code Pro",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Source Sans Pro",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v21",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Source Serif Pro",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Space Grotesk",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v12",
+		"lastModified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Taviraj",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v11",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Teko",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Titillium Web",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"600",
+			"700",
+			"900"
+		],
+		"version": "v15",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Ubuntu",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"700"
+		],
+		"version": "v20",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Varela Round",
+		"variants": [
+			"400"
+		],
+		"version": "v19",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Work Sans",
+		"variants": [
+			"100",
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700",
+			"800",
+			"900"
+		],
+		"version": "v17",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Yanone Kaffeesatz",
+		"variants": [
+			"200",
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v23",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	},
+	{
+		"name": "Zilla Slab",
+		"variants": [
+			"300",
+			"400",
+			"500",
+			"600",
+			"700"
+		],
+		"version": "v11",
+		"last_modified": "2022-04-27",
+		"source": "google-font"
+	}
+]
