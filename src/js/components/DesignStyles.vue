@@ -158,6 +158,11 @@ a {
   
   .btn--primary {
     color: var(--color-contrast-lower);
+    
+    &:hover {
+      background-color: var(--color-contrast-higher);
+      opacity: .9;
+    }
   }
   
   .btn--tertiary {
@@ -175,7 +180,9 @@ a {
   }
 }
 
-// Override tertiary button in hero's
+/* --------------------------------
+Override tertiary button in hero's
+-------------------------------- */
 .hero, 
 .feature-v4 { // feature-v4 is the isolated hero block
   .btn--tertiary {
@@ -188,7 +195,9 @@ a {
   }
 }
 
-// Fixes the button misalignment in boxed hero
+/* --------------------------------
+Fixes the button misalignment in boxed hero
+-------------------------------- */
 .hero--boxed {
   .btn--primary {
     margin-bottom: var(--gap-y, 0) !important;
@@ -196,7 +205,9 @@ a {
   }
 }
 
-// Hide the help icon
+/* --------------------------------
+Hide the help icon
+-------------------------------- */
 .js-tour-help-trigger {
   font-size: var(--text-sm);
   
@@ -208,7 +219,38 @@ a {
   }
 }
 
-// Patch in calculator styles from Child Theme
+/* --------------------------------
+Override testimonial quote svg color
+-------------------------------- */
+section.full-width-blockquote {
+  .icon {
+    display: none;
+  }
+  
+  .text-component {
+    &:before {
+      display: inline-flex;
+      content: '';
+      
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 100%;
+      
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 100%;
+      
+      background-color: var(--color-accent);
+      background-size: 50px 50px;
+      width: 60px;
+      height: 60px;
+    }
+    
+    p {
+      padding-top: 30px;
+    }
+  }
+}
+
+/* --------------------------------
+Patch in calculator styles from Child Theme
+-------------------------------- */
 section.calculator {
   padding: var(--space-xl) 0;
   background-position: center;
@@ -217,6 +259,18 @@ section.calculator {
   
   @media (min-width: 64rem) {
     padding: var(--space-xxl) 0;
+  }
+  
+  h2, h3, p, span, label {
+    color: var(--color-contrast-higher) !important;
+  }
+  
+  .results_ticker {
+    color: var(--color-primary) !important;
+  }
+  
+  .calculator-section label {
+    font-size: unset !important;
   }
 
   & > .container {
@@ -236,9 +290,41 @@ section.calculator {
   .calculator .calculator-footer a {
     width: 100%;
     
+    &:hover {
+      background: var(--color-primary-light);
+    }
+    
     @media (min-width: 48rem) {
       width: 50%;
     }
+  }
+  
+  .button-group__button label {
+    border: 2px solid var(--color-primary) !important;
+    color: var(--color-primary) !important;
+    
+    &:hover {
+      background: var(--color-primary) !important;
+    }
+  }
+  
+  .button-group__button input:checked+label {
+    background: var(--color-primary) !important;
+    color: var(--color-contrast-lower) !important;
+  }
+  
+  .button-group__button input:hover~label {
+    background: var(--color-primary) !important;
+    color: var(--color-contrast-lower) !important;
+  }
+  
+  .button-group__button input:focus~label:after {
+    border: none;
+  }
+  
+  .calculator-section .slider-group-min,
+  .calculator-section .slider-group-max {
+    display: none;
   }
 }
 
@@ -267,7 +353,7 @@ section.calculator {
 .calculator .calculator-section .select-group select {
   border: 1px solid var(--color-contrast-low) !important;
   color: var(--color-primary) !important;
-  
+
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -349,5 +435,61 @@ section.calculator {
 .calculator-mortgage-payment .calculator-body .calculator-section:nth-child(3),
 .calculator-retirement-savings .calculator-body .calculator-section:nth-child(3) {
   clear: both;
+}
+
+section.calculator[data-theme="bg-2"] {
+  h2, h3, p, span, label, legend {
+    color: var(--color-contrast-lower) !important;
+  }
+  
+  .results_ticker {
+    color: var(--color-bg) !important;
+  }
+  
+  .input-group .pre,
+  .input-group input,
+  .select-group select {
+    color: var(--color-bg) !important;
+  }
+  
+  .calculator-header div.output-result {
+    color: var(--color-bg) !important;
+  }
+  
+  .button {
+    background: var(--color-bg);
+    color: var(--color-contrast-higher);
+
+    &:hover {
+      background: var(--color-primary-light);
+    }
+  }
+  
+  .button-group__button label {
+    border: 2px solid var(--color-bg) !important;
+    color: var(--color-bg) !important;
+    
+    &:hover {
+      background: var(--color-bg) !important;
+    }
+  }
+  
+  .button-group__button input:checked+label {
+    background: var(--color-bg) !important;
+    color: var(--color-contrast-higher) !important;
+  }
+  
+  .button-group__button input:hover~label {
+    background: var(--color-bg) !important;
+    color: var(--color-contrast-higher) !important;
+  }
+  
+  .button-group__button input:focus~label:after {
+    border: none;
+  }
+  
+  .calculator-section .slider-group input[type=range]::-webkit-slider-thumb {
+    background-color:var(--color-bg) !important;
+  }
 }
 </style>

@@ -54,7 +54,7 @@ export const useDesignStore = defineStore('designStore', {
         .then(response => {
           this.design = response.data.data
           
-          setTimeout(() => {
+          setTimeout(() => {  
             this.loading = false
           }, 1000)
         })
