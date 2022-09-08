@@ -3,7 +3,7 @@
 Plugin Name: BloomCU Design
 Plugin URI: https://bloomcu.com/
 Description: Design made easier. Made by BloomCU.
-Version: 0.0.1
+Version: 1.0.0
 Author: BloomCU
 Author URI: https://bloomcu.com/
 License: GPL2
