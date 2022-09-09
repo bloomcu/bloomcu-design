@@ -439,7 +439,7 @@
                 <fieldset style="width: 100%;">
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="store.variables.btn_radius" class="slider__input" type="range" name="sliderValue" min="0" max="2" step="0.05">
+                      <input v-model="store.variables.btn_radius" class="slider__input" type="range" name="sliderValue" min="0" max="3" step="0.05">
                     </div>
                     <div class="slider__value">
                       <input v-model="store.variables.btn_radius" class="form-control text-sm text-center width-xl" type="text">
@@ -454,7 +454,7 @@
                 <fieldset style="width: 100%;">
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="store.variables.btn_padding_y" class="slider__input" type="range" name="sliderValue" min="0.2" max="1" step="0.02">
+                      <input v-model="store.variables.btn_padding_y" class="slider__input" type="range" name="sliderValue" min="0.2" max="2" step="0.02">
                     </div>
                     <div class="slider__value">
                       <input v-model="store.variables.btn_padding_y" class="form-control text-sm text-center width-xl" type="text">
@@ -469,7 +469,7 @@
                 <fieldset style="width: 100%;">
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
-                      <input v-model="store.variables.btn_padding_x" class="slider__input" type="range" name="sliderValue" min="0.5" max="2" step="0.02">
+                      <input v-model="store.variables.btn_padding_x" class="slider__input" type="range" name="sliderValue" min="0.5" max="3" step="0.02">
                     </div>
                     <div class="slider__value">
                       <input v-model="store.variables.btn_padding_x" class="form-control text-sm text-center width-xl" type="text">
