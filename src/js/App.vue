@@ -7,7 +7,38 @@
         <DesignStyles :variables="store.variables"/>
       </div>
       
-      <!-- Siderail -->
+      <!-- Siderail: Viewer -->
+      <div v-if="mode === 'view'" class="siderail">
+        <!-- Top menu -->
+        <div class="siderail__top-menu">
+          <IconLoading v-if="store.loading"/>
+          <svg v-else width="24" height="24" viewBox="0 0 24 24">
+            <g fill="currentColor">
+              <path d="M22.707,6.293l-5-5c-0.391-0.391-1.023-0.391-1.414,0l-2.291,2.291l2.706,2.71l-1.415,1.413l-2.705-2.709 l-1.586,1.586l1.709,1.709l-1.414,1.414L9.588,7.998L8.002,9.584l2.709,2.709l-1.414,1.414l-2.709-2.709l-1.586,1.586l1.709,1.709 l-1.414,1.414l-1.709-1.709l-2.295,2.295c-0.391,0.391-0.391,1.023,0,1.414l5,5C6.488,22.902,6.744,23,7,23s0.512-0.098,0.707-0.293 l15-15C23.098,7.316,23.098,6.684,22.707,6.293z"></path> <path data-color="color-2" d="M4.672,10.086l5.414-5.414L6.707,1.293c-0.391-0.391-1.023-0.391-1.414,0l-4,4 c-0.391,0.391-0.391,1.023,0,1.414L4.672,10.086z"></path><path data-color="color-2" d="M21.98,16.804c-0.039-0.193-0.134-0.371-0.273-0.511l-2.379-2.379l-5.414,5.414l2.379,2.379 c0.14,0.14,0.317,0.235,0.511,0.273l5,1C21.869,22.994,21.935,23,22,23c0.263,0,0.518-0.104,0.707-0.293 c0.236-0.236,0.339-0.575,0.273-0.903L21.98,16.804z"></path>
+            </g>
+          </svg>
+        </div>
+        
+        <!-- Mini style guide -->
+        <div class="siderail-item">
+          <button @click="toggleMenu('styleguide')" type="button" class="siderail-item__button" :class="activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="3"></line><line data-cap="butt" x1="8" y1="17" x2="6" y2="23"></line><line data-cap="butt" x1="18" y1="23" x2="16" y2="17"></line><line data-cap="butt" x1="7" y1="20" x2="17" y2="20"></line><rect x="4" y="3" width="16" height="14"></rect>
+              </g>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Bottom menu -->
+        <div class="siderail__bottom-menu">
+          <button @click="togglePower()" class="siderail-item__button">
+            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
+          </button>
+        </div>
+      </div>
+        
+      <!-- Siderail: Editor -->
       <div v-if="mode === 'edit'" class="siderail">
         <!-- Top menu -->
         <div class="siderail__top-menu">
@@ -126,7 +157,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Fonts -->
           <div class="siderail-item">
             <button @click="toggleMenu('typography')" type="button" class="siderail-item__button" :class="activeMenu === 'typography' ? 'siderail-item__button--active' : ''">
@@ -306,7 +336,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Buttons -->
           <div class="siderail-item">
             <button @click="toggleMenu('buttons')" type="button" class="siderail-item__button" :class="activeMenu === 'buttons' ? 'siderail-item__button--active' : ''">
@@ -456,7 +485,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Mini style guide -->
           <div class="siderail-item">
             <button @click="toggleMenu('styleguide')" type="button" class="siderail-item__button" :class="activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''">
@@ -653,6 +681,7 @@ const toggleMenu = (menu) => {
 
 const togglePower = () => {
   document.cookie = 'design_plugin_disabled=true; path=/;'
+  location.reload()
 }
 
 const saveDesign = debounce(() => {
