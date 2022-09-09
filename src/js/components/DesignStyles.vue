@@ -36,6 +36,8 @@
       --btn-tertiary-text-color:  {{ variables.btn_tertiary_text_color ? variables.btn_tertiary_text_color : variables.color_contrast_higher }};
       
       <!-- Buttons style -->
+      --btn-padding-y:            {{ variables.btn_padding_y + 'em' }};
+      --btn-padding-x:            {{ variables.btn_padding_x + 'em' }};
       --btn-radius:               {{ variables.btn_radius + 'em' }};
       --btn-text-transform:       {{ variables.btn_text_transform }};
     }
@@ -107,7 +109,10 @@ a {
   }
 }
 
-.btn--primary, .btn--secondary, .btn--tertiary {
+.btn--primary, 
+.btn--secondary, 
+.btn--tertiary,
+.button {
   border: 2px solid transparent;
   font-family: var(--font-buttons);
   font-weight: var(--font-buttons-weight);

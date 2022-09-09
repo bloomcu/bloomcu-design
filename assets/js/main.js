@@ -24115,16 +24115,78 @@ var _hoisted_123 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
     "margin-right": "20px",
     "font-size": "18px"
   }
-}, "Text transform", -1
+}, "Vertical padding", -1
 /* HOISTED */
 );
 
 var _hoisted_124 = {
+  style: {
+    "width": "100%"
+  }
+};
+var _hoisted_125 = {
+  "class": "slider slider--input gap-sm"
+};
+var _hoisted_126 = {
+  "class": "slider__range"
+};
+var _hoisted_127 = {
+  "class": "slider__value"
+};
+var _hoisted_128 = {
+  "class": "siderail-menu__section",
+  style: {
+    "width": "100%"
+  }
+};
+
+var _hoisted_129 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "width": "260px",
+    "margin-right": "20px",
+    "font-size": "18px"
+  }
+}, "Horizontal padding", -1
+/* HOISTED */
+);
+
+var _hoisted_130 = {
+  style: {
+    "width": "100%"
+  }
+};
+var _hoisted_131 = {
+  "class": "slider slider--input gap-sm"
+};
+var _hoisted_132 = {
+  "class": "slider__range"
+};
+var _hoisted_133 = {
+  "class": "slider__value"
+};
+var _hoisted_134 = {
+  "class": "siderail-menu__section",
+  style: {
+    "width": "100%"
+  }
+};
+
+var _hoisted_135 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  style: {
+    "width": "260px",
+    "margin-right": "20px",
+    "font-size": "18px"
+  }
+}, "Text transform", -1
+/* HOISTED */
+);
+
+var _hoisted_136 = {
   "class": "select"
 };
-var _hoisted_125 = ["value", "selected"];
+var _hoisted_137 = ["value", "selected"];
 
-var _hoisted_126 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_138 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   "class": "select__icon",
   "aria-hidden": "true",
   viewBox: "0 0 16 16"
@@ -24139,18 +24201,18 @@ var _hoisted_126 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 /* HOISTED */
 );
 
-var _hoisted_127 = {
+var _hoisted_139 = {
   "class": "siderail-item"
 };
 
-var _hoisted_128 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line data-cap=\"butt\" x1=\"8\" y1=\"17\" x2=\"6\" y2=\"23\"></line><line data-cap=\"butt\" x1=\"18\" y1=\"23\" x2=\"16\" y2=\"17\"></line><line data-cap=\"butt\" x1=\"7\" y1=\"20\" x2=\"17\" y2=\"20\"></line><rect x=\"4\" y=\"3\" width=\"16\" height=\"14\"></rect></g></svg>", 1);
+var _hoisted_140 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line x1=\"12\" y1=\"1\" x2=\"12\" y2=\"3\"></line><line data-cap=\"butt\" x1=\"8\" y1=\"17\" x2=\"6\" y2=\"23\"></line><line data-cap=\"butt\" x1=\"18\" y1=\"23\" x2=\"16\" y2=\"17\"></line><line data-cap=\"butt\" x1=\"7\" y1=\"20\" x2=\"17\" y2=\"20\"></line><rect x=\"4\" y=\"3\" width=\"16\" height=\"14\"></rect></g></svg>", 1);
 
-var _hoisted_129 = [_hoisted_128];
-var _hoisted_130 = {
+var _hoisted_141 = [_hoisted_140];
+var _hoisted_142 = {
   "class": "siderail__bottom-menu"
 };
 
-var _hoisted_131 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+var _hoisted_143 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   width: "24",
   height: "24",
   viewBox: "0 0 24 24"
@@ -24171,100 +24233,100 @@ var _hoisted_131 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 /* HOISTED */
 );
 
-var _hoisted_132 = [_hoisted_131];
-var _hoisted_133 = {
+var _hoisted_144 = [_hoisted_143];
+var _hoisted_145 = {
   key: 0,
   "class": "styleguide flex flex-center bg-black bg-opacity-30%"
 };
-var _hoisted_134 = {
+var _hoisted_146 = {
   "class": "styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg radius-md shadow-md"
 };
-var _hoisted_135 = {
+var _hoisted_147 = {
   "class": "container max-width-lg"
 };
-var _hoisted_136 = {
+var _hoisted_148 = {
   "class": "grid gap-xxl"
 };
 
-var _hoisted_137 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-6 margin-bottom-0\"><!-- Logo --><!-- &lt;div class=&quot;margin-bottom-xl&quot;&gt;\n                &lt;p class=&quot;text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%&quot;&gt;Logo&lt;/p&gt;\n                &lt;h2&gt;AcmeCU&lt;/h2&gt;\n              &lt;/div&gt; --><!-- Typography --><div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Typography</p><h1 class=\"h1 margin-bottom-xs\">H1 heading sample</h1><h2 class=\"h2 margin-bottom-xs\">H2 heading sample</h2><h3 class=\"h3 margin-bottom-xs\">H3 heading sample</h3><h4 class=\"h4 margin-bottom-xs\">H4 heading sample</h4><p>Body lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada leo ac augue fringilla dignissim. Vivamus dolor arcu, iaculis eget augue eget, euismod vulputate lorem.</p></div></div>", 1);
+var _hoisted_149 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-6 margin-bottom-0\"><!-- Logo --><!-- &lt;div class=&quot;margin-bottom-xl&quot;&gt;\n                &lt;p class=&quot;text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%&quot;&gt;Logo&lt;/p&gt;\n                &lt;h2&gt;AcmeCU&lt;/h2&gt;\n              &lt;/div&gt; --><!-- Typography --><div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Typography</p><h1 class=\"h1 margin-bottom-xs\">H1 heading sample</h1><h2 class=\"h2 margin-bottom-xs\">H2 heading sample</h2><h3 class=\"h3 margin-bottom-xs\">H3 heading sample</h3><h4 class=\"h4 margin-bottom-xs\">H4 heading sample</h4><p>Body lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada leo ac augue fringilla dignissim. Vivamus dolor arcu, iaculis eget augue eget, euismod vulputate lorem.</p></div></div>", 1);
 
-var _hoisted_138 = {
+var _hoisted_150 = {
   "class": "col-6 margin-bottom-0"
 };
-var _hoisted_139 = {
+var _hoisted_151 = {
   "class": "margin-bottom-xl"
 };
 
-var _hoisted_140 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_152 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%"
 }, "Colors", -1
 /* HOISTED */
 );
 
-var _hoisted_141 = {
+var _hoisted_153 = {
   "class": "grid gap-md"
 };
-var _hoisted_142 = {
+var _hoisted_154 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_143 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_155 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, "Primary", -1
 /* HOISTED */
 );
 
-var _hoisted_144 = {
+var _hoisted_156 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_145 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_157 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, "Accent", -1
 /* HOISTED */
 );
 
-var _hoisted_146 = {
+var _hoisted_158 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_147 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_159 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, "Text color", -1
 /* HOISTED */
 );
 
-var _hoisted_148 = {
+var _hoisted_160 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_149 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_161 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("color")], -1
 /* HOISTED */
 );
 
-var _hoisted_150 = {
+var _hoisted_162 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_151 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_163 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("medium")], -1
 /* HOISTED */
 );
 
-var _hoisted_152 = {
+var _hoisted_164 = {
   "class": "col-4 flex flex-column flex-center"
 };
 
-var _hoisted_153 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_165 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-sm text-center"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Background "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("dark")], -1
 /* HOISTED */
 );
 
-var _hoisted_154 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Buttons</p><div class=\"grid gap-sm\"><div class=\"col\"><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--primary\">Primary</a></div><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--secondary\">Secondary</a></div><div><a href=\"#\" class=\"btn btn--tertiary\">Tertiary</a></div></div><div class=\"col\"><a href=\"#\">Hyperlink</a></div></div></div>", 1);
+var _hoisted_166 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><p class=\"text-sm text-uppercase text-bold border-bottom padding-bottom-xs margin-bottom-md width-100%\">Buttons</p><div class=\"grid gap-sm\"><div class=\"col\"><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--primary\">Primary</a></div><div class=\"margin-bottom-sm\"><a href=\"#\" class=\"btn btn--secondary\">Secondary</a></div><div><a href=\"#\" class=\"btn btn--tertiary\">Tertiary</a></div></div><div class=\"col\"><a href=\"#\">Hyperlink</a></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Design variables "), $setup.store.design ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["DesignFonts"], {
@@ -24682,8 +24744,48 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "text"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text weight "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"siderail-menu__section\" style=\"width: 100%;\">\n                <p style=\"width: 260px; margin-right: 20px; font-size: 18px;\">Text weight</p>\n                <div v-if=\"store.variables.font_secondary.source === 'google-font'\" class=\"select\">\n                  <select v-model=\"store.variables.btn_text_weight\" name=\"heading\" id=\"heading\" class=\"select_input form-control width-100%\">\n                    <option \n                      v-for=\"weight in getGoogleFontByName(store.variables.font_secondary.name).variants\"\n                      :key=\"weight\" \n                      :value=\"weight\" \n                      :selected=\"store.variables.btn_text_weight === weight\"\n                    >\n                      {{ weight }}\n                    </option>\n                  </select>\n                  <svg class=\"select__icon\" aria-hidden=\"true\" viewBox=\"0 0 16 16\"><polyline points=\"1 5 8 12 15 5\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"/></svg>\n                </div>\n              </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text transform "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_122, [_hoisted_123, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_124, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_radius]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons y padding "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_122, [_hoisted_123, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", _hoisted_124, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_125, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_126, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     "onUpdate:modelValue": _cache[28] || (_cache[28] = function ($event) {
+      return $setup.store.variables.btn_padding_y = $event;
+    }),
+    "class": "slider__input",
+    type: "range",
+    name: "sliderValue",
+    min: "0.2",
+    max: "1",
+    step: "0.02"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_padding_y]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_127, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[29] || (_cache[29] = function ($event) {
+      return $setup.store.variables.btn_padding_y = $event;
+    }),
+    "class": "form-control text-sm text-center width-xl",
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_padding_y]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons x padding "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_128, [_hoisted_129, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("fieldset", _hoisted_130, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_131, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_132, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[30] || (_cache[30] = function ($event) {
+      return $setup.store.variables.btn_padding_x = $event;
+    }),
+    "class": "slider__input",
+    type: "range",
+    name: "sliderValue",
+    min: "0.5",
+    max: "2",
+    step: "0.02"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_padding_x]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_133, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "onUpdate:modelValue": _cache[31] || (_cache[31] = function ($event) {
+      return $setup.store.variables.btn_padding_x = $event;
+    }),
+    "class": "form-control text-sm text-center width-xl",
+    type: "text"
+  }, null, 512
+  /* NEED_PATCH */
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.store.variables.btn_padding_x]])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text transform "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_134, [_hoisted_135, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_136, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
+    "onUpdate:modelValue": _cache[32] || (_cache[32] = function ($event) {
       return $setup.store.variables.btn_text_transform = $event;
     }),
     name: "heading",
@@ -24696,55 +24798,55 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       selected: $setup.store.variables.btn_text_transform === transform
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(transform), 9
     /* TEXT, PROPS */
-    , _hoisted_125);
+    , _hoisted_137);
   }), 64
   /* STABLE_FRAGMENT */
   ))], 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_text_transform]]), _hoisted_126])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Mini style guide "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_127, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[29] || (_cache[29] = function ($event) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $setup.store.variables.btn_text_transform]]), _hoisted_138])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Mini style guide "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_139, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[33] || (_cache[33] = function ($event) {
       return $setup.toggleMenu('styleguide');
     }),
     type: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''])
-  }, _hoisted_129, 2
+  }, _hoisted_141, 2
   /* CLASS */
-  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_130, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-    onClick: _cache[30] || (_cache[30] = function ($event) {
+  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_142, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[34] || (_cache[34] = function ($event) {
       return $setup.togglePower();
     }),
     "class": "siderail-item__button"
-  }, _hoisted_132)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Styleguide "), $setup.activeMenu === 'styleguide' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_133, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_134, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_135, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_136, [_hoisted_137, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_138, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_139, [_hoisted_140, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_141, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_142, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  }, _hoisted_144)])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Styleguide "), $setup.activeMenu === 'styleguide' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_145, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_146, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Content "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_147, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_148, [_hoisted_149, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_150, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_151, [_hoisted_152, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_153, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_154, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_143]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_144, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_155]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_156, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_accent, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_145]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_146, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_157]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_158, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_contrast_higher, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_147]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_148, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_159]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_160, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_background, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_149]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_150, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_161]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_162, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full bg-contrast-medium border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary + '0D', ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_151]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_152, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  ), _hoisted_163]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_164, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "width-xxl height-xxl margin-bottom-xs radius-full border",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)("background: ".concat($setup.store.variables.color_primary, ";"))
   }, null, 4
   /* STYLE */
-  ), _hoisted_153])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), _hoisted_154])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+  ), _hoisted_165])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons "), _hoisted_166])])])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
 }
 
 /***/ }),
@@ -25036,7 +25138,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons text colors "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --btn-primary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_primary_text_color ? $props.variables.btn_primary_text_color : $props.variables.color_white) + "; --btn-secondary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_secondary_text_color ? $props.variables.btn_secondary_text_color : $props.variables.color_white) + "; --btn-tertiary-text-color: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_tertiary_text_color ? $props.variables.btn_tertiary_text_color : $props.variables.color_contrast_higher) + "; ", 1
       /* TEXT */
-      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons style "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --btn-radius: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_radius + 'em') + "; --btn-text-transform: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_text_transform) + "; } ", 1
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Buttons style "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" --btn-padding-y: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_padding_y + 'em') + "; --btn-padding-x: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_padding_x + 'em') + "; --btn-radius: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_radius + 'em') + "; --btn-text-transform: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.btn_text_transform) + "; } ", 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Theme 1 "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" [data-theme=\"bg-1\"] { --color-bg: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.variables.color_primary + '0D') + "; } ", 1
       /* TEXT */
@@ -25503,7 +25605,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue3_colorpicker_style_css__WEBPACK_IMPORTED_MODULE_1__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBody\n-------------------------------- */\nbody.design-plugin-enabled {\n  padding-right: 65px;\n}\n\n/* --------------------------------\nVue Colorpicker\n-------------------------------- */\n.vc-color-wrap {\n  margin: 0 !important;\n}\n\n/* --------------------------------\nPlugin styles\n-------------------------------- */\n.bloomcu-design {\n  /* --------------------------------\n  Resets\n  -------------------------------- */\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-size: 20px;\n  font-weight: normal;\n  color: #313135;\n  /* --------------------------------\n  Siderail\n  -------------------------------- */\n  /* --------------------------------\n  Input group\n  -------------------------------- */\n  /* --------------------------------\n  Select input\n  -------------------------------- */\n  /* --------------------------------\n  Slider input\n  -------------------------------- */\n}\n.bloomcu-design button, .bloomcu-design input, .bloomcu-design span {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-weight: normal;\n}\n.bloomcu-design h1, .bloomcu-design .h1, .bloomcu-design h2, .bloomcu-design .h2, .bloomcu-design h3, .bloomcu-design .h3, .bloomcu-design h4, .bloomcu-design .h4 {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-weight: normal;\n  color: #1c1c21;\n  line-height: 1.2;\n}\n.bloomcu-design h1, .bloomcu-design .h1 {\n  font-size: 41px;\n}\n.bloomcu-design h2, .bloomcu-design .h2 {\n  font-size: 34px;\n}\n.bloomcu-design h3, .bloomcu-design .h3 {\n  font-size: 28px;\n}\n.bloomcu-design h4, .bloomcu-design .h4 {\n  font-size: 24px;\n}\n.bloomcu-design .form-control {\n  background: #fff;\n}\n.bloomcu-design .card {\n  background-color: #fff;\n}\n.bloomcu-design .siderail {\n  position: fixed;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  width: 64px;\n  height: 100vh;\n  padding: 46px 12px 20px 12px;\n  border-left: 1px solid #eaeaeb;\n  background: #fff;\n}\n.bloomcu-design .siderail__top-menu {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  height: 40px;\n}\n.bloomcu-design .siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.bloomcu-design .siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.bloomcu-design .siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.bloomcu-design .siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: transform;\n  transition-duration: 0.15s;\n}\n.bloomcu-design .siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.bloomcu-design .siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.bloomcu-design .siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.bloomcu-design .siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.bloomcu-design .siderail-menu {\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin-right: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.bloomcu-design .siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n.bloomcu-design .input-group {\n  display: flex;\n}\n.bloomcu-design .input-group > * {\n  position: relative;\n}\n.bloomcu-design .input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.bloomcu-design .input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.bloomcu-design .input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.bloomcu-design .input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.bloomcu-design .input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.bloomcu-design .input-group > *:focus, .bloomcu-design .input-group *:focus-within {\n  z-index: 1;\n}\n.bloomcu-design .input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 18.5px;\n  background-color: #fff;\n  border-radius: 5px;\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: #68667f;\n}\n.bloomcu-design .input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.bloomcu-design .input-group__tag:last-child {\n  border-left-width: 0px;\n}\n.bloomcu-design .select {\n  position: relative;\n  width: 100%;\n}\n.bloomcu-design .select__icon {\n  width: 16px;\n  height: 16px;\n  pointer-events: none;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.bloomcu-design .slider {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.bloomcu-design .slider__range {\n  width: 100%;\n  --slider-fill-value: 0%;\n  --slider-empty-value: 100%;\n}\n.bloomcu-design .slider__input {\n  display: block;\n  -webkit-appearance: none;\n  width: 100%;\n  background: transparent;\n}\n.bloomcu-design .slider__input:focus {\n  outline: none;\n}\n.bloomcu-design .slider__input::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #9966ff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: -webkit-grab;\n  cursor: grab;\n  margin-top: -6px;\n}\n.bloomcu-design .slider__input:active::-webkit-slider-thumb {\n  cursor: -webkit-grabbing;\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input::-moz-range-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #9966ff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n}\n.bloomcu-design .slider__input:active::-moz-range-thumb {\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input:active::-ms-thumb {\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input:focus::-webkit-slider-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.bloomcu-design .slider__input:focus::-moz-range-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.bloomcu-design .slider__input::-webkit-slider-runnable-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  margin-top: 6px;\n}\n.bloomcu-design .slider__input::-moz-range-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n}\n.bloomcu-design .slider__input::-moz-focus-outer {\n  border: 0;\n}\n.bloomcu-design .slider__input::-ms-tooltip {\n  display: none;\n}\n.bloomcu-design .slider__input::-ms-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #fff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n  transform: translateY(0);\n  background-color: white !important;\n  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);\n  height: 20px;\n  width: 20px;\n}\n.bloomcu-design .slider__input:focus::-ms-thumb {\n  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);\n}\n.bloomcu-design .slider__input::-ms-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  background-color: hsl(240deg, 1%, 60%);\n  color: transparent;\n  height: 8px;\n}\n.bloomcu-design .slider__value {\n  display: flex;\n  align-items: center;\n}\n\n/* --------------------------------\nStyleguide\n-------------------------------- */\n.styleguide {\n  position: fixed;\n  top: 0;\n  right: 30px;\n  width: 100%;\n  height: 100%;\n  z-index: 90;\n}\n.styleguide__content {\n  background: var(--color-bg);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* --------------------------------\nBody\n-------------------------------- */\nbody.design-plugin-enabled {\n  padding-right: 65px;\n}\n\n/* --------------------------------\nVue Colorpicker\n-------------------------------- */\n.vc-colorpicker .vc-color-wrap {\n  margin: 0 !important;\n}\n.vc-colorpicker .vc-display {\n  display: none !important;\n}\n\n/* --------------------------------\nPlugin styles\n-------------------------------- */\n.bloomcu-design {\n  /* --------------------------------\n  Resets\n  -------------------------------- */\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-size: 20px;\n  font-weight: normal;\n  color: #313135;\n  /* --------------------------------\n  Siderail\n  -------------------------------- */\n  /* --------------------------------\n  Input group\n  -------------------------------- */\n  /* --------------------------------\n  Select input\n  -------------------------------- */\n  /* --------------------------------\n  Slider input\n  -------------------------------- */\n}\n.bloomcu-design button, .bloomcu-design input, .bloomcu-design span {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-weight: normal;\n}\n.bloomcu-design h1, .bloomcu-design .h1, .bloomcu-design h2, .bloomcu-design .h2, .bloomcu-design h3, .bloomcu-design .h3, .bloomcu-design h4, .bloomcu-design .h4 {\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\";\n  font-weight: normal;\n  color: #1c1c21;\n  line-height: 1.2;\n}\n.bloomcu-design h1, .bloomcu-design .h1 {\n  font-size: 41px;\n}\n.bloomcu-design h2, .bloomcu-design .h2 {\n  font-size: 34px;\n}\n.bloomcu-design h3, .bloomcu-design .h3 {\n  font-size: 28px;\n}\n.bloomcu-design h4, .bloomcu-design .h4 {\n  font-size: 24px;\n}\n.bloomcu-design .form-control {\n  background: #fff;\n}\n.bloomcu-design .card {\n  background-color: #fff;\n}\n.bloomcu-design .siderail {\n  position: fixed;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 100;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  width: 64px;\n  height: 100vh;\n  padding: 46px 12px 20px 12px;\n  border-left: 1px solid #eaeaeb;\n  background: #fff;\n}\n.bloomcu-design .siderail__top-menu {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  height: 40px;\n}\n.bloomcu-design .siderail-item {\n  display: inline-flex;\n  position: relative;\n  margin-bottom: 8px;\n}\n.bloomcu-design .siderail-item__button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  background: none;\n  cursor: pointer;\n}\n.bloomcu-design .siderail-item__button svg {\n  display: block;\n  stroke: #000;\n  z-index: 1;\n}\n.bloomcu-design .siderail-item__button:before {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  opacity: 0;\n  background-color: #9f9f9f;\n  border-radius: 5px;\n  transform: scale(0.75);\n  transition-property: transform;\n  transition-duration: 0.15s;\n}\n.bloomcu-design .siderail-item__button--active svg {\n  stroke: #712aff;\n}\n.bloomcu-design .siderail-item__button--active:before {\n  transform: scale(1);\n  opacity: 0.17;\n  background-color: #96f;\n}\n.bloomcu-design .siderail-item__button--active:hover:before {\n  opacity: 0.32 !important;\n}\n.bloomcu-design .siderail-item__button:hover:before {\n  transform: scale(1);\n  opacity: 0.17;\n}\n.bloomcu-design .siderail-menu {\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin-right: 60px;\n  border-radius: 7px;\n  background: #fff;\n  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\n  z-index: 100;\n}\n.bloomcu-design .siderail-menu__section {\n  display: flex;\n  align-items: center;\n  gap: 10px 10px;\n  width: -webkit-max-content;\n  width: -moz-max-content;\n  width: max-content;\n  padding: 20px;\n  border-bottom: 1px solid #e3e2e9;\n}\n.bloomcu-design .input-group {\n  display: flex;\n}\n.bloomcu-design .input-group > * {\n  position: relative;\n}\n.bloomcu-design .input-group > *:not(:last-child):not(:first-child) {\n  border-radius: 0;\n}\n.bloomcu-design .input-group > *:first-child {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.bloomcu-design .input-group > *:first-child .select__input {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.bloomcu-design .input-group > *:last-child {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.bloomcu-design .input-group > *:last-child .select__input {\n  border-top-left-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.bloomcu-design .input-group > *:focus, .bloomcu-design .input-group *:focus-within {\n  z-index: 1;\n}\n.bloomcu-design .input-group__tag {\n  display: flex;\n  align-items: center;\n  padding: 0 18.5px;\n  background-color: #fff;\n  border-radius: 5px;\n  border: 2px solid #e3e2e9;\n  white-space: nowrap;\n  color: #68667f;\n}\n.bloomcu-design .input-group__tag:first-child {\n  border-right-width: 0px;\n}\n.bloomcu-design .input-group__tag:last-child {\n  border-left-width: 0px;\n}\n.bloomcu-design .select {\n  position: relative;\n  width: 100%;\n}\n.bloomcu-design .select__icon {\n  width: 16px;\n  height: 16px;\n  pointer-events: none;\n  position: absolute;\n  right: 20px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.bloomcu-design .slider {\n  position: relative;\n  display: flex;\n  align-items: center;\n}\n.bloomcu-design .slider__range {\n  width: 100%;\n  --slider-fill-value: 0%;\n  --slider-empty-value: 100%;\n}\n.bloomcu-design .slider__input {\n  display: block;\n  -webkit-appearance: none;\n  width: 100%;\n  background: transparent;\n}\n.bloomcu-design .slider__input:focus {\n  outline: none;\n}\n.bloomcu-design .slider__input::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #9966ff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: -webkit-grab;\n  cursor: grab;\n  margin-top: -6px;\n}\n.bloomcu-design .slider__input:active::-webkit-slider-thumb {\n  cursor: -webkit-grabbing;\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input::-moz-range-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #9966ff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n}\n.bloomcu-design .slider__input:active::-moz-range-thumb {\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input:active::-ms-thumb {\n  cursor: grabbing;\n}\n.bloomcu-design .slider__input:focus::-webkit-slider-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.bloomcu-design .slider__input:focus::-moz-range-thumb {\n  box-shadow: var(--shadow-xs), var(--shadow-sm), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2), var(--shadow-md);\n}\n.bloomcu-design .slider__input::-webkit-slider-runnable-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  margin-top: 6px;\n}\n.bloomcu-design .slider__input::-moz-range-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n}\n.bloomcu-design .slider__input::-moz-focus-outer {\n  border: 0;\n}\n.bloomcu-design .slider__input::-ms-tooltip {\n  display: none;\n}\n.bloomcu-design .slider__input::-ms-thumb {\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  border: none;\n  background-color: #fff;\n  box-shadow: var(--shadow-xs), var(--shadow-sm);\n  cursor: grab;\n  transform: translateY(0);\n  background-color: white !important;\n  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.1);\n  height: 20px;\n  width: 20px;\n}\n.bloomcu-design .slider__input:focus::-ms-thumb {\n  box-shadow: inset 0 0 0 2px hsla(220deg, 90%, 56%, 0.2);\n}\n.bloomcu-design .slider__input::-ms-track {\n  height: 8px;\n  border-radius: 50em;\n  background-image: linear-gradient(to right, #9966ff var(--slider-fill-value), var(--color-contrast-low) var(--slider-fill-value), var(--color-contrast-low) var(--slider-empty-value));\n  background-color: hsl(240deg, 1%, 60%);\n  color: transparent;\n  height: 8px;\n}\n.bloomcu-design .slider__value {\n  display: flex;\n  align-items: center;\n}\n\n/* --------------------------------\nStyleguide\n-------------------------------- */\n.styleguide {\n  position: fixed;\n  top: 0;\n  right: 30px;\n  width: 100%;\n  height: 100%;\n  z-index: 90;\n}\n.styleguide__content {\n  background: var(--color-bg);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -25527,7 +25629,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\nh1, .h1, h2, .h2, h3, .h3, h4, .h4 {\n  font-family: var(--font-primary);\n  font-weight: var(--font-primary-weight);\n}\nbody {\n  font-family: var(--font-secondary);\n  font-weight: var(--font-secondary-weight);\n}\na {\n  color: var(--color-contrast-higher);\n}\na:hover {\n  text-decoration: none;\n}\n.btn--primary, .btn--secondary, .btn--tertiary {\n  border: 2px solid transparent;\n  font-family: var(--font-buttons);\n  font-weight: var(--font-buttons-weight);\n  text-transform: var(--btn-text-transform);\n}\n.btn--primary {\n  background: var(--color-primary);\n  color: var(--btn-primary-text-color);\n}\n.btn--primary:hover {\n  background: var(--color-primary-light);\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.btn--secondary:hover {\n  background-color: var(--color-accent-light);\n}\n.btn--tertiary {\n  background-color: var(--color-white);\n  color: var(--btn-tertiary-text-color);\n}\n.color-contrast-medium {\n  color: var(--color-contrast-medium);\n}\n.color-contrast-high {\n  color: var(--color-contrast-high);\n}\n.color-contrast-higher {\n  color: var(--color-contrast-higher);\n}\n[data-theme=bg-1] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] .btn--primary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .btn--primary:hover {\n  background-color: var(--color-contrast-higher);\n  opacity: 0.9;\n}\n[data-theme=bg-2] .btn--tertiary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .pre-title {\n  color: var(--color-primary);\n}\n[data-theme=bg-2] .text-component p {\n  color: var(--color-contrast-high);\n}\n\n/* --------------------------------\nOverride tertiary button in hero's\n-------------------------------- */\n.hero .btn--tertiary,\n.feature-v4 .btn--tertiary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.hero .btn--tertiary:hover,\n.feature-v4 .btn--tertiary:hover {\n  background-color: var(--color-accent-light);\n}\n\n/* --------------------------------\nFixes the button misalignment in boxed hero\n-------------------------------- */\n.hero--boxed .btn--primary {\n  margin-bottom: var(--gap-y, 0) !important;\n  margin-right: 0 !important;\n}\n\n/* --------------------------------\nHide the help icon\n-------------------------------- */\n.js-tour-help-trigger {\n  font-size: var(--text-sm);\n}\n.js-tour-help-trigger .icon {\n  display: none !important;\n}\n.js-tour-help-trigger .mega-nav__icon-label {\n  margin-left: 0 !important;\n}\n\n/* --------------------------------\nOverride testimonial quote svg color\n-------------------------------- */\nsection.full-width-blockquote .icon {\n  display: none;\n}\nsection.full-width-blockquote .text-component:before {\n  display: inline-flex;\n  content: \"\";\n  -webkit-mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") no-repeat 100% 100%;\n  mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") no-repeat 100% 100%;\n  background-color: var(--color-accent);\n  background-size: 50px 50px;\n  width: 60px;\n  height: 60px;\n}\nsection.full-width-blockquote .text-component p {\n  padding-top: 30px;\n}\n\n/* --------------------------------\nPatch in calculator styles from Child Theme\n-------------------------------- */\nsection.calculator {\n  padding: var(--space-xl) 0;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n@media (min-width: 64rem) {\nsection.calculator {\n    padding: var(--space-xxl) 0;\n}\n}\nsection.calculator h2, section.calculator h3, section.calculator p, section.calculator span, section.calculator label {\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator .results_ticker {\n  color: var(--color-primary) !important;\n}\nsection.calculator .calculator-section label {\n  font-size: unset !important;\n}\nsection.calculator > .container {\n  background-color: var(--color-white);\n  padding: var(--space-xl) var(--space-sm) var(--space-md);\n  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);\n}\n@media (min-width: 48rem) {\nsection.calculator > .container {\n    padding: var(--space-xl);\n}\n}\n@media (min-width: 64rem) {\nsection.calculator > .container {\n    padding: var(--space-xl) var(--space-xxl);\n}\n}\nsection.calculator .calculator .calculator-footer a {\n  width: 100%;\n}\nsection.calculator .calculator .calculator-footer a:hover {\n  background: var(--color-primary-light);\n}\n@media (min-width: 48rem) {\nsection.calculator .calculator .calculator-footer a {\n    width: 50%;\n}\n}\nsection.calculator .button-group__button label {\n  border: 2px solid var(--color-primary) !important;\n  color: var(--color-primary) !important;\n}\nsection.calculator .button-group__button label:hover {\n  background: var(--color-primary) !important;\n}\nsection.calculator .button-group__button input:checked + label {\n  background: var(--color-primary) !important;\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator .button-group__button input:hover ~ label {\n  background: var(--color-primary) !important;\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator .button-group__button input:focus ~ label:after {\n  border: none;\n}\nsection.calculator .calculator-section .slider-group-min,\nsection.calculator .calculator-section .slider-group-max {\n  display: none;\n}\n.calculator-layout-wide .calculator-body {\n  grid-row-start: 1 !important;\n  grid-row-end: 3 !important;\n}\n.calculator-layout-wide .calculator-header {\n  grid-row-start: 1 !important;\n  height: auto !important;\n}\n.calculator-layout-wide .calculator-footer {\n  grid-row-start: 2 !important;\n  height: auto !important;\n}\n.calculator .calc-input {\n  width: 100%;\n  margin-top: 0 !important;\n  padding: 12px 14px !important;\n  border-radius: 3px;\n}\n.calculator .calculator-section .select-group select {\n  border: 1px solid var(--color-contrast-low) !important;\n  color: var(--color-primary) !important;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url(\"data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e\");\n  background-repeat: no-repeat;\n  background-position: right 1rem center;\n  background-size: 1em;\n}\n.modal .calculator-section .input-group,\n.calculator .calculator-section .input-group {\n  border-bottom: none;\n  border: 1px solid var(--color-contrast-low) !important;\n  border-radius: 3px;\n  color: var(--color-primary);\n  display: flex;\n}\n.modal .calculator-section .input-group {\n  max-width: -webkit-fit-content;\n  max-width: -moz-fit-content;\n  max-width: fit-content;\n}\n.modal .calculator-section .input-group .pre,\n.calculator .calculator-section .input-group .pre {\n  border-right: 1px solid var(--color-contrast-low);\n  height: 100%;\n  line-height: var(--space-lg);\n  padding: 0 15px !important;\n  color: var(--color-primary) !important;\n}\n.modal .calculator-section .input-group input,\n.calculator .calculator-section .input-group input {\n  color: var(--color-primary) !important;\n  border: none;\n  line-height: var(--space-lg);\n  padding: 0 10px !important;\n}\n.calculator .calculator-section label,\n.calculator .calculator-section span {\n  font-weight: 400;\n  margin-bottom: var(--space-sm);\n  display: block;\n}\n.calc_main_input_desc {\n  display: flex;\n}\n.calculator .calculator-header h3,\n.calculator .calculator-header .caculator-header__title {\n  color: var(--color-primary);\n  margin-bottom: var(--space-md);\n}\n.calculator.calculator-retirement-savings .calculator-header h3 {\n  margin-bottom: var(--space-xs);\n}\n.calculator.calculator-retirement-savings .output-result-savings {\n  margin-bottom: var(--space-sm);\n}\n.calculator .calculator-header .output-result {\n  font-size: var(--text-xxl) !important;\n  font-weight: bold !important;\n  color: var(--color-primary) !important;\n}\n@media (min-width: 48rem) {\n.calculator .calculator-header .output-result {\n    font-size: var(--text-xxxl) !important;\n}\n}\n@media (min-width: 64rem) {\n.calculator .calculator-header .output-result {\n    font-size: var(--text-xxxxl) !important;\n}\n}\n.calculator-saving-compounding .calculator-body .calculator-section:nth-child(4),\n.calculator-investment .calculator-body .calculator-section:nth-child(4),\n.calculator-mortgage-payment .calculator-body .calculator-section:nth-child(3),\n.calculator-retirement-savings .calculator-body .calculator-section:nth-child(3) {\n  clear: both;\n}\nsection.calculator[data-theme=bg-2] h2, section.calculator[data-theme=bg-2] h3, section.calculator[data-theme=bg-2] p, section.calculator[data-theme=bg-2] span, section.calculator[data-theme=bg-2] label, section.calculator[data-theme=bg-2] legend {\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator[data-theme=bg-2] .results_ticker {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .input-group .pre,\nsection.calculator[data-theme=bg-2] .input-group input,\nsection.calculator[data-theme=bg-2] .select-group select {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .calculator-header div.output-result {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button {\n  background: var(--color-bg);\n  color: var(--color-contrast-higher);\n}\nsection.calculator[data-theme=bg-2] .button:hover {\n  background: var(--color-primary-light);\n}\nsection.calculator[data-theme=bg-2] .button-group__button label {\n  border: 2px solid var(--color-bg) !important;\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button label:hover {\n  background: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:checked + label {\n  background: var(--color-bg) !important;\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:hover ~ label {\n  background: var(--color-bg) !important;\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:focus ~ label:after {\n  border: none;\n}\nsection.calculator[data-theme=bg-2] .calculator-section .slider-group input[type=range]::-webkit-slider-thumb {\n  background-color: var(--color-bg) !important;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@charset \"UTF-8\";\n/* --------------------------------\nBase Theme Overrides\n-------------------------------- */\nh1, .h1, h2, .h2, h3, .h3, h4, .h4 {\n  font-family: var(--font-primary);\n  font-weight: var(--font-primary-weight);\n}\nbody {\n  font-family: var(--font-secondary);\n  font-weight: var(--font-secondary-weight);\n}\na {\n  color: var(--color-contrast-higher);\n}\na:hover {\n  text-decoration: none;\n}\n.btn--primary,\n.btn--secondary,\n.btn--tertiary,\n.button {\n  border: 2px solid transparent;\n  font-family: var(--font-buttons);\n  font-weight: var(--font-buttons-weight);\n  text-transform: var(--btn-text-transform);\n}\n.btn--primary {\n  background: var(--color-primary);\n  color: var(--btn-primary-text-color);\n}\n.btn--primary:hover {\n  background: var(--color-primary-light);\n}\n.btn--secondary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.btn--secondary:hover {\n  background-color: var(--color-accent-light);\n}\n.btn--tertiary {\n  background-color: var(--color-white);\n  color: var(--btn-tertiary-text-color);\n}\n.color-contrast-medium {\n  color: var(--color-contrast-medium);\n}\n.color-contrast-high {\n  color: var(--color-contrast-high);\n}\n.color-contrast-higher {\n  color: var(--color-contrast-higher);\n}\n[data-theme=bg-1] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] {\n  background-color: var(--color-bg);\n}\n[data-theme=bg-2] .btn--primary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .btn--primary:hover {\n  background-color: var(--color-contrast-higher);\n  opacity: 0.9;\n}\n[data-theme=bg-2] .btn--tertiary {\n  color: var(--color-contrast-lower);\n}\n[data-theme=bg-2] .pre-title {\n  color: var(--color-primary);\n}\n[data-theme=bg-2] .text-component p {\n  color: var(--color-contrast-high);\n}\n\n/* --------------------------------\nOverride tertiary button in hero's\n-------------------------------- */\n.hero .btn--tertiary,\n.feature-v4 .btn--tertiary {\n  background-color: var(--color-accent);\n  color: var(--btn-secondary-text-color);\n}\n.hero .btn--tertiary:hover,\n.feature-v4 .btn--tertiary:hover {\n  background-color: var(--color-accent-light);\n}\n\n/* --------------------------------\nFixes the button misalignment in boxed hero\n-------------------------------- */\n.hero--boxed .btn--primary {\n  margin-bottom: var(--gap-y, 0) !important;\n  margin-right: 0 !important;\n}\n\n/* --------------------------------\nHide the help icon\n-------------------------------- */\n.js-tour-help-trigger {\n  font-size: var(--text-sm);\n}\n.js-tour-help-trigger .icon {\n  display: none !important;\n}\n.js-tour-help-trigger .mega-nav__icon-label {\n  margin-left: 0 !important;\n}\n\n/* --------------------------------\nOverride testimonial quote svg color\n-------------------------------- */\nsection.full-width-blockquote .icon {\n  display: none;\n}\nsection.full-width-blockquote .text-component:before {\n  display: inline-flex;\n  content: \"\";\n  -webkit-mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") no-repeat 100% 100%;\n  mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 27'%3E%3Cg%3E%3Cg id='Style-Guide' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Specs---Icons' transform='translate(-933 -731)' fill='%2382BC00' fill-rule='nonzero'%3E%3Cpath d='M964.221 758v-12.926h-5.84c0-2.042.495-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968zm-19.053 0v-12.926h-5.84c0-2.042.494-3.797 1.484-5.265.99-1.469 2.441-2.554 4.356-3.256V731c-1.66.51-3.207 1.18-4.643 2.01a15.9 15.9 0 0 0-3.782 3.017 13.807 13.807 0 0 0-2.585 4.069c-.639 1.532-.958 3.191-.958 4.978V758h11.968z' id='“'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E\") no-repeat 100% 100%;\n  background-color: var(--color-accent);\n  background-size: 50px 50px;\n  width: 60px;\n  height: 60px;\n}\nsection.full-width-blockquote .text-component p {\n  padding-top: 30px;\n}\n\n/* --------------------------------\nPatch in calculator styles from Child Theme\n-------------------------------- */\nsection.calculator {\n  padding: var(--space-xl) 0;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n}\n@media (min-width: 64rem) {\nsection.calculator {\n    padding: var(--space-xxl) 0;\n}\n}\nsection.calculator h2, section.calculator h3, section.calculator p, section.calculator span, section.calculator label {\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator .results_ticker {\n  color: var(--color-primary) !important;\n}\nsection.calculator .calculator-section label {\n  font-size: unset !important;\n}\nsection.calculator > .container {\n  background-color: var(--color-white);\n  padding: var(--space-xl) var(--space-sm) var(--space-md);\n  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);\n}\n@media (min-width: 48rem) {\nsection.calculator > .container {\n    padding: var(--space-xl);\n}\n}\n@media (min-width: 64rem) {\nsection.calculator > .container {\n    padding: var(--space-xl) var(--space-xxl);\n}\n}\nsection.calculator .calculator .calculator-footer a {\n  width: 100%;\n}\nsection.calculator .calculator .calculator-footer a:hover {\n  background: var(--color-primary-light);\n}\n@media (min-width: 48rem) {\nsection.calculator .calculator .calculator-footer a {\n    width: 50%;\n}\n}\nsection.calculator .button-group__button label {\n  border: 2px solid var(--color-primary) !important;\n  color: var(--color-primary) !important;\n}\nsection.calculator .button-group__button label:hover {\n  background: var(--color-primary) !important;\n}\nsection.calculator .button-group__button input:checked + label {\n  background: var(--color-primary) !important;\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator .button-group__button input:hover ~ label {\n  background: var(--color-primary) !important;\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator .button-group__button input:focus ~ label:after {\n  border: none;\n}\nsection.calculator .calculator-section .slider-group-min,\nsection.calculator .calculator-section .slider-group-max {\n  display: none;\n}\n.calculator-layout-wide .calculator-body {\n  grid-row-start: 1 !important;\n  grid-row-end: 3 !important;\n}\n.calculator-layout-wide .calculator-header {\n  grid-row-start: 1 !important;\n  height: auto !important;\n}\n.calculator-layout-wide .calculator-footer {\n  grid-row-start: 2 !important;\n  height: auto !important;\n}\n.calculator .calc-input {\n  width: 100%;\n  margin-top: 0 !important;\n  padding: 12px 14px !important;\n  border-radius: 3px;\n}\n.calculator .calculator-section .select-group select {\n  border: 1px solid var(--color-contrast-low) !important;\n  color: var(--color-primary) !important;\n  -webkit-appearance: none;\n     -moz-appearance: none;\n          appearance: none;\n  background-image: url(\"data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e\");\n  background-repeat: no-repeat;\n  background-position: right 1rem center;\n  background-size: 1em;\n}\n.modal .calculator-section .input-group,\n.calculator .calculator-section .input-group {\n  border-bottom: none;\n  border: 1px solid var(--color-contrast-low) !important;\n  border-radius: 3px;\n  color: var(--color-primary);\n  display: flex;\n}\n.modal .calculator-section .input-group {\n  max-width: -webkit-fit-content;\n  max-width: -moz-fit-content;\n  max-width: fit-content;\n}\n.modal .calculator-section .input-group .pre,\n.calculator .calculator-section .input-group .pre {\n  border-right: 1px solid var(--color-contrast-low);\n  height: 100%;\n  line-height: var(--space-lg);\n  padding: 0 15px !important;\n  color: var(--color-primary) !important;\n}\n.modal .calculator-section .input-group input,\n.calculator .calculator-section .input-group input {\n  color: var(--color-primary) !important;\n  border: none;\n  line-height: var(--space-lg);\n  padding: 0 10px !important;\n}\n.calculator .calculator-section label,\n.calculator .calculator-section span {\n  font-weight: 400;\n  margin-bottom: var(--space-sm);\n  display: block;\n}\n.calc_main_input_desc {\n  display: flex;\n}\n.calculator .calculator-header h3,\n.calculator .calculator-header .caculator-header__title {\n  color: var(--color-primary);\n  margin-bottom: var(--space-md);\n}\n.calculator.calculator-retirement-savings .calculator-header h3 {\n  margin-bottom: var(--space-xs);\n}\n.calculator.calculator-retirement-savings .output-result-savings {\n  margin-bottom: var(--space-sm);\n}\n.calculator .calculator-header .output-result {\n  font-size: var(--text-xxl) !important;\n  font-weight: bold !important;\n  color: var(--color-primary) !important;\n}\n@media (min-width: 48rem) {\n.calculator .calculator-header .output-result {\n    font-size: var(--text-xxxl) !important;\n}\n}\n@media (min-width: 64rem) {\n.calculator .calculator-header .output-result {\n    font-size: var(--text-xxxxl) !important;\n}\n}\n.calculator-saving-compounding .calculator-body .calculator-section:nth-child(4),\n.calculator-investment .calculator-body .calculator-section:nth-child(4),\n.calculator-mortgage-payment .calculator-body .calculator-section:nth-child(3),\n.calculator-retirement-savings .calculator-body .calculator-section:nth-child(3) {\n  clear: both;\n}\nsection.calculator[data-theme=bg-2] h2, section.calculator[data-theme=bg-2] h3, section.calculator[data-theme=bg-2] p, section.calculator[data-theme=bg-2] span, section.calculator[data-theme=bg-2] label, section.calculator[data-theme=bg-2] legend {\n  color: var(--color-contrast-lower) !important;\n}\nsection.calculator[data-theme=bg-2] .results_ticker {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .input-group .pre,\nsection.calculator[data-theme=bg-2] .input-group input,\nsection.calculator[data-theme=bg-2] .select-group select {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .calculator-header div.output-result {\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button {\n  background: var(--color-bg);\n  color: var(--color-contrast-higher);\n}\nsection.calculator[data-theme=bg-2] .button:hover {\n  background: var(--color-primary-light);\n}\nsection.calculator[data-theme=bg-2] .button-group__button label {\n  border: 2px solid var(--color-bg) !important;\n  color: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button label:hover {\n  background: var(--color-bg) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:checked + label {\n  background: var(--color-bg) !important;\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:hover ~ label {\n  background: var(--color-bg) !important;\n  color: var(--color-contrast-higher) !important;\n}\nsection.calculator[data-theme=bg-2] .button-group__button input:focus ~ label:after {\n  border: none;\n}\nsection.calculator[data-theme=bg-2] .calculator-section .slider-group input[type=range]::-webkit-slider-thumb {\n  background-color: var(--color-bg) !important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

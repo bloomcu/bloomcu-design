@@ -448,23 +448,35 @@
                 </fieldset>
               </div>
               
-              <!-- Buttons text weight -->
-              <!-- <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Text weight</p>
-                <div v-if="store.variables.font_secondary.source === 'google-font'" class="select">
-                  <select v-model="store.variables.btn_text_weight" name="heading" id="heading" class="select_input form-control width-100%">
-                    <option 
-                      v-for="weight in getGoogleFontByName(store.variables.font_secondary.name).variants"
-                      :key="weight" 
-                      :value="weight" 
-                      :selected="store.variables.btn_text_weight === weight"
-                    >
-                      {{ weight }}
-                    </option>
-                  </select>
-                  <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
-                </div>
-              </div> -->
+              <!-- Buttons y padding -->
+              <div class="siderail-menu__section" style="width: 100%;">
+                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Vertical padding</p>
+                <fieldset style="width: 100%;">
+                  <div class="slider slider--input gap-sm">
+                    <div class="slider__range">
+                      <input v-model="store.variables.btn_padding_y" class="slider__input" type="range" name="sliderValue" min="0.2" max="1" step="0.02">
+                    </div>
+                    <div class="slider__value">
+                      <input v-model="store.variables.btn_padding_y" class="form-control text-sm text-center width-xl" type="text">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              
+              <!-- Buttons x padding -->
+              <div class="siderail-menu__section" style="width: 100%;">
+                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Horizontal padding</p>
+                <fieldset style="width: 100%;">
+                  <div class="slider slider--input gap-sm">
+                    <div class="slider__range">
+                      <input v-model="store.variables.btn_padding_x" class="slider__input" type="range" name="sliderValue" min="0.5" max="2" step="0.02">
+                    </div>
+                    <div class="slider__value">
+                      <input v-model="store.variables.btn_padding_x" class="form-control text-sm text-center width-xl" type="text">
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
               
               <!-- Buttons text transform -->
               <div class="siderail-menu__section" style="width: 100%;">
@@ -718,8 +730,14 @@ body.design-plugin-enabled {
 /* --------------------------------
 Vue Colorpicker
 -------------------------------- */
-.vc-color-wrap {
-  margin: 0 !important;
+.vc-colorpicker {
+  .vc-color-wrap {
+    margin: 0 !important;
+  }
+
+  .vc-display {
+    display: none !important;
+  }  
 }
 
 /* --------------------------------
