@@ -117,6 +117,7 @@ a {
   font-family: var(--font-buttons);
   font-weight: var(--font-buttons-weight);
   text-transform: var(--btn-text-transform);
+  padding: var(--btn-padding-y) var(--btn-padding-x);
 }
 
 .btn--primary {
@@ -268,6 +269,10 @@ section.calculator {
   
   h2, h3, p, span, label {
     color: var(--color-contrast-higher) !important;
+  }
+  
+  .button {
+    width: fit-content !important;
   }
   
   .results_ticker {
