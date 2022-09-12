@@ -32,6 +32,14 @@
         
         <!-- Bottom menu -->
         <div class="siderail__bottom-menu">
+          <!-- <button @click="toggleEdit()" class="siderail-item__button">
+            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
+          </button>
+          
+          <button @click="toggleView()" class="siderail-item__button">
+            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
+          </button> -->
+          
           <button @click="togglePower()" class="siderail-item__button">
             <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
           </button>
@@ -499,6 +507,14 @@
         
         <!-- Bottom menu -->
         <div class="siderail__bottom-menu">
+          <!-- <button @click="toggleEdit()" class="siderail-item__button">
+            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
+          </button>
+          
+          <button @click="toggleView()" class="siderail-item__button">
+            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
+          </button> -->
+          
           <button @click="togglePower()" class="siderail-item__button">
             <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
           </button>
@@ -679,9 +695,22 @@ const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
 }
 
+const toggleEdit = () => {
+  document.cookie = 'design_plugin_mode=edit; path=/;'
+  let path = window.location.href.split('?')[0]
+  window.location = path
+}
+
+const toggleView = () => {
+  document.cookie = 'design_plugin_mode=view; path=/;'
+  let path = window.location.href.split('?')[0]
+  window.location = path
+}
+
 const togglePower = () => {
   document.cookie = 'design_plugin_disabled=true; path=/;'
-  location.reload()
+  let path = window.location.href.split('?')[0]
+  window.location = path
 }
 
 const saveDesign = debounce(() => {

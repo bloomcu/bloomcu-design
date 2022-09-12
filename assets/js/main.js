@@ -23013,9 +23013,22 @@ __webpack_require__.r(__webpack_exports__);
       activeMenu.value = activeMenu.value === menu ? '' : menu;
     };
 
+    var toggleEdit = function toggleEdit() {
+      document.cookie = 'design_plugin_mode=edit; path=/;';
+      var path = window.location.href.split('?')[0];
+      window.location = path;
+    };
+
+    var toggleView = function toggleView() {
+      document.cookie = 'design_plugin_mode=view; path=/;';
+      var path = window.location.href.split('?')[0];
+      window.location = path;
+    };
+
     var togglePower = function togglePower() {
       document.cookie = 'design_plugin_disabled=true; path=/;';
-      location.reload();
+      var path = window.location.href.split('?')[0];
+      window.location = path;
     };
 
     var saveDesign = (0,_composables_useDebounce__WEBPACK_IMPORTED_MODULE_1__.debounce)(function () {
@@ -23044,6 +23057,8 @@ __webpack_require__.r(__webpack_exports__);
       onSelectSecondaryFont: onSelectSecondaryFont,
       onSelectButtonsFont: onSelectButtonsFont,
       toggleMenu: toggleMenu,
+      toggleEdit: toggleEdit,
+      toggleView: toggleView,
       togglePower: togglePower,
       saveDesign: saveDesign,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
@@ -24285,7 +24300,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''])
   }, _hoisted_10, 2
   /* CLASS */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button @click=\"toggleEdit()\" class=\"siderail-item__button\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line data-cap=\"butt\" x1=\"14.328\" y1=\"4.672\" x2=\"19.328\" y2=\"9.672\"></line> <path d=\"M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z\"></path></g></svg>\n          </button>\n          \n          <button @click=\"toggleView()\" class=\"siderail-item__button\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><path d=\"M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z\"></path><circle cx=\"12\" cy=\"12\" r=\"4\"></circle></g></svg>\n          </button> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $setup.togglePower();
     }),
@@ -24709,7 +24724,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["siderail-item__button", $setup.activeMenu === 'styleguide' ? 'siderail-item__button--active' : ''])
   }, _hoisted_129, 2
   /* CLASS */
-  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_130, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  )])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Bottom menu "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_130, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <button @click=\"toggleEdit()\" class=\"siderail-item__button\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><line data-cap=\"butt\" x1=\"14.328\" y1=\"4.672\" x2=\"19.328\" y2=\"9.672\"></line> <path d=\"M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z\"></path></g></svg>\n          </button>\n          \n          <button @click=\"toggleView()\" class=\"siderail-item__button\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><g stroke-linecap=\"round\" stroke-width=\"1.5\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\"><path d=\"M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z\"></path><circle cx=\"12\" cy=\"12\" r=\"4\"></circle></g></svg>\n          </button> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[30] || (_cache[30] = function ($event) {
       return $setup.togglePower();
     }),

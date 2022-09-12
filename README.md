@@ -4,7 +4,7 @@ Design made easier. Made by BloomCU.
 
 ## Changelog
 
-**1.0.0**
+**1.1.0**
 *Release Date – Sept 8, 2022*
 * Stable version in production
 

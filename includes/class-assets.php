@@ -7,22 +7,54 @@ namespace Design;
 class Assets {
 
 	public function __construct() {
-		if (!isset($_COOKIE['design_plugin_disabled'])) {
+		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
+		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
+		
+		if (isset($_GET['design']) && isset($_GET['mode'])) {
+			// $disabled = false;
 			$design = isset($_GET['design']) ? $_GET['design'] : null;
 			$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
 			
-			if (!$design) { 
-				return; 
-			}
-			
-			if ($mode === 'edit' && !is_user_logged_in()) {
-				$this->redirect_to_login();
-			}
-			
-			if ($mode === 'view' || $mode === 'edit') {
-				$this->init();
-			}	
+			// Update cookies
+			setcookie('design_plugin_disabled', '', 'Thu, 01 Jan 1970 00:00:00 UTC', '/'); // Destroy cookie
+			setcookie('design_plugin_design', $design, time() + (86400 * 30), '/'); // 86400 = 1 day
+			setcookie('design_plugin_mode', $mode, time() + (86400 * 30), '/');
 		}
+		
+		if (!$disabled) {
+			// return;
+			
+			if ($mode === 'edit') {
+				if (!is_user_logged_in() && $GLOBALS['pagenow'] !== 'wp-login.php') {
+					$this->redirect_to_login();
+				}
+				
+				$this->init();
+			}
+			
+			if ($mode === 'view') {
+				$this->init();
+			}
+		}
+		
+		// return;
+		
+		// if (!isset($_COOKIE['design_plugin_disabled'])) {
+		// 	$design = isset($_GET['design']) ? $_GET['design'] : null;
+		// 	$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		// 
+		// 	if (!$design) { 
+		// 		return; 
+		// 	}
+		// 
+		// 	if ($mode === 'edit' && !is_user_logged_in()) {
+		// 		$this->redirect_to_login();
+		// 	}
+		// 
+		// 	if ($mode === 'view' || $mode === 'edit') {
+		// 		$this->init();
+		// 	}	
 	}
 	
 	/**
