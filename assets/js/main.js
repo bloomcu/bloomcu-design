@@ -24806,12 +24806,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     name: "heading",
     id: "heading",
     "class": "select_input form-control width-100%"
-  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(['none', 'uppercase'], function (transform) {
+  }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)([{
+    label: 'None',
+    value: 'none'
+  }, {
+    label: 'Uppercase',
+    value: 'uppercase'
+  }], function (transform) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("option", {
-      key: transform,
-      value: transform,
-      selected: $setup.store.variables.btn_text_transform === transform
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(transform), 9
+      key: transform.value,
+      value: transform.value,
+      selected: $setup.store.variables.btn_text_transform === transform.value
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(transform.label), 9
     /* TEXT, PROPS */
     , _hoisted_137);
   }), 64

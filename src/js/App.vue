@@ -443,7 +443,7 @@
 
               <!-- Buttons radius -->
               <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;" >Radius</p>
+                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Radius</p>
                 <fieldset style="width: 100%;">
                   <div class="slider slider--input gap-sm">
                     <div class="slider__range">
@@ -492,12 +492,15 @@
                 <div class="select">
                   <select v-model="store.variables.btn_text_transform" name="heading" id="heading" class="select_input form-control width-100%">
                     <option 
-                      v-for="transform in ['none', 'uppercase']" 
-                      :key="transform" 
-                      :value="transform" 
-                      :selected="store.variables.btn_text_transform === transform"
+                      v-for="transform in [
+                        {label: 'None', value: 'none'},
+                        {label: 'Uppercase', value: 'uppercase'}
+                      ]" 
+                      :key="transform.value" 
+                      :value="transform.value" 
+                      :selected="store.variables.btn_text_transform === transform.value"
                     >
-                      {{ transform }}
+                      {{ transform.label }}
                     </option>
                   </select>
                   <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
