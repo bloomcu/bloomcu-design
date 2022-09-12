@@ -107,7 +107,10 @@ a {
   }
 }
 
-.btn--primary, .btn--secondary, .btn--tertiary {
+.btn--primary, 
+.btn--secondary, 
+.btn--tertiary,
+.button {
   border: 2px solid transparent;
   font-family: var(--font-buttons);
   font-weight: var(--font-buttons-weight);
@@ -263,6 +266,10 @@ section.calculator {
   
   h2, h3, p, span, label {
     color: var(--color-contrast-higher) !important;
+  }
+  
+  .button {
+    width: fit-content !important;
   }
   
   .results_ticker {
@@ -459,7 +466,7 @@ section.calculator[data-theme="bg-2"] {
   .button {
     background: var(--color-bg);
     color: var(--color-contrast-higher);
-
+    
     &:hover {
       background: var(--color-primary-light);
     }
