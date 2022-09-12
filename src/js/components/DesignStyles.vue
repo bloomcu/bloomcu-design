@@ -469,7 +469,7 @@ section.calculator[data-theme="bg-2"] {
   .button {
     background: var(--color-bg);
     color: var(--color-contrast-higher);
-
+    
     &:hover {
       background: var(--color-primary-light);
     }

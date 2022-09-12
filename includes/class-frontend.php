@@ -20,17 +20,31 @@ class Frontend {
 	 * @return string
 	 */
 	public function render_frontend($atts) {
-		$design = isset($_GET['design']) ? $_GET['design'] : null;
-		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
+		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
 		
-		if ($design && $mode) {
-			echo '
-				<div
-					id="app"
-					data-design="'.$design.'"
-					data-mode="'.$mode.'"
-				></div>
-			';
+		// echo 'Design: ' . $design;
+		// echo 'Mode: ' . $mode;
+		
+		if (isset($_GET['design']) && isset($_GET['mode'])) {
+			// $disabled = false;
+			$design = isset($_GET['design']) ? $_GET['design'] : null;
+			$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		}
+		
+		if (!$disabled) {
+			// return;
+			
+			if ($design && $mode) {
+				echo '
+					<div
+						id="app"
+						data-design="' . $design . '"
+						data-mode="' . $mode . '"
+					></div>
+				';
+			}
 		}
 	}
 	
@@ -40,12 +54,23 @@ class Frontend {
 	 * @return array
 	 */
 	public function add_body_class($classes = []) {
-		$design = isset($_GET['design']) ? $_GET['design'] : null;
-		$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
+		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
 		
-		if ($design && $mode === 'edit') {
-			$classes[] = 'design-plugin-enabled';
-	    return $classes;
+		if (isset($_GET['design']) && isset($_GET['mode'])) {
+			// $disabled = false;
+			$design = isset($_GET['design']) ? $_GET['design'] : null;
+			$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+		}
+		
+		if (!$disabled) {
+			// return;
+			
+			if ($design && $mode) {
+				$classes[] = 'design-plugin-enabled';
+		    return $classes;
+			}
 		}
 		
 		return $classes;
@@ -57,20 +82,25 @@ class Frontend {
 	 * @return void
 	 */
 	public function admin_bar_menu($admin_bar) {
-		if (isset($_COOKIE['design_plugin_disabled'])) {
-			// Enable design
+		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		
+		// if (isset($_GET['design']) && isset($_GET['mode'])) {
+		// 	$disabled = false;
+		// }
+		
+		if ($disabled) {
+			// Toggle on
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
 				'title' => '<span class="ab-icon dashicons dashicons-visibility" style="top: 2px;"></span>' . 'Enable Style Designer',
 				'href'  => '#',
 				'meta'  => array(
 					'onclick' => 'document.cookie = "design_plugin_disabled=; path=/; expires= Thu, 01 Jan 1970 00:00:00 UTC", location.reload();',
-					// 'onclick' => '$.removeCookie("design_plugin_disabled");'
 				),
 			));	
 			
 		} else {
-			// Disable design
+			// Toggle off
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
 				'title' => '<span class="ab-icon dashicons dashicons-hidden" style="top: 2px;"></span>' . 'Disable Style Designer',
@@ -79,7 +109,6 @@ class Frontend {
 					'onclick' => 'document.cookie = "design_plugin_disabled=true; path=/;", location.reload();',
 				),
 			));	
-			
 		}
 	}
 }
