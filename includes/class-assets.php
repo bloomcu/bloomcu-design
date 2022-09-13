@@ -33,9 +33,9 @@ class Assets {
 				$this->init();
 			}
 			
-			if ($mode === 'view') {
+			// if ($mode === 'view') {
 				$this->init();
-			}
+			// }
 		}
 		
 		// return;

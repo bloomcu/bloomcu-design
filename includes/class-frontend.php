@@ -36,7 +36,7 @@ class Frontend {
 		if (!$disabled) {
 			// return;
 			
-			if ($design && $mode) {
+			// if ($design && $mode) {
 				echo '
 					<div
 						id="app"
@@ -44,7 +44,7 @@ class Frontend {
 						data-mode="' . $mode . '"
 					></div>
 				';
-			}
+			// }
 		}
 	}
 	
