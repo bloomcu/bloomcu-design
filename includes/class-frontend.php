@@ -55,6 +55,7 @@ class Frontend {
 	 */
 	public function add_body_class($classes = []) {
 		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$collapsed = isset($_COOKIE['design_plugin_sidebar_collapsed']);
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
 		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
 		
@@ -64,13 +65,11 @@ class Frontend {
 			$mode = isset($_GET['mode']) ? $_GET['mode'] : null;
 		}
 		
-		if (!$disabled) {
+		if (!$disabled && !$collapsed) {
 			// return;
 			
-			if ($design && $mode) {
-				$classes[] = 'design-plugin-enabled';
-		    return $classes;
-			}
+			$classes[] = 'design-plugin-enabled';
+			return $classes;
 		}
 		
 		return $classes;

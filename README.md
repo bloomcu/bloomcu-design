@@ -4,6 +4,10 @@ Design made easier. Made by BloomCU.
 
 ## Changelog
 
+**1.2.0**
+*Release Date – Sept 12, 2022*
+* Add sidebar toggle
+
 **1.1.1**
 *Release Date – Sept 8, 2022*
 * Stable version in production

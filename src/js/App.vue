@@ -8,7 +8,7 @@
       </div>
       
       <!-- Siderail: Viewer -->
-      <div v-if="mode === 'view'" class="siderail">
+      <div v-if="mode === 'view' && !sidebarCollapsed" class="siderail">
         <!-- Top menu -->
         <div class="siderail__top-menu">
           <IconLoading v-if="store.loading"/>
@@ -32,22 +32,34 @@
         
         <!-- Bottom menu -->
         <div class="siderail__bottom-menu">
-          <!-- <button @click="toggleEdit()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
-          </button>
+          <!-- <div class="siderail-item">
+            <button @click="toggleEdit()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
+            </button>
+          </div> -->
           
-          <button @click="toggleView()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
-          </button> -->
+          <!-- <div class="siderail-item">
+            <button @click="toggleView()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
+            </button>
+          </div> -->
           
-          <button @click="togglePower()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
-          </button>
+          <div class="siderail-item">
+            <button @click="sidebarCollapse()" :disabled="activeMenu !== ''" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
+            </button>
+          </div>
+          
+          <div class="siderail-item">
+            <button @click="togglePower()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
+            </button>
+          </div>
         </div>
       </div>
         
       <!-- Siderail: Editor -->
-      <div v-if="mode === 'edit'" class="siderail">
+      <div v-if="mode === 'edit' && !sidebarCollapsed" class="siderail">
         <!-- Top menu -->
         <div class="siderail__top-menu">
           <IconLoading v-if="store.loading"/>
@@ -87,7 +99,7 @@
                 </g>
               </svg>
             </button>
-            <div v-if="activeMenu === 'colors'" class="siderail-menu"  style="top: -205px;">
+            <div v-if="activeMenu === 'colors'" class="siderail-menu" style="position: absolute; top: -96px;">
               <div class="siderail-menu__section" style="width: auto;">
                 <p style="font-size: 18px;" class="font-bold">Color palette</p>
               </div>
@@ -174,7 +186,7 @@
                 </g>
               </svg>
             </button>
-            <div v-if="activeMenu === 'typography'" class="siderail-menu" style="top: -250px;">
+            <div v-if="activeMenu === 'typography'" class="siderail-menu" style="position: absolute; top: -250px;">
               <!-- Toggle Google Fonts and upload -->
               <div class="siderail-menu__section justify-between" style="width: auto;">
                 <p style="font-size: 18px;" class="font-bold">Fonts</p>
@@ -352,158 +364,160 @@
                 </g>
               </svg>
             </button>
-            <div v-if="activeMenu === 'buttons'" class="siderail-menu" style="top: -345px;">
-              <div class="siderail-menu__section" style="width: auto;">
-                <p style="font-size: 18px;" class="font-bold">Button styles</p>
-              </div>
-                 
-              <!-- Primary button text color -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <div style="width: 100%;">
-                  <p class="margin-bottom-sm" style="font-size: 18px;">Primary button text color</p>
-                  <div class="flex gap-sm items-center">
-                    <div class="select" style="width: 300px;">
-                      <select v-model="store.variables.btn_primary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
-                        <option 
-                          v-for="color in [
-                            { name: 'Primary', hex: store.variables.color_primary },
-                            { name: 'Accent', hex: store.variables.color_accent },
-                            { name: 'Text', hex: store.variables.color_contrast_higher },
-                            { name: 'Background (Default)', hex: store.variables.color_white },
-                          ]" 
-                          :key="color.name" 
-                          :value="color.hex" 
-                          :selected="store.variables.btn_primary_text_color === color.hex"
-                        >
-                          {{ color.name }}
-                        </option>
-                      </select>
-                      <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+            <div v-if="activeMenu === 'buttons'" class="siderail-menu" style="margin-right: 70px;">
+              <div class="siderail-menu__inner" style="height: 90vh;">
+                <div class="siderail-menu__section" style="width: auto;">
+                  <p style="font-size: 18px;" class="font-bold">Button styles</p>
+                </div>
+                   
+                <!-- Primary button text color -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <div style="width: 100%;">
+                    <p class="margin-bottom-sm" style="font-size: 18px;">Primary button text color</p>
+                    <div class="flex gap-sm items-center">
+                      <div class="select" style="width: 300px;">
+                        <select v-model="store.variables.btn_primary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
+                          <option 
+                            v-for="color in [
+                              { name: 'Primary', hex: store.variables.color_primary },
+                              { name: 'Accent', hex: store.variables.color_accent },
+                              { name: 'Text', hex: store.variables.color_contrast_higher },
+                              { name: 'Background (Default)', hex: store.variables.color_white },
+                            ]" 
+                            :key="color.name" 
+                            :value="color.hex" 
+                            :selected="store.variables.btn_primary_text_color === color.hex"
+                          >
+                            {{ color.name }}
+                          </option>
+                        </select>
+                        <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                      </div>
+                      <a href="#" class="btn btn--primary" style="width: 200px;">Primary</a>
                     </div>
-                    <a href="#" class="btn btn--primary" style="width: 200px;">Primary</a>
                   </div>
                 </div>
-              </div>
-              
-              <!-- Secondary button text color -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <div style="width: 100%;">
-                  <p class="margin-bottom-sm" style="font-size: 18px;">Secondary button text color</p>
-                  <div class="flex gap-sm items-center">
-                    <div class="select" style="width: 300px;">
-                      <select v-model="store.variables.btn_secondary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
-                        <option 
-                          v-for="color in [
-                            { name: 'Primary', hex: store.variables.color_primary },
-                            { name: 'Accent', hex: store.variables.color_accent },
-                            { name: 'Text', hex: store.variables.color_contrast_higher },
-                            { name: 'Background (Default)', hex: store.variables.color_white },
-                          ]" 
-                          :key="color.name" 
-                          :value="color.hex" 
-                          :selected="store.variables.btn_secondary_text_color === color.hex"
-                        >
-                          {{ color.name }}
-                        </option>
-                      </select>
-                      <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                
+                <!-- Secondary button text color -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <div style="width: 100%;">
+                    <p class="margin-bottom-sm" style="font-size: 18px;">Secondary button text color</p>
+                    <div class="flex gap-sm items-center">
+                      <div class="select" style="width: 300px;">
+                        <select v-model="store.variables.btn_secondary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
+                          <option 
+                            v-for="color in [
+                              { name: 'Primary', hex: store.variables.color_primary },
+                              { name: 'Accent', hex: store.variables.color_accent },
+                              { name: 'Text', hex: store.variables.color_contrast_higher },
+                              { name: 'Background (Default)', hex: store.variables.color_white },
+                            ]" 
+                            :key="color.name" 
+                            :value="color.hex" 
+                            :selected="store.variables.btn_secondary_text_color === color.hex"
+                          >
+                            {{ color.name }}
+                          </option>
+                        </select>
+                        <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                      </div>
+                      <a href="#" class="btn btn--secondary" style="width: 200px;">Secondary</a>
                     </div>
-                    <a href="#" class="btn btn--secondary" style="width: 200px;">Secondary</a>
                   </div>
                 </div>
-              </div>
-              
-              <!-- Tertiary button text color -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <div style="width: 100%;">
-                  <p class="margin-bottom-sm" style="font-size: 18px;">Tertiary button text color</p>
-                  <div class="flex gap-sm items-center">
-                    <div class="select" style="width: 300px;">
-                      <select v-model="store.variables.btn_tertiary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
-                        <option 
-                          v-for="color in [
-                            { name: 'Primary', hex: store.variables.color_primary },
-                            { name: 'Accent', hex: store.variables.color_accent },
-                            { name: 'Text (Default)', hex: store.variables.color_contrast_higher },
-                            { name: 'Background', hex: store.variables.color_white },
-                          ]" 
-                          :key="color.name" 
-                          :value="color.hex" 
-                          :selected="store.variables.btn_tertiary_text_color === color.hex"
-                        >
-                          {{ color.name }}
-                        </option>
-                      </select>
-                      <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                
+                <!-- Tertiary button text color -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <div style="width: 100%;">
+                    <p class="margin-bottom-sm" style="font-size: 18px;">Tertiary button text color</p>
+                    <div class="flex gap-sm items-center">
+                      <div class="select" style="width: 300px;">
+                        <select v-model="store.variables.btn_tertiary_text_color" name="heading" id="heading" class="select_input form-control" style="width: 300px;">
+                          <option 
+                            v-for="color in [
+                              { name: 'Primary', hex: store.variables.color_primary },
+                              { name: 'Accent', hex: store.variables.color_accent },
+                              { name: 'Text (Default)', hex: store.variables.color_contrast_higher },
+                              { name: 'Background', hex: store.variables.color_white },
+                            ]" 
+                            :key="color.name" 
+                            :value="color.hex" 
+                            :selected="store.variables.btn_tertiary_text_color === color.hex"
+                          >
+                            {{ color.name }}
+                          </option>
+                        </select>
+                        <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                      </div>
+                      <a href="#" class="btn btn--tertiary" style="width: 200px;">Tertiary</a>
                     </div>
-                    <a href="#" class="btn btn--tertiary" style="width: 200px;">Tertiary</a>
                   </div>
                 </div>
-              </div>
 
-              <!-- Buttons radius -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Radius</p>
-                <fieldset style="width: 100%;">
-                  <div class="slider slider--input gap-sm">
-                    <div class="slider__range">
-                      <input v-model="store.variables.btn_radius" class="slider__input" type="range" name="sliderValue" min="0" max="3" step="0.05">
+                <!-- Buttons radius -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <p style="width: 260px; margin-right: 20px; font-size: 18px;">Radius</p>
+                  <fieldset style="width: 100%;">
+                    <div class="slider slider--input gap-sm">
+                      <div class="slider__range">
+                        <input v-model="store.variables.btn_radius" class="slider__input" type="range" name="sliderValue" min="0" max="3" step="0.05">
+                      </div>
+                      <div class="slider__value">
+                        <input v-model="store.variables.btn_radius" class="form-control text-sm text-center width-xl" type="text">
+                      </div>
                     </div>
-                    <div class="slider__value">
-                      <input v-model="store.variables.btn_radius" class="form-control text-sm text-center width-xl" type="text">
+                  </fieldset>
+                </div>
+                
+                <!-- Buttons y padding -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <p style="width: 260px; margin-right: 20px; font-size: 18px;">Vertical padding</p>
+                  <fieldset style="width: 100%;">
+                    <div class="slider slider--input gap-sm">
+                      <div class="slider__range">
+                        <input v-model="store.variables.btn_padding_y" class="slider__input" type="range" name="sliderValue" min="0.2" max="2" step="0.02">
+                      </div>
+                      <div class="slider__value">
+                        <input v-model="store.variables.btn_padding_y" class="form-control text-sm text-center width-xl" type="text">
+                      </div>
                     </div>
+                  </fieldset>
+                </div>
+                
+                <!-- Buttons x padding -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <p style="width: 260px; margin-right: 20px; font-size: 18px;">Horizontal padding</p>
+                  <fieldset style="width: 100%;">
+                    <div class="slider slider--input gap-sm">
+                      <div class="slider__range">
+                        <input v-model="store.variables.btn_padding_x" class="slider__input" type="range" name="sliderValue" min="0.5" max="3" step="0.02">
+                      </div>
+                      <div class="slider__value">
+                        <input v-model="store.variables.btn_padding_x" class="form-control text-sm text-center width-xl" type="text">
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                
+                <!-- Buttons text transform -->
+                <div class="siderail-menu__section" style="width: 100%;">
+                  <p style="width: 260px; margin-right: 20px; font-size: 18px;">Text transform</p>
+                  <div class="select">
+                    <select v-model="store.variables.btn_text_transform" name="heading" id="heading" class="select_input form-control width-100%">
+                      <option 
+                        v-for="transform in [
+                          {label: 'None', value: 'none'},
+                          {label: 'Uppercase', value: 'uppercase'}
+                        ]" 
+                        :key="transform.value" 
+                        :value="transform.value" 
+                        :selected="store.variables.btn_text_transform === transform.value"
+                      >
+                        {{ transform.label }}
+                      </option>
+                    </select>
+                    <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                   </div>
-                </fieldset>
-              </div>
-              
-              <!-- Buttons y padding -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Vertical padding</p>
-                <fieldset style="width: 100%;">
-                  <div class="slider slider--input gap-sm">
-                    <div class="slider__range">
-                      <input v-model="store.variables.btn_padding_y" class="slider__input" type="range" name="sliderValue" min="0.2" max="2" step="0.02">
-                    </div>
-                    <div class="slider__value">
-                      <input v-model="store.variables.btn_padding_y" class="form-control text-sm text-center width-xl" type="text">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              
-              <!-- Buttons x padding -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Horizontal padding</p>
-                <fieldset style="width: 100%;">
-                  <div class="slider slider--input gap-sm">
-                    <div class="slider__range">
-                      <input v-model="store.variables.btn_padding_x" class="slider__input" type="range" name="sliderValue" min="0.5" max="3" step="0.02">
-                    </div>
-                    <div class="slider__value">
-                      <input v-model="store.variables.btn_padding_x" class="form-control text-sm text-center width-xl" type="text">
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-              
-              <!-- Buttons text transform -->
-              <div class="siderail-menu__section" style="width: 100%;">
-                <p style="width: 260px; margin-right: 20px; font-size: 18px;">Text transform</p>
-                <div class="select">
-                  <select v-model="store.variables.btn_text_transform" name="heading" id="heading" class="select_input form-control width-100%">
-                    <option 
-                      v-for="transform in [
-                        {label: 'None', value: 'none'},
-                        {label: 'Uppercase', value: 'uppercase'}
-                      ]" 
-                      :key="transform.value" 
-                      :value="transform.value" 
-                      :selected="store.variables.btn_text_transform === transform.value"
-                    >
-                      {{ transform.label }}
-                    </option>
-                  </select>
-                  <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                 </div>
               </div>
             </div>
@@ -522,19 +536,38 @@
         
         <!-- Bottom menu -->
         <div class="siderail__bottom-menu">
-          <!-- <button @click="toggleEdit()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
-          </button>
+          <!-- <div class="siderail-item">
+            <button @click="toggleEdit()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
+            </button>
+          </div> -->
           
-          <button @click="toggleView()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
-          </button> -->
+          <!-- <div class="siderail-item">
+            <button @click="toggleView()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
+            </button>
+          </div> -->
           
-          <button @click="togglePower()" class="siderail-item__button">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
-          </button>
+          <div class="siderail-item">
+            <button @click="sidebarCollapse()" :disabled="activeMenu !== ''" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
+            </button>
+          </div>
+          
+          <div class="siderail-item">
+            <button @click="togglePower()" class="siderail-item__button">
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
+            </button>
+          </div>
         </div>
       </div>
+    </div>
+    
+    <!-- Toggle sidebar -->
+    <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 76px; right: 0; z-index: 100;">
+      <button @click="sidebarExpand()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 10px 7px 2px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
+        <svg class="flip-x" width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
+      </button>
     </div>
     
     <!-- Styleguide -->
@@ -653,6 +686,7 @@ const props = defineProps({
 
 const activeMenu = ref('')
 const activeFontsSource = ref('google-font')
+const sidebarCollapsed = ref(getCookie('design_plugin_sidebar_collapsed'))
 const store = useDesignStore()
 
 const toggleHero = () => {
@@ -696,16 +730,6 @@ function onSelectButtonsFont(e) {
   }
 }
 
-// function onSelectButtonsFont(fontGroup) {
-//   if (fontGroup === 'primary') {
-//     store.variables.font_buttons = store.variables.font_primary
-//   }
-// 
-//   if (fontGroup === 'secondary') {
-//     store.variables.font_buttons = store.variables.font_secondary
-//   }
-// }
-
 const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
 }
@@ -728,9 +752,46 @@ const togglePower = () => {
   window.location = path
 }
 
+const sidebarCollapse = () => {
+  document.body.classList.remove('design-plugin-enabled');
+  sidebarCollapsed.value = true
+  createCookie('design_plugin_sidebar_collapsed', true, 30)
+}
+
+const sidebarExpand = () => {
+  document.body.classList.add('design-plugin-enabled');
+  sidebarCollapsed.value = false
+  eraseCookie('design_plugin_sidebar_collapsed')
+}
+
 const saveDesign = debounce(() => {
   store.update()
 }, 3000)
+
+function createCookie(name, value, days) {
+  var expires = ""
+  if (days) {
+    var date = new Date()
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+    expires = "; expires=" + date.toUTCString()
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/"
+}
+
+function getCookie(name) {
+  var nameEQ = name + "="
+  var ca = document.cookie.split(';')
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i]
+    while (c.charAt(0) == ' ') c = c.substring(1, c.length)
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length)
+  }
+  return null
+}
+
+function eraseCookie(name) {
+  createCookie(name,"",-1)
+}
 
 store.$subscribe((mutation, state) => {
   if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
@@ -918,14 +979,29 @@ Plugin styles
   }
 
   .siderail-menu {
-    position: absolute;
-    top: 0;
+    // position: absolute;
+    // top: 0;
+    position: fixed;
+    top: 50px;
     right: 0;
     margin-right: 60px;
     border-radius: 7px;
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 100;
+    
+    &__inner {
+      position: relative; 
+      padding-bottom: 60px;
+      
+      // Hide scrollbar
+      overflow: auto;
+      -ms-overflow-style: none; // IE and Edge
+      scrollbar-width: none; // Firefox
+      &::-webkit-scrollbar {
+          display: none; // Chrome, Safari and Opera
+      }
+    }
     
     &__section {
       display: flex; 
