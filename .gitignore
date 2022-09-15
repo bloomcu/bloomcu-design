@@ -1,4 +1,5 @@
 node_modules
 assets/css/*
 assets/js/*
+.zip
 .DS_Store
