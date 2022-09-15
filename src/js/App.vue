@@ -807,6 +807,10 @@ onMounted(() => {
         activeFontsSource.value = 'upload'
       }
     })
+    
+  if (window.screen.width <= 1024) {
+    sidebarCollapse()
+  }
 })
 </script>
 
