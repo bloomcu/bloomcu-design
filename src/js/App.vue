@@ -780,6 +780,26 @@ function getCookie(name) {
 function eraseCookie(name) {
   createCookie(name,"",-1)
 }
+
+store.$subscribe((mutation, state) => {
+  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
+    saveDesign()
+  }
+})
+
+onMounted(() => {
+  // store.init()
+  store.show(props.design)
+    .then(() => {
+      if (store.variables.font_primary.source === 'upload') {
+        activeFontsSource.value = 'upload'
+      }
+    })
+    
+  if (window.screen.width <= 1024) {
+    sidebarCollapse()
+  }
+})
 </script>
 
 <style lang="scss">
