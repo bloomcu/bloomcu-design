@@ -22,13 +22,16 @@
           </button>
           <div v-if="activeMenu === 'hero'" class="siderail-menu">
             <div class="siderail-menu__section">
-              <AppLogin/>
+              <!-- <AppLogin/> -->
               <div v-if="store.designs" class="text-component">
-                <p class="font-bold">My Designs</p>
+                <p class="font-bold">Stylesn</p>
                 <div
-                  v-for="design in store.designs" 
-                  :key="design.id" 
-                  class="card padding-xs text-sm"
+                  v-for="design in store.designs"
+                  :key="design.id"
+                  @click="showDesign(design.uuid)"
+                  :class="(store.design !== null && store.design.uuid === design.uuid) ? 'card' : 'card card--dark'"
+                  class="margin-bottom-xs text-sm cursor-pointer"
+                  style="width: 280px;"
                 >
                   {{ design.title }}
                 </div>
@@ -491,19 +494,19 @@
         <div class="siderail__bottom-menu">
           <!-- Collapse sidebar -->
           <div class="siderail-item">
-            <button @click="sidebarCollapse()" :disabled="activeMenu !== ''" class="siderail-item__button">
+            <button @click="collapseSidebar()" :disabled="activeMenu !== ''" class="siderail-item__button">
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
             </button>
           </div>      
           <!-- Turn on edit mode -->
           <!-- <div class="siderail-item">
-            <button @click="toggleEdit()" class="siderail-item__button">
+            <button @click="toggleEditMode()" class="siderail-item__button">
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
             </button>
           </div> -->      
           <!-- Turn on view mode -->
           <!-- <div class="siderail-item">
-            <button @click="toggleView()" class="siderail-item__button">
+            <button @click="toggleViewMode()" class="siderail-item__button">
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
             </button>
           </div> -->        
@@ -605,7 +608,7 @@
     
     <!-- Toggle sidebar -->
     <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 76px; right: 0; z-index: 100;">
-      <button @click="sidebarExpand()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 10px 7px 2px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
+      <button @click="expandSidebar()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 10px 7px 2px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
         <svg class="flip-x" width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
       </button>
     </div>
@@ -630,11 +633,10 @@ import DesignStyles from './components/DesignStyles.vue'
 const props = defineProps({
   design: { 
     type: String,
-    // required: true,
   },
   mode: {
     type: String,
-    // required: true,
+    default: 'view',
   }
 })
 
@@ -688,13 +690,13 @@ const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
 }
 
-const toggleEdit = () => {
+const toggleEditMode = () => {
   document.cookie = 'design_plugin_mode=edit; path=/;'
   let path = window.location.href.split('?')[0]
   window.location = path
 }
 
-const toggleView = () => {
+const toggleViewMode = () => {
   document.cookie = 'design_plugin_mode=view; path=/;'
   let path = window.location.href.split('?')[0]
   window.location = path
@@ -706,22 +708,54 @@ const toggleDisablePlugin = () => {
   window.location = path
 }
 
-const sidebarCollapse = () => {
+const collapseSidebar = () => {
   document.body.classList.remove('design-plugin-enabled');
   sidebarCollapsed.value = true
   createCookie('design_plugin_sidebar_collapsed', true, 30)
 }
 
-const sidebarExpand = () => {
+const expandSidebar = () => {
   document.body.classList.add('design-plugin-enabled');
   sidebarCollapsed.value = false
   eraseCookie('design_plugin_sidebar_collapsed')
 }
 
-const saveDesign = debounce(() => {
+const showDesign = (uuid) => {
+  store.show(uuid)
+    // TODO: Clean this up
+    .then(() => {
+      document.cookie = `design_plugin_design=${uuid}; path=/;`
+      document.cookie = `design_plugin_mode=${props.mode}; path=/;`
+      
+      if (store.variables.font_primary.source === 'upload') {
+        activeFontsSource.value = 'upload'
+      }
+    })
+}
+
+const updateDesign = debounce(() => {
   store.update()
 }, 3000)
 
+store.$subscribe((mutation, state) => {
+  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
+    updateDesign()
+  }
+})
+
+onMounted(() => {
+  if (props.design) {
+    store.show(props.design)
+      // TODO: Clean this up
+      .then(() => {
+        if (store.variables.font_primary.source === 'upload') {
+          activeFontsSource.value = 'upload'
+        }
+      })
+  }
+})
+
+// Cookie utilities
 function createCookie(name, value, days) {
   var expires = ""
   if (days) {
@@ -746,24 +780,6 @@ function getCookie(name) {
 function eraseCookie(name) {
   createCookie(name,"",-1)
 }
-
-store.$subscribe((mutation, state) => {
-  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
-    saveDesign()
-  }
-})
-
-onMounted(() => {
-  if (props.design) {
-    store.show(props.design)
-      // TODO: Clean this up
-      .then(() => {
-        if (store.variables.font_primary.source === 'upload') {
-          activeFontsSource.value = 'upload'
-        }
-      })
-  }
-})
 </script>
 
 <style lang="scss">
@@ -831,10 +847,6 @@ Plugin styles
   
   .form-control {
     background: #fff;
-  }
-  
-  .card {
-    background-color: #fff;
   }
   
   /* --------------------------------
@@ -968,7 +980,31 @@ Plugin styles
       border-bottom: 1px solid #e3e2e9;
     }
   }
+  
+  /* --------------------------------
+  Card
+  -------------------------------- */
+  .card {
+    border: 1px solid #d6d7d7;
+    border-radius: .5em;
+    padding: 1.125rem;
+    background: #ffffff;
+    
+    &--dark {
+      border: none;
+      background-color: #f4f5f5;
+      box-shadow: none;
+      
+      &:hover {
+        box-shadow: var(--shadow-sm);
+      }
+    }
+  }
 
+  .card-header {
+    border-radius: .5em;
+  }
+  
   /* --------------------------------
   Input group
   -------------------------------- */
