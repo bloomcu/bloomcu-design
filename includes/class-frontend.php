@@ -24,8 +24,19 @@ class Frontend {
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
 		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
 		
-		// echo 'Design: ' . $design;
-		// echo 'Mode: ' . $mode;
+		global $current_user; 
+		// $wpUser = wp_get_current_user();
+		// var_dump($user);
+		
+		$user = wp_get_current_user();
+		// Setup user
+		// global $current_user; 
+		// $wordpressUser = get_currentuserinfo();
+		
+		// var_dump($wordpressUser->ID !== 0);
+		
+		
+		// var_dump(json_encode($user));
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
 			// $disabled = false;
@@ -36,15 +47,15 @@ class Frontend {
 		if (!$disabled) {
 			// return;
 			
-			// if ($design && $mode) {
-				echo '
-					<div
-						id="app"
-						data-design="' . $design . '"
-						data-mode="' . $mode . '"
-					></div>
-				';
-			// }
+			echo '
+				<div
+					id="app"
+					data-design="' . $design . '"
+					data-mode="' . $mode . '"
+					data-user_name="' . $user->data->display_name . '"
+					data-user_email="' . $user->data->user_email . '"
+				></div>
+			';
 		}
 	}
 	

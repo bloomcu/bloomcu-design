@@ -2,7 +2,7 @@
   <div>
     <div class="bloomcu-design">
       <!-- Design variables -->
-      <div v-if="store.design">
+      <div v-if="!store.loading && store.design">
         <DesignFonts :variables="store.variables"/>
         <DesignStyles :variables="store.variables"/>
       </div>
@@ -20,11 +20,26 @@
           <button v-else @click="toggleHero()" class="siderail-item__button" :class="activeMenu === 'hero' ? 'siderail-item__button--active' : ''">
             <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
           </button>
-          <div v-if="activeMenu === 'hero'" class="siderail-menu">
-            <div class="siderail-menu__section">
+          <div v-if="activeMenu === 'hero'" class="siderail-menu" style="margin-right: 70px;">
+            <div class="siderail-menu__inner" style="max-height: 90vh;">
               <!-- <AppLogin/> -->
-              <div v-if="store.designs" class="text-component">
-                <p class="font-bold">Stylesn</p>
+              <div class="border-bottom" style="padding: 20px;">
+                <div v-if="user_name && user_email">
+                  <p class="font-bold">{{ user_name }}</p>
+                  <p class="text-sm">{{ user_email }}</p>
+                </div>
+                
+                <div v-else>
+                  <p class="font-bold">Viewer</p>
+                  <p class="text-sm">
+                    <a href="/wp-admin">Log in</a>
+                    to edit styles
+                  </p>
+                </div>
+              </div>
+              
+              <div v-if="store.designs" style="padding: 20px;">
+                <p class="font-bold margin-bottom-xs">Styles</p>
                 <div
                   v-for="design in store.designs"
                   :key="design.id"
@@ -34,6 +49,10 @@
                   style="width: 280px;"
                 >
                   {{ design.title }}
+                  <div v-if="user_name && user_email">
+                    <button @click.stop="duplicateDesign(design.uuid)">Duplicate</button>
+                    <button @click.stop="destroyDesign(design.uuid)">Archive</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -41,7 +60,7 @@
         </div>
           
         <!-- Middle menu -->
-        <div>
+        <div v-if="!store.loading">
           <div v-if="mode === 'edit'">
             <!-- Colors -->
             <div class="siderail-item">
@@ -318,7 +337,7 @@
                 </svg>
               </button>
               <div v-if="activeMenu === 'buttons'" class="siderail-menu" style="margin-right: 70px;">
-                <div class="siderail-menu__inner" style="height: 90vh;">
+                <div class="siderail-menu__inner" style="height: 90vh; padding-bottom: 60px;">
                   <div class="siderail-menu__section" style="width: auto;">
                     <p style="font-size: 18px;" class="font-bold">Button styles</p>
                   </div>
@@ -637,6 +656,12 @@ const props = defineProps({
   mode: {
     type: String,
     default: 'view',
+  },
+  user_name: {
+    type: String,
+  },
+  user_email: {
+    type: String,
   }
 })
 
@@ -724,13 +749,23 @@ const showDesign = (uuid) => {
   store.show(uuid)
     // TODO: Clean this up
     .then(() => {
-      document.cookie = `design_plugin_design=${uuid}; path=/;`
       document.cookie = `design_plugin_mode=${props.mode}; path=/;`
       
       if (store.variables.font_primary.source === 'upload') {
         activeFontsSource.value = 'upload'
       }
     })
+}
+
+const duplicateDesign = (uuid) => {
+  store.duplicate(uuid, {
+    name: props.user_name,
+    email: props.user_email,
+  })
+}
+
+const destroyDesign = (uuid) => {
+  store.destroy(uuid)
 }
 
 const updateDesign = debounce(() => {
@@ -752,6 +787,10 @@ onMounted(() => {
           activeFontsSource.value = 'upload'
         }
       })
+  }
+  
+  if (window.screen.width <= 1024) {
+    sidebarCollapse()
   }
 })
 
@@ -781,25 +820,23 @@ function eraseCookie(name) {
   createCookie(name,"",-1)
 }
 
-store.$subscribe((mutation, state) => {
-  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
-    saveDesign()
-  }
-})
+// store.$subscribe((mutation, state) => {
+//   if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
+//     updateDesign()
+//   }
+// })
 
-onMounted(() => {
-  // store.init()
-  store.show(props.design)
-    .then(() => {
-      if (store.variables.font_primary.source === 'upload') {
-        activeFontsSource.value = 'upload'
-      }
-    })
-    
-  if (window.screen.width <= 1024) {
-    sidebarCollapse()
-  }
-})
+// onMounted(() => {
+//   // store.init()
+//   store.show(props.design)
+//     .then(() => {
+//       if (store.variables.font_primary.source === 'upload') {
+//         activeFontsSource.value = 'upload'
+//       }
+//     })
+// 
+// 
+// })
 </script>
 
 <style lang="scss">
@@ -980,7 +1017,6 @@ Plugin styles
     
     &__inner {
       position: relative; 
-      padding-bottom: 60px;
       
       // Hide scrollbar
       overflow: auto;

@@ -11,15 +11,15 @@ const designApi = {
         return HttpClient.get(`/${organization}/designs`, { params: params })
     },
     
-    /**
-     * Store a design
-     *
-     * @param Object design [Properties to create design from]
-     * @return promise
-     */
-    store(organization, design) {
-        return HttpClient.post(`/${organization}/designs`, design)
-    },
+    // /**
+    //  * Store a design
+    //  *
+    //  * @param Object design [Properties to create design from]
+    //  * @return promise
+    //  */
+    // store(organization, design) {
+    //     return HttpClient.post(`/${organization}/designs`, design)
+    // },
     
     /**
      * Show a design
@@ -50,6 +50,19 @@ const designApi = {
      */
     destroy(organization, uuid) {
         return HttpClient.delete(`/${organization}/designs/${uuid}`)
+    },
+    
+    /**
+     * Duplicate a design
+     *
+     * @param String uuid [Uuid of the design to be duplicated]
+     * @param Object designer [Designer personal information]
+     * @param String designer.designer_name [Designer first and last name]
+     * @param String designer.designer_email [Designer email]
+     * @return promise
+     */
+    duplicate(organization, uuid, designer) {
+        return HttpClient.post(`/${organization}/designs/${uuid}/duplicate`, designer)
     },
     
     /**

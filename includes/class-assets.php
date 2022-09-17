@@ -30,7 +30,7 @@ class Assets {
 					$this->redirect_to_login();
 				}
 				
-				$this->init();
+				// $this->init();
 			}
 			
 			// if ($mode === 'view') {

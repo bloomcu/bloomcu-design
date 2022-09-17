@@ -14,14 +14,14 @@ export const useDesignStore = defineStore('designStore', {
   },
 
   actions: {
-    init() {
-      // this.loading = true
-    },
+    // init() {
+    //   this.loading = true
+    // },
     
-    setProfile(name, email) {
-      // this.profile = { name: name, email: email }
-      // localStorage.setItem('designer_profile', JSON.stringify(this.profile))
-    },
+    // setProfile(name, email) {
+    //   this.profile = { name: name, email: email }
+    //   localStorage.setItem('designer_profile', JSON.stringify(this.profile))
+    // },
 
     index(params) {
       this.loading = true
@@ -36,27 +36,33 @@ export const useDesignStore = defineStore('designStore', {
         })
     },
 
-    async store(design) {
+    // async store(design) {
+    //   this.loading = true
+    // 
+    //   await DesignApi.store('bloomcu', design)
+    //     .then(response => {
+    //       this.designs.push(response.data.data)
+    //     }).catch(error => {
+    //       console.log('Error', error.response.data)
+    //     })
+    // },
+
+    async show(uuid) {
       this.loading = true
 
-      await DesignApi.store('bloomcu', design)
-        .then(response => {
-          this.designs.push(response.data.data)
-        }).catch(error => {
-          console.log('Error', error.response.data)
-        })
-    },
-
-    async show(id) {
-      this.loading = true
-
-      await DesignApi.show('bloomcu', id)
+      await DesignApi.show('bloomcu', uuid)
         .then(response => {
           this.design = response.data.data
+          document.cookie = `design_plugin_design=${uuid}; path=/;`
           
           setTimeout(() => {  
             this.loading = false
-          }, 1000)
+          }, 500)
+        })
+        .catch(error => {
+          this.design = null
+          document.cookie = 'design_plugin_design=""; expires=Sat, 20 Jan 1980 12:00:00 UTC; path=/;';
+          console.log('Error', error.response)
         })
     },
 
@@ -69,17 +75,45 @@ export const useDesignStore = defineStore('designStore', {
 
           setTimeout(() => {
             this.loading = false
-          }, 2000)
+          }, 1000)
+        })
+        .catch(error => {
+          console.log('Error', error.response.data)
         })
     },
 
-    destroy(id) {
+    destroy(uuid) {
+      this.loading = true
+    
+      DesignApi.destroy('bloomcu', uuid)
+        .then(response => {
+          this.designs = this.designs.filter((design) => design.uuid !== uuid)
+          
+          if (this.design && this.design.uuid === uuid) {
+            this.design = null
+          }
+          
+          this.loading = false
+        })
+        .catch(error => {
+          console.log('Error', error.response.data)
+        })
+    },
+    
+    async duplicate(uuid, designer) {
       this.loading = true
 
-      DesignApi.destroy('bloomcu', id)
+      await DesignApi.duplicate('bloomcu', uuid, {
+        designer_name: designer.name,
+        designer_email: designer.email,
+      })
         .then(response => {
-          this.designs = this.designs.filter((design) => design.id !== id)
+          this.designs.unshift(response.data.data)
+          this.design = response.data.data
+          document.cookie = `design_plugin_design=${response.data.data.uuid}; path=/;`          
           this.loading = false
+        }).catch(error => {
+          console.log('Error', error.response.data)
         })
     },
     

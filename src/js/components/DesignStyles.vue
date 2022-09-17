@@ -92,12 +92,12 @@ function shadeColor(color, percent) {
 Base Theme Overrides
 -------------------------------- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: var(--font-primary);
+  font-family: var(--font-primary, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol");
   font-weight: var(--font-primary-weight);
 }
 
 body {
-  font-family: var(--font-secondary);
+  font-family: var(--font-secondary, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol");
   font-weight: var(--font-secondary-weight);
 }
 
@@ -155,6 +155,7 @@ a {
   color: var(--color-contrast-higher);
 }
 
+
 [data-theme="bg-1"] {
   background-color: var(--color-bg);
 }
@@ -182,21 +183,6 @@ a {
   .text-component {
     p {
       color: var(--color-contrast-high);
-    }
-  }
-}
-
-/* --------------------------------
-Override tertiary button in hero's
--------------------------------- */
-.hero, 
-.feature-v4 { // feature-v4 is the isolated hero block
-  .btn--tertiary {
-    background-color: var(--color-accent);
-    color: var(--btn-secondary-text-color);
-    
-    &:hover {
-      background-color: var(--color-accent-light);
     }
   }
 }
@@ -250,6 +236,21 @@ section.full-width-blockquote {
     
     p {
       padding-top: 30px;
+    }
+  }
+}
+
+/* --------------------------------
+Override tertiary button in hero's
+-------------------------------- */
+.hero, 
+.feature-v4 { // feature-v4 is the isolated hero block
+  .btn--tertiary {
+    background-color: var(--color-accent);
+    color: var(--btn-secondary-text-color);
+    
+    &:hover {
+      background-color: var(--color-accent-light);
     }
   }
 }
