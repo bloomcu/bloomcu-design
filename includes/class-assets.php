@@ -82,7 +82,7 @@ class Assets {
 	 * @return void
 	 */
 	public function enqueue_design_plugin_frontend() {
-		wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/js/main.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/assets/js/main.js'), [], '', true);
+		wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/assets/index.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/assets/index.js'), [], '', true);
 	}
 	
 	/**
