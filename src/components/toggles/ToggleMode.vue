@@ -39,10 +39,10 @@ const toggleEditMode = () => {
 <style lang="scss">
 :root {
   --radio-switch-vertical-width: 80px;
-  --radio-switch-vertical-height: 50px;
+  --radio-switch-vertical-height: 44px;
   --radio-switch-vertical-padding: 3px;
   --radio-switch-vertical-radius: 50em;
-  --radio-switch-vertical-animation-duration: 0.3s;
+  --radio-switch-vertical-animation-duration: 0.2s;
 }
 
 .radio-switch-vertical {
@@ -52,7 +52,8 @@ const toggleEditMode = () => {
   flex-direction: column;
   padding: var(--radio-switch-vertical-padding);
   border-radius: calc(var(--radio-switch-vertical-radius) * 1.4);
-  background-color: var(--color-bg-darker);
+  border: 1px solid #dadadc;
+  // background-color: var(--color-bg-darker);
 }
 
 .radio-switch-vertical__item {
@@ -98,7 +99,7 @@ const toggleEditMode = () => {
   top: -100%;
   left: 0;
   border-radius: var(--radio-switch-vertical-radius);
-  background-color: #712aff;
+  background-color: #96f;
   height: calc(var(--radio-switch-vertical-height) - 2 * var(--radio-switch-vertical-padding));
   width: calc(var(--radio-switch-vertical-width) * 0.5 -  var(--radio-switch-vertical-padding));
   box-shadow: var(--shadow-md);

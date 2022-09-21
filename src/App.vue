@@ -9,16 +9,27 @@
       
       <!-- Sidebar -->
       <div v-if="!sidebarCollapsed" class="siderail">
-        <!-- Top menu -->
-        <div class="siderail__top-menu">
-          <IconLoading v-if="store.loading"/>
-          <button v-else @click="toggleMenu('MainMenu')" class="siderail-item__button" :class="activeMenu === 'MainMenu' ? 'siderail-item__button--active' : ''">
-            <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
-          </button>
+        <!-- Top -->
+        <div class="siderail-top">
+          <div v-if="store.loading" class="siderail-item">
+            <IconLoading/>
+          </div>
+          
+          <div v-else class="siderail-item">
+            <button 
+              @click="toggleMenu('MainMenu')" 
+              class="siderail-item__button" 
+              :class="activeMenu === 'MainMenu' ? 'siderail-item__button--active' : ''"
+              style="display: flex; flex-direction: column; align-items: center;"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
+              <!-- <span style="font-size: 13px;">Menu</span> -->
+            </button>
+          </div>
         </div>
           
-        <!-- Middle menus -->
-        <div v-if="store.design">
+        <!-- Middle -->
+        <div class="siderail-middle" v-if="store.design">
           <div v-if="store.mode === 'edit'">
             <!-- Colors -->
             <div class="siderail-item">
@@ -67,24 +78,11 @@
           </div>
         </div>
         
-        <!-- Bottom menu -->
-        <div class="siderail__bottom-menu"> 
-          <div class="siderail-item">
+        <!-- Bottom -->
+        <div class="siderail-bottom" style="display: flex; flex-direction: column; align-items: center;"> 
+          <div class="siderail-item padding-bottom-sm">
             <ToggleMode/>
           </div>
-          <!-- Turn on edit mode -->
-          <!-- <div class="siderail-item">
-            <button @click="toggleEditMode()" class="siderail-item__button" :class="store.mode === 'edit' ? 'siderail-item__button--active' : ''">
-              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><line data-cap="butt" x1="14.328" y1="4.672" x2="19.328" y2="9.672"></line> <path d="M8,21,2,22l1-6L16.414,2.586a2,2,0,0,1,2.828,0l2.172,2.172a2,2,0,0,1,0,2.828Z"></path></g></svg>
-            </button>
-          </div> -->
-          
-          <!-- Turn on view mode -->
-          <!-- <div class="siderail-item">
-            <button @click="toggleViewMode()" class="siderail-item__button" :class="store.mode === 'view' ? 'siderail-item__button--active' : ''">
-              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle></g></svg>
-            </button>
-          </div> -->
           
           <!-- Collapse sidebar -->
           <div class="siderail-item">
@@ -94,11 +92,11 @@
           </div>
               
           <!-- Disable plugin -->
-          <div class="siderail-item">
+          <!-- <div class="siderail-item">
             <button @click="toggleDisablePlugin()" class="siderail-item__button">
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
             </button>
-          </div>
+          </div> -->
         </div>
       </div>
       
@@ -109,8 +107,8 @@
     
     
     <!-- Toggle sidebar -->
-    <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 76px; right: 0; z-index: 100;">
-      <button @click="expandSidebar()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 10px 7px 2px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
+    <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 30px; right: 0; z-index: 100;">
+      <button @click="expandSidebar()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 14px 7px 4px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
         <svg class="flip-x" width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
       </button>
     </div>
@@ -345,16 +343,16 @@ Plugin styles
     border-left: 1px solid #eaeaeb;
     background: #fff;
     
-    &__top-menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      height: 40px;
-      // margin-bottom: 30px;
-    }
+    // &__top-menu {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   position: relative;
+    //   height: 40px;
+    //   // margin-bottom: 30px;
+    // }
     
-    &__bottom-menu {}
+    // &__bottom-menu {}
   }
 
   .siderail-item {
@@ -368,8 +366,8 @@ Plugin styles
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border: 0;
     background: none;
     cursor: pointer;
