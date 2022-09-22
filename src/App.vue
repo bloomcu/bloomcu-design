@@ -660,6 +660,32 @@ Plugin styles
 }
 
 /* --------------------------------
+Action icon
+-------------------------------- */
+.action-icon {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  
+  transition: 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eee5ff;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* --------------------------------
 Styleguide
 -------------------------------- */
 .styleguide {
