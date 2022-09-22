@@ -1,9 +1,9 @@
 <template>
   <div class="siderail-menu siderail-menu-main">
     <header class="siderail-menu__header">
-      <div v-if="user_name && user_email">
-        <p class="font-bold margin-bottom-xs">{{ user_name }}</p>
-        <p class="text-sm">{{ user_email }}</p>
+      <div v-if="user.name && user.email">
+        <p class="font-bold margin-bottom-xs">{{ user.name }}</p>
+        <p class="text-sm">{{ user.email }}</p>
       </div>
       
       <div v-else>
@@ -24,12 +24,12 @@
           :key="design.id"
           @click="showDesign(design.uuid)"
           :class="(store.design !== null && store.design.uuid === design.uuid) ? 'card' : 'card card--dark'"
-          class="margin-bottom-xs text-sm cursor-pointer"
+          class="flex items-center justify-between margin-bottom-xs text-sm cursor-pointer"
         >
           {{ design.title }}
-          <div v-if="user_name && user_email">
-            <button @click.stop="duplicateDesign(design.uuid)">Duplicate</button>
-            <button @click.stop="destroyDesign(design.uuid)">Archive</button>
+          <div v-if="user.name && user.email" class="flex items-center gap-xxs">
+            <button class="btn btn--sm btn--subtle" @click.stop="duplicateDesign(design.uuid)">Duplicate</button>
+            <button class="btn btn--sm btn--subtle" @click.stop="destroyDesign(design.uuid)">Archive</button>
           </div>
         </div>
       </div>
@@ -40,8 +40,10 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useDesignStore } from '@/store/useDesignStore'
+import { useUserStore } from '@/store/useUserStore'
 
 const store = useDesignStore()
+const user = useUserStore()
 
 const showDesign = (uuid) => {
   store.show(uuid)
@@ -53,6 +55,17 @@ const showDesign = (uuid) => {
       //   activeFontsSource.value = 'upload'
       // }
     // })
+}
+
+const destroyDesign = (uuid) => {
+  store.destroy(uuid)
+}
+
+const duplicateDesign = (uuid) => {
+  store.duplicate(uuid, {
+    name: user.name,
+    email: user.email,
+  })
 }
 
 onMounted(() => {

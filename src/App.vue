@@ -136,6 +136,7 @@ export default defineComponent({
 import { ref, onMounted } from 'vue'
 import { debounce } from '@/composables/useDebounce'
 import { useDesignStore } from '@/store/useDesignStore'
+import { useUserStore } from '@/store/useUserStore'
 
 import IconLoading from '@/components/IconLoading.vue'
 import DesignFonts from '@/components/DesignFonts.vue'
@@ -158,10 +159,10 @@ const props = defineProps({
   }
 })
 
-const activeMenu = ref('')
-
-const sidebarCollapsed = ref(getCookie('design_plugin_sidebar_collapsed'))
 const store = useDesignStore()
+const user = useUserStore()
+const activeMenu = ref('')
+const sidebarCollapsed = ref(getCookie('design_plugin_sidebar_collapsed'))
 
 const toggleMenu = (menu) => {
   activeMenu.value = activeMenu.value === menu ? '' : menu
@@ -185,19 +186,6 @@ const expandSidebar = () => {
   eraseCookie('design_plugin_sidebar_collapsed')
 }
 
-
-
-const duplicateDesign = (uuid) => {
-  store.duplicate(uuid, {
-    name: props.user_name,
-    email: props.user_email,
-  })
-}
-
-const destroyDesign = (uuid) => {
-  store.destroy(uuid)
-}
-
 const updateDesign = debounce(() => {
   store.update()
 }, 3000)
@@ -217,6 +205,10 @@ onMounted(() => {
           activeFontsSource.value = 'upload'
         }
       })
+  }
+  
+  if (props.user_name && props.user_email) {
+    user.init(props.user_name, props.user_email)
   }
   
   if (window.screen.width <= 1024) {
@@ -396,10 +388,8 @@ Plugin styles
     position: fixed;
     width: 100%;
     max-width: 460px;
-    // height: 100%;
     max-height: 96vh;
-    // max-height: 600px;
-    // overflow-y: auto;
+    overflow: auto;
     
     top: 50%;
     right: 74px;
@@ -411,22 +401,10 @@ Plugin styles
     z-index: 100;
     
     // Hide scrollbar
-    overflow: auto;
     // -ms-overflow-style: none; // IE and Edge
     // scrollbar-width: none; // Firefox
     // &::-webkit-scrollbar {
     //     display: none; // Chrome, Safari and Opera
-    // }
-    
-    // &__inner {
-    //   display: flex;
-    //   flex-direction: column;
-    //   position: absolute;
-    //   top: 0;
-    //   right: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   max-height: 96vh;
     // }
     
     &__header {
@@ -436,13 +414,6 @@ Plugin styles
     
     &__body {
       height: 100%;
-      // overflow: auto;
-      
-      // -ms-scroll-chaining: none;
-      // overscroll-behavior: contain;
-      // -webkit-overflow-scrolling: touch;
-    
-      
     }
     
     &__section {

@@ -3,7 +3,6 @@ import { designApi as DesignApi } from '../api/designApi'
 
 export const useDesignStore = defineStore('designStore', {
   state: () => ({
-    // profile: JSON.parse(localStorage.getItem('designer_profile')),
     mode: localStorage.getItem('design_plugin_mode') || 'edit',
     designs: null,
     design: null,
@@ -15,15 +14,6 @@ export const useDesignStore = defineStore('designStore', {
   },
 
   actions: {
-    // init() {
-    //   this.loading = true
-    // },
-    
-    // setProfile(name, email) {
-    //   this.profile = { name: name, email: email }
-    //   localStorage.setItem('designer_profile', JSON.stringify(this.profile))
-    // },
-
     index(params) {
       this.loading = true
       this.designs = null
@@ -101,12 +91,12 @@ export const useDesignStore = defineStore('designStore', {
         })
     },
     
-    async duplicate(uuid, designer) {
+    async duplicate(uuid, user) {
       this.loading = true
 
       await DesignApi.duplicate('bloomcu', uuid, {
-        designer_name: designer.name,
-        designer_email: designer.email,
+        designer_name: user.name,
+        designer_email: user.email,
       })
         .then(response => {
           this.designs.unshift(response.data.data)
