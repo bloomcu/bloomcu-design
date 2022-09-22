@@ -1,6 +1,7 @@
 <template>
   <div class="styleguide flex flex-center bg-black bg-opacity-30%">
-    <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-md padding-top-lg radius-md shadow-md">
+    <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-lg padding-top-lg radius-md shadow-md">
+      
       <!-- Content -->
       <div class="container max-width-lg">
         <div class="grid gap-xxl">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="store.variables.font_buttons.source !== 'upload'" class="file-upload inline-block">
+    <div v-if="store.variables.font_buttons.source !== 'upload'" class="file-upload inline-block width-100%">
       <input
         id="uploadButtonsFont"
         class="file-upload__input sr-only" 

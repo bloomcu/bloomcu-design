@@ -109,15 +109,18 @@ a {
   }
 }
 
-.btn--primary, 
-.btn--secondary, 
-.btn--tertiary,
+.btn,
 .button {
   border: 2px solid transparent;
   font-family: var(--font-buttons);
   font-weight: var(--font-buttons-weight);
   text-transform: var(--btn-text-transform);
   padding: var(--btn-padding-y) var(--btn-padding-x);
+  box-shadow: none;
+  
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .btn--primary {

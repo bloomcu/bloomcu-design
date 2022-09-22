@@ -1,13 +1,6 @@
 <template>
   <div>
     <div class="bloomcu-design">
-      <!-- Variables -->
-      <div v-if="store.design">
-        <DesignFonts :variables="store.variables"/>
-        <DesignStyles :variables="store.variables"/>
-      </div>
-      
-      <!-- Sidebar -->
       <div v-if="!sidebarCollapsed" class="siderail">
         <!-- Top -->
         <div class="siderail-top">
@@ -104,13 +97,17 @@
       <component :is="activeMenu"/>
     </div>
     
-    
-    
     <!-- Toggle sidebar -->
     <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 30px; right: 0; z-index: 100;">
       <button @click="expandSidebar()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 14px 7px 4px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
         <svg class="flip-x" width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
       </button>
+    </div>
+    
+    <!-- Variables -->
+    <div v-if="store.design">
+      <DesignFonts :variables="store.variables"/>
+      <DesignStyles :variables="store.variables"/>
     </div>
   </div>
 </template>
@@ -140,9 +137,7 @@ import { ref, onMounted } from 'vue'
 import { debounce } from '@/composables/useDebounce'
 import { useDesignStore } from '@/store/useDesignStore'
 
-
 import IconLoading from '@/components/IconLoading.vue'
-// import AppLogin from '@/components/AppLogin.vue'
 import DesignFonts from '@/components/DesignFonts.vue'
 import DesignStyles from '@/components/DesignStyles.vue'
 import ToggleMode from '@/components/toggles/ToggleMode.vue'
@@ -265,18 +260,7 @@ body.design-plugin-enabled {
   padding-right: 65px;
 }
 
-/* --------------------------------
-Vue Colorpicker
--------------------------------- */
-.vc-colorpicker {
-  .vc-color-wrap {
-    margin: 0 !important;
-  }
 
-  .vc-display {
-    display: none !important;
-  }  
-}
 
 /* --------------------------------
 Plugin styles
@@ -342,17 +326,6 @@ Plugin styles
     padding: 20px 12px 20px 12px;
     border-left: 1px solid #eaeaeb;
     background: #fff;
-    
-    // &__top-menu {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   position: relative;
-    //   height: 40px;
-    //   // margin-bottom: 30px;
-    // }
-    
-    // &__bottom-menu {}
   }
 
   .siderail-item {
@@ -418,39 +391,74 @@ Plugin styles
       }
     }
   }
-
+  
   .siderail-menu {
-    // position: absolute;
-    // top: 0;
     position: fixed;
-    top: 50px;
-    right: 0;
-    margin-right: 60px;
+    width: 100%;
+    max-width: 460px;
+    // height: 100%;
+    max-height: 96vh;
+    // max-height: 600px;
+    // overflow-y: auto;
+    
+    top: 50%;
+    right: 74px;
+    transform: translate(0, -50%);
+
     border-radius: 7px;
     background: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 100;
     
-    &__inner {
-      position: relative; 
+    // Hide scrollbar
+    overflow: auto;
+    // -ms-overflow-style: none; // IE and Edge
+    // scrollbar-width: none; // Firefox
+    // &::-webkit-scrollbar {
+    //     display: none; // Chrome, Safari and Opera
+    // }
+    
+    // &__inner {
+    //   display: flex;
+    //   flex-direction: column;
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   max-height: 96vh;
+    // }
+    
+    &__header {
+      border-bottom: 1px solid #e3e2e9;
+      padding: 20px;
+    }
+    
+    &__body {
+      height: 100%;
+      // overflow: auto;
       
-      // Hide scrollbar
-      overflow: auto;
-      -ms-overflow-style: none; // IE and Edge
-      scrollbar-width: none; // Firefox
-      &::-webkit-scrollbar {
-          display: none; // Chrome, Safari and Opera
-      }
+      // -ms-scroll-chaining: none;
+      // overscroll-behavior: contain;
+      // -webkit-overflow-scrolling: touch;
+    
+      
     }
     
     &__section {
-      display: flex; 
-      align-items: center; 
-      gap: 10px 10px;
-      width: max-content;
+      width: 100%;
       padding: 20px;
       border-bottom: 1px solid #e3e2e9;
+      
+      &:last-child {
+        border-bottom: 0;
+      }
     }
+  }
+  
+  .siderail-menu-main {
+    top: 20px;
+    transform: translate(0, 0);
   }
   
   /* --------------------------------
@@ -520,10 +528,10 @@ Plugin styles
     display: flex;
     align-items: center;
 
-    padding: 0 18.5px;
+    padding: 0 0 0 10px;
     background-color: #fff;
     border-radius: 5px;
-    border: 2px solid #e3e2e9;
+    border: 1px solid #d7d7da;
 
     white-space: nowrap;
     color: #68667f;
