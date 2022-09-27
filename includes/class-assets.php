@@ -82,7 +82,30 @@ class Assets {
 	 * @return void
 	 */
 	public function enqueue_design_plugin_frontend() {
+		// wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/assets/index.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/assets/index.js'), [], '', true);
+		// wp_enqueue_script('design-plugin-frontend', '/wp-content/plugins/bloomcu-design/src/main.js', [], '', true);
+		// add_filter('script_loader_tag', [$this, 'add_module_to_design_plugin_script'], 10, 3);
+		
+		// Prod
+		wp_enqueue_style('design-plugin-css', DESIGN_PLUGIN_ASSETS . '/assets/index.css?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/assets/index.css'), [], '', 'screen');
 		wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/assets/index.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/assets/index.js'), [], '', true);
+		add_filter('script_loader_tag', [$this, 'add_module_to_design_plugin_script'], 10, 3);
+		
+		// ESM format
+		// wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/bloomcu-design.esm.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/bloomcu-design.esm.js'), [], '', true);
+		// wp_enqueue_style('design-plugin-css', DESIGN_PLUGIN_ASSETS . '/style.css?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/style.css'), [], '', 'screen');
+		
+		// UMD format
+		// wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/bloomcu-design.umd.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/bloomcu-design.umd.js'), [], '', true);
+		// wp_enqueue_style('design-plugin-css', DESIGN_PLUGIN_ASSETS . '/style.css?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/style.css'), [], '', 'screen');
+	}
+	
+	function add_module_to_design_plugin_script($tag, $handle, $src) {
+		if ('design-plugin-frontend' === $handle) {
+			$tag = '<script type="module" src="' . esc_url($src) . '"></script>';
+		}
+
+		return $tag;
 	}
 	
 	/**

@@ -4,14 +4,13 @@ export const useUIStore = defineStore('UIStore', {
   state: () => ({
     activeMenu: '',
     activeStyleGuide: false,
-    mode: 'view',
-    collapsed: false,
+    collapsed: localStorage.getItem('design_plugin_sidebar_collapsed') || 'false',
+    mode: localStorage.getItem('design_plugin_mode') || 'view',
   }),
 
   actions: {
-    init(mode = 'view', collapsed = false) {
+    init(mode = 'view') {
       this.mode = mode
-      this.collapsed = collapsed
     }
   }
 })

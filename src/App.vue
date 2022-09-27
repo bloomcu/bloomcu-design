@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="bloomcu-design">
-      <div v-if="!sidebarCollapsed" class="siderail">
+      <div v-if="ui.collapsed === 'false'" class="siderail">
+        
         <!-- Top -->
         <div class="siderail-top">
           <div v-if="store.loading" class="siderail-item">
@@ -12,7 +13,7 @@
             <button 
               @click="toggleMenu('MainMenu')" 
               class="siderail-item__button" 
-              :class="activeMenu === 'MainMenu' ? 'siderail-item__button--active' : ''"
+              :class="ui.activeMenu === 'MainMenu' ? 'siderail-item__button--active' : ''"
               style="display: flex; flex-direction: column; align-items: center;"
             >
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
@@ -23,10 +24,10 @@
           
         <!-- Middle -->
         <div class="siderail-middle" v-if="store.design">
-          <div v-if="store.mode === 'edit'">
+          <div v-if="ui.mode === 'edit'">
             <!-- Colors -->
             <div class="siderail-item">
-              <button @click="toggleMenu('ColorsMenu')" type="button" class="siderail-item__button" :class="activeMenu === 'ColorsMenu' ? 'siderail-item__button--active' : ''">
+              <button @click="toggleMenu('ColorsMenu')" type="button" class="siderail-item__button" :class="ui.activeMenu === 'ColorsMenu' ? 'siderail-item__button--active' : ''">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round">
                     <path data-cap="butt" d="M3.41,12.017l10.607,7.778 c0.781,0.781,3.155-0.327,5.303-2.475s3.256-4.522,2.475-5.303L14.017,1.41"></path><ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.195 8.1276)" cx="8.713" cy="6.713" rx="7.5" ry="3"></ellipse><path d="M1,20 c0-1.105,2-4,2-4s2,2.895,2,4s-0.895,2-2,2S1,21.105,1,20z"></path><path d="M14,11h4 c2.209,0,4-1.791,4-4c0-2.209-1.791-4-4-4h-2.817"></path>
@@ -37,7 +38,7 @@
             
             <!-- Fonts -->
             <div class="siderail-item">
-              <button @click="toggleMenu('TypographyMenu')" type="button" class="siderail-item__button" :class="activeMenu === 'TypographyMenu' ? 'siderail-item__button--active' : ''">
+              <button @click="toggleMenu('TypographyMenu')" type="button" class="siderail-item__button" :class="ui.activeMenu === 'TypographyMenu' ? 'siderail-item__button--active' : ''">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round">
                     <polyline points="1,5 1,3 17,3 17,5 "></polyline><line x1="9" y1="3" x2="9" y2="20"></line><line x1="5" y1="20" x2="12" y2="20"></line><polyline points=" 13,11 13,10 23,10 23,11 "></polyline><line x1="18" y1="10" x2="18" y2="20"></line><line x1="16" y1="20" x2="20" y2="20"></line>
@@ -48,7 +49,7 @@
             
             <!-- Buttons -->
             <div class="siderail-item">
-              <button @click="toggleMenu('ButtonsMenu')" type="button" class="siderail-item__button" :class="activeMenu === 'ButtonsMenu' ? 'siderail-item__button--active' : ''">
+              <button @click="toggleMenu('ButtonsMenu')" type="button" class="siderail-item__button" :class="ui.activeMenu === 'ButtonsMenu' ? 'siderail-item__button--active' : ''">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline data-cap="butt" points="8.333,14 1,14 1,1 23,1 23,14 20,14 "></polyline><line data-cap="butt" x1="13" y1="14" x2="19" y2="20"></line><polygon points=" 6,7 10,19 13,14 18,11 "></polygon>
                   </g>
@@ -57,10 +58,10 @@
             </div>
           </div>
           
-          <div v-if="store.mode === 'view' || store.mode === 'edit'" >
+          <div v-if="ui.mode === 'view' || ui.mode === 'edit'" >
             <!-- Mini style guide -->
             <div class="siderail-item">
-              <button @click="toggleMenu('StyleGuide')" type="button" class="siderail-item__button" :class="activeMenu === 'StyleGuide' ? 'siderail-item__button--active' : ''">
+              <button @click="toggleMenu('StyleGuide')" type="button" class="siderail-item__button" :class="ui.activeMenu === 'StyleGuide' ? 'siderail-item__button--active' : ''">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round">
                     <line x1="12" y1="1" x2="12" y2="3"></line><line data-cap="butt" x1="8" y1="17" x2="6" y2="23"></line><line data-cap="butt" x1="18" y1="23" x2="16" y2="17"></line><line data-cap="butt" x1="7" y1="20" x2="17" y2="20"></line><rect x="4" y="3" width="16" height="14"></rect>
@@ -79,26 +80,19 @@
           
           <!-- Collapse sidebar -->
           <div class="siderail-item">
-            <button @click="collapseSidebar()" :disabled="activeMenu !== ''" class="siderail-item__button">
+            <button @click="collapseSidebar()" :disabled="ui.activeMenu !== ''" class="siderail-item__button">
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
             </button>
           </div>
-              
-          <!-- Disable plugin -->
-          <!-- <div class="siderail-item">
-            <button @click="toggleDisablePlugin()" class="siderail-item__button">
-              <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><path d="M17,4.3c3,1.7,5,5,5,8.7 c0,5.5-4.5,10-10,10S2,18.5,2,13c0-3.7,2-6.9,5-8.7"></path><line x1="12" y1="1" x2="12" y2="8"></line></g></svg>
-            </button>
-          </div> -->
         </div>
       </div>
       
       <!-- Menus -->
-      <component :is="activeMenu"/>
+      <component :is="ui.activeMenu"/>
     </div>
     
     <!-- Toggle sidebar -->
-    <div v-if="sidebarCollapsed" class="sidebar-toggle" style="position: fixed; bottom: 30px; right: 0; z-index: 100;">
+    <div v-if="ui.collapsed === 'true'" class="sidebar-toggle" style="position: fixed; bottom: 30px; right: 0; z-index: 100;">
       <button @click="expandSidebar()" class="reset" style="display: flex; flex-direction: row; align-items: center; background: #fff; padding: 7px 14px 7px 4px; border: 1px solid #eaeaeb; border-right: 0; border-radius: 5px 0 0 5px; cursor: pointer;">
         <svg class="flip-x" width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="1.5" fill="none" stroke="currentColor" stroke-linejoin="round"><polyline points="7,2 17,12 7,22 " transform="translate(0, 0)"></polyline></g></svg>
       </button>
@@ -133,9 +127,10 @@ export default defineComponent({
 </script>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import { debounce } from '@/composables/useDebounce'
 import { useDesignStore } from '@/store/useDesignStore'
+import { useUIStore } from '@/store/useUIStore'
 import { useUserStore } from '@/store/useUserStore'
 
 import IconLoading from '@/components/IconLoading.vue'
@@ -160,30 +155,27 @@ const props = defineProps({
 })
 
 const store = useDesignStore()
+const ui = useUIStore()
 const user = useUserStore()
-const activeMenu = ref('')
-const sidebarCollapsed = ref(getCookie('design_plugin_sidebar_collapsed'))
 
 const toggleMenu = (menu) => {
-  activeMenu.value = activeMenu.value === menu ? '' : menu
-}
-
-const toggleDisablePlugin = () => {
-  document.cookie = 'design_plugin_disabled=true; path=/;'
-  let path = window.location.href.split('?')[0]
-  window.location = path
+  ui.activeMenu = ui.activeMenu === menu ? '' : menu
 }
 
 const collapseSidebar = () => {
+  ui.collapsed = 'true'
+  localStorage.setItem('design_plugin_sidebar_collapsed', true)
   document.body.classList.remove('design-plugin-enabled');
-  sidebarCollapsed.value = true
-  createCookie('design_plugin_sidebar_collapsed', true, 30)
+  
+  // createCookie('design_plugin_sidebar_collapsed', true, 30)
 }
 
 const expandSidebar = () => {
+  ui.collapsed = 'false'
+  localStorage.setItem('design_plugin_sidebar_collapsed', false)
   document.body.classList.add('design-plugin-enabled');
-  sidebarCollapsed.value = false
-  eraseCookie('design_plugin_sidebar_collapsed')
+  
+  // eraseCookie('design_plugin_sidebar_collapsed')
 }
 
 const updateDesign = debounce(() => {
@@ -200,15 +192,19 @@ onMounted(() => {
   if (props.design) {
     store.show(props.design)
       // TODO: Clean this up
-      .then(() => {
-        if (store.variables.font_primary.source === 'upload') {
-          activeFontsSource.value = 'upload'
-        }
-      })
+      // .then(() => {
+      //   if (store.variables.font_primary.source === 'upload') {
+      //     activeFontsSource.value = 'upload'
+      //   }
+      // })
   }
   
   if (props.user_name && props.user_email) {
     user.init(props.user_name, props.user_email)
+  }
+  
+  if (props.mode) {
+    ui.init(props.mode)
   }
   
   if (window.screen.width <= 1024) {
@@ -433,30 +429,6 @@ Plugin styles
   }
   
   /* --------------------------------
-  Card
-  -------------------------------- */
-  .card {
-    border: 1px solid #d6d7d7;
-    border-radius: .5em;
-    padding: 1.125rem;
-    background: #ffffff;
-    
-    &--dark {
-      border: none;
-      background-color: #f4f5f5;
-      box-shadow: none;
-      
-      &:hover {
-        box-shadow: var(--shadow-sm);
-      }
-    }
-  }
-
-  .card-header {
-    border-radius: .5em;
-  }
-  
-  /* --------------------------------
   Input group
   -------------------------------- */
   .input-group {
@@ -671,12 +643,11 @@ Action icon
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  
   transition: 0.2s;
   cursor: pointer;
 
   &:hover {
-    background-color: #eee5ff;
+    background-color: #efefef;
   }
 
   .icon {

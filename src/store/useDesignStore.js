@@ -3,7 +3,6 @@ import { designApi as DesignApi } from '../api/designApi'
 
 export const useDesignStore = defineStore('designStore', {
   state: () => ({
-    mode: localStorage.getItem('design_plugin_mode') || 'edit',
     designs: null,
     design: null,
     loading: false,

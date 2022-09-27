@@ -8,7 +8,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "prod": "vite build --production",
     "zip": "zip -r bloomcu-design.zip . -x *.git* *.DS_Store* bloomcu-design.json /node_modules node_modules/\\*"
   },
   "dependencies": {
