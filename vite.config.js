@@ -24,6 +24,7 @@ export default defineConfig({
     //   name: 'App',
     // },
     rollupOptions: {
+      input: '/src/main.js',
       output: {
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
