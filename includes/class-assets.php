@@ -82,6 +82,8 @@ class Assets {
 	 * @return void
 	 */
 	public function enqueue_design_plugin_frontend() {
+		wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/main.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/src/main.js'), [], '', true);
+		
 		// wp_enqueue_script('design-plugin-frontend', DESIGN_PLUGIN_ASSETS . '/assets/index.js?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/assets/index.js'), [], '', true);
 		// wp_enqueue_script('design-plugin-frontend', '/wp-content/plugins/bloomcu-design/src/main.js', [], '', true);
 		// add_filter('script_loader_tag', [$this, 'add_module_to_design_plugin_script'], 10, 3);
@@ -100,13 +102,13 @@ class Assets {
 		// wp_enqueue_style('design-plugin-css', DESIGN_PLUGIN_ASSETS . '/style.css?v=' . filemtime(DESIGN_PLUGIN_PATH . '/dist/style.css'), [], '', 'screen');
 	}
 	
-	function add_module_to_design_plugin_script($tag, $handle, $src) {
-		if ('design-plugin-frontend' === $handle) {
-			$tag = '<script type="module" src="' . esc_url($src) . '"></script>';
-		}
-
-		return $tag;
-	}
+	// function add_module_to_design_plugin_script($tag, $handle, $src) {
+	// 	if ('design-plugin-frontend' === $handle) {
+	// 		$tag = '<script type="module" src="' . esc_url($src) . '"></script>';
+	// 	}
+	// 
+	// 	return $tag;
+	// }
 	
 	/**
 	 * Redirect to login

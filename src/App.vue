@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="bloomcu-design">
-      <div v-if="ui.collapsed === 'false'" class="siderail">
-        
-        <!-- Top -->
+      <div class="siderail" v-if="ui.collapsed === 'false'" >
         <div class="siderail-top">
           <div v-if="store.loading" class="siderail-item">
             <IconLoading/>
@@ -17,12 +15,10 @@
               style="display: flex; flex-direction: column; align-items: center;"
             >
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
-              <!-- <span style="font-size: 13px;">Menu</span> -->
+              <span style="font-size: 13px;">Menu</span>
             </button>
           </div>
         </div>
-          
-        <!-- Middle -->
         <div class="siderail-middle" v-if="store.design">
           <div v-if="ui.mode === 'edit'">
             <!-- Colors -->
@@ -71,8 +67,6 @@
             </div>
           </div>
         </div>
-        
-        <!-- Bottom -->
         <div class="siderail-bottom" style="display: flex; flex-direction: column; align-items: center;"> 
           <div class="siderail-item padding-bottom-sm">
             <ToggleMode/>
@@ -109,11 +103,11 @@
 <script>
 import { defineComponent } from 'vue'
 
-import MainMenu from '@/components/menus/MainMenu.vue'
-import ColorsMenu from '@/components/menus/ColorsMenu.vue'
-import TypographyMenu from '@/components/menus/TypographyMenu.vue'
-import ButtonsMenu from '@/components/menus/ButtonsMenu.vue'
-import StyleGuide from '@/components/menus/StyleGuide.vue'
+import MainMenu from './components/menus/MainMenu.vue'
+import ColorsMenu from './components/menus/ColorsMenu.vue'
+import TypographyMenu from './components/menus/TypographyMenu.vue'
+import ButtonsMenu from './components/menus/ButtonsMenu.vue'
+import StyleGuide from './components/menus/StyleGuide.vue'
 
 export default defineComponent({
     components: {
@@ -128,15 +122,15 @@ export default defineComponent({
 
 <script setup>
 import { onMounted } from 'vue'
-import { debounce } from '@/composables/useDebounce'
-import { useDesignStore } from '@/store/useDesignStore'
-import { useUIStore } from '@/store/useUIStore'
-import { useUserStore } from '@/store/useUserStore'
+import { debounce } from './composables/useDebounce'
+import { useDesignStore } from './store/useDesignStore'
+import { useUIStore } from './store/useUIStore'
+import { useUserStore } from './store/useUserStore'
 
-import IconLoading from '@/components/IconLoading.vue'
-import DesignFonts from '@/components/DesignFonts.vue'
-import DesignStyles from '@/components/DesignStyles.vue'
-import ToggleMode from '@/components/toggles/ToggleMode.vue'
+import IconLoading from './components/IconLoading.vue'
+import DesignFonts from './components/DesignFonts.vue'
+import DesignStyles from './components/DesignStyles.vue'
+import ToggleMode from './components/toggles/ToggleMode.vue'
 
 const props = defineProps({
   design: { 
