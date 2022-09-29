@@ -11,24 +11,11 @@ mix.js('src/main.js', 'dist').vue();
 mix.sass('src/scss/app.scss', 'dist');
 
 mix.browserSync({
-  proxy: 'http://localhost:3000',
+  proxy: 'http://localhost:10003',
   files: ['*.php', './**/*.php', './includes/*.php', './includes/**/*.php', './assets/**/*.*'],
   files: [
     'src/*.vue',
   ],
-  template: 'dist/index.html',
   notify: false
 });
     
-// mix.options({
-//     hmrOptions: {
-//         host: 'localhost',
-//         port: '3000'
-//     },
-// });
-
-mix.webpackConfig({
-    devServer: {
-        port: '8079'
-    },
-});
