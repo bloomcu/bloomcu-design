@@ -1,9 +1,9 @@
 <template>
-  <div class="styleguide flex flex-center bg-black bg-opacity-30%">
-    <div class="styleguide__content width-100% max-width-xl height-100% overflow-hidden padding-x-lg padding-top-lg radius-md shadow-md">
+  <div class="styleguide flex __flex-center bg-black bg-opacity-30%">
+    <div class="styleguide__content width-100% __max-width-xl height-100% overflow-hidden padding-x-xl padding-top-xl radius-md shadow-md">
       
       <!-- Content -->
-      <div class="container max-width-lg">
+      <div class="__container max-width-md">
         <div class="grid gap-xxl">
           <div class="col-6 margin-bottom-0">
 
@@ -91,3 +91,18 @@ import { useDesignStore } from '@/store/useDesignStore'
 
 const store = useDesignStore()
 </script>
+
+<style lang="scss">
+.styleguide {
+  position: fixed;
+  top: 0;
+  right: 30px;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+  
+  &__content {
+    background: var(--color-bg);
+  }
+}
+</style>

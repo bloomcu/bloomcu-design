@@ -57,7 +57,7 @@
           <div v-if="ui.mode === 'view' || ui.mode === 'edit'" >
             <!-- Mini style guide -->
             <div class="siderail-item">
-              <button @click="toggleMenu('StyleGuide')" type="button" class="siderail-item__button" :class="ui.activeMenu === 'StyleGuide' ? 'siderail-item__button--active' : ''">
+              <button @click="toggleStyleGuide()" type="button" class="siderail-item__button" :class="ui.activeStyleGuide ? 'siderail-item__button--active' : ''">
                 <svg width="24" height="24" viewBox="0 0 24 24">
                   <g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round">
                     <line x1="12" y1="1" x2="12" y2="3"></line><line data-cap="butt" x1="8" y1="17" x2="6" y2="23"></line><line data-cap="butt" x1="18" y1="23" x2="16" y2="17"></line><line data-cap="butt" x1="7" y1="20" x2="17" y2="20"></line><rect x="4" y="3" width="16" height="14"></rect>
@@ -80,10 +80,11 @@
           </div>
         </div>
       </div>
-      
-      <!-- Menus -->
       <component :is="ui.activeMenu"/>
     </div>
+    
+    <!-- Styleguide -->
+    <StyleGuide v-if="ui.activeStyleGuide"/>
     
     <!-- Toggle sidebar -->
     <div v-if="ui.collapsed === 'true'" class="sidebar-toggle" style="position: fixed; bottom: 30px; right: 0; z-index: 100;">
@@ -107,7 +108,6 @@ import MainMenu from './components/menus/MainMenu.vue'
 import ColorsMenu from './components/menus/ColorsMenu.vue'
 import TypographyMenu from './components/menus/TypographyMenu.vue'
 import ButtonsMenu from './components/menus/ButtonsMenu.vue'
-import StyleGuide from './components/menus/StyleGuide.vue'
 
 export default defineComponent({
     components: {
@@ -115,7 +115,6 @@ export default defineComponent({
       ColorsMenu,
       TypographyMenu,
       ButtonsMenu,
-      StyleGuide,
     }
 })    
 </script>
@@ -130,6 +129,7 @@ import { useUserStore } from './store/useUserStore'
 import IconLoading from './components/IconLoading.vue'
 import DesignFonts from './components/DesignFonts.vue'
 import DesignStyles from './components/DesignStyles.vue'
+import StyleGuide from './components/menus/StyleGuide.vue'
 import ToggleMode from './components/toggles/ToggleMode.vue'
 
 const props = defineProps({
@@ -154,6 +154,10 @@ const user = useUserStore()
 
 const toggleMenu = (menu) => {
   ui.activeMenu = ui.activeMenu === menu ? '' : menu
+}
+
+function toggleStyleGuide() {
+  ui.activeStyleGuide = !ui.activeStyleGuide
 }
 
 const collapseSidebar = () => {
@@ -663,22 +667,6 @@ Action icon
   .icon {
     width: 18px;
     height: 18px;
-  }
-}
-
-/* --------------------------------
-Styleguide
--------------------------------- */
-.styleguide {
-  position: fixed;
-  top: 0;
-  right: 30px;
-  width: 100%;
-  height: 100%;
-  z-index: 90;
-  
-  &__content {
-    background: var(--color-bg);
   }
 }
 </style>
