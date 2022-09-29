@@ -242,7 +242,23 @@ body.design-plugin-enabled {
   padding-right: 65px;
 }
 
-
+body.admin-bar {
+  .bloomcu-design .siderail {
+    padding-top: 44px;
+  }
+  
+  .bloomcu-design .siderail-menu {
+    max-height: 92vh;
+  }
+  
+  .bloomcu-design .siderail-menu-main {
+    top: 46px;
+  }
+  
+  .bloomcu-design .styleguide__content {
+    padding-top: 3em;
+  }
+}
 
 /* --------------------------------
 Plugin styles
