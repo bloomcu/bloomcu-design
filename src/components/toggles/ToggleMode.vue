@@ -30,7 +30,6 @@ const ui = useUIStore()
 design.$subscribe((mutation, state) => {
   if (design.design && design.design.designer_email === user.email) {
     user.canEdit = true
-    ui.mode = 'edit'
   } else {
     user.canEdit = false
     ui.mode = 'view'

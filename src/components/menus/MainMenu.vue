@@ -26,6 +26,7 @@
       
       <div class="siderail-menu__section">
         <p class="font-bold margin-bottom-sm">Styles</p>
+        
         <div
           v-for="design in store.designs"
           :key="design.id"
@@ -35,7 +36,7 @@
         >
           <div>
             <p class="text-bold margin-bottom-xxs">{{ design.title }}</p>
-            <p class="text-sm">{{design.designer_name}}</p>
+            <p v-if="user.email === design.designer_email" class="text-sm">My Style</p>
           </div>
           
           <div class="flex items-center gap-xxs">
@@ -43,11 +44,11 @@
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle><line x1="2" y1="22" x2="22" y2="2"></line></g></svg>
             </button>
             
-            <button v-if="user.name === design.designer_name && user.email === design.designer_email" @click.stop="destroyDesign(design.uuid)" class="action-icon reset">
+            <button v-if="user.email === design.designer_email" @click.stop="destroyDesign(design.uuid)" class="action-icon reset">
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><path d="M20,9l-.867,12.142A2,2,0,0,1,17.138,23H6.862a2,2,0,0,1-1.995-1.858L4,9"></path><line x1="1" y1="5" x2="23" y2="5" stroke="#000000"></line><path data-cap="butt" d="M8,5V1h8V5" stroke="#000000"></path></g></svg>
             </button>
             
-            <button v-if="user.name && user.email" @click.stop="duplicateDesign(design.uuid)" class="action-icon reset">
+            <button v-if="user.email" @click.stop="duplicateDesign(design.uuid)" class="action-icon reset">
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><polyline points=" 16,8 22,8 22,22 8,22 8,16 "></polyline><rect x="2" y="2" width="14" height="14"></rect></g></svg>
             </button>
           </div>

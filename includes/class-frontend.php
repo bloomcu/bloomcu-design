@@ -26,7 +26,7 @@ class Frontend {
 		
 		global $current_user; 
 		$user = wp_get_current_user();
-		var_dump($user->data);
+		// var_dump($user->data);
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
 			// $disabled = false;
