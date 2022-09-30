@@ -3,6 +3,10 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.2.2**
+*Release Date – Sept 30, 2022*
+* Add design duplication functionality
+* Prevent designs from being edited/archived by other designers
 
 **1.2.1**
 *Release Date – Sept 12, 2022*
