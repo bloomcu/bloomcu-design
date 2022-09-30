@@ -1,5 +1,7 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
 import { designApi as DesignApi } from '../api/designApi'
+// import { useUIStore } from './store/useUIStore'
+// import { useUserStore } from './store/useUserStore'
 
 export const useDesignStore = defineStore('designStore', {
   state: () => ({
@@ -39,6 +41,9 @@ export const useDesignStore = defineStore('designStore', {
 
     async show(uuid) {
       this.loading = true
+      
+      // const ui = useUIStore()
+      // const user = useUserStore()
 
       await DesignApi.show('bloomcu', uuid)
         .then(response => {
@@ -99,7 +104,7 @@ export const useDesignStore = defineStore('designStore', {
       })
         .then(response => {
           this.designs.unshift(response.data.data)
-          this.design = response.data.data
+          this.show(response.data.data.uuid)
           document.cookie = `design_plugin_design=${response.data.data.uuid}; path=/;`          
           this.loading = false
         }).catch(error => {

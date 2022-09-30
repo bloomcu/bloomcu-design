@@ -22,21 +22,11 @@ class Frontend {
 	public function render_frontend($atts) {
 		$disabled = isset($_COOKIE['design_plugin_disabled']);
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
-		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
+		$mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : 'view';
 		
 		global $current_user; 
-		// $wpUser = wp_get_current_user();
-		// var_dump($user);
-		
 		$user = wp_get_current_user();
-		// Setup user
-		// global $current_user; 
-		// $wordpressUser = get_currentuserinfo();
-		
-		// var_dump($wordpressUser->ID !== 0);
-		
-		
-		// var_dump(json_encode($user));
+		var_dump($user->data);
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
 			// $disabled = false;
@@ -45,8 +35,6 @@ class Frontend {
 		}
 		
 		if (!$disabled) {
-			// return;
-			
 			echo '
 				<div
 					id="app"

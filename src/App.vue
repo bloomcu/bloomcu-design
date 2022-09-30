@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bloomcu-design">
-      <div class="siderail" v-if="ui.collapsed === 'false'" >
+      <div class="siderail" v-if="ui.collapsed === 'false'">
         <div class="siderail-top">
           <div v-if="store.loading" class="siderail-item">
             <IconLoading/>
