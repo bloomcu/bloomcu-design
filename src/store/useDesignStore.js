@@ -49,6 +49,7 @@ export const useDesignStore = defineStore('designStore', {
         .then(response => {
           this.design = response.data.data
           document.cookie = `design_plugin_design=${uuid}; path=/;`
+          // localStorage.setItem('design_plugin_design', uuid)
           
           setTimeout(() => {  
             this.loading = false

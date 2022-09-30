@@ -80,6 +80,7 @@ const showDesign = (uuid) => {
 
 const disableDesign = () => {
   store.design = null
+  document.cookie = 'design_plugin_design=""; expires=Sat, 20 Jan 1980 12:00:00 UTC; path=/;';
 }
 
 const duplicateDesign = (uuid) => {

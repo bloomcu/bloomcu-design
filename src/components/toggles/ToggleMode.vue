@@ -1,6 +1,6 @@
 <template>
   <ul class="radio-switch-vertical">
-    <li v-if="user.canEdit" @click="toggleEditMode()" class="radio-switch-vertical__item">
+    <li v-if="ui.canEdit" @click="toggleEditMode()" class="radio-switch-vertical__item">
       <input class="radio-switch-vertical__input sr-only" type="radio" name="radio-switch-vertical-name" id="radio-1" :checked="ui.mode === 'edit'">
       <label class="radio-switch-vertical__label" for="radio-1">
         <svg class="icon icon--xs" height="16" width="16" viewBox="0 0 16 16"><g><path d="M8.1,3.5l-7.8,7.8C0.1,11.5,0,11.7,0,12v3c0,0.6,0.4,1,1,1h3c0.3,0,0.5-0.1,0.7-0.3l7.8-7.8L8.1,3.5z"></path> <path data-color="color-2" d="M15.7,3.3l-3-3c-0.4-0.4-1-0.4-1.4,0L9.5,2.1l4.4,4.4l1.8-1.8C16.1,4.3,16.1,3.7,15.7,3.3z"></path></g></svg>
@@ -19,6 +19,7 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useDesignStore } from '@/store/useDesignStore'
 import { useUIStore } from '@/store/useUIStore'
 import { useUserStore } from '@/store/useUserStore'
@@ -28,13 +29,23 @@ const user = useUserStore()
 const ui = useUIStore()
 
 design.$subscribe((mutation, state) => {
-  if (design.design && design.design.designer_email === user.email) {
-    user.canEdit = true
-  } else {
-    user.canEdit = false
-    ui.mode = 'view'
-  }
+  setCanUserEdit()
 })
+
+onMounted(() => {
+  setCanUserEdit()
+})
+
+function setCanUserEdit() {
+  if (design.design) {
+    if (design.design.designer_email === user.email) {
+      ui.canEdit = true
+    } else {
+      ui.canEdit = false
+      ui.mode = 'view'
+    }  
+  }
+}
 
 const toggleViewMode = () => {
   ui.mode = 'view'

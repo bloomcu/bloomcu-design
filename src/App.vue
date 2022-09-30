@@ -138,7 +138,6 @@ const props = defineProps({
   },
   mode: {
     type: String,
-    default: 'view',
   },
   user_name: {
     type: String,
@@ -162,7 +161,7 @@ function toggleStyleGuide() {
 
 const collapseSidebar = () => {
   ui.collapsed = 'true'
-  localStorage.setItem('design_plugin_sidebar_collapsed', true)
+  localStorage.setItem('design_plugin_sidebar_collapsed', 'true')
   document.body.classList.remove('design-plugin-enabled');
   
   // createCookie('design_plugin_sidebar_collapsed', true, 30)
@@ -170,7 +169,7 @@ const collapseSidebar = () => {
 
 const expandSidebar = () => {
   ui.collapsed = 'false'
-  localStorage.setItem('design_plugin_sidebar_collapsed', false)
+  localStorage.setItem('design_plugin_sidebar_collapsed', 'false')
   document.body.classList.add('design-plugin-enabled');
   
   // eraseCookie('design_plugin_sidebar_collapsed')
@@ -197,12 +196,12 @@ onMounted(() => {
       // })
   }
   
+  // if (props.mode) {
+  //   ui.init(props.mode)
+  // }
+  
   if (props.user_name && props.user_email) {
     user.init(props.user_name, props.user_email)
-  }
-  
-  if (props.mode) {
-    ui.init(props.mode)
   }
   
   if (window.screen.width <= 1024) {
