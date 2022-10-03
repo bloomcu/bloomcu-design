@@ -1,5 +1,5 @@
 <template>
-  <ul class="radio-switch-vertical">
+  <ul v-if="design.design" class="radio-switch-vertical">
     <li v-if="ui.canEdit" @click="toggleEditMode()" class="radio-switch-vertical__item">
       <input class="radio-switch-vertical__input sr-only" type="radio" name="radio-switch-vertical-name" id="radio-1" :checked="ui.mode === 'edit'">
       <label class="radio-switch-vertical__label" for="radio-1">

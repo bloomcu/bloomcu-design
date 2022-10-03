@@ -11,7 +11,17 @@ export const useDesignStore = defineStore('designStore', {
   }),
 
   getters: {
-    variables: (state) => state.design.variables
+    variables: (state) => state.design.variables,
+    
+    filterDesignsBy: (state) => (filter, value) => {
+      if (filter) {
+        return state.designs.filter((design) => {
+          return design[filter] === value
+        })
+      } else {
+        return state.designs
+      }
+    }
   },
 
   actions: {
@@ -28,16 +38,22 @@ export const useDesignStore = defineStore('designStore', {
         })
     },
 
-    // async store(design) {
-    //   this.loading = true
-    // 
-    //   await DesignApi.store('bloomcu', design)
-    //     .then(response => {
-    //       this.designs.push(response.data.data)
-    //     }).catch(error => {
-    //       console.log('Error', error.response.data)
-    //     })
-    // },
+    async store(user) {
+      this.loading = true
+    
+      await DesignApi.store('bloomcu', {
+        designer_name: user.name,
+        designer_email: user.email,
+      })
+        .then(response => {
+          this.designs.unshift(response.data.data)
+          this.show(response.data.data.uuid)
+          document.cookie = `design_plugin_design=${response.data.data.uuid}; path=/;`          
+          this.loading = false
+        }).catch(error => {
+          console.log('Error', error.response.data)
+        })
+    },
 
     async show(uuid) {
       this.loading = true

@@ -25,10 +25,35 @@
     <div v-if="store.designs" class="siderail-menu__body">
       
       <div class="siderail-menu__section">
-        <p class="font-bold margin-bottom-sm">Styles</p>
+
+        <!-- Styles menu -->
+        <div v-if="user.email" class="flex justify-between align-center margin-bottom-sm">
+          <!-- Toggle -->
+          <div>
+            <button 
+              @click="designsFilter = 'designer_email'"
+              class="reset text-sm border radius-full padding-y-xxs padding-x-sm cursor-pointer margin-right-xs"
+              :class="designsFilter === 'designer_email' ? 'border-opacity-0 color-white bg-black' : ''"
+            >
+              My styles
+            </button>
+            <button 
+              @click="designsFilter = null"
+              class="reset text-sm border radius-full padding-y-xxs padding-x-sm cursor-pointer"
+              :class="designsFilter === null ? 'border-opacity-0 color-white bg-black' : ''"
+            >
+              All styles
+            </button>
+          </div>
+          
+          <!-- Create new design -->
+          <button @click="storeNewDesign()" class="action-icon reset">
+            <svg width="22" height="22" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round" class="nc-icon-wrapper"><line x1="12" y1="2" x2="12" y2="22"></line> <line x1="22" y1="12" x2="2" y2="12"></line></g></svg>
+          </button>
+        </div>
         
         <div
-          v-for="design in store.designs"
+          v-for="design in store.filterDesignsBy(designsFilter, user.email)"
           :key="design.id"
           @click="showDesign(design.uuid)"
           :class="(store.design !== null && store.design.uuid === design.uuid) ? 'card card--dark' : 'card'"
@@ -36,7 +61,7 @@
         >
           <div>
             <p class="text-bold margin-bottom-xxs">{{ design.title }}</p>
-            <p v-if="user.email === design.designer_email" class="text-sm">My Style</p>
+            <span v-if="user.email === design.designer_email" class="text-sm radius-full padding-x-xxs" style="color: #96f; background: #eee5ff; border: 1px solid #fff;">Mine</span>
           </div>
           
           <div class="flex items-center gap-xxs">
@@ -59,10 +84,11 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useDesignStore } from '@/store/useDesignStore'
 import { useUserStore } from '@/store/useUserStore'
 
+const designsFilter = ref('designer_email')
 const store = useDesignStore()
 const user = useUserStore()
 
@@ -83,11 +109,12 @@ const disableDesign = () => {
   document.cookie = 'design_plugin_design=""; expires=Sat, 20 Jan 1980 12:00:00 UTC; path=/;';
 }
 
+const storeNewDesign = () => {
+  store.store(user)
+}
+
 const duplicateDesign = (uuid) => {
-  store.duplicate(uuid, {
-    name: user.name,
-    email: user.email,
-  })
+  store.duplicate(uuid, user)
 }
 
 const destroyDesign = (uuid) => {

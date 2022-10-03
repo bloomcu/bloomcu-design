@@ -11,15 +11,15 @@ const designApi = {
         return HttpClient.get(`/${organization}/designs`, { params: params })
     },
     
-    // /**
-    //  * Store a design
-    //  *
-    //  * @param Object design [Properties to create design from]
-    //  * @return promise
-    //  */
-    // store(organization, design) {
-    //     return HttpClient.post(`/${organization}/designs`, design)
-    // },
+    /**
+     * Store a design
+     *
+     * @param Object design [Properties to create design from]
+     * @return promise
+     */
+    store(organization, designer) {
+        return HttpClient.post(`/${organization}/designs`, designer)
+    },
     
     /**
      * Show a design

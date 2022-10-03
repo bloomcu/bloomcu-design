@@ -7,6 +7,7 @@
             <IconLoading/>
           </div>
           
+          <!-- Main menu -->
           <div v-else class="siderail-item">
             <button 
               @click="toggleMenu('MainMenu')" 
@@ -15,7 +16,24 @@
               style="display: flex; flex-direction: column; align-items: center;"
             >
               <svg width="24" height="24" viewBox="0 0 24 24"><g stroke-linecap="round" fill="none" stroke="currentColor" stroke-linejoin="round"><line x1="1" y1="12" x2="23" y2="12"></line><line x1="1" y1="5" x2="23" y2="5"></line><line x1="1" y1="19" x2="23" y2="19"></line></g></svg>
-              <span style="font-size: 13px;">Menu</span>
+              <!-- <span style="font-size: 13px;">Menu</span> -->
+            </button>
+          </div>
+          
+          <!-- Mini style guide -->
+          <div class="siderail-item">
+            <button 
+              @click="toggleStyleGuide()" 
+              class="siderail-item__button" 
+              :class="ui.activeStyleGuide ? 'siderail-item__button--active' : ''"
+              style="display: flex; flex-direction: column; align-items: center;"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="3"></line><line data-cap="butt" x1="8" y1="17" x2="6" y2="23"></line><line data-cap="butt" x1="18" y1="23" x2="16" y2="17"></line><line data-cap="butt" x1="7" y1="20" x2="17" y2="20"></line><rect x="4" y="3" width="16" height="14"></rect>
+                </g>
+              </svg>
+              <!-- <span style="font-size: 13px;">Style</span> -->
             </button>
           </div>
         </div>
@@ -53,22 +71,9 @@
               </button>
             </div>
           </div>
-          
-          <div v-if="ui.mode === 'view' || ui.mode === 'edit'" >
-            <!-- Mini style guide -->
-            <div class="siderail-item">
-              <button @click="toggleStyleGuide()" type="button" class="siderail-item__button" :class="ui.activeStyleGuide ? 'siderail-item__button--active' : ''">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round">
-                    <line x1="12" y1="1" x2="12" y2="3"></line><line data-cap="butt" x1="8" y1="17" x2="6" y2="23"></line><line data-cap="butt" x1="18" y1="23" x2="16" y2="17"></line><line data-cap="butt" x1="7" y1="20" x2="17" y2="20"></line><rect x="4" y="3" width="16" height="14"></rect>
-                  </g>
-                </svg>
-              </button>
-            </div>
-          </div>
         </div>
         <div class="siderail-bottom" style="display: flex; flex-direction: column; align-items: center;"> 
-          <div class="siderail-item padding-bottom-sm">
+          <div class="siderail-item padding-bottom-xs">
             <ToggleMode/>
           </div>
           
@@ -151,12 +156,13 @@ const store = useDesignStore()
 const ui = useUIStore()
 const user = useUserStore()
 
-const toggleMenu = (menu) => {
+function toggleMenu(menu) {
   ui.activeMenu = ui.activeMenu === menu ? '' : menu
 }
 
 function toggleStyleGuide() {
   ui.activeStyleGuide = !ui.activeStyleGuide
+  document.body.classList.toggle('overflow-hidden')
 }
 
 const collapseSidebar = () => {
@@ -324,7 +330,7 @@ Plugin styles
     
     width: 64px;
     height: 100vh;
-    padding: 20px 12px 20px 12px;
+    padding: 20px 12px 0 12px;
     border-left: 1px solid #eaeaeb;
     background: #fff;
   }
