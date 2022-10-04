@@ -3,6 +3,10 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.2.3**
+*Release Date – Oct 4, 2022*
+* Fix logic that controls the state of the plugin based on cookies
+
 **1.2.2**
 *Release Date – Sept 30, 2022*
 * Add design duplication functionality
