@@ -65,17 +65,31 @@
           </div>
           
           <div class="flex items-center gap-xxs">
+            <!-- Disable -->
             <button v-if="store.design !== null && store.design.uuid === design.uuid" @click.stop="disableDesign()" class="action-icon reset">
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><path d="M1.373,13.183a2.064,2.064,0,0,1,0-2.366C2.946,8.59,6.819,4,12,4s9.054,4.59,10.627,6.817a2.064,2.064,0,0,1,0,2.366C21.054,15.41,17.181,20,12,20S2.946,15.41,1.373,13.183Z"></path><circle cx="12" cy="12" r="4"></circle><line x1="2" y1="22" x2="22" y2="2"></line></g></svg>
             </button>
             
+            <!-- Destroy -->
             <button v-if="user.email === design.designer_email" @click.stop="destroyDesign(design.uuid)" class="action-icon reset">
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><path d="M20,9l-.867,12.142A2,2,0,0,1,17.138,23H6.862a2,2,0,0,1-1.995-1.858L4,9"></path><line x1="1" y1="5" x2="23" y2="5" stroke="#000000"></line><path data-cap="butt" d="M8,5V1h8V5" stroke="#000000"></path></g></svg>
             </button>
             
+            <!-- Duplicate -->
             <button v-if="user.email" @click.stop="duplicateDesign(design.uuid)" class="action-icon reset">
               <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><polyline points=" 16,8 22,8 22,22 8,22 8,16 "></polyline><rect x="2" y="2" width="14" height="14"></rect></g></svg>
             </button>
+            
+            <!-- Share -->
+            <button @click.stop="copyDesignUrl(design.uuid)" class="action-icon reset">
+              <svg height="18" width="18" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="#000000" stroke-linejoin="round"><line data-cap="butt" x1="11" y1="13" x2="22" y2="2"></line><polyline points="14 2 22 2 22 10"></polyline><path d="M9,4H4A2,2,0,0,0,2,6V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V15"></path></g></svg>
+            </button>
+            
+            <transition name="fade">
+              <div v-if="copiedDesign === design.uuid" class="share-overlay">
+                <p>Url copied</p>
+              </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -127,6 +141,29 @@ const disablePlugin = () => {
   window.location = path
 }
 
+const copiedDesign = ref(null)
+const copyDesignUrl = (designUuid) => {
+  let path = window.location.href.split('?')[0]
+  copyToClipboard(path + `?design=${designUuid}&mode=view`)
+  
+  copiedDesign.value = designUuid
+  setTimeout(() => {  
+    copiedDesign.value = null
+  }, 2000)
+}
+
+// TODO: Make this a composable
+// Ref: https://codepen.io/PJCHENder/pen/jamJpj?editors=1010
+const copyToClipboard = (value) => {
+  var tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
 onMounted(() => {
   if (!store.designs) {
     store.index()
@@ -140,6 +177,7 @@ onMounted(() => {
   Card
   -------------------------------- */
   .card {
+    position: relative;
     border: 1px solid #dadadc;
     border-radius: .5em;
     padding: 1.125rem;
@@ -166,6 +204,20 @@ onMounted(() => {
 
   .card-header {
     border-radius: .5em;
+  }
+  
+  .share-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: var(--color-white);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
