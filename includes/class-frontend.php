@@ -20,26 +20,27 @@ class Frontend {
 	 * @return string
 	 */
 	public function render_frontend($atts) {
-		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
-		// $mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : 'view';
+		$mode = null;
 		
 		global $current_user; 
 		$user = wp_get_current_user();
-		// var_dump($user->data);
 		
-		// if (isset($_GET['design']) && isset($_GET['mode'])) {
 		if (isset($_GET['design'])) {
-			// $disabled = false;
-			$design = isset($_GET['design']) ? $_GET['design'] : null;
-			// $mode = isset($_GET['mode']) ? $_GET['mode'] : null;
+			$design = $_GET['design'];
 		}
 		
-		if (!$disabled) {
+		if (isset($_GET['mode'])) {
+			$mode = $_GET['mode'];
+		}
+		
+		if ($enabled || $design && $mode) {
 			echo '
 				<div
 					id="app"
 					data-design="' . $design . '"
+					data-mode="' . $mode . '"
 					data-user_name="' . $user->data->display_name . '"
 					data-user_email="' . $user->data->user_email . '"
 				></div>
@@ -53,15 +54,13 @@ class Frontend {
 	 * @return array
 	 */
 	// public function add_body_class($classes = []) {
-	// 	// $disabled = isset($_COOKIE['design_plugin_disabled']);
-	// 	// $collapsed = isset($_COOKIE['design_plugin_sidebar_collapsed']);
+	// 	$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
+	// 	$collapsed = isset($_COOKIE['design_plugin_sidebar_collapsed']) ? $_COOKIE['design_plugin_sidebar_collapsed'] : null;
 	// 
-	// 	// if (!$disabled && !$collapsed) {
-	// 	// 	// return;
-	// 	// 
-	// 	// 	$classes[] = 'design-plugin-enabled';
-	// 	// 	return $classes;
-	// 	// }
+	// 	if ($enabled && !$collapsed || $design && $mode && !$collapsed) {
+	// 		$classes[] = 'design-plugin-enabled';
+	// 		return $classes;
+	// 	}
 	// 
 	// 	return $classes;
 	// }
@@ -72,31 +71,26 @@ class Frontend {
 	 * @return void
 	 */
 	public function admin_bar_menu($admin_bar) {
-		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
 		
-		// if (isset($_GET['design']) && isset($_GET['mode'])) {
-		// 	$disabled = false;
-		// }
-		
-		if ($disabled) {
-			// Toggle on
-			$admin_bar->add_menu( array(
-				'id'    => 'design-plugin-power-button',
-				'title' => '<span class="ab-icon dashicons dashicons-visibility" style="top: 2px;"></span>' . 'Enable Style Designer',
-				'href'  => '#',
-				'meta'  => array(
-					'onclick' => 'document.cookie = "design_plugin_disabled=; path=/; expires= Thu, 01 Jan 1970 00:00:00 UTC", location.reload();',
-				),
-			));	
-			
-		} else {
-			// Toggle off
+		if ($enabled) {
+			// Show button that disables plugin
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
 				'title' => '<span class="ab-icon dashicons dashicons-hidden" style="top: 2px;"></span>' . 'Disable Style Designer',
 				'href'  => '#',
 				'meta'  => array(
 					'onclick' => 'document.cookie = "design_plugin_disabled=true; path=/;", location.reload();',
+				),
+			));	
+		} else {
+			// Show button that enables plugin
+			$admin_bar->add_menu( array(
+				'id'    => 'design-plugin-power-button',
+				'title' => '<span class="ab-icon dashicons dashicons-visibility" style="top: 2px;"></span>' . 'Enable Style Designer',
+				'href'  => '#',
+				'meta'  => array(
+					'onclick' => 'document.cookie = "design_plugin_disabled=; path=/; expires= Thu, 01 Jan 1970 00:00:00 UTC", location.reload();',
 				),
 			));	
 		}

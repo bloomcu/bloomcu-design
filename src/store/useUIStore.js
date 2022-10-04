@@ -9,11 +9,7 @@ export const useUIStore = defineStore('UIStore', {
     collapsed: localStorage.getItem('design_plugin_sidebar_collapsed') || 'false',
   }),
 
-  // actions: {
-  //   init(mode = 'edit') {
-  //     this.mode = mode
-  //   }
-  // }
+  actions: {}
 })
 
 /**

@@ -7,21 +7,18 @@ namespace Design;
 class Assets {
 
 	public function __construct() {
-		$disabled = isset($_COOKIE['design_plugin_disabled']);
+		$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
 		$mode = null;
-		// $mode = isset($_COOKIE['design_plugin_mode']) ? $_COOKIE['design_plugin_mode'] : null;
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
 			$design = $_GET['design'];
 			$mode = $_GET['mode'];
 			
-			setcookie('design_plugin_disabled', '', 'Thu, 01 Jan 1970 00:00:00 UTC', '/'); // Enable plugin
-			setcookie('design_plugin_design', $design, time() + (86400 * 30), '/'); // 86400 = 1 day
+			setcookie('design_plugin_enabled', 'true', time() + (30 * 30 * 24 * 60 * 60 * 1000), '/'); // 30 days
 		}
 		
-		if (!$disabled) {
-
+		if ($enabled || $design && $mode) {
 			if ($mode === 'edit') {
 				if (!is_user_logged_in() && $GLOBALS['pagenow'] !== 'wp-login.php') {
 					$this->redirect_to_login();
@@ -65,11 +62,11 @@ class Assets {
 	 *
 	 * @return void
 	 */
-	// public function redirect_to_login() {
-	// 	$redirect = wp_login_url() . '?redirect_to=' . $this->get_current_url();
-	// 
-	// 	wp_redirect($redirect);
-	// }
+	public function redirect_to_login() {
+		$redirect = wp_login_url() . '?redirect_to=' . $this->get_current_url();
+	
+		wp_redirect($redirect);
+	}
 	
 	/**
 	 * Get the current URL

@@ -11,7 +11,7 @@
       <div v-else>
         <p class="font-bold margin-bottom-xs">Viewer</p>
         <p class="text-sm">
-          <a @click.prevent="redirectToLogin()" href="">Log in</a>
+          <a @click.prevent="redirectToLogin()" href="#">Log in</a>
           to edit styles
         </p>
       </div>
@@ -137,9 +137,14 @@ const destroyDesign = (uuid) => {
 }
 
 const disablePlugin = () => {
-  document.cookie = 'design_plugin_disabled=true; path=/;'
+  document.cookie = 'design_plugin_enabled=""; expires=Sat, 20 Jan 1980 12:00:00 UTC; path=/;';
   let path = window.location.href.split('?')[0]
   window.location = path
+}
+
+const redirectToLogin = () => {
+  let path = window.location.href.split('?')[0]
+  window.location = `/wp-admin?redirect_to=${path}`
 }
 
 const copiedDesign = ref(null)
