@@ -64,8 +64,15 @@ export const useDesignStore = defineStore('designStore', {
       await DesignApi.show('bloomcu', uuid)
         .then(response => {
           this.design = response.data.data
+          
+          // Set cookie
           document.cookie = `design_plugin_design=${uuid}; path=/;`
-          // localStorage.setItem('design_plugin_design', uuid)
+          
+          // Set cookie
+          // let days = 1
+          // let date = new Date()
+          //     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000))
+          // document.cookie = `design_plugin_design=${uuid}; expires=${date.toUTCString()}; path=/;`
           
           setTimeout(() => {  
             this.loading = false

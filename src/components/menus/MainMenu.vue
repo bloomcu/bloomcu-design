@@ -11,7 +11,7 @@
       <div v-else>
         <p class="font-bold margin-bottom-xs">Viewer</p>
         <p class="text-sm">
-          <a href="/wp-admin">Log in</a>
+          <a @click.prevent="redirectToLogin()" href="">Log in</a>
           to edit styles
         </p>
       </div>
@@ -52,6 +52,7 @@
           </button>
         </div>
         
+        <!-- List designs -->
         <div
           v-for="design in store.filterDesignsBy(designsFilter, user.email)"
           :key="design.id"
@@ -102,7 +103,7 @@ import { ref, onMounted } from 'vue'
 import { useDesignStore } from '@/store/useDesignStore'
 import { useUserStore } from '@/store/useUserStore'
 
-const designsFilter = ref('designer_email')
+const designsFilter = ref(null)
 const store = useDesignStore()
 const user = useUserStore()
 
@@ -167,6 +168,10 @@ const copyToClipboard = (value) => {
 onMounted(() => {
   if (!store.designs) {
     store.index()
+  }
+  
+  if (user.email) {
+    designsFilter.value = 'designer_email'
   }
 })
 </script>
