@@ -12,10 +12,9 @@ class Assets {
 		$mode = null;
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
+			$enabled = true;
 			$design = $_GET['design'];
 			$mode = $_GET['mode'];
-			
-			setcookie('design_plugin_enabled', 'true', time() + (30 * 30 * 24 * 60 * 60 * 1000), '/'); // 30 days
 		}
 		
 		if ($enabled || $design && $mode) {

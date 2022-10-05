@@ -62,7 +62,9 @@
         >
           <div>
             <p class="text-bold margin-bottom-xxs">{{ design.title }}</p>
-            <span v-if="user.email === design.designer_email" class="text-sm radius-full padding-x-xxs" style="color: #96f; background: #eee5ff; border: 1px solid #fff;">Mine</span>
+            <span v-if="user.email === design.designer_email" class="text-sm radius-full padding-x-xxs" style="color: #96f; background: #eee5ff; border: 1px solid #fff;">
+              My style
+            </span>
           </div>
           
           <div class="flex items-center gap-xxs">
