@@ -3,6 +3,11 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.3.0**
+*Release Date – Oct 5, 2022*
+* Finish October's round of bugs and enhancements
+* Plugin UI is now disabled by default until enabled by URL or UI
+
 **1.2.3**
 *Release Date – Oct 4, 2022*
 * Fix logic that controls the state of the plugin based on cookies
