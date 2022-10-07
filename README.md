@@ -3,6 +3,10 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.3.1**
+*Release Date – Oct 6, 2022*
+* Redesign the styleguide for CSS developer
+
 **1.3.0**
 *Release Date – Oct 5, 2022*
 * Finish October's round of bugs and enhancements

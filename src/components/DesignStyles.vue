@@ -217,12 +217,14 @@ Hide the help icon
 /* --------------------------------
 Override testimonial quote svg color
 -------------------------------- */
-section.full-width-blockquote {
+section.full-width-blockquote,
+section.testimonial-cards {
   .icon {
     display: none;
   }
   
-  .text-component {
+  .text-component, // child of section.full-width-blockquote
+  .testimonial-cards-block__icon { // child of section.testimonial-cards
     &:before {
       display: inline-flex;
       content: '';
