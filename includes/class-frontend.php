@@ -20,6 +20,9 @@ class Frontend {
 	 * @return string
 	 */
 	public function render_frontend($atts) {
+		$endpoint = get_field('api_endpoint', 'option');
+		$organization = get_field('organization_slug', 'option');
+		
 		$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
 		$mode = null;
@@ -37,6 +40,8 @@ class Frontend {
 			echo '
 				<div
 					id="app"
+					data-endpoint="' . $endpoint . '"
+					data-organization="' . $organization . '"
 					data-design="' . $design . '"
 					data-mode="' . $mode . '"
 					data-user_name="' . $user->data->display_name . '"

@@ -3,6 +3,11 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.4.0**
+*Release Date – Oct 11, 2022*
+* Add ACF fields for endpoint and organization
+* Plugin settings must me setup in admin before plugin can be used
+
 **1.3.1**
 *Release Date – Oct 6, 2022*
 * Redesign the styleguide for CSS developer

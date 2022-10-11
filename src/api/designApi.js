@@ -7,8 +7,8 @@ const designApi = {
      * @param Object params [Key/value params to query by]
      * @return promise
      */
-    index(organization, params) {
-        return HttpClient.get(`/${organization}/designs`, { params: params })
+    index(endpoint, organization, params) {
+        return HttpClient.get(`${endpoint}/${organization}/designs`, { params: params })
     },
     
     /**
@@ -17,8 +17,8 @@ const designApi = {
      * @param Object design [Properties to create design from]
      * @return promise
      */
-    store(organization, designer) {
-        return HttpClient.post(`/${organization}/designs`, designer)
+    store(endpoint, organization, designer) {
+        return HttpClient.post(`${endpoint}/${organization}/designs`, designer)
     },
     
     /**
@@ -27,8 +27,8 @@ const designApi = {
      * @param Integer id [Slug of the design you want to show]
      * @return promise
      */
-    show(organization, uuid) {
-      return HttpClient.get(`/${organization}/designs/${uuid}`)
+    show(endpoint, organization, uuid) {
+      return HttpClient.get(`${endpoint}/${organization}/designs/${uuid}`)
     },
     
     /**
@@ -38,8 +38,8 @@ const designApi = {
      * @param Object  design [Properties to update design with]
      * @return promise
      */
-    update(organization, uuid, design) {
-      return HttpClient.put(`/${organization}/designs/${uuid}`, design)
+    update(endpoint, organization, uuid, design) {
+      return HttpClient.put(`${endpoint}/${organization}/designs/${uuid}`, design)
     },
     
     /**
@@ -48,8 +48,8 @@ const designApi = {
      * @param Integer id [Id of the file you want to destroy]
      * @return promise
      */
-    destroy(organization, uuid) {
-        return HttpClient.delete(`/${organization}/designs/${uuid}`)
+    destroy(endpoint, organization, uuid) {
+        return HttpClient.delete(`${endpoint}/${organization}/designs/${uuid}`)
     },
     
     /**
@@ -61,8 +61,8 @@ const designApi = {
      * @param String designer.designer_email [Designer email]
      * @return promise
      */
-    duplicate(organization, uuid, designer) {
-        return HttpClient.post(`/${organization}/designs/${uuid}/duplicate`, designer)
+    duplicate(endpoint, organization, uuid, designer) {
+        return HttpClient.post(`${endpoint}/${organization}/designs/${uuid}/duplicate`, designer)
     },
     
     /**
@@ -75,8 +75,8 @@ const designApi = {
      * @param String tags [Tags to attach to media]
      * @return promise
      */
-    storeMedia(organization_slug, design_uuid, file, collection, tags) {
-        return HttpClient.post(`/${organization_slug}/designs/${design_uuid}/media`, file)
+    storeMedia(endpoint, organization, design_uuid, file, collection, tags) {
+        return HttpClient.post(`${endpoint}/${organization}/designs/${design_uuid}/media`, file)
     },
 }
 

@@ -5,6 +5,8 @@ import { designApi as DesignApi } from '../api/designApi'
 
 export const useDesignStore = defineStore('designStore', {
   state: () => ({
+    endpoint: '',
+    organization: '',
     designs: null,
     design: null,
     loading: false,
@@ -25,11 +27,16 @@ export const useDesignStore = defineStore('designStore', {
   },
 
   actions: {
+    init(endpoint, organization) {
+      this.endpoint = endpoint
+      this.organization = organization
+    },
+    
     index(params) {
       this.loading = true
       this.designs = null
 
-      DesignApi.index('bloomcu', params)
+      DesignApi.index(this.endpoint, this.organization, params)
         .then(response => {
           this.designs = response.data.data
           this.loading = false
@@ -41,7 +48,7 @@ export const useDesignStore = defineStore('designStore', {
     async store(user) {
       this.loading = true
     
-      await DesignApi.store('bloomcu', {
+      await DesignApi.store(this.endpoint, this.organization, {
         designer_name: user.name,
         designer_email: user.email,
       })
@@ -61,7 +68,7 @@ export const useDesignStore = defineStore('designStore', {
       // const ui = useUIStore()
       // const user = useUserStore()
 
-      await DesignApi.show('bloomcu', uuid)
+      await DesignApi.show(this.endpoint, this.organization, uuid)
         .then(response => {
           this.design = response.data.data
           
@@ -88,7 +95,7 @@ export const useDesignStore = defineStore('designStore', {
     update() {
       this.loading = true
 
-      DesignApi.update('bloomcu', this.design.uuid, this.design)
+      DesignApi.update(this.endpoint, this.organization, this.design.uuid, this.design)
         .then(response => {
           console.log('Design successfully updated')
 
@@ -104,7 +111,7 @@ export const useDesignStore = defineStore('designStore', {
     destroy(uuid) {
       this.loading = true
     
-      DesignApi.destroy('bloomcu', uuid)
+      DesignApi.destroy(this.endpoint, this.organization, uuid)
         .then(response => {
           this.designs = this.designs.filter((design) => design.uuid !== uuid)
           
@@ -122,7 +129,7 @@ export const useDesignStore = defineStore('designStore', {
     async duplicate(uuid, user) {
       this.loading = true
 
-      await DesignApi.duplicate('bloomcu', uuid, {
+      await DesignApi.duplicate(this.endpoint, this.organization, uuid, {
         designer_name: user.name,
         designer_email: user.email,
       })
@@ -137,7 +144,7 @@ export const useDesignStore = defineStore('designStore', {
     },
     
     async storeMedia(file, collection, tags) {
-      return await DesignApi.storeMedia('bloomcu', this.design.uuid, file, collection, tags)
+      return await DesignApi.storeMedia(this.endpoint, this.organization, this.design.uuid, file, collection, tags)
         .then(response => {
           return response.data.data
         }).catch(error => {

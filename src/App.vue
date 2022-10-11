@@ -139,6 +139,12 @@ import StyleGuide from './components/menus/StyleGuide.vue'
 import ToggleMode from './components/toggles/ToggleMode.vue'
 
 const props = defineProps({
+  endpoint: { 
+    type: String,
+  },
+  organization: { 
+    type: String,
+  },
   design: { 
     type: String,
   },
@@ -187,20 +193,18 @@ const updateDesign = debounce(() => {
 }, 3000)
 
 store.$subscribe((mutation, state) => {
-  if (!['loading', 'design', 'designs'].includes(mutation.events.key)) {
+  if (!['loading', 'design', 'designs', 'organization'].includes(mutation.events.key)) {
     updateDesign()
   }
 })
 
 onMounted(() => {
+  if (props.endpoint && props.organization) {
+    store.init(props.endpoint, props.organization)
+  }
+  
   if (props.design) {
     store.show(props.design)
-      // TODO: Clean this up
-      // .then(() => {
-      //   if (store.variables.font_primary.source === 'upload') {
-      //     activeFontsSource.value = 'upload'
-      //   }
-      // })
   }
   
   if (props.mode) {
