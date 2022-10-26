@@ -8,7 +8,6 @@ class Frontend {
 
 	public function __construct() {
 		add_action('wp_head', [$this, 'render_frontend'], 12);
-		// add_filter('body_class', [$this, 'add_body_class']);
 		add_action('admin_bar_menu', [ $this, 'admin_bar_menu' ], 999);
 	}
 	
@@ -50,23 +49,6 @@ class Frontend {
 			';
 		}
 	}
-	
-	/**
-	 * Add body class
-	 *
-	 * @return array
-	 */
-	// public function add_body_class($classes = []) {
-	// 	$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
-	// 	$collapsed = isset($_COOKIE['design_plugin_sidebar_collapsed']) ? $_COOKIE['design_plugin_sidebar_collapsed'] : null;
-	// 
-	// 	if ($enabled && !$collapsed || $design && $mode && !$collapsed) {
-	// 		$classes[] = 'design-plugin-enabled';
-	// 		return $classes;
-	// 	}
-	// 
-	// 	return $classes;
-	// }
 	
 	/**
 	 * Inject our button into the frontend admin bar
