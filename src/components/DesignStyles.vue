@@ -143,7 +143,12 @@ a {
 
 .btn--tertiary {
   background-color: var(--color-white);
+  border-color: var(--color-contrast-low);
   color: var(--btn-tertiary-text-color);
+  
+  &:hover {
+    background-color: hsla(var(--color-contrast-lower-h),var(--color-contrast-lower-s),var(--color-contrast-lower-l),var(--bg-o,1));
+  }
 }
 
 .color-contrast-medium {
