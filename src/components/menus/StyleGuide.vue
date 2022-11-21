@@ -227,7 +227,7 @@
             </div>
             <div class="col-6 padding-sm radius-md border">
               <div class="bloomcu-design">
-                <p>{{ store.variables.btn_text_transform }}</p>
+                <p class="text-capitalize">{{ store.variables.btn_text_transform }}</p>
               </div>
             </div>
           </div>
