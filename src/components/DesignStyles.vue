@@ -151,6 +151,13 @@ a {
   }
 }
 
+// TODO: Remove line-height: 1.2 !important in Base Theme
+.btn.btn--primary,
+.btn.btn--secondary,
+.btn.btn--tertiary {
+  line-height: normal !important;
+}
+
 .color-contrast-medium {
   color: var(--color-contrast-medium);
 }
@@ -162,7 +169,6 @@ a {
 .color-contrast-higher {
   color: var(--color-contrast-higher);
 }
-
 
 [data-theme="bg-1"] {
   background-color: var(--color-bg);
