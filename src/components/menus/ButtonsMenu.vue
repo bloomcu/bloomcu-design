@@ -28,7 +28,9 @@
             </select>
             <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </div>
-          <a href="#" class="btn btn--primary" style="width: 200px;">Primary</a>
+          <div class="btn--primary text-center width-xl padding-y-xs radius-md cursor-pointer">
+              Aa
+          </div>
         </div>
       </div>
 
@@ -54,7 +56,9 @@
             </select>
             <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </div>
-          <a href="#" class="btn btn--secondary" style="width: 200px;">Secondary</a>
+          <div class="btn--secondary text-center width-xl padding-y-xs radius-md cursor-pointer">
+              Aa
+          </div>
         </div>
       </div>
 
@@ -80,7 +84,9 @@
             </select>
             <svg class="select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
           </div>
-          <a href="#" class="btn btn--tertiary" style="width: 200px;">Tertiary</a>
+          <div class="btn--tertiary text-center width-xl padding-y-xs radius-md border cursor-pointer">
+              Aa
+          </div>
         </div>
       </div>
 
