@@ -7,9 +7,9 @@
       --color-white:              {{ variables.color_white }};
       --color-black:              {{ variables.color_black }};
       --color-primary:            {{ variables.color_primary }};
-      --color-primary-light:      {{ shadeColor(variables.color_primary, 10) }}; <!-- 10% darker -->
+      --color-primary-light:      {{ shadeColor(variables.color_primary, 10) }}; <!-- 10% -->
       --color-accent:             {{ variables.color_accent }};
-      --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }}; <!-- 10% darker -->
+      --color-accent-light:       {{ shadeColor(variables.color_accent, 10) }}; <!-- 10% -->
       --color-contrast-high:      {{ variables.color_contrast_higher }};
       --color-contrast-higher:    {{ variables.color_contrast_higher }};
       --color-contrast-medium:    {{ variables.color_contrast_higher }};
@@ -29,6 +29,11 @@
       <!-- Buttons font -->
       --font-buttons:             {{ variables.font_buttons.name ? variables.font_buttons.name : variables.font_secondary.name }};
       --font-buttons-weight:      {{ variables.font_buttons.weight ? variables.font_buttons.weight : variables.font_secondary.weight }};
+      
+      <!-- Buttons bg colors -->
+      --btn-primary-bg-color: {{ variables.color_primary }};
+      --btn-secondary-bg-color: {{ variables.color_accent }};
+      --btn-tertiary-bg-color: {{ variables.color_white }};
       
       <!-- Buttons text colors -->
       --btn-primary-text-color:   {{ variables.btn_primary_text_color ? variables.btn_primary_text_color : variables.color_white }};
@@ -124,26 +129,27 @@ a {
 }
 
 .btn--primary {
-  background: var(--color-primary);
+  background: var(--btn-primary-bg-color);
   color: var(--btn-primary-text-color);
 
   &:hover {
-    background: var(--color-primary-light);
+    background: var(--btn-primary-bg-color);
+    opacity: 0.8;
   }
 }
 
 .btn--secondary {
-  background-color: var(--color-accent);
+  background-color: var(--btn-secondary-bg-color);
   color: var(--btn-secondary-text-color);
 
   &:hover {
-    background-color: var(--color-accent-light);
+    background-color: var(--btn-secondary-bg-color);
+    opacity: 0.8;
   }
 }
 
 .btn--tertiary {
-  background-color: var(--color-white);
-  // border-color: var(--color-contrast-low);
+  background-color: var(--btn-tertiary-bg-color);
   color: var(--btn-tertiary-text-color);
   
   &:hover {
@@ -177,18 +183,18 @@ a {
 [data-theme="bg-2"] {
   background-color: var(--color-bg);
   
-  .btn--primary {
-    color: var(--color-contrast-lower);
-    
-    &:hover {
-      background-color: var(--color-contrast-higher);
-      opacity: .9;
-    }
-  }
+  // .btn--primary {
+  //   color: var(--color-contrast-lower);
+  // 
+  //   &:hover {
+  //     background-color: var(--color-contrast-higher);
+  //     opacity: .9;
+  //   }
+  // }
   
-  .btn--tertiary {
-    color: var(--color-contrast-lower);
-  }
+  // .btn--tertiary {
+  //   color: var(--color-contrast-lower);
+  // }
   
   .pre-title {
     color: var(--color-primary);
@@ -261,14 +267,14 @@ Override tertiary button in hero's
 -------------------------------- */
 .hero, 
 .feature-v4 { // feature-v4 is the isolated hero block
-  .btn--tertiary {
-    background-color: var(--color-accent);
-    color: var(--btn-secondary-text-color);
-    
-    &:hover {
-      background-color: var(--color-accent-light);
-    }
-  }
+  // .btn--tertiary {
+  //   background-color: var(--color-accent);
+  //   color: var(--btn-secondary-text-color);
+  // 
+  //   &:hover {
+  //     background-color: var(--color-accent-light);
+  //   }
+  // }
 }
 
 /* --------------------------------

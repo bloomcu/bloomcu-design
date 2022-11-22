@@ -3,6 +3,10 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.5.0**
+*Release Date – Nov 22, 2022*
+* Update button styles to work with new ACF button style dropdown
+
 **1.4.0**
 *Release Date – Oct 11, 2022*
 * Add ACF fields for endpoint and organization
