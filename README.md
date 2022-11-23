@@ -6,6 +6,7 @@ Design made easier. Made by BloomCU.
 **1.5.1**
 *Release Date – Nov 22, 2022*
 * Replace button previews with thumbnails
+* Add menu offset if BloomCU Research plugin is active
 
 **1.5.0**
 *Release Date – Nov 22, 2022*

@@ -252,6 +252,12 @@ body.admin-bar {
   }
 }
 
+body.admin-bar.research-bar {
+  .bloomcu-design .siderail {
+    padding-top: 84px;
+  }
+}
+
 /* --------------------------------
 Plugin styles
 -------------------------------- */
