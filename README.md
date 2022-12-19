@@ -3,6 +3,10 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.5.2**
+*Release Date – Dec 15, 2022*
+* Fix issue where the enabled cookie is not set when visiting a share url if not logged into Wordpress
+
 **1.5.1**
 *Release Date – Nov 22, 2022*
 * Replace button previews with thumbnails

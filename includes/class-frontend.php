@@ -7,8 +7,20 @@ namespace Design;
 class Frontend {
 
 	public function __construct() {
+		add_action('init', [$this, 'init'], 999);
 		add_action('wp_head', [$this, 'render_frontend'], 12);
 		add_action('admin_bar_menu', [ $this, 'admin_bar_menu' ], 999);
+	}
+	
+	/**
+	 * Initialize
+	 *
+	 * @return string
+	 */
+	public function init() {
+		if (isset($_GET['design']) && isset($_GET['mode'])) {
+			setcookie('design_plugin_enabled', 'true', time() + (30 * 30 * 24 * 60 * 60 * 1000), '/'); // 30 days
+		}
 	}
 	
 	/**
@@ -26,14 +38,15 @@ class Frontend {
 		$design = isset($_COOKIE['design_plugin_design']) ? $_COOKIE['design_plugin_design'] : null;
 		$mode = null;
 		
-		global $current_user; 
-		$user = wp_get_current_user();
-		
+		// Url params overide cookies that might be available
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
 			$enabled = true;
 			$design = $_GET['design'];
 			$mode = $_GET['mode'];
 		}
+		
+		global $current_user; 
+		$user = wp_get_current_user();
 		
 		if ($enabled || $design && $mode) {
 			echo '
@@ -59,11 +72,11 @@ class Frontend {
 		$enabled = isset($_COOKIE['design_plugin_enabled']) ? $_COOKIE['design_plugin_enabled'] : null;
 		
 		if (isset($_GET['design']) && isset($_GET['mode'])) {
-			setcookie('design_plugin_enabled', 'true', time() + (30 * 30 * 24 * 60 * 60 * 1000), '/'); // 30 days
 			$enabled = true;
 		}
 		
 		if ($enabled) {
+			
 			// Show button that disables plugin
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
@@ -74,6 +87,7 @@ class Frontend {
 				),
 			));	
 		} else {
+			
 			// Show button that enables plugin
 			$admin_bar->add_menu( array(
 				'id'    => 'design-plugin-power-button',
