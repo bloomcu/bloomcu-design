@@ -8,7 +8,7 @@ mix.alias({
 mix.setPublicPath('dist');
 
 mix.js('src/main.js', 'dist').vue();
-mix.sass('src/scss/app.scss', 'dist');
+// mix.sass('src/styles/app.scss', 'dist');
 
 mix.browserSync({
   proxy: 'http://localhost:10003',
