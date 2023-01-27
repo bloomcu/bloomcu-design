@@ -3,13 +3,16 @@
     <header class="siderail-menu__header flex justify-between items-center">
       <!-- Logged in -->
       <div v-if="user.name && user.email">
-        <p class="font-bold margin-bottom-xxxs">{{ user.name }}</p>
-        <p class="text-sm">{{ user.email }}</p>
+        <p class="font-bold margin-bottom-xxs">{{ user.name }}</p>
+        <div class="text-sm">
+          <p v-if="user.isAdmin" class="margin-bottom-xxxs">Role: Administrator</p>
+          <p>{{ user.email }}</p>  
+        </div>
       </div>
       
       <!-- Viewer -->
       <div v-else>
-        <p class="font-bold margin-bottom-xs">Viewer</p>
+        <!-- <p class="font-bold margin-bottom-xs">Viewer</p> -->
         <p class="text-sm">
           <a @click.prevent="redirectToLogin()" href="#">Log in</a>
           to edit styles
@@ -23,16 +26,14 @@
     </header>
     
     <div v-if="store.designs" class="siderail-menu__body">
-      
       <div class="siderail-menu__section">
 
-        <!-- Styles menu -->
+        <!-- Styles filter -->
         <div v-if="user.email" class="flex justify-between align-center margin-bottom-sm">
-          <!-- Toggle -->
           <div>
             <button 
               @click="designsFilter = 'designer_email'"
-              class="reset text-sm border radius-full padding-y-xxs padding-x-sm cursor-pointer margin-right-xs"
+              class="reset text-sm border radius-full padding-y-xxs padding-x-sm cursor-pointer margin-right-xxs"
               :class="designsFilter === 'designer_email' ? 'border-opacity-0 color-white bg-black' : ''"
             >
               My styles
@@ -47,8 +48,9 @@
           </div>
           
           <!-- Create new design -->
-          <button @click="storeNewDesign()" class="action-icon reset">
-            <svg width="22" height="22" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round" class="nc-icon-wrapper"><line x1="12" y1="2" x2="12" y2="22"></line> <line x1="22" y1="12" x2="2" y2="12"></line></g></svg>
+          <button @click="storeNewDesign()" class="flex items-center text-sm border radius-md padding-y-xxs padding-x-xs cursor-pointer reset">
+            <svg width="16" height="16" viewBox="0 0 24 24"><g stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" stroke-linejoin="round" class="nc-icon-wrapper"><line x1="12" y1="2" x2="12" y2="22"></line> <line x1="22" y1="12" x2="2" y2="12"></line></g></svg>
+            <span class="margin-left-xxxs">New design</span>
           </button>
         </div>
         
@@ -62,8 +64,11 @@
         >
           <div>
             <p class="text-bold margin-bottom-xxs">{{ design.title }}</p>
-            <span v-if="user.email === design.designer_email" class="text-sm radius-full padding-x-xxs" style="color: #96f; background: #eee5ff; border: 1px solid #fff;">
-              My style
+            <span v-if="user.email === design.designer_email" class="text-sm radius-full padding-x-sm padding-y-xxxs" style="color: #96f; background: #eee5ff; border: 1px solid #fff;">
+              {{ design.designer_name }}
+            </span>
+            <span v-else-if="user.isAdmin" class="text-sm radius-full padding-x-sm padding-y-xxxs" style="border: 1px solid #e1e1e1;">
+              {{ design.designer_name }}
             </span>
           </div>
           

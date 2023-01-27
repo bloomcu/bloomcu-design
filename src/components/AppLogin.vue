@@ -45,7 +45,7 @@ const inputs = ref({
 function login() {
   const { email, password } = inputs.value
   
-  console.log(email, password)
+  // console.log(email, password)
   // authStore.login(email, password)
   //   .then(() => {
   //     // TODO: Push me to an organization dashboard with next steps
