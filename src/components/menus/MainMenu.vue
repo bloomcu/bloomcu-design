@@ -5,8 +5,8 @@
       <div v-if="user.name && user.email">
         <p class="font-bold margin-bottom-xxs">{{ user.name }}</p>
         <div class="text-sm">
-          <p v-if="user.isAdmin" class="margin-bottom-xxxs">Role: Administrator</p>
-          <p>{{ user.email }}</p>  
+          <p v-if="user.isAdmin" class="margin-bottom-xxxs">Administrator</p>
+          <!-- <p>{{ user.email }}</p>   -->
         </div>
       </div>
       
