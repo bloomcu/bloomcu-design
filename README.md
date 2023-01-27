@@ -3,6 +3,11 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.5.3**
+*Release Date – Jan 27, 2023*
+* Allow users with Administrator role to see design owners. All other roles cannot see design owner.
+* Add labels to all menu options and design controls (e.g., share, duplicate, archive).
+
 **1.5.2**
 *Release Date – Dec 15, 2022*
 * Fix issue where the enabled cookie is not set when visiting a share url if not logged into Wordpress
