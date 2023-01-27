@@ -58,11 +58,12 @@ class Frontend {
 					data-mode="' . $mode . '"
 					data-user_name="' . $user->data->display_name . '"
 					data-user_email="' . $user->data->user_email . '"
+					data-user_role="' . $user->roles[0] . '"
 				></div>
 			';
 		}
 	}
-	
+	// data-user_roles="' . implode($user->roles, ', ') . ']"
 	/**
 	 * Inject our button into the frontend admin bar
 	 *
