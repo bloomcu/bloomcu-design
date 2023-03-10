@@ -3,6 +3,11 @@
 Design made easier. Made by BloomCU.
 
 ## Changelog
+**1.5.4**
+*Release Date – Mar 10, 2023*
+* Fix [Vue warn]: Invalid vnode type when creating vnode.
+* Fix released on the API for font uploads issue.
+
 **1.5.3**
 *Release Date – Jan 27, 2023*
 * Allow users with Administrator role to see design owners. All other roles cannot see design owner.

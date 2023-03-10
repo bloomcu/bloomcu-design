@@ -1,6 +1,5 @@
 <template>
   <form class="login-form" action="#" @submit.prevent="login()">
-    <!-- {{ inputs }} -->
     <div class="text-component text-center margin-bottom-sm">
       <h2>Log in</h2>
     </div>
@@ -44,13 +43,5 @@ const inputs = ref({
 
 function login() {
   const { email, password } = inputs.value
-  
-  // console.log(email, password)
-  // authStore.login(email, password)
-  //   .then(() => {
-  //     // TODO: Push me to an organization dashboard with next steps
-  //     router.push({ name: 'assetsIntake', params: { organization: authStore.organization } })
-  //     // router.push({ name: 'organizations' })
-  //   })
 }
 </script>

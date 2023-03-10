@@ -87,7 +87,13 @@
           </div>
         </div>
       </div>
-      <component :is="ui.activeMenu"/>
+      
+      <!-- <component :is="ui.activeMenu"/> -->
+      
+      <MainMenu v-if="ui.activeMenu == 'MainMenu'"/>
+      <ColorsMenu v-if="ui.activeMenu == 'ColorsMenu'"/>
+      <TypographyMenu v-if="ui.activeMenu == 'TypographyMenu'"/>
+      <ButtonsMenu v-if="ui.activeMenu == 'ButtonsMenu'"/>
     </div>
     
     <!-- Styleguide -->
@@ -108,24 +114,6 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
-
-import MainMenu from './components/menus/MainMenu.vue'
-import ColorsMenu from './components/menus/ColorsMenu.vue'
-import TypographyMenu from './components/menus/TypographyMenu.vue'
-import ButtonsMenu from './components/menus/ButtonsMenu.vue'
-
-export default defineComponent({
-    components: {
-      MainMenu,
-      ColorsMenu,
-      TypographyMenu,
-      ButtonsMenu,
-    }
-})    
-</script>
-
 <script setup>
 import { onMounted } from 'vue'
 import { debounce } from './composables/useDebounce'
@@ -133,6 +121,13 @@ import { useDesignStore } from './store/useDesignStore'
 import { useUIStore } from './store/useUIStore'
 import { useUserStore } from './store/useUserStore'
 
+// Menus
+import MainMenu from './components/menus/MainMenu.vue'
+import ColorsMenu from './components/menus/ColorsMenu.vue'
+import TypographyMenu from './components/menus/TypographyMenu.vue'
+import ButtonsMenu from './components/menus/ButtonsMenu.vue'
+
+// Components
 import IconLoading from './components/IconLoading.vue'
 import DesignFonts from './components/DesignFonts.vue'
 import DesignStyles from './components/DesignStyles.vue'
@@ -210,7 +205,6 @@ onMounted(() => {
   
   // Init user
   if (props.user_name && props.user_email && props.user_role) {
-    console.log('prop', props.user_role)
     user.init(
       props.user_name, 
       props.user_email,
